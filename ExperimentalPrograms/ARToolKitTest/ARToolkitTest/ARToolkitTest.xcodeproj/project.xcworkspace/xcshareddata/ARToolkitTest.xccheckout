@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<key>IDESourceControlProjectFavoriteDictionaryKey</key>
+	<false/>
+	<key>IDESourceControlProjectIdentifier</key>
+	<string>6B1D1ABC-4527-4EA6-995F-F5EADC09620C</string>
+	<key>IDESourceControlProjectName</key>
+	<string>ARToolkitTest</string>
+	<key>IDESourceControlProjectOriginsDictionary</key>
+	<dict>
+		<key>E9E97F88-B51E-4F7F-BDC7-2AD5E98719B8</key>
+		<string>https://github.com/irscttrbrn/ARLangEduProject.git</string>
+	</dict>
+	<key>IDESourceControlProjectPath</key>
+	<string>ExperimentalPrograms/ARToolKitTest/ARToolkitTest/ARToolkitTest.xcodeproj/project.xcworkspace</string>
+	<key>IDESourceControlProjectRelativeInstallPathDictionary</key>
+	<dict>
+		<key>E9E97F88-B51E-4F7F-BDC7-2AD5E98719B8</key>
+		<string>../../../../..</string>
+	</dict>
+	<key>IDESourceControlProjectURL</key>
+	<string>https://github.com/irscttrbrn/ARLangEduProject.git</string>
+	<key>IDESourceControlProjectVersion</key>
+	<integer>110</integer>
+	<key>IDESourceControlProjectWCCIdentifier</key>
+	<string>E9E97F88-B51E-4F7F-BDC7-2AD5E98719B8</string>
+	<key>IDESourceControlProjectWCConfigurations</key>
+	<array>
+		<dict>
+			<key>IDESourceControlRepositoryExtensionIdentifierKey</key>
+			<string>public.vcs.git</string>
+			<key>IDESourceControlWCCIdentifierKey</key>
+			<string>E9E97F88-B51E-4F7F-BDC7-2AD5E98719B8</string>
+			<key>IDESourceControlWCCName</key>
+			<string>ARLangEduProject</string>
+		</dict>
+	</array>
+</dict>
+</plist>

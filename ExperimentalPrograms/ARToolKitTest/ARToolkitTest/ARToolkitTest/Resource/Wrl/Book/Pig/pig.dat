@@ -1,0 +1,5 @@
+pig.wrl
+TRANSLATION	100.0 150.0 0.0		# Translation
+ROTATION	30.0 0.0 0.0 1.0	# Rotation
+ROTATION	90.0 1.0 0.0 0.0	# Rotation
+SCALE		30 30 30		# Scale

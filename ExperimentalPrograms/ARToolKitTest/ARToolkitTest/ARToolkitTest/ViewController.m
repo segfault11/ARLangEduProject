@@ -1,3 +1,4 @@
+//------------------------------------------------------------------------------
 //
 //  ViewController.m
 //  ARToolkitTest
@@ -5,99 +6,72 @@
 //  Created by Arno in Wolde Lübke on 13.12.13.
 //  Copyright (c) 2013 Arno in Wolde Lübke. All rights reserved.
 //
-
+//------------------------------------------------------------------------------
 #import "ViewController.h"
-
-#define BUFFER_OFFSET(i) ((char *)NULL + (i))
-
-// Uniform index.
-enum
+#import <AR/ar.h>
+#import <AR/gsub2.h>
+#import <assert.h>
+#import <CoreVideo/CVOpenGLESTextureCache.h>
+#import <assert.h>
+#import "GLUEProgram.h"
+//------------------------------------------------------------------------------
+#define VIDEO_FRAME_WIDTH 480
+#define VIDEO_FRAME_HEIGHT 640
+//------------------------------------------------------------------------------
+static float quad[] = {
+        -1.0f, 1.0f,
+        1.0f, 1.0f,
+        1.0f, -1.0f,
+    
+        -1.0f, 1.0f,
+        1.0f, -1.0f,
+        -1.0f, -1.0f
+    };
+//------------------------------------------------------------------------------
+static float cube[] =
+    {
+        0.0f, 0.0f, 0.0f
+    };
+//------------------------------------------------------------------------------
+@interface ViewController ()
 {
-    UNIFORM_MODELVIEWPROJECTION_MATRIX,
-    UNIFORM_NORMAL_MATRIX,
-    NUM_UNIFORMS
-};
-GLint uniforms[NUM_UNIFORMS];
-
-// Attribute index.
-enum
-{
-    ATTRIB_VERTEX,
-    ATTRIB_NORMAL,
-    NUM_ATTRIBUTES
-};
-
-GLfloat gCubeVertexData[216] = 
-{
-    // Data layout for each line below is:
-    // positionX, positionY, positionZ,     normalX, normalY, normalZ,
-    0.5f, -0.5f, -0.5f,        1.0f, 0.0f, 0.0f,
-    0.5f, 0.5f, -0.5f,         1.0f, 0.0f, 0.0f,
-    0.5f, -0.5f, 0.5f,         1.0f, 0.0f, 0.0f,
-    0.5f, -0.5f, 0.5f,         1.0f, 0.0f, 0.0f,
-    0.5f, 0.5f, -0.5f,          1.0f, 0.0f, 0.0f,
-    0.5f, 0.5f, 0.5f,         1.0f, 0.0f, 0.0f,
-    
-    0.5f, 0.5f, -0.5f,         0.0f, 1.0f, 0.0f,
-    -0.5f, 0.5f, -0.5f,        0.0f, 1.0f, 0.0f,
-    0.5f, 0.5f, 0.5f,          0.0f, 1.0f, 0.0f,
-    0.5f, 0.5f, 0.5f,          0.0f, 1.0f, 0.0f,
-    -0.5f, 0.5f, -0.5f,        0.0f, 1.0f, 0.0f,
-    -0.5f, 0.5f, 0.5f,         0.0f, 1.0f, 0.0f,
-    
-    -0.5f, 0.5f, -0.5f,        -1.0f, 0.0f, 0.0f,
-    -0.5f, -0.5f, -0.5f,       -1.0f, 0.0f, 0.0f,
-    -0.5f, 0.5f, 0.5f,         -1.0f, 0.0f, 0.0f,
-    -0.5f, 0.5f, 0.5f,         -1.0f, 0.0f, 0.0f,
-    -0.5f, -0.5f, -0.5f,       -1.0f, 0.0f, 0.0f,
-    -0.5f, -0.5f, 0.5f,        -1.0f, 0.0f, 0.0f,
-    
-    -0.5f, -0.5f, -0.5f,       0.0f, -1.0f, 0.0f,
-    0.5f, -0.5f, -0.5f,        0.0f, -1.0f, 0.0f,
-    -0.5f, -0.5f, 0.5f,        0.0f, -1.0f, 0.0f,
-    -0.5f, -0.5f, 0.5f,        0.0f, -1.0f, 0.0f,
-    0.5f, -0.5f, -0.5f,        0.0f, -1.0f, 0.0f,
-    0.5f, -0.5f, 0.5f,         0.0f, -1.0f, 0.0f,
-    
-    0.5f, 0.5f, 0.5f,          0.0f, 0.0f, 1.0f,
-    -0.5f, 0.5f, 0.5f,         0.0f, 0.0f, 1.0f,
-    0.5f, -0.5f, 0.5f,         0.0f, 0.0f, 1.0f,
-    0.5f, -0.5f, 0.5f,         0.0f, 0.0f, 1.0f,
-    -0.5f, 0.5f, 0.5f,         0.0f, 0.0f, 1.0f,
-    -0.5f, -0.5f, 0.5f,        0.0f, 0.0f, 1.0f,
-    
-    0.5f, -0.5f, -0.5f,        0.0f, 0.0f, -1.0f,
-    -0.5f, -0.5f, -0.5f,       0.0f, 0.0f, -1.0f,
-    0.5f, 0.5f, -0.5f,         0.0f, 0.0f, -1.0f,
-    0.5f, 0.5f, -0.5f,         0.0f, 0.0f, -1.0f,
-    -0.5f, -0.5f, -0.5f,       0.0f, 0.0f, -1.0f,
-    -0.5f, 0.5f, -0.5f,        0.0f, 0.0f, -1.0f
-};
-
-@interface ViewController () {
-    GLuint _program;
-    
-    GLKMatrix4 _modelViewProjectionMatrix;
-    GLKMatrix3 _normalMatrix;
-    float _rotation;
-    
     GLuint _vertexArray;
-    GLuint _vertexBuffer;
+    GLuint _buffer;
+    GLuint _luminanceTex;
+    GLuint _chrominanceTex;
+    ARParam _cparam;
+    ARParamLT* _cparamLT;
+    ARHandle* _arHandle;
+    ARPattHandle* _pattHandle;
+    int _pattId;
+    ARUint8 _imgY[VIDEO_FRAME_WIDTH*VIDEO_FRAME_HEIGHT];
+    AR3DHandle* _ar3DHandle;
+    
+    struct
+    {
+        GLuint vertexArray;
+        GLuint buffer;
+    }
+    _cube;
 }
-@property (strong, nonatomic) EAGLContext *context;
-@property (strong, nonatomic) GLKBaseEffect *effect;
-
+@property(nonatomic, strong) GLUEProgram* program;
+@property(nonatomic, strong) GLUEProgram* program2;
+@property(nonatomic, strong) AVCaptureSession* session;
+@property(nonatomic, strong) AVCaptureDevice* backCamera;
+@property(nonatomic, strong) AVCaptureDeviceInput* input;
+@property(nonatomic, strong) AVCaptureVideoDataOutput* output;
+@property(nonatomic, strong) AVCaptureVideoPreviewLayer* previewLayer;
+@property(strong, nonatomic) EAGLContext *context;
+- (void)initMarkerDetection;
 - (void)setupGL;
+- (void)initCaptureSession;
 - (void)tearDownGL;
-
-- (BOOL)loadShaders;
-- (BOOL)compileShader:(GLuint *)shader type:(GLenum)type file:(NSString *)file;
-- (BOOL)linkProgram:(GLuint)prog;
-- (BOOL)validateProgram:(GLuint)prog;
+- (void)renderVideo;
+- (void)renderCube:(GLfloat*)view;
 @end
-
+//------------------------------------------------------------------------------
 @implementation ViewController
-
+//------------------------------------------------------------------------------
 - (void)viewDidLoad
 {
     [super viewDidLoad];
@@ -113,17 +87,151 @@ GLfloat gCubeVertexData[216] =
     view.drawableDepthFormat = GLKViewDrawableDepthFormat24;
     
     [self setupGL];
+    [self initMarkerDetection];
+    [self initCaptureSession];
 }
+//------------------------------------------------------------------------------
+- (void)initMarkerDetection
+{
+    //
+    //  Set up AR Toolkit
+    //
 
+
+    // load camera parameters
+    NSString* path = [[[NSBundle mainBundle] resourcePath]
+        stringByAppendingString:@"/camera_para_ipadmini640x480"];
+    
+    if (arParamLoad((char*)[path UTF8String], "dat", 1, &_cparam) < 0)
+    {
+        NSLog(@"Could not load camera parameters");
+        exit(0);
+    }
+
+    arParamChangeSize(
+        &_cparam,
+        VIDEO_FRAME_WIDTH,
+        VIDEO_FRAME_HEIGHT,
+        &_cparam
+    );
+    arParamDisp( &_cparam );
+
+    _cparamLT = arParamLTCreate(&_cparam, AR_PARAM_LT_DEFAULT_OFFSET);
+    _arHandle = arCreateHandle(_cparamLT);
+    
+    if (NULL == _arHandle)
+    {
+        NSLog(@"Cannot create handle");
+        exit(0);
+    }
+    
+    arSetPixelFormat(_arHandle, AR_PIXEL_FORMAT_MONO);
+    arSetImageProcMode(_arHandle, AR_IMAGE_PROC_FIELD_IMAGE);
+    arSetLabelingThresh(_arHandle, 100);
+    arSetDebugMode(_arHandle, 0);
+    
+    //
+    //  Load marker
+    //
+    _pattHandle = arPattCreateHandle();
+    
+    if (NULL == _pattHandle)
+    {
+        NSLog(@"Could not create pattern handle");
+        exit(0);
+    }
+    
+    _pattId = arPattLoad(_pattHandle, "patt", "hiro");
+    
+    if (0 > _pattId)
+    {
+        NSLog(@"Could not load pattern");
+        exit(0);
+    }
+    
+    arPattAttach(_arHandle, _pattHandle);
+
+    //
+    //  Create a 3D handle
+    //
+    _ar3DHandle = ar3DCreateHandle(&_cparam);
+}
+//------------------------------------------------------------------------------
+- (void)initCaptureSession
+{
+    // init and configure a AVCaptureSession
+    self.session = [[AVCaptureSession alloc] init];
+    self.session.sessionPreset = AVCaptureSessionPreset640x480;
+ 
+    // select the back camera
+    NSArray *devices = [AVCaptureDevice devices];
+ 
+    for (AVCaptureDevice *device in devices)
+    {
+        if ([device hasMediaType:AVMediaTypeVideo])
+        {
+            if ([device position] == AVCaptureDevicePositionBack)
+            {
+                self.backCamera = device;
+            }
+        }
+    }
+    
+    [self.backCamera lockForConfiguration:NULL];
+    [self.backCamera setActiveVideoMinFrameDuration:CMTimeMake(1.0f, 30.0f)];
+    [self.backCamera unlockForConfiguration];
+ 
+    // create a capture input device
+    NSError* error;
+    self.input = [AVCaptureDeviceInput deviceInputWithDevice:self.backCamera error:&error];
+ 
+    if (!self.input) {
+        NSLog(@"Failed to create capture device input");
+        exit(0);
+    }
+ 
+    if ([self.session canAddInput:self.input]) {
+        [self.session addInput:self.input];
+    } else {
+        NSLog(@"Failed to add input");
+        exit(0);
+    }
+ 
+    // create an output device
+    self.output = [[AVCaptureVideoDataOutput alloc] init];
+    [self.output setAlwaysDiscardsLateVideoFrames:YES]; // Probably want to set this to NO when recording
+    self.output.videoSettings = @{ (NSString *)kCVPixelBufferPixelFormatTypeKey : @(kCVPixelFormatType_420YpCbCr8BiPlanarFullRange) };
+    [self.output setSampleBufferDelegate:self queue:dispatch_get_main_queue()]; // Set dispatch to be on the main thread so OpenGL can do things with the data
+    assert([self.session canAddOutput:self.output]);
+    [self.session addOutput:self.output];
+ 
+    AVCaptureConnection* connection =
+        [self.output connectionWithMediaType:AVMediaTypeVideo];
+ 
+    if ([connection isVideoOrientationSupported])
+    {
+        [connection setVideoOrientation:AVCaptureVideoOrientationPortrait];
+    }
+    else
+    {
+        NSLog(@"Could not set orientation");
+        exit(0);
+    }
+ 
+    // start the session
+    [self.session startRunning];
+}
+//------------------------------------------------------------------------------
 - (void)dealloc
 {    
     [self tearDownGL];
     
-    if ([EAGLContext currentContext] == self.context) {
+    if ([EAGLContext currentContext] == self.context)
+    {
         [EAGLContext setCurrentContext:nil];
     }
 }
-
+//------------------------------------------------------------------------------
 - (void)didReceiveMemoryWarning
 {
     [super didReceiveMemoryWarning];
@@ -141,251 +249,228 @@ GLfloat gCubeVertexData[216] =
 
     // Dispose of any resources that can be recreated.
 }
-
+//------------------------------------------------------------------------------
 - (void)setupGL
 {
     [EAGLContext setCurrentContext:self.context];
     
-    [self loadShaders];
-    
-    self.effect = [[GLKBaseEffect alloc] init];
-    self.effect.light0.enabled = GL_TRUE;
-    self.effect.light0.diffuseColor = GLKVector4Make(1.0f, 0.4f, 0.4f, 1.0f);
-    
-    glEnable(GL_DEPTH_TEST);
-    
+    // set up vao & buffer for our background texture quad
+    glGenBuffers(1, &_buffer);
+    glBindBuffer(GL_ARRAY_BUFFER, _buffer);
+    glBufferData(GL_ARRAY_BUFFER, sizeof(quad), quad, GL_STATIC_DRAW);
+
     glGenVertexArraysOES(1, &_vertexArray);
     glBindVertexArrayOES(_vertexArray);
+    glBindBuffer(GL_ARRAY_BUFFER, _buffer);
+    glEnableVertexAttribArray(0);
+    glVertexAttribPointer(0, 2, GL_FLOAT, GL_FALSE, 0, 0);
     
-    glGenBuffers(1, &_vertexBuffer);
-    glBindBuffer(GL_ARRAY_BUFFER, _vertexBuffer);
-    glBufferData(GL_ARRAY_BUFFER, sizeof(gCubeVertexData), gCubeVertexData, GL_STATIC_DRAW);
+    // create a glsl program for rendering the tex quad
+    self.program = [[GLUEProgram alloc] init];
+    [self.program attachShaderOfType:GL_VERTEX_SHADER FromFile:@"VideoVS.glsl"];
+    [self.program attachShaderOfType:GL_FRAGMENT_SHADER FromFile:@"VideoFS.glsl"];
+    [self.program bindAttribLocation:0 ToVariable:@"pos"];
+    [self.program compile];
+    [self.program bind];
+    [self.program setUniform:@"luminance" WithInt:0];
+    [self.program setUniform:@"chrominance" WithInt:1];
     
-    glEnableVertexAttribArray(GLKVertexAttribPosition);
-    glVertexAttribPointer(GLKVertexAttribPosition, 3, GL_FLOAT, GL_FALSE, 24, BUFFER_OFFSET(0));
-    glEnableVertexAttribArray(GLKVertexAttribNormal);
-    glVertexAttribPointer(GLKVertexAttribNormal, 3, GL_FLOAT, GL_FALSE, 24, BUFFER_OFFSET(12));
+    glGenTextures(1, &_luminanceTex);
+    glBindTexture(GL_TEXTURE_2D, _luminanceTex);
+    glTexParameteri(GL_TEXTURE_2D, GL_TEXTURE_WRAP_S, GL_CLAMP_TO_EDGE);
+    glTexParameteri(GL_TEXTURE_2D, GL_TEXTURE_WRAP_T, GL_CLAMP_TO_EDGE);
+    glTexParameteri(GL_TEXTURE_2D, GL_TEXTURE_MIN_FILTER, GL_LINEAR);
+    glTexParameteri(GL_TEXTURE_2D, GL_TEXTURE_MAG_FILTER, GL_LINEAR);
     
-    glBindVertexArrayOES(0);
+    glTexImage2D(
+        GL_TEXTURE_2D,
+        0, GL_RED_EXT, VIDEO_FRAME_WIDTH, VIDEO_FRAME_HEIGHT, 0,
+        GL_RED_EXT, GL_UNSIGNED_BYTE,
+        NULL
+    );
+    
+    glGenTextures(1, &_chrominanceTex);
+    glBindTexture(GL_TEXTURE_2D, _chrominanceTex);
+    glTexParameteri(GL_TEXTURE_2D, GL_TEXTURE_WRAP_S, GL_CLAMP_TO_EDGE);
+    glTexParameteri(GL_TEXTURE_2D, GL_TEXTURE_WRAP_T, GL_CLAMP_TO_EDGE);
+    glTexParameteri(GL_TEXTURE_2D, GL_TEXTURE_MIN_FILTER, GL_LINEAR);
+    glTexParameteri(GL_TEXTURE_2D, GL_TEXTURE_MAG_FILTER, GL_LINEAR);
+    
+    glTexImage2D(
+        GL_TEXTURE_2D,
+        0, GL_RG_EXT, VIDEO_FRAME_WIDTH/2, VIDEO_FRAME_HEIGHT/2, 0,
+        GL_RG_EXT, GL_UNSIGNED_BYTE,
+        NULL
+    );
+    
+    //
+    // prepare stuff for rendering a cube
+    //
+    glGenBuffers(1, &_cube.buffer);
+    glBindBuffer(GL_ARRAY_BUFFER, _cube.buffer);
+    glBufferData(GL_ARRAY_BUFFER, sizeof(cube), cube, GL_STATIC_DRAW);
+    
+    glGenVertexArraysOES(1, &_cube.vertexArray);
+    glBindVertexArrayOES(_cube.vertexArray);
+    glBindBuffer(GL_ARRAY_BUFFER, _cube.buffer);
+    glEnableVertexAttribArray(0);
+    glVertexAttribPointer(0, 3, GL_FLOAT, GL_FALSE, 0, 0);
+    
+    self.program2 = [[GLUEProgram alloc] init];
+    [self.program2 attachShaderOfType:GL_VERTEX_SHADER FromFile:@"CubeVS.glsl"];
+    [self.program2 attachShaderOfType:GL_FRAGMENT_SHADER FromFile:@"CubeFS.glsl"];
+    [self.program2 bindAttribLocation:0 ToVariable:@"pos"];
+    [self.program2 compile];
+    
+    assert(GL_NO_ERROR == glGetError());
 }
-
+//------------------------------------------------------------------------------
 - (void)tearDownGL
 {
-    [EAGLContext setCurrentContext:self.context];
-    
-    glDeleteBuffers(1, &_vertexBuffer);
     glDeleteVertexArraysOES(1, &_vertexArray);
+    glDeleteBuffers(1, &_buffer);
+    glDeleteTextures(1, &_luminanceTex);
+    glDeleteTextures(1, &_chrominanceTex);
     
-    self.effect = nil;
+    assert(GL_NO_ERROR == glGetError());
+
+    [EAGLContext setCurrentContext:self.context];
+}
+//------------------------------------------------------------------------------
+- (void) captureOutput:(AVCaptureOutput *)captureOutput
+didOutputSampleBuffer:(CMSampleBufferRef)sampleBuffer
+fromConnection:(AVCaptureConnection *)connection
+{
+    CVImageBufferRef imageBuffer = CMSampleBufferGetImageBuffer(sampleBuffer);
+
+    CVPixelBufferLockBaseAddress(imageBuffer, 0);
     
-    if (_program) {
-        glDeleteProgram(_program);
-        _program = 0;
+    //
+    // Process luminance input of the video
+    //
+    uint8_t* baseAddress = (uint8_t *)CVPixelBufferGetBaseAddressOfPlane(
+            imageBuffer, 0
+        );
+    
+    size_t bytesPerRow = CVPixelBufferGetBytesPerRowOfPlane(imageBuffer, 0);
+    size_t width = CVPixelBufferGetWidthOfPlane(imageBuffer, 0);
+    size_t height = CVPixelBufferGetHeightOfPlane(imageBuffer, 0);
+
+    if (NULL == baseAddress
+        || width != VIDEO_FRAME_WIDTH
+        || height != VIDEO_FRAME_HEIGHT
+    )
+    {
+        NSLog(@"Couldnt get image");
+    }
+
+    memcpy(_imgY, baseAddress, VIDEO_FRAME_WIDTH*VIDEO_FRAME_HEIGHT);
+
+    glActiveTexture(GL_TEXTURE0);
+    glBindTexture(GL_TEXTURE_2D, _luminanceTex);
+    
+    glTexSubImage2D(
+        GL_TEXTURE_2D, 0, 0, 0, VIDEO_FRAME_WIDTH, VIDEO_FRAME_HEIGHT,
+        GL_RED_EXT, GL_UNSIGNED_BYTE, baseAddress
+    );
+
+    //
+    // Process chrominance input of the video
+    //
+    baseAddress = (uint8_t *)CVPixelBufferGetBaseAddressOfPlane(imageBuffer, 1);
+    bytesPerRow = CVPixelBufferGetBytesPerRowOfPlane(imageBuffer, 1);
+    width = CVPixelBufferGetWidthOfPlane(imageBuffer, 1);
+    height = CVPixelBufferGetHeightOfPlane(imageBuffer, 1);
+
+    glActiveTexture(GL_TEXTURE1);
+    glBindTexture(GL_TEXTURE_2D, _chrominanceTex);
+    
+    glTexSubImage2D(
+        GL_TEXTURE_2D, 0, 0, 0, VIDEO_FRAME_WIDTH/2, VIDEO_FRAME_HEIGHT/2,
+        GL_RG_EXT, GL_UNSIGNED_BYTE, baseAddress
+    );
+    
+    assert(glGetError() == GL_NO_ERROR);
+    
+    CVPixelBufferUnlockBaseAddress(imageBuffer, 0);
+    
+    [self renderVideo];
+    
+    //
+    //  FIND THE MARKER, MR PROGRAM CODE!!
+    //
+    static int cont = 0;
+    
+    arDetectMarker(_arHandle, _imgY);
+    ARMarkerInfo* markerInfo = arGetMarker(_arHandle);
+    int numMarkers = arGetMarkerNum(_arHandle);
+
+    if (numMarkers  == 0)
+    {
+        cont = 0;
+        return;
+    }
+    
+    float trans[3][4];
+    GLfloat view[16];
+    
+    for (int i = 0; i < numMarkers; i++)
+    {
+        if (_pattId == markerInfo[i].id)
+        {
+            if (cont == 0)
+            {
+                NSLog(@"%d", numMarkers);
+                arGetTransMatSquare(_ar3DHandle, &(markerInfo[i]), 44.0f, trans);
+            }
+            else
+            {
+                arGetTransMatSquareCont(
+                    _ar3DHandle,
+                    &(markerInfo[i]),
+                    trans,
+                    44.0f,
+                    trans
+                );
+            }
+            
+            cont = 1;
+
+            //arg2ConvGlpara(trans, view);
+//            [self renderCube:NULL];
+
+        }
     }
 }
+//------------------------------------------------------------------------------
+- (void)renderVideo
+{
+    glClearColor(0.7, 0.7, 0.7, 1.0);
+    glClear(GL_COLOR_BUFFER_BIT | GL_DEPTH_BUFFER_BIT);
 
-#pragma mark - GLKView and GLKViewController delegate methods
-
+    [self.program bind];
+    glBindVertexArrayOES(_vertexArray);
+    glDrawArrays(GL_TRIANGLES, 0, 6);
+}
+//------------------------------------------------------------------------------
+- (void)renderCube:(GLfloat*)view
+{
+    [self.program2 bind];
+    glBindVertexArrayOES(_cube.vertexArray);
+    glDrawArrays(GL_POINTS, 0, 1);
+}
+//------------------------------------------------------------------------------
 - (void)update
 {
-    float aspect = fabsf(self.view.bounds.size.width / self.view.bounds.size.height);
-    GLKMatrix4 projectionMatrix = GLKMatrix4MakePerspective(GLKMathDegreesToRadians(65.0f), aspect, 0.1f, 100.0f);
-    
-    self.effect.transform.projectionMatrix = projectionMatrix;
-    
-    GLKMatrix4 baseModelViewMatrix = GLKMatrix4MakeTranslation(0.0f, 0.0f, -4.0f);
-    baseModelViewMatrix = GLKMatrix4Rotate(baseModelViewMatrix, _rotation, 0.0f, 1.0f, 0.0f);
-    
-    // Compute the model view matrix for the object rendered with GLKit
-    GLKMatrix4 modelViewMatrix = GLKMatrix4MakeTranslation(0.0f, 0.0f, -1.5f);
-    modelViewMatrix = GLKMatrix4Rotate(modelViewMatrix, _rotation, 1.0f, 1.0f, 1.0f);
-    modelViewMatrix = GLKMatrix4Multiply(baseModelViewMatrix, modelViewMatrix);
-    
-    self.effect.transform.modelviewMatrix = modelViewMatrix;
-    
-    // Compute the model view matrix for the object rendered with ES2
-    modelViewMatrix = GLKMatrix4MakeTranslation(0.0f, 0.0f, 1.5f);
-    modelViewMatrix = GLKMatrix4Rotate(modelViewMatrix, _rotation, 1.0f, 1.0f, 1.0f);
-    modelViewMatrix = GLKMatrix4Multiply(baseModelViewMatrix, modelViewMatrix);
-    
-    _normalMatrix = GLKMatrix3InvertAndTranspose(GLKMatrix4GetMatrix3(modelViewMatrix), NULL);
-    
-    _modelViewProjectionMatrix = GLKMatrix4Multiply(projectionMatrix, modelViewMatrix);
-    
-    _rotation += self.timeSinceLastUpdate * 0.5f;
-}
 
+
+}
+//------------------------------------------------------------------------------
 - (void)glkView:(GLKView *)view drawInRect:(CGRect)rect
 {
-    glClearColor(0.65f, 0.65f, 0.65f, 1.0f);
-    glClear(GL_COLOR_BUFFER_BIT | GL_DEPTH_BUFFER_BIT);
-    
-    glBindVertexArrayOES(_vertexArray);
-    
-    // Render the object with GLKit
-    [self.effect prepareToDraw];
-    
-    glDrawArrays(GL_TRIANGLES, 0, 36);
-    
-    // Render the object again with ES2
-    glUseProgram(_program);
-    
-    glUniformMatrix4fv(uniforms[UNIFORM_MODELVIEWPROJECTION_MATRIX], 1, 0, _modelViewProjectionMatrix.m);
-    glUniformMatrix3fv(uniforms[UNIFORM_NORMAL_MATRIX], 1, 0, _normalMatrix.m);
-    
-    glDrawArrays(GL_TRIANGLES, 0, 36);
+
+
 }
-
-#pragma mark -  OpenGL ES 2 shader compilation
-
-- (BOOL)loadShaders
-{
-    GLuint vertShader, fragShader;
-    NSString *vertShaderPathname, *fragShaderPathname;
-    
-    // Create shader program.
-    _program = glCreateProgram();
-    
-    // Create and compile vertex shader.
-    vertShaderPathname = [[NSBundle mainBundle] pathForResource:@"Shader" ofType:@"vsh"];
-    if (![self compileShader:&vertShader type:GL_VERTEX_SHADER file:vertShaderPathname]) {
-        NSLog(@"Failed to compile vertex shader");
-        return NO;
-    }
-    
-    // Create and compile fragment shader.
-    fragShaderPathname = [[NSBundle mainBundle] pathForResource:@"Shader" ofType:@"fsh"];
-    if (![self compileShader:&fragShader type:GL_FRAGMENT_SHADER file:fragShaderPathname]) {
-        NSLog(@"Failed to compile fragment shader");
-        return NO;
-    }
-    
-    // Attach vertex shader to program.
-    glAttachShader(_program, vertShader);
-    
-    // Attach fragment shader to program.
-    glAttachShader(_program, fragShader);
-    
-    // Bind attribute locations.
-    // This needs to be done prior to linking.
-    glBindAttribLocation(_program, GLKVertexAttribPosition, "position");
-    glBindAttribLocation(_program, GLKVertexAttribNormal, "normal");
-    
-    // Link program.
-    if (![self linkProgram:_program]) {
-        NSLog(@"Failed to link program: %d", _program);
-        
-        if (vertShader) {
-            glDeleteShader(vertShader);
-            vertShader = 0;
-        }
-        if (fragShader) {
-            glDeleteShader(fragShader);
-            fragShader = 0;
-        }
-        if (_program) {
-            glDeleteProgram(_program);
-            _program = 0;
-        }
-        
-        return NO;
-    }
-    
-    // Get uniform locations.
-    uniforms[UNIFORM_MODELVIEWPROJECTION_MATRIX] = glGetUniformLocation(_program, "modelViewProjectionMatrix");
-    uniforms[UNIFORM_NORMAL_MATRIX] = glGetUniformLocation(_program, "normalMatrix");
-    
-    // Release vertex and fragment shaders.
-    if (vertShader) {
-        glDetachShader(_program, vertShader);
-        glDeleteShader(vertShader);
-    }
-    if (fragShader) {
-        glDetachShader(_program, fragShader);
-        glDeleteShader(fragShader);
-    }
-    
-    return YES;
-}
-
-- (BOOL)compileShader:(GLuint *)shader type:(GLenum)type file:(NSString *)file
-{
-    GLint status;
-    const GLchar *source;
-    
-    source = (GLchar *)[[NSString stringWithContentsOfFile:file encoding:NSUTF8StringEncoding error:nil] UTF8String];
-    if (!source) {
-        NSLog(@"Failed to load vertex shader");
-        return NO;
-    }
-    
-    *shader = glCreateShader(type);
-    glShaderSource(*shader, 1, &source, NULL);
-    glCompileShader(*shader);
-    
-#if defined(DEBUG)
-    GLint logLength;
-    glGetShaderiv(*shader, GL_INFO_LOG_LENGTH, &logLength);
-    if (logLength > 0) {
-        GLchar *log = (GLchar *)malloc(logLength);
-        glGetShaderInfoLog(*shader, logLength, &logLength, log);
-        NSLog(@"Shader compile log:\n%s", log);
-        free(log);
-    }
-#endif
-    
-    glGetShaderiv(*shader, GL_COMPILE_STATUS, &status);
-    if (status == 0) {
-        glDeleteShader(*shader);
-        return NO;
-    }
-    
-    return YES;
-}
-
-- (BOOL)linkProgram:(GLuint)prog
-{
-    GLint status;
-    glLinkProgram(prog);
-    
-#if defined(DEBUG)
-    GLint logLength;
-    glGetProgramiv(prog, GL_INFO_LOG_LENGTH, &logLength);
-    if (logLength > 0) {
-        GLchar *log = (GLchar *)malloc(logLength);
-        glGetProgramInfoLog(prog, logLength, &logLength, log);
-        NSLog(@"Program link log:\n%s", log);
-        free(log);
-    }
-#endif
-    
-    glGetProgramiv(prog, GL_LINK_STATUS, &status);
-    if (status == 0) {
-        return NO;
-    }
-    
-    return YES;
-}
-
-- (BOOL)validateProgram:(GLuint)prog
-{
-    GLint logLength, status;
-    
-    glValidateProgram(prog);
-    glGetProgramiv(prog, GL_INFO_LOG_LENGTH, &logLength);
-    if (logLength > 0) {
-        GLchar *log = (GLchar *)malloc(logLength);
-        glGetProgramInfoLog(prog, logLength, &logLength, log);
-        NSLog(@"Program validate log:\n%s", log);
-        free(log);
-    }
-    
-    glGetProgramiv(prog, GL_VALIDATE_STATUS, &status);
-    if (status == 0) {
-        return NO;
-    }
-    
-    return YES;
-}
-
+//------------------------------------------------------------------------------
 @end
+//------------------------------------------------------------------------------

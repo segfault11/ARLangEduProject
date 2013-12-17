@@ -1,0 +1,6 @@
+1. Functional Requirements
+
+2. Non-Functional Requirements
+	2.1 The application is exclusively for the iPad
+	2.2 The resolution of the video feed is 640x480
+	2.3 The device orientation is always assumed to be "Portrait".

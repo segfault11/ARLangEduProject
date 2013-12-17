@@ -7,6 +7,12 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		192FD06E1860706100004EB5 /* patt.hiro in Resources */ = {isa = PBXBuildFile; fileRef = 192FD06D1860706100004EB5 /* patt.hiro */; };
+		192FD070186083F100004EB5 /* CubeVS.glsl in Resources */ = {isa = PBXBuildFile; fileRef = 192FD06F186083F100004EB5 /* CubeVS.glsl */; };
+		192FD0721860844E00004EB5 /* CubeFS.glsl in Resources */ = {isa = PBXBuildFile; fileRef = 192FD0711860844E00004EB5 /* CubeFS.glsl */; };
+		194D91A0185FEB7F00818A48 /* GLUEProgram.m in Sources */ = {isa = PBXBuildFile; fileRef = 194D919F185FEB7F00818A48 /* GLUEProgram.m */; };
+		194D91A2185FEE2C00818A48 /* VideoVS.glsl in Resources */ = {isa = PBXBuildFile; fileRef = 194D91A1185FEE2C00818A48 /* VideoVS.glsl */; };
+		194D91A4185FEE8C00818A48 /* VideoFS.glsl in Resources */ = {isa = PBXBuildFile; fileRef = 194D91A3185FEE8C00818A48 /* VideoFS.glsl */; };
 		19516157185AA2F900887AB6 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 19516156185AA2F900887AB6 /* Foundation.framework */; };
 		19516159185AA2F900887AB6 /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 19516158185AA2F900887AB6 /* CoreGraphics.framework */; };
 		1951615B185AA2F900887AB6 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1951615A185AA2F900887AB6 /* UIKit.framework */; };
@@ -17,8 +23,6 @@
 		1951616B185AA2F900887AB6 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 1951616A185AA2F900887AB6 /* AppDelegate.m */; };
 		1951616E185AA2F900887AB6 /* Main_iPhone.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 1951616C185AA2F900887AB6 /* Main_iPhone.storyboard */; };
 		19516171185AA2F900887AB6 /* Main_iPad.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 1951616F185AA2F900887AB6 /* Main_iPad.storyboard */; };
-		19516173185AA2F900887AB6 /* Shader.fsh in Resources */ = {isa = PBXBuildFile; fileRef = 19516172185AA2F900887AB6 /* Shader.fsh */; };
-		19516175185AA2F900887AB6 /* Shader.vsh in Resources */ = {isa = PBXBuildFile; fileRef = 19516174185AA2F900887AB6 /* Shader.vsh */; };
 		19516178185AA2F900887AB6 /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 19516177185AA2F900887AB6 /* ViewController.m */; };
 		1951617A185AA2F900887AB6 /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 19516179185AA2F900887AB6 /* Images.xcassets */; };
 		19516181185AA2F900887AB6 /* XCTest.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 19516180185AA2F900887AB6 /* XCTest.framework */; };
@@ -26,6 +30,11 @@
 		19516183185AA2F900887AB6 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1951615A185AA2F900887AB6 /* UIKit.framework */; };
 		1951618B185AA2F900887AB6 /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = 19516189185AA2F900887AB6 /* InfoPlist.strings */; };
 		1951618D185AA2F900887AB6 /* ARToolkitTestTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 1951618C185AA2F900887AB6 /* ARToolkitTestTests.m */; };
+		19A0A02C185AD127004DDA29 /* libAR.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 19A0A029185AD127004DDA29 /* libAR.a */; };
+		19A0A02D185AD128004DDA29 /* libGLES2sub.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 19A0A02A185AD127004DDA29 /* libGLES2sub.a */; };
+		19A0A02E185AD128004DDA29 /* libgluES2.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 19A0A02B185AD127004DDA29 /* libgluES2.a */; };
+		19A0A031185AD1C6004DDA29 /* artoolkit.m in Sources */ = {isa = PBXBuildFile; fileRef = 19A0A02F185AD1C6004DDA29 /* artoolkit.m */; };
+		19A0A03C185ADFFA004DDA29 /* camera_para_ipadmini640x480.dat in Resources */ = {isa = PBXBuildFile; fileRef = 19A0A03B185ADFFA004DDA29 /* camera_para_ipadmini640x480.dat */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -39,6 +48,13 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		192FD06D1860706100004EB5 /* patt.hiro */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = patt.hiro; sourceTree = "<group>"; };
+		192FD06F186083F100004EB5 /* CubeVS.glsl */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = CubeVS.glsl; sourceTree = "<group>"; };
+		192FD0711860844E00004EB5 /* CubeFS.glsl */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = CubeFS.glsl; sourceTree = "<group>"; };
+		194D919E185FEB7F00818A48 /* GLUEProgram.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GLUEProgram.h; sourceTree = "<group>"; };
+		194D919F185FEB7F00818A48 /* GLUEProgram.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GLUEProgram.m; sourceTree = "<group>"; };
+		194D91A1185FEE2C00818A48 /* VideoVS.glsl */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = VideoVS.glsl; sourceTree = "<group>"; };
+		194D91A3185FEE8C00818A48 /* VideoFS.glsl */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = VideoFS.glsl; sourceTree = "<group>"; };
 		19516153185AA2F900887AB6 /* ARToolkitTest.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = ARToolkitTest.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		19516156185AA2F900887AB6 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
 		19516158185AA2F900887AB6 /* CoreGraphics.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreGraphics.framework; path = System/Library/Frameworks/CoreGraphics.framework; sourceTree = SDKROOT; };
@@ -53,8 +69,6 @@
 		1951616A185AA2F900887AB6 /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
 		1951616D185AA2F900887AB6 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main_iPhone.storyboard; sourceTree = "<group>"; };
 		19516170185AA2F900887AB6 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main_iPad.storyboard; sourceTree = "<group>"; };
-		19516172185AA2F900887AB6 /* Shader.fsh */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.glsl; name = Shader.fsh; path = Shaders/Shader.fsh; sourceTree = "<group>"; };
-		19516174185AA2F900887AB6 /* Shader.vsh */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.glsl; name = Shader.vsh; path = Shaders/Shader.vsh; sourceTree = "<group>"; };
 		19516176185AA2F900887AB6 /* ViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ViewController.h; sourceTree = "<group>"; };
 		19516177185AA2F900887AB6 /* ViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ViewController.m; sourceTree = "<group>"; };
 		19516179185AA2F900887AB6 /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Images.xcassets; sourceTree = "<group>"; };
@@ -63,6 +77,12 @@
 		19516188185AA2F900887AB6 /* ARToolkitTestTests-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "ARToolkitTestTests-Info.plist"; sourceTree = "<group>"; };
 		1951618A185AA2F900887AB6 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
 		1951618C185AA2F900887AB6 /* ARToolkitTestTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ARToolkitTestTests.m; sourceTree = "<group>"; };
+		19A0A029185AD127004DDA29 /* libAR.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; name = libAR.a; path = ../../../../../../../Libraries/ARToolKit/ARToolkit/lib/libAR.a; sourceTree = "<group>"; };
+		19A0A02A185AD127004DDA29 /* libGLES2sub.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; name = libGLES2sub.a; path = ../../../../../../../Libraries/ARToolKit/ARToolkit/lib/libGLES2sub.a; sourceTree = "<group>"; };
+		19A0A02B185AD127004DDA29 /* libgluES2.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; name = libgluES2.a; path = ../../../../../../../Libraries/ARToolKit/ARToolkit/lib/libgluES2.a; sourceTree = "<group>"; };
+		19A0A02F185AD1C6004DDA29 /* artoolkit.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = artoolkit.m; sourceTree = "<group>"; };
+		19A0A030185AD1C6004DDA29 /* artoolkit.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = artoolkit.h; sourceTree = "<group>"; };
+		19A0A03B185ADFFA004DDA29 /* camera_para_ipadmini640x480.dat */ = {isa = PBXFileReference; lastKnownFileType = file; path = camera_para_ipadmini640x480.dat; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -70,7 +90,10 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				19A0A02C185AD127004DDA29 /* libAR.a in Frameworks */,
+				19A0A02D185AD128004DDA29 /* libGLES2sub.a in Frameworks */,
 				1951615F185AA2F900887AB6 /* OpenGLES.framework in Frameworks */,
+				19A0A02E185AD128004DDA29 /* libgluES2.a in Frameworks */,
 				19516159185AA2F900887AB6 /* CoreGraphics.framework in Frameworks */,
 				1951615B185AA2F900887AB6 /* UIKit.framework in Frameworks */,
 				1951615D185AA2F900887AB6 /* GLKit.framework in Frameworks */,
@@ -113,6 +136,9 @@
 		19516155185AA2F900887AB6 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				19A0A029185AD127004DDA29 /* libAR.a */,
+				19A0A02A185AD127004DDA29 /* libGLES2sub.a */,
+				19A0A02B185AD127004DDA29 /* libgluES2.a */,
 				19516156185AA2F900887AB6 /* Foundation.framework */,
 				19516158185AA2F900887AB6 /* CoreGraphics.framework */,
 				1951615A185AA2F900887AB6 /* UIKit.framework */,
@@ -126,16 +152,24 @@
 		19516160185AA2F900887AB6 /* ARToolkitTest */ = {
 			isa = PBXGroup;
 			children = (
+				192FD06D1860706100004EB5 /* patt.hiro */,
+				194D919E185FEB7F00818A48 /* GLUEProgram.h */,
+				194D919F185FEB7F00818A48 /* GLUEProgram.m */,
+				19A0A03B185ADFFA004DDA29 /* camera_para_ipadmini640x480.dat */,
+				19A0A02F185AD1C6004DDA29 /* artoolkit.m */,
+				19A0A030185AD1C6004DDA29 /* artoolkit.h */,
 				19516169185AA2F900887AB6 /* AppDelegate.h */,
 				1951616A185AA2F900887AB6 /* AppDelegate.m */,
 				1951616C185AA2F900887AB6 /* Main_iPhone.storyboard */,
 				1951616F185AA2F900887AB6 /* Main_iPad.storyboard */,
-				19516172185AA2F900887AB6 /* Shader.fsh */,
-				19516174185AA2F900887AB6 /* Shader.vsh */,
 				19516176185AA2F900887AB6 /* ViewController.h */,
 				19516177185AA2F900887AB6 /* ViewController.m */,
 				19516179185AA2F900887AB6 /* Images.xcassets */,
 				19516161185AA2F900887AB6 /* Supporting Files */,
+				194D91A1185FEE2C00818A48 /* VideoVS.glsl */,
+				194D91A3185FEE8C00818A48 /* VideoFS.glsl */,
+				192FD06F186083F100004EB5 /* CubeVS.glsl */,
+				192FD0711860844E00004EB5 /* CubeFS.glsl */,
 			);
 			path = ARToolkitTest;
 			sourceTree = "<group>";
@@ -245,12 +279,16 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				19516173185AA2F900887AB6 /* Shader.fsh in Resources */,
 				19516171185AA2F900887AB6 /* Main_iPad.storyboard in Resources */,
 				1951616E185AA2F900887AB6 /* Main_iPhone.storyboard in Resources */,
+				192FD06E1860706100004EB5 /* patt.hiro in Resources */,
+				19A0A03C185ADFFA004DDA29 /* camera_para_ipadmini640x480.dat in Resources */,
+				194D91A2185FEE2C00818A48 /* VideoVS.glsl in Resources */,
+				192FD070186083F100004EB5 /* CubeVS.glsl in Resources */,
+				194D91A4185FEE8C00818A48 /* VideoFS.glsl in Resources */,
 				1951617A185AA2F900887AB6 /* Images.xcassets in Resources */,
 				19516165185AA2F900887AB6 /* InfoPlist.strings in Resources */,
-				19516175185AA2F900887AB6 /* Shader.vsh in Resources */,
+				192FD0721860844E00004EB5 /* CubeFS.glsl in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -270,7 +308,9 @@
 			buildActionMask = 2147483647;
 			files = (
 				19516178185AA2F900887AB6 /* ViewController.m in Sources */,
+				19A0A031185AD1C6004DDA29 /* artoolkit.m in Sources */,
 				1951616B185AA2F900887AB6 /* AppDelegate.m in Sources */,
+				194D91A0185FEB7F00818A48 /* GLUEProgram.m in Sources */,
 				19516167185AA2F900887AB6 /* main.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -406,12 +446,18 @@
 		19516191185AA2F900887AB6 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = YES;
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "ARToolkitTest/ARToolkitTest-Prefix.pch";
 				INFOPLIST_FILE = "ARToolkitTest/ARToolkitTest-Info.plist";
+				LIBRARY_SEARCH_PATHS = (
+					"/Users/scatterbrain/Documents/Libraries/ARToolKit/ARToolkit/lib/**",
+					/Users/scatterbrain/Documents/Libraries/ARToolKit/ARToolkit/lib,
+				);
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				USER_HEADER_SEARCH_PATHS = "/Users/scatterbrain/Documents/Libraries/ARToolKit/ARToolkit/include/**";
 				WRAPPER_EXTENSION = app;
 			};
 			name = Debug;
@@ -419,12 +465,19 @@
 		19516192185AA2F900887AB6 /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = YES;
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "ARToolkitTest/ARToolkitTest-Prefix.pch";
 				INFOPLIST_FILE = "ARToolkitTest/ARToolkitTest-Info.plist";
+				LIBRARY_SEARCH_PATHS = (
+					"/Users/scatterbrain/Documents/Libraries/ARToolKit/ARToolkit/lib/**",
+					/Users/scatterbrain/Documents/Libraries/ARToolKit/ARToolkit/lib,
+				);
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				USER_HEADER_SEARCH_PATHS = "/Users/scatterbrain/Documents/Libraries/ARToolKit/ARToolkit/include/**";
+				"USER_HEADER_SEARCH_PATHS[arch=*]" = "/Users/scatterbrain/Documents/Libraries/ARToolKit/ARToolkit/include/**";
 				WRAPPER_EXTENSION = app;
 			};
 			name = Release;
@@ -490,6 +543,7 @@
 				19516192185AA2F900887AB6 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		19516193185AA2F900887AB6 /* Build configuration list for PBXNativeTarget "ARToolkitTestTests" */ = {
 			isa = XCConfigurationList;
@@ -498,6 +552,7 @@
 				19516195185AA2F900887AB6 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};

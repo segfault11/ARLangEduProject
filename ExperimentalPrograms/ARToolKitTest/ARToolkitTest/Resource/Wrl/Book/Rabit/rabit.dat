@@ -1,0 +1,5 @@
+rabit.wrl
+TRANSLATION	0.0 10.0 -15.0		# Translation
+TRANSLATION	80.0 200.0 10.0		# Translation
+ROTATION	90.0 0.7 0.0 0.0	# Rotation
+SCALE		60 60 60		# Scale
