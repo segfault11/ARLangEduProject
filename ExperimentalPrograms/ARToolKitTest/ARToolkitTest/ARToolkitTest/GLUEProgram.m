@@ -217,4 +217,17 @@
     glUniformMatrix4fv(loc, 1, GL_FALSE, v);
 }
 
+- (void)setUniform:(NSString*)name WithMat4:(const float*)v AndTranspose:(GLboolean) transposed
+{
+    [self bind];
+    GLint loc = glGetUniformLocation(_program, (const char*)[name UTF8String]);
+    
+    if (-1 == loc) {
+        NSLog(@"Could not find location");
+        return;
+    }
+    
+    glUniformMatrix4fv(loc, 1, transposed, v);
+}
+
 @end

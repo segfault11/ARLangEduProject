@@ -15,8 +15,8 @@
 #import <assert.h>
 #import "GLUEProgram.h"
 //------------------------------------------------------------------------------
-#define VIDEO_FRAME_WIDTH 480
-#define VIDEO_FRAME_HEIGHT 640
+#define VIDEO_FRAME_WIDTH 640
+#define VIDEO_FRAME_HEIGHT 480
 //------------------------------------------------------------------------------
 static float quad[] = {
         -1.0f, 1.0f,
@@ -28,10 +28,59 @@ static float quad[] = {
         -1.0f, -1.0f
     };
 //------------------------------------------------------------------------------
-static float cube[] =
-    {
-        0.0f, 0.0f, 0.0f
+static float cube[] = {
+        1.0, -1.0, -1.0,
+        1.0, -1.0,  1.0,
+        -1.0, -1.0,  1.0,
+        -1.0,  -1.0,  -1.0,
+        1.0,  1.0, -1.0,
+        1.0, 1.0, 1.0,
+        -1.0, 1.0, 1.0,
+        -1.0,  1.0, -1.0
     };
+//------------------------------------------------------------------------------
+//static float cube[] = {
+//        1.0, -1.0, -1.0,
+//        1.0, -1.0,  1.0,
+//        -1.0, -1.0,  1.0,
+//        -1.0,  -1.0,  -1.0,
+//        1.0,  1.0, -1.0,
+//        1.0, 1.0, 1.0,
+//        -1.0, 1.0, 1.0,
+//        -1.0,  1.0, -1.0
+//    };
+//------------------------------------------------------------------------------
+//static float cube[] = {
+//        0.0, 0.0, 0.0,
+//        1.0, 0.0, 0.0,
+//        0.0, 1.0, 0.0,
+//        0.0, 0.0, 0.0,
+//        -1.0, 0.0, 0.0,
+//        0.0, -1.0, 0.0,
+//        0.0, 0.0, 0.0,
+//        0.0, 0.0, 0.0
+//    };
+//------------------------------------------------------------------------------
+static GLushort cubeIndices[] = {
+        4, 7, 6,
+        0, 4, 5,
+        1, 5, 2,
+        2, 6, 3,
+        4, 0, 3,
+        5, 4, 6,
+        1, 0, 5,
+        5, 6, 2,
+        6, 7, 3,
+        7, 4, 3,
+        0, 1, 2,
+        3, 0, 2
+    };
+//------------------------------------------------------------------------------
+static void arg2ConvGLcpara(
+    ARParam *cparam,
+    ARG2ClipPlane clipPlane,
+    GLfloat m[16]
+);
 //------------------------------------------------------------------------------
 @interface ViewController ()
 {
@@ -46,11 +95,13 @@ static float cube[] =
     int _pattId;
     ARUint8 _imgY[VIDEO_FRAME_WIDTH*VIDEO_FRAME_HEIGHT];
     AR3DHandle* _ar3DHandle;
+    GLfloat _proj[16];
     
     struct
     {
         GLuint vertexArray;
         GLuint buffer;
+        GLuint indexBuffer;
     }
     _cube;
 }
@@ -67,7 +118,7 @@ static float cube[] =
 - (void)initCaptureSession;
 - (void)tearDownGL;
 - (void)renderVideo;
-- (void)renderCube:(GLfloat*)view;
+- (void)renderCubeWithView:(GLfloat*)view AndProjection:(GLfloat*)proj;
 @end
 //------------------------------------------------------------------------------
 @implementation ViewController
@@ -89,6 +140,18 @@ static float cube[] =
     [self setupGL];
     [self initMarkerDetection];
     [self initCaptureSession];
+    
+    
+//    [super viewDidAppear:animated];
+
+    UIApplication* application = [UIApplication sharedApplication];
+
+    if (application.statusBarOrientation != UIInterfaceOrientationPortrait)
+    {
+        UIViewController *c = [[UIViewController alloc]init];
+        [self presentModalViewController:c animated:NO];
+        [self dismissModalViewControllerAnimated:NO];
+    }
 }
 //------------------------------------------------------------------------------
 - (void)initMarkerDetection
@@ -96,7 +159,6 @@ static float cube[] =
     //
     //  Set up AR Toolkit
     //
-
 
     // load camera parameters
     NSString* path = [[[NSBundle mainBundle] resourcePath]
@@ -114,7 +176,8 @@ static float cube[] =
         VIDEO_FRAME_HEIGHT,
         &_cparam
     );
-    arParamDisp( &_cparam );
+    
+    arParamDisp(&_cparam);
 
     _cparamLT = arParamLTCreate(&_cparam, AR_PARAM_LT_DEFAULT_OFFSET);
     _arHandle = arCreateHandle(_cparamLT);
@@ -155,6 +218,12 @@ static float cube[] =
     //  Create a 3D handle
     //
     _ar3DHandle = ar3DCreateHandle(&_cparam);
+    
+    // prepare projection matrix
+    ARG2ClipPlane clip;
+    clip.nearClip = 0.01f;
+    clip.farClip = 10000.0f;
+    arg2ConvGLcpara(&_cparam, clip, _proj);
 }
 //------------------------------------------------------------------------------
 - (void)initCaptureSession
@@ -205,19 +274,19 @@ static float cube[] =
     assert([self.session canAddOutput:self.output]);
     [self.session addOutput:self.output];
  
-    AVCaptureConnection* connection =
-        [self.output connectionWithMediaType:AVMediaTypeVideo];
+//    AVCaptureConnection* connection =
+//        [self.output connectionWithMediaType:AVMediaTypeVideo];
  
-    if ([connection isVideoOrientationSupported])
-    {
-        [connection setVideoOrientation:AVCaptureVideoOrientationPortrait];
-    }
-    else
-    {
-        NSLog(@"Could not set orientation");
-        exit(0);
-    }
- 
+//    if ([connection isVideoOrientationSupported])
+//    {
+//        [connection setVideoOrientation:AVCaptureVideoOrientationPortrait];
+//    }
+//    else
+//    {
+//        NSLog(@"Could not set orientation");
+//        exit(0);
+//    }
+// 
     // start the session
     [self.session startRunning];
 }
@@ -253,6 +322,10 @@ static float cube[] =
 - (void)setupGL
 {
     [EAGLContext setCurrentContext:self.context];
+    
+    //
+    // Prepare OpenGL stuff for rendering the video
+    //
     
     // set up vao & buffer for our background texture quad
     glGenBuffers(1, &_buffer);
@@ -310,11 +383,22 @@ static float cube[] =
     glBindBuffer(GL_ARRAY_BUFFER, _cube.buffer);
     glBufferData(GL_ARRAY_BUFFER, sizeof(cube), cube, GL_STATIC_DRAW);
     
+    glGenBuffers(1, &_cube.indexBuffer);
+    glBindBuffer(GL_ELEMENT_ARRAY_BUFFER, _cube.indexBuffer);
+
+    glBufferData(
+        GL_ELEMENT_ARRAY_BUFFER,
+        sizeof(cubeIndices),
+        cubeIndices,
+        GL_STATIC_DRAW
+    );
+    
     glGenVertexArraysOES(1, &_cube.vertexArray);
     glBindVertexArrayOES(_cube.vertexArray);
     glBindBuffer(GL_ARRAY_BUFFER, _cube.buffer);
     glEnableVertexAttribArray(0);
     glVertexAttribPointer(0, 3, GL_FLOAT, GL_FALSE, 0, 0);
+    glBindBuffer(GL_ELEMENT_ARRAY_BUFFER, _cube.indexBuffer);
     
     self.program2 = [[GLUEProgram alloc] init];
     [self.program2 attachShaderOfType:GL_VERTEX_SHADER FromFile:@"CubeVS.glsl"];
@@ -355,6 +439,8 @@ fromConnection:(AVCaptureConnection *)connection
     size_t bytesPerRow = CVPixelBufferGetBytesPerRowOfPlane(imageBuffer, 0);
     size_t width = CVPixelBufferGetWidthOfPlane(imageBuffer, 0);
     size_t height = CVPixelBufferGetHeightOfPlane(imageBuffer, 0);
+
+    
 
     if (NULL == baseAddress
         || width != VIDEO_FRAME_WIDTH
@@ -405,13 +491,13 @@ fromConnection:(AVCaptureConnection *)connection
     ARMarkerInfo* markerInfo = arGetMarker(_arHandle);
     int numMarkers = arGetMarkerNum(_arHandle);
 
-    if (numMarkers  == 0)
+    if (numMarkers == 0)
     {
         cont = 0;
         return;
     }
     
-    float trans[3][4];
+    static float trans[3][4];
     GLfloat view[16];
     
     for (int i = 0; i < numMarkers; i++)
@@ -419,9 +505,14 @@ fromConnection:(AVCaptureConnection *)connection
         if (_pattId == markerInfo[i].id)
         {
             if (cont == 0)
+//            if (true)
             {
-                NSLog(@"%d", numMarkers);
-                arGetTransMatSquare(_ar3DHandle, &(markerInfo[i]), 44.0f, trans);
+                arGetTransMatSquare(
+                    _ar3DHandle,
+                    &(markerInfo[i]),
+                    40.0f,
+                    trans
+                );
             }
             else
             {
@@ -429,18 +520,21 @@ fromConnection:(AVCaptureConnection *)connection
                     _ar3DHandle,
                     &(markerInfo[i]),
                     trans,
-                    44.0f,
+                    40.0f,
                     trans
                 );
             }
             
             cont = 1;
-
-            //arg2ConvGlpara(trans, view);
-//            [self renderCube:NULL];
-
+            
+            // prepare view matrix
+            arg2ConvGlpara(trans, view);
+            
+            [self renderCubeWithView:view AndProjection:_proj];
         }
     }
+    
+    assert(glGetError() == GL_NO_ERROR);
 }
 //------------------------------------------------------------------------------
 - (void)renderVideo
@@ -453,11 +547,33 @@ fromConnection:(AVCaptureConnection *)connection
     glDrawArrays(GL_TRIANGLES, 0, 6);
 }
 //------------------------------------------------------------------------------
-- (void)renderCube:(GLfloat*)view
+- (void)renderCubeWithView:(GLfloat*)view AndProjection:(GLfloat*)proj;
 {
+    assert(glGetError() == GL_NO_ERROR);
+
+    glClear(GL_DEPTH_BUFFER_BIT);
+    
     [self.program2 bind];
+    [self.program2 setUniform:@"P" WithMat4:proj];
+    [self.program2 setUniform:@"V" WithMat4:view];
+
+    GLint err = glGetError();
+ 
+    if (err != GL_NO_ERROR)
+    {
+        NSLog(@"err %d", err);
+    
+        exit(0);
+    }
+
+    assert(glGetError() == GL_NO_ERROR);
+
     glBindVertexArrayOES(_cube.vertexArray);
-    glDrawArrays(GL_POINTS, 0, 1);
+//    glDrawArrays(GL_POINTS, 0, 1);
+//    glDrawElements(GL_TRIANGLES, 36, GL_UNSIGNED_SHORT, NULL);
+    glDrawElements(GL_POINTS, 36, GL_UNSIGNED_SHORT, NULL);
+    assert(glGetError() == GL_NO_ERROR);
+    
 }
 //------------------------------------------------------------------------------
 - (void)update
@@ -472,5 +588,94 @@ fromConnection:(AVCaptureConnection *)connection
 
 }
 //------------------------------------------------------------------------------
+//- (NSUInteger)supportedInterfaceOrientations
+//{
+//    return UIInterfaceOrientationMaskLandscapeLeft;
+//}
+//------------------------------------------------------------------------------
 @end
+//------------------------------------------------------------------------------
+void arg2ConvGLcpara(ARParam *cparam, ARG2ClipPlane clipPlane, GLfloat m[16])
+{
+    float   icpara[3][4];
+    float   trans[3][4];
+    float   p[3][3], q[4][4];
+    float   farClip, nearClip;
+    int      width, height;
+    int      i, j;
+    
+    width  = cparam->xsize;
+    height = cparam->ysize;
+    farClip    = clipPlane.farClip;
+    nearClip   = clipPlane.nearClip;
+    
+    if( arParamDecompMat(cparam->mat, icpara, trans) < 0 )
+    {
+        exit(0);
+    }
+    
+    for( i = 0; i < 4; i++ ) {
+        icpara[1][i] = (height-1)*(icpara[2][i]) - icpara[1][i];
+    }
+    
+    
+    for( i = 0; i < 3; i++ ) {
+        for( j = 0; j < 3; j++ ) {
+            p[i][j] = icpara[i][j] / icpara[2][2];
+        }
+    }
+#if 0
+    q[0][0] = (2.0 * p[0][0] / (width-1));
+    q[0][1] = (2.0 * p[0][1] / (width-1));
+    q[0][2] = ((2.0 * p[0][2] / (width-1))  - 1.0);
+    q[0][3] = 0.0;
+    
+    q[1][0] = 0.0;
+    q[1][1] = (2.0 * p[1][1] / (height-1));
+    q[1][2] = ((2.0 * p[1][2] / (height-1)) - 1.0);
+    q[1][3] = 0.0;
+    
+    q[2][0] = 0.0;
+    q[2][1] = 0.0;
+    q[2][2] = (farClip + nearClip)/(farClip - nearClip);
+    q[2][3] = -2.0 * farClip * nearClip / (farClip - nearClip);
+    
+    q[3][0] = 0.0;
+    q[3][1] = 0.0;
+    q[3][2] = 1.0;
+    q[3][3] = 0.0;
+#else
+    q[0][0] =  (2.0 * p[0][0] / (width-1));
+    q[0][1] = -(2.0 * p[0][1] / (width-1));
+    q[0][2] = -((2.0 * p[0][2] / (width-1))  - 1.0);
+    q[0][3] =  0.0;
+    
+    q[1][0] = 0.0;
+    q[1][1] = -(2.0 * p[1][1] / (height-1));
+    q[1][2] = -((2.0 * p[1][2] / (height-1)) - 1.0);
+    q[1][3] =  0.0;
+    
+    q[2][0] =  0.0;
+    q[2][1] =  0.0;
+    q[2][2] = -(farClip + nearClip)/(farClip - nearClip);
+    q[2][3] = -2.0 * farClip * nearClip / (farClip - nearClip);
+    
+    q[3][0] =  0.0;
+    q[3][1] =  0.0;
+    q[3][2] = -1.0;
+    q[3][3] =  0.0;
+#endif
+    
+    for( i = 0; i < 4; i++ ) {
+        for( j = 0; j < 3; j++ ) {
+            m[i+j*4] = q[i][0] * trans[0][j]
+            + q[i][1] * trans[1][j]
+            + q[i][2] * trans[2][j];
+        }
+        m[i+3*4] = q[i][0] * trans[0][3]
+        + q[i][1] * trans[1][3]
+        + q[i][2] * trans[2][3]
+        + q[i][3];
+    }
+}
 //------------------------------------------------------------------------------
