@@ -1,0 +1,31 @@
+0. Notes
+	Document is incomplete.
+
+1. File Format
+	All entities are stored in the JSON file format.
+
+2. Entities
+
+2.1 Sprite
+	Sprites are stored in the "Sprites.json" file.
+	
+	A Sprite entity is defined as
+
+	TYPE 	NAME 			COMMENT 
+	======  =============== ==================================================
+	int 	id 				id of the sprite.
+	int     spriteSheet 	reference to a sprite sheet.
+	int  	frame 			frame of the sprite sheet that is shown.
+	float   size 			size of the sprite.
+
+
+2.2 Sprite Sheet
+	Sprite sheets are stored in the "SpriteSheets.json" file.
+
+	A Sprite sheet is defined by
+
+	TYPE 	NAME 		COMMENT
+	======  ==========  ======================================================
+	int 	id 			id of the sprite sheet
+	string 	filename 	filename of the sprite sheet
+	int 	numFrames 	number of the frames in the sprite sheet

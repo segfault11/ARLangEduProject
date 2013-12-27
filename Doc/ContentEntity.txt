@@ -1,0 +1,6 @@
+- marker filename
+- verb
+- animation filename
+- animation world coordinates
+- translation
+- sound filename
