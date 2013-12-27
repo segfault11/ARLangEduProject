@@ -13,6 +13,7 @@
 #import <GLKit/GLKit.h>
 #import "GLUEProgram.h"
 #import <assert.h>
+#import "AnimationManager.h"
 //------------------------------------------------------------------------------
 static float quad[] = {
         -1.0f, 1.0f,
@@ -143,6 +144,19 @@ static float quad[] = {
 //------------------------------------------------------------------------------
 - (void)renderSpriteWithId:(int)id
 {
+    static float elapsed = 0.0;
+    static float prevId = -1;
+    
+    if (prevId == id)
+    {
+        elapsed += 0.02;
+    }
+    else
+    {
+        elapsed = 0.0;
+    }
+    
+
     Sprite* s = [[SpriteManager instance] getSpriteWithId:id];
 
     if (!s)
@@ -160,6 +174,14 @@ static float quad[] = {
         exit(0);
     }
 
+    Animation* a = [[AnimationManager instance] getAnimationWithId:s.animation];
+    
+    if (!a)
+    {
+        NSLog(@"Animation not found. s.animation = %d", s.animation);
+        exit(0);
+    }
+
     GLKTextureInfo* texInfo = [self.sheetTextures
         objectForKey:[NSNumber numberWithInt:ss.id]];
 
@@ -168,6 +190,9 @@ static float quad[] = {
     float asp = texInfo.width/(texInfo.height*ss.numFrames);
     [self.program setUniform:@"frameAspect" WithFloat:asp];
     [self.program setUniform:@"numFrames" WithInt:ss.numFrames];
+    
+    int currentFrame = ((int)(elapsed/a.duration*ss.numFrames) + s.frame)% ss.numFrames;
+    [self.program setUniform:@"curFrame" WithInt:currentFrame];
     
     if (!texInfo)
     {
@@ -185,6 +210,8 @@ static float quad[] = {
     glDrawArrays(GL_TRIANGLES, 0, 6);
 
     assert(GL_NO_ERROR == glGetError());
+    
+    prevId = id;
 }
 //------------------------------------------------------------------------------
 @end

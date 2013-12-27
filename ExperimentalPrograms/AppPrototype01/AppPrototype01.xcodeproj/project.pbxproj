@@ -53,6 +53,9 @@
 		19622C81186D486F00C600F2 /* SpriteSheet00.png in Resources */ = {isa = PBXBuildFile; fileRef = 19622C80186D486F00C600F2 /* SpriteSheet00.png */; };
 		19622C86186D5FDD00C600F2 /* SpriteRendererVS.glsl in Resources */ = {isa = PBXBuildFile; fileRef = 19622C85186D5FDD00C600F2 /* SpriteRendererVS.glsl */; };
 		19622C88186D607A00C600F2 /* SpriteRendererFS.glsl in Resources */ = {isa = PBXBuildFile; fileRef = 19622C87186D607A00C600F2 /* SpriteRendererFS.glsl */; };
+		19622C8B186D74DC00C600F2 /* Animation.m in Sources */ = {isa = PBXBuildFile; fileRef = 19622C8A186D74DC00C600F2 /* Animation.m */; };
+		19622C8D186D759000C600F2 /* Animations.json in Resources */ = {isa = PBXBuildFile; fileRef = 19622C8C186D759000C600F2 /* Animations.json */; };
+		19622C90186D760D00C600F2 /* AnimationManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 19622C8F186D760D00C600F2 /* AnimationManager.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -130,6 +133,11 @@
 		19622C80186D486F00C600F2 /* SpriteSheet00.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = SpriteSheet00.png; sourceTree = "<group>"; };
 		19622C85186D5FDD00C600F2 /* SpriteRendererVS.glsl */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = SpriteRendererVS.glsl; sourceTree = "<group>"; };
 		19622C87186D607A00C600F2 /* SpriteRendererFS.glsl */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = SpriteRendererFS.glsl; sourceTree = "<group>"; };
+		19622C89186D74DC00C600F2 /* Animation.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Animation.h; sourceTree = "<group>"; };
+		19622C8A186D74DC00C600F2 /* Animation.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Animation.m; sourceTree = "<group>"; };
+		19622C8C186D759000C600F2 /* Animations.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = Animations.json; sourceTree = "<group>"; };
+		19622C8E186D760D00C600F2 /* AnimationManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AnimationManager.h; sourceTree = "<group>"; };
+		19622C8F186D760D00C600F2 /* AnimationManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AnimationManager.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -307,6 +315,8 @@
 				19284FE3186C154C00617DEB /* Sprite.m */,
 				19622C77186D411C00C600F2 /* SpriteSheet.h */,
 				19622C78186D411C00C600F2 /* SpriteSheet.m */,
+				19622C89186D74DC00C600F2 /* Animation.h */,
+				19622C8A186D74DC00C600F2 /* Animation.m */,
 			);
 			name = Entities;
 			sourceTree = "<group>";
@@ -320,6 +330,8 @@
 				19284FE7186C1EBE00617DEB /* SpriteManager.m */,
 				19622C7A186D41F100C600F2 /* SpriteSheetManager.h */,
 				19622C7B186D41F100C600F2 /* SpriteSheetManager.m */,
+				19622C8E186D760D00C600F2 /* AnimationManager.h */,
+				19622C8F186D760D00C600F2 /* AnimationManager.m */,
 			);
 			name = Manager;
 			sourceTree = "<group>";
@@ -329,6 +341,7 @@
 			children = (
 				19622C72186D30A500C600F2 /* Sprites.json */,
 				19622C7D186D420A00C600F2 /* SpriteSheets.json */,
+				19622C8C186D759000C600F2 /* Animations.json */,
 			);
 			name = Entities;
 			sourceTree = "<group>";
@@ -460,6 +473,7 @@
 				1918501B186BCE4E007B53A8 /* CubeFS.glsl in Resources */,
 				1918501F186BCE4E007B53A8 /* VideoVS.glsl in Resources */,
 				1918501C186BCE4E007B53A8 /* CubeVS.glsl in Resources */,
+				19622C8D186D759000C600F2 /* Animations.json in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -487,6 +501,8 @@
 				1918501D186BCE4E007B53A8 /* GLUEProgram.m in Sources */,
 				19184FD7186BCA75007B53A8 /* AppDelegate.m in Sources */,
 				19185020186BCE4E007B53A8 /* ViewController.m in Sources */,
+				19622C8B186D74DC00C600F2 /* Animation.m in Sources */,
+				19622C90186D760D00C600F2 /* AnimationManager.m in Sources */,
 				1918500E186BCAF6007B53A8 /* ProfileManager.m in Sources */,
 				19622C7C186D41F100C600F2 /* SpriteSheetManager.m in Sources */,
 				1918500C186BCAF6007B53A8 /* NavigationViewController.m in Sources */,

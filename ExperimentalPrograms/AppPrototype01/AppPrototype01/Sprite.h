@@ -13,6 +13,7 @@
     int _id;
     int _spriteSheet;
     int _frame;
+    int _animation;
 }
-@property int id, spriteSheet, frame;
+@property int id, spriteSheet, frame, animation;
 @end
