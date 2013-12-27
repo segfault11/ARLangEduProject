@@ -7,6 +7,7 @@
 //
 
 #import "IntroductionViewController.h"
+#import "SpriteSheetManager.h"
 
 @interface IntroductionViewController ()
 @property (weak, nonatomic) IBOutlet UILabel *introductionText;
@@ -32,6 +33,8 @@
 	// Do any additional setup after loading the view.
     self.introductionText.text = @"Here are some instructions (m.b. screen shots) on\nhow\nto\nuse\nthis\napp";
     self.introductionText.numberOfLines = 0;
+    
+    [SpriteSheetManager instance];
 }
 
 - (void)didReceiveMemoryWarning

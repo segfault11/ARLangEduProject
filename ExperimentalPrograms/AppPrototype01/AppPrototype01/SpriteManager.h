@@ -11,4 +11,5 @@
 
 @interface SpriteManager : NSObject
 + (SpriteManager*)instance;
+- (Sprite*)getSpriteWithId:(int)id;
 @end

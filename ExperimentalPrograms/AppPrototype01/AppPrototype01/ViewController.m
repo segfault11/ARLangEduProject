@@ -13,6 +13,7 @@
 #import <assert.h>
 #import <CoreVideo/CVOpenGLESTextureCache.h>
 #import <assert.h>
+#import "SpriteRenderer.h"
 #import "GLUEProgram.h"
 //------------------------------------------------------------------------------
 #define VIDEO_FRAME_WIDTH 640
@@ -107,6 +108,7 @@ static void arg2ConvGLcpara(
     }
     _cube;
 }
+@property(nonatomic, strong) SpriteRenderer* spriteRenderer;
 @property(nonatomic, strong) GLUEProgram* program;
 @property(nonatomic, strong) GLUEProgram* program2;
 @property(nonatomic, strong) AVCaptureSession* session;
@@ -142,6 +144,7 @@ static void arg2ConvGLcpara(
     [self setupGL];
     [self initMarkerDetection];
     [self initCaptureSession];
+    self.spriteRenderer = [[SpriteRenderer alloc] init];
 }
 //------------------------------------------------------------------------------
 - (void)initMarkerDetection
@@ -267,20 +270,7 @@ static void arg2ConvGLcpara(
     [self.output setSampleBufferDelegate:self queue:dispatch_get_main_queue()]; // Set dispatch to be on the main thread so OpenGL can do things with the data
     assert([self.session canAddOutput:self.output]);
     [self.session addOutput:self.output];
- 
-//    AVCaptureConnection* connection =
-//        [self.output connectionWithMediaType:AVMediaTypeVideo];
- 
-//    if ([connection isVideoOrientationSupported])
-//    {
-//        [connection setVideoOrientation:AVCaptureVideoOrientationPortrait];
-//    }
-//    else
-//    {
-//        NSLog(@"Could not set orientation");
-//        exit(0);
-//    }
-// 
+
     // start the session
     [self.session startRunning];
 }
@@ -400,6 +390,8 @@ static void arg2ConvGLcpara(
     [self.program2 bindAttribLocation:0 ToVariable:@"pos"];
     [self.program2 compile];
     
+    glDisable(GL_DEPTH_TEST);
+    
     assert(GL_NO_ERROR == glGetError());
 }
 //------------------------------------------------------------------------------
@@ -475,60 +467,62 @@ fromConnection:(AVCaptureConnection *)connection
     CVPixelBufferUnlockBaseAddress(imageBuffer, 0);
     
     [self renderVideo];
+    [self.spriteRenderer renderSpriteWithId:0];
+    
     
     //
     //  FIND THE MARKER, MR PROGRAM CODE!!
     //
-    static int cont = 0;
+//    static int cont = 0;
     
-    arDetectMarker(_arHandle, _imgY);
-    ARMarkerInfo* markerInfo = arGetMarker(_arHandle);
-    int numMarkers = arGetMarkerNum(_arHandle);
-
-    if (numMarkers == 0)
-    {
-        cont = 0;
-        return;
-    }
-    
-    static float trans[3][4];
-    GLfloat view[16];
-    
-    for (int i = 0; i < numMarkers; i++)
-    {
-        if (_pattId == markerInfo[i].id || _pattId2 == markerInfo[i].id)
-        {
-//            if (cont == 0)
-            if (true)
-            {
-                arGetTransMatSquare(
-                    _ar3DHandle,
-                    &(markerInfo[i]),
-                    60.0f,
-                    trans
-                );
-            }
-//            else
+//    arDetectMarker(_arHandle, _imgY);
+//    ARMarkerInfo* markerInfo = arGetMarker(_arHandle);
+//    int numMarkers = arGetMarkerNum(_arHandle);
+//
+//    if (numMarkers == 0)
+//    {
+//        cont = 0;
+//        return;
+//    }
+//    
+//    static float trans[3][4];
+//    GLfloat view[16];
+//    
+//    for (int i = 0; i < numMarkers; i++)
+//    {
+//        if (_pattId == markerInfo[i].id || _pattId2 == markerInfo[i].id)
+//        {
+////            if (cont == 0)
+//            if (true)
 //            {
-//                arGetTransMatSquareCont(
+//                arGetTransMatSquare(
 //                    _ar3DHandle,
 //                    &(markerInfo[i]),
-//                    trans,
 //                    60.0f,
 //                    trans
 //                );
 //            }
+////            else
+////            {
+////                arGetTransMatSquareCont(
+////                    _ar3DHandle,
+////                    &(markerInfo[i]),
+////                    trans,
+////                    60.0f,
+////                    trans
+////                );
+////            }
+////            
+////            cont = 1;
 //            
-//            cont = 1;
-            
-            // prepare view matrix
-            arg2ConvGlpara(trans, view);
-            
-            [self renderCubeWithView:view AndProjection:_proj];
-
-        }
-
-    }
+//            // prepare view matrix
+//            arg2ConvGlpara(trans, view);
+//            
+//            [self renderCubeWithView:view AndProjection:_proj];
+//
+//        }
+//
+//    }
     
     assert(glGetError() == GL_NO_ERROR);
 }

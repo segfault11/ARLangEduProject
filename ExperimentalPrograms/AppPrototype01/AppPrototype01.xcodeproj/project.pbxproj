@@ -47,6 +47,12 @@
 		19284FE8186C1EBE00617DEB /* SpriteManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 19284FE7186C1EBE00617DEB /* SpriteManager.m */; };
 		19622C73186D30A500C600F2 /* Sprites.json in Resources */ = {isa = PBXBuildFile; fileRef = 19622C72186D30A500C600F2 /* Sprites.json */; };
 		19622C76186D315000C600F2 /* JSONKit.m in Sources */ = {isa = PBXBuildFile; fileRef = 19622C75186D315000C600F2 /* JSONKit.m */; settings = {COMPILER_FLAGS = "-fno-objc-arc"; }; };
+		19622C79186D411C00C600F2 /* SpriteSheet.m in Sources */ = {isa = PBXBuildFile; fileRef = 19622C78186D411C00C600F2 /* SpriteSheet.m */; };
+		19622C7C186D41F100C600F2 /* SpriteSheetManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 19622C7B186D41F100C600F2 /* SpriteSheetManager.m */; };
+		19622C7E186D420A00C600F2 /* SpriteSheets.json in Resources */ = {isa = PBXBuildFile; fileRef = 19622C7D186D420A00C600F2 /* SpriteSheets.json */; };
+		19622C81186D486F00C600F2 /* SpriteSheet00.png in Resources */ = {isa = PBXBuildFile; fileRef = 19622C80186D486F00C600F2 /* SpriteSheet00.png */; };
+		19622C86186D5FDD00C600F2 /* SpriteRendererVS.glsl in Resources */ = {isa = PBXBuildFile; fileRef = 19622C85186D5FDD00C600F2 /* SpriteRendererVS.glsl */; };
+		19622C88186D607A00C600F2 /* SpriteRendererFS.glsl in Resources */ = {isa = PBXBuildFile; fileRef = 19622C87186D607A00C600F2 /* SpriteRendererFS.glsl */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -116,6 +122,14 @@
 		19622C72186D30A500C600F2 /* Sprites.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = Sprites.json; sourceTree = "<group>"; };
 		19622C74186D315000C600F2 /* JSONKit.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = JSONKit.h; sourceTree = "<group>"; };
 		19622C75186D315000C600F2 /* JSONKit.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = JSONKit.m; sourceTree = "<group>"; };
+		19622C77186D411C00C600F2 /* SpriteSheet.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SpriteSheet.h; sourceTree = "<group>"; };
+		19622C78186D411C00C600F2 /* SpriteSheet.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SpriteSheet.m; sourceTree = "<group>"; };
+		19622C7A186D41F100C600F2 /* SpriteSheetManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SpriteSheetManager.h; sourceTree = "<group>"; };
+		19622C7B186D41F100C600F2 /* SpriteSheetManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SpriteSheetManager.m; sourceTree = "<group>"; };
+		19622C7D186D420A00C600F2 /* SpriteSheets.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = SpriteSheets.json; sourceTree = "<group>"; };
+		19622C80186D486F00C600F2 /* SpriteSheet00.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = SpriteSheet00.png; sourceTree = "<group>"; };
+		19622C85186D5FDD00C600F2 /* SpriteRendererVS.glsl */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = SpriteRendererVS.glsl; sourceTree = "<group>"; };
+		19622C87186D607A00C600F2 /* SpriteRendererFS.glsl */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = SpriteRendererFS.glsl; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -268,11 +282,10 @@
 		19284FDC186C0D1A00617DEB /* Resources */ = {
 			isa = PBXGroup;
 			children = (
+				19622C83186D48AC00C600F2 /* CameraParameter */,
+				19622C82186D487900C600F2 /* Marker */,
+				19622C7F186D485600C600F2 /* SpriteSheets */,
 				19622C71186D309000C600F2 /* Entities */,
-				19185031186BE7F8007B53A8 /* 1.dat */,
-				19185032186BE7F8007B53A8 /* 2.dat */,
-				1918502D186BCFA6007B53A8 /* camera_para_ipadmini640x480.dat */,
-				1918502E186BCFA6007B53A8 /* patt.hiro */,
 			);
 			name = Resources;
 			sourceTree = "<group>";
@@ -280,6 +293,7 @@
 		19284FDD186C0D5C00617DEB /* Renderer */ = {
 			isa = PBXGroup;
 			children = (
+				19622C84186D5FCB00C600F2 /* Shader */,
 				19284FDE186C0DF700617DEB /* SpriteRenderer.h */,
 				19284FDF186C0DF700617DEB /* SpriteRenderer.m */,
 			);
@@ -291,6 +305,8 @@
 			children = (
 				19284FE2186C154C00617DEB /* Sprite.h */,
 				19284FE3186C154C00617DEB /* Sprite.m */,
+				19622C77186D411C00C600F2 /* SpriteSheet.h */,
+				19622C78186D411C00C600F2 /* SpriteSheet.m */,
 			);
 			name = Entities;
 			sourceTree = "<group>";
@@ -302,6 +318,8 @@
 				19185006186BCAF6007B53A8 /* ProfileManager.h */,
 				19185007186BCAF6007B53A8 /* ProfileManager.m */,
 				19284FE7186C1EBE00617DEB /* SpriteManager.m */,
+				19622C7A186D41F100C600F2 /* SpriteSheetManager.h */,
+				19622C7B186D41F100C600F2 /* SpriteSheetManager.m */,
 			);
 			name = Manager;
 			sourceTree = "<group>";
@@ -310,8 +328,44 @@
 			isa = PBXGroup;
 			children = (
 				19622C72186D30A500C600F2 /* Sprites.json */,
+				19622C7D186D420A00C600F2 /* SpriteSheets.json */,
 			);
 			name = Entities;
+			sourceTree = "<group>";
+		};
+		19622C7F186D485600C600F2 /* SpriteSheets */ = {
+			isa = PBXGroup;
+			children = (
+				19622C80186D486F00C600F2 /* SpriteSheet00.png */,
+			);
+			name = SpriteSheets;
+			sourceTree = "<group>";
+		};
+		19622C82186D487900C600F2 /* Marker */ = {
+			isa = PBXGroup;
+			children = (
+				1918502E186BCFA6007B53A8 /* patt.hiro */,
+				19185031186BE7F8007B53A8 /* 1.dat */,
+				19185032186BE7F8007B53A8 /* 2.dat */,
+			);
+			name = Marker;
+			sourceTree = "<group>";
+		};
+		19622C83186D48AC00C600F2 /* CameraParameter */ = {
+			isa = PBXGroup;
+			children = (
+				1918502D186BCFA6007B53A8 /* camera_para_ipadmini640x480.dat */,
+			);
+			name = CameraParameter;
+			sourceTree = "<group>";
+		};
+		19622C84186D5FCB00C600F2 /* Shader */ = {
+			isa = PBXGroup;
+			children = (
+				19622C85186D5FDD00C600F2 /* SpriteRendererVS.glsl */,
+				19622C87186D607A00C600F2 /* SpriteRendererFS.glsl */,
+			);
+			name = Shader;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -390,7 +444,9 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				19622C86186D5FDD00C600F2 /* SpriteRendererVS.glsl in Resources */,
 				19185034186BE7F8007B53A8 /* 2.dat in Resources */,
+				19622C7E186D420A00C600F2 /* SpriteSheets.json in Resources */,
 				19184FDD186BCA75007B53A8 /* Main_iPad.storyboard in Resources */,
 				19622C73186D30A500C600F2 /* Sprites.json in Resources */,
 				19185033186BE7F8007B53A8 /* 1.dat in Resources */,
@@ -399,6 +455,8 @@
 				1918501E186BCE4E007B53A8 /* VideoFS.glsl in Resources */,
 				19184FD1186BCA75007B53A8 /* InfoPlist.strings in Resources */,
 				19185030186BCFA6007B53A8 /* patt.hiro in Resources */,
+				19622C81186D486F00C600F2 /* SpriteSheet00.png in Resources */,
+				19622C88186D607A00C600F2 /* SpriteRendererFS.glsl in Resources */,
 				1918501B186BCE4E007B53A8 /* CubeFS.glsl in Resources */,
 				1918501F186BCE4E007B53A8 /* VideoVS.glsl in Resources */,
 				1918501C186BCE4E007B53A8 /* CubeVS.glsl in Resources */,
@@ -423,12 +481,14 @@
 				1918500F186BCAF6007B53A8 /* SelectProfileViewController.m in Sources */,
 				1918500B186BCAF6007B53A8 /* IntroductionViewController.m in Sources */,
 				19284FE8186C1EBE00617DEB /* SpriteManager.m in Sources */,
+				19622C79186D411C00C600F2 /* SpriteSheet.m in Sources */,
 				19284FE4186C154C00617DEB /* Sprite.m in Sources */,
 				1918500D186BCAF6007B53A8 /* NewProfileViewController.m in Sources */,
 				1918501D186BCE4E007B53A8 /* GLUEProgram.m in Sources */,
 				19184FD7186BCA75007B53A8 /* AppDelegate.m in Sources */,
 				19185020186BCE4E007B53A8 /* ViewController.m in Sources */,
 				1918500E186BCAF6007B53A8 /* ProfileManager.m in Sources */,
+				19622C7C186D41F100C600F2 /* SpriteSheetManager.m in Sources */,
 				1918500C186BCAF6007B53A8 /* NavigationViewController.m in Sources */,
 				1918500A186BCAF6007B53A8 /* ARViewController.m in Sources */,
 				19284FE0186C0DF700617DEB /* SpriteRenderer.m in Sources */,
