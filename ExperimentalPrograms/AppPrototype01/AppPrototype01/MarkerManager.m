@@ -78,6 +78,9 @@ static const char* FILE_NAME = "/Marker.json";
 
         NSString* str = [entry objectForKey:@"filename"];
         s.filename = str;
+
+        str = [entry objectForKey:@"suffix"];
+        s.suffix = str;
         
         [self.marker setObject:s forKey:[NSNumber numberWithInt:s.id]];
     }

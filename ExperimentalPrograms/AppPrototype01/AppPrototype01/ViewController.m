@@ -13,6 +13,9 @@
 #import <assert.h>
 #import <CoreVideo/CVOpenGLESTextureCache.h>
 #import <assert.h>
+#import "MarkerManager.h"
+#import "ContentManager.h"
+#import "SpriteManager.h"
 #import "SpriteRenderer.h"
 #import "GLUEProgram.h"
 //------------------------------------------------------------------------------
@@ -197,20 +200,49 @@ static void arg2ConvGLcpara(
         NSLog(@"Could not create pattern handle");
         exit(0);
     }
-
-    _pattId = arPattLoad(_pattHandle, "1", "dat");
     
-    _pattId2 = arPattLoad(_pattHandle, "2", "dat");
+    // load all marker
+    MarkerManager* mm = [MarkerManager instance];
+    unsigned int numMarker = [mm getNumMarker];
     
-
-    if (0 > _pattId)
+    self.marker = [[NSMutableDictionary alloc] init];
+    
+    for (unsigned int i = 0; i < numMarker; i++)
     {
-        NSLog(@"Could not load pattern");
-        exit(0);
+        Marker* m = [mm getMarkerAtIndex:i];
+
+        int mid = m.id;
+        int pid = arPattLoad(
+                _pattHandle,
+                (char*)[m.filename UTF8String],
+                (char*)[m.suffix UTF8String]
+            );
+
+//        NSLog(@"pid = %d", pid);
+
+        [self.marker
+            setObject:[NSNumber numberWithInt:mid]
+            forKey:[NSNumber numberWithInt:pid]];
+
+        if (0 > pid)
+        {
+            NSLog(@"Could not load pattern");
+            exit(0);
+        }
+
     }
+
+//    _pattId = arPattLoad(_pattHandle, "1", "dat");
+//    _pattId2 = arPattLoad(_pattHandle, "2", "dat");
+
+    
+//    if (0 > _pattId)
+//    {
+//        NSLog(@"Could not load pattern");
+//        exit(0);
+//    }
     
     arPattAttach(_arHandle, _pattHandle);
-
 
     //
     //  Create a 3D handle
@@ -488,10 +520,14 @@ fromConnection:(AVCaptureConnection *)connection
     
     for (int i = 0; i < numMarkers; i++)
     {
-        if (_pattId == markerInfo[i].id || _pattId2 == markerInfo[i].id)
+//        if (_pattId == markerInfo[i].id || _pattId2 == markerInfo[i].id)
+        NSNumber* mid = [self.marker
+                objectForKey:[NSNumber numberWithInt:markerInfo[i].id]];
+        if (mid != nil)
         {
-            if (cont == 0)
-//            if (true)
+            // compute matrices
+//            if (cont == 0)
+            if (true)
             {
                 arGetTransMatSquare(
                     _ar3DHandle,
@@ -500,23 +536,29 @@ fromConnection:(AVCaptureConnection *)connection
                     trans
                 );
             }
-            else
-            {
-                arGetTransMatSquareCont(
-                    _ar3DHandle,
-                    &(markerInfo[i]),
-                    trans,
-                    60.0f,
-                    trans
-                );
-            }
+//            else
+//            {
+//                arGetTransMatSquareCont(
+//                    _ar3DHandle,
+//                    &(markerInfo[i]),
+//                    trans,
+//                    60.0f,
+//                    trans
+//                );
+//            }
             
             cont = 1;
 
             // prepare view matrix
             arg2ConvGlpara(trans, view);
             
-            [self.spriteRenderer renderSprite:0 WithView:view AndProjection:_proj];
+            // get content for marker
+            Marker* m = [[MarkerManager instance] getMarkerForId:[mid integerValue]];
+            Content* c = [[ContentManager instance] getContentWithId:m.content];
+            Sprite* s = [[SpriteManager instance] getSpriteWithId:c.sprite];
+            
+            // display content
+            [self.spriteRenderer renderSprite:s.id WithView:view AndProjection:_proj];
             [self renderCubeWithView:view AndProjection:_proj];
 
         }

@@ -49,7 +49,8 @@
 	======  ==========  ======================================================
 	int 	id 			id of the marker
 	int 	content 	id of the content that is associated with the marker.
-	string 	filename  	filename of the marker.
+	string 	filename  	filename of the marker without the suffix.
+	string 	suffix 		suffix for the maker file name (e.g. "dat").
 
 2.5 Content
 	Contents are stored in the "Contents.json" file.

@@ -4,5 +4,11 @@
         "spriteSheet" : 0,
         "frame" : 0,
         "animation" : 0
+    },
+    {
+        "id" : 1,
+        "spriteSheet" : 1,
+        "frame" : 0,
+        "animation" : 0
     }
 ]

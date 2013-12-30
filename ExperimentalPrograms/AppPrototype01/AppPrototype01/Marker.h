@@ -13,7 +13,9 @@
     int _id;
     int _content;
     NSString* _filename;
+    NSString* _suffix;
 }
 @property int id, content;
 @property NSString* filename;
+@property NSString* suffix;
 @end

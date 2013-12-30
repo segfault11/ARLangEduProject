@@ -2,6 +2,14 @@
     {
         "id" : 0,
         "content" : 0,
-        "filename" : "1.dat"
+        "filename" : "1",
+        "suffix" : "dat"
+    },
+ 
+    {
+        "id" : 1,
+        "content" : 1,
+        "filename" : "2",
+        "suffix" : "dat"
     }
 ]

@@ -51,6 +51,7 @@
 		195FF4C1187152A000100AF1 /* MarkerManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 195FF4C0187152A000100AF1 /* MarkerManager.m */; };
 		195FF4C31871560E00100AF1 /* Marker.json in Resources */ = {isa = PBXBuildFile; fileRef = 195FF4C21871560E00100AF1 /* Marker.json */; };
 		195FF4C51871565D00100AF1 /* Contents.json in Resources */ = {isa = PBXBuildFile; fileRef = 195FF4C41871565D00100AF1 /* Contents.json */; };
+		195FF4C91871665100100AF1 /* SpriteSheet01.png in Resources */ = {isa = PBXBuildFile; fileRef = 195FF4C81871665100100AF1 /* SpriteSheet01.png */; };
 		19622C73186D30A500C600F2 /* Sprites.json in Resources */ = {isa = PBXBuildFile; fileRef = 19622C72186D30A500C600F2 /* Sprites.json */; };
 		19622C76186D315000C600F2 /* JSONKit.m in Sources */ = {isa = PBXBuildFile; fileRef = 19622C75186D315000C600F2 /* JSONKit.m */; settings = {COMPILER_FLAGS = "-fno-objc-arc"; }; };
 		19622C79186D411C00C600F2 /* SpriteSheet.m in Sources */ = {isa = PBXBuildFile; fileRef = 19622C78186D411C00C600F2 /* SpriteSheet.m */; };
@@ -138,6 +139,7 @@
 		195FF4C0187152A000100AF1 /* MarkerManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MarkerManager.m; sourceTree = "<group>"; };
 		195FF4C21871560E00100AF1 /* Marker.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = Marker.json; sourceTree = "<group>"; };
 		195FF4C41871565D00100AF1 /* Contents.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = Contents.json; sourceTree = "<group>"; };
+		195FF4C81871665100100AF1 /* SpriteSheet01.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = SpriteSheet01.png; sourceTree = "<group>"; };
 		19622C72186D30A500C600F2 /* Sprites.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = Sprites.json; sourceTree = "<group>"; };
 		19622C74186D315000C600F2 /* JSONKit.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = JSONKit.h; sourceTree = "<group>"; };
 		19622C75186D315000C600F2 /* JSONKit.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = JSONKit.m; sourceTree = "<group>"; };
@@ -375,6 +377,7 @@
 		19622C7F186D485600C600F2 /* SpriteSheets */ = {
 			isa = PBXGroup;
 			children = (
+				195FF4C81871665100100AF1 /* SpriteSheet01.png */,
 				19622C80186D486F00C600F2 /* SpriteSheet00.png */,
 			);
 			name = SpriteSheets;
@@ -496,6 +499,7 @@
 				19184FD1186BCA75007B53A8 /* InfoPlist.strings in Resources */,
 				19185030186BCFA6007B53A8 /* patt.hiro in Resources */,
 				19622C81186D486F00C600F2 /* SpriteSheet00.png in Resources */,
+				195FF4C91871665100100AF1 /* SpriteSheet01.png in Resources */,
 				19622C88186D607A00C600F2 /* SpriteRendererFS.glsl in Resources */,
 				1918501B186BCE4E007B53A8 /* CubeFS.glsl in Resources */,
 				1918501F186BCE4E007B53A8 /* VideoVS.glsl in Resources */,
