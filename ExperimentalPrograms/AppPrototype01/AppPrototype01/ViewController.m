@@ -426,8 +426,6 @@ fromConnection:(AVCaptureConnection *)connection
     size_t width = CVPixelBufferGetWidthOfPlane(imageBuffer, 0);
     size_t height = CVPixelBufferGetHeightOfPlane(imageBuffer, 0);
 
-    
-
     if (NULL == baseAddress
         || width != VIDEO_FRAME_WIDTH
         || height != VIDEO_FRAME_HEIGHT
@@ -467,62 +465,62 @@ fromConnection:(AVCaptureConnection *)connection
     CVPixelBufferUnlockBaseAddress(imageBuffer, 0);
     
     [self renderVideo];
-    [self.spriteRenderer renderSpriteWithId:0];
     
     
     //
     //  FIND THE MARKER, MR PROGRAM CODE!!
     //
-//    static int cont = 0;
+    static int cont = 0;
     
-//    arDetectMarker(_arHandle, _imgY);
-//    ARMarkerInfo* markerInfo = arGetMarker(_arHandle);
-//    int numMarkers = arGetMarkerNum(_arHandle);
-//
-//    if (numMarkers == 0)
-//    {
-//        cont = 0;
-//        return;
-//    }
-//    
-//    static float trans[3][4];
-//    GLfloat view[16];
-//    
-//    for (int i = 0; i < numMarkers; i++)
-//    {
-//        if (_pattId == markerInfo[i].id || _pattId2 == markerInfo[i].id)
-//        {
-////            if (cont == 0)
+    arDetectMarker(_arHandle, _imgY);
+    ARMarkerInfo* markerInfo = arGetMarker(_arHandle);
+    int numMarkers = arGetMarkerNum(_arHandle);
+
+    if (numMarkers == 0)
+    {
+        cont = 0;
+        return;
+    }
+    
+    static float trans[3][4];
+    GLfloat view[16];
+    
+    for (int i = 0; i < numMarkers; i++)
+    {
+        if (_pattId == markerInfo[i].id || _pattId2 == markerInfo[i].id)
+        {
+            if (cont == 0)
 //            if (true)
-//            {
-//                arGetTransMatSquare(
-//                    _ar3DHandle,
-//                    &(markerInfo[i]),
-//                    60.0f,
-//                    trans
-//                );
-//            }
-////            else
-////            {
-////                arGetTransMatSquareCont(
-////                    _ar3DHandle,
-////                    &(markerInfo[i]),
-////                    trans,
-////                    60.0f,
-////                    trans
-////                );
-////            }
-////            
-////            cont = 1;
-//            
-//            // prepare view matrix
-//            arg2ConvGlpara(trans, view);
-//            
-//            [self renderCubeWithView:view AndProjection:_proj];
-//
-//        }
-//
-//    }
+            {
+                arGetTransMatSquare(
+                    _ar3DHandle,
+                    &(markerInfo[i]),
+                    60.0f,
+                    trans
+                );
+            }
+            else
+            {
+                arGetTransMatSquareCont(
+                    _ar3DHandle,
+                    &(markerInfo[i]),
+                    trans,
+                    60.0f,
+                    trans
+                );
+            }
+            
+            cont = 1;
+
+            // prepare view matrix
+            arg2ConvGlpara(trans, view);
+            
+            [self.spriteRenderer renderSprite:0 WithView:view AndProjection:_proj];
+            [self renderCubeWithView:view AndProjection:_proj];
+
+        }
+
+    }
     
     assert(glGetError() == GL_NO_ERROR);
 }

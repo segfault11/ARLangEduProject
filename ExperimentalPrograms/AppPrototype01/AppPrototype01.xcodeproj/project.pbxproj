@@ -45,6 +45,12 @@
 		19284FE0186C0DF700617DEB /* SpriteRenderer.m in Sources */ = {isa = PBXBuildFile; fileRef = 19284FDF186C0DF700617DEB /* SpriteRenderer.m */; };
 		19284FE4186C154C00617DEB /* Sprite.m in Sources */ = {isa = PBXBuildFile; fileRef = 19284FE3186C154C00617DEB /* Sprite.m */; };
 		19284FE8186C1EBE00617DEB /* SpriteManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 19284FE7186C1EBE00617DEB /* SpriteManager.m */; };
+		1938F06618714DEF00E2BE25 /* Content.m in Sources */ = {isa = PBXBuildFile; fileRef = 1938F06518714DEF00E2BE25 /* Content.m */; };
+		195FF4BB18714E6700100AF1 /* Marker.m in Sources */ = {isa = PBXBuildFile; fileRef = 195FF4BA18714E6700100AF1 /* Marker.m */; };
+		195FF4BE187150B300100AF1 /* ContentManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 195FF4BD187150B300100AF1 /* ContentManager.m */; };
+		195FF4C1187152A000100AF1 /* MarkerManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 195FF4C0187152A000100AF1 /* MarkerManager.m */; };
+		195FF4C31871560E00100AF1 /* Marker.json in Resources */ = {isa = PBXBuildFile; fileRef = 195FF4C21871560E00100AF1 /* Marker.json */; };
+		195FF4C51871565D00100AF1 /* Contents.json in Resources */ = {isa = PBXBuildFile; fileRef = 195FF4C41871565D00100AF1 /* Contents.json */; };
 		19622C73186D30A500C600F2 /* Sprites.json in Resources */ = {isa = PBXBuildFile; fileRef = 19622C72186D30A500C600F2 /* Sprites.json */; };
 		19622C76186D315000C600F2 /* JSONKit.m in Sources */ = {isa = PBXBuildFile; fileRef = 19622C75186D315000C600F2 /* JSONKit.m */; settings = {COMPILER_FLAGS = "-fno-objc-arc"; }; };
 		19622C79186D411C00C600F2 /* SpriteSheet.m in Sources */ = {isa = PBXBuildFile; fileRef = 19622C78186D411C00C600F2 /* SpriteSheet.m */; };
@@ -122,6 +128,16 @@
 		19284FE3186C154C00617DEB /* Sprite.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Sprite.m; sourceTree = "<group>"; };
 		19284FE6186C1EBE00617DEB /* SpriteManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SpriteManager.h; sourceTree = "<group>"; };
 		19284FE7186C1EBE00617DEB /* SpriteManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SpriteManager.m; sourceTree = "<group>"; };
+		1938F06418714DEF00E2BE25 /* Content.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Content.h; sourceTree = "<group>"; };
+		1938F06518714DEF00E2BE25 /* Content.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Content.m; sourceTree = "<group>"; };
+		195FF4B918714E6700100AF1 /* Marker.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Marker.h; sourceTree = "<group>"; };
+		195FF4BA18714E6700100AF1 /* Marker.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Marker.m; sourceTree = "<group>"; };
+		195FF4BC187150B300100AF1 /* ContentManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ContentManager.h; sourceTree = "<group>"; };
+		195FF4BD187150B300100AF1 /* ContentManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ContentManager.m; sourceTree = "<group>"; };
+		195FF4BF187152A000100AF1 /* MarkerManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MarkerManager.h; sourceTree = "<group>"; };
+		195FF4C0187152A000100AF1 /* MarkerManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MarkerManager.m; sourceTree = "<group>"; };
+		195FF4C21871560E00100AF1 /* Marker.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = Marker.json; sourceTree = "<group>"; };
+		195FF4C41871565D00100AF1 /* Contents.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = Contents.json; sourceTree = "<group>"; };
 		19622C72186D30A500C600F2 /* Sprites.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = Sprites.json; sourceTree = "<group>"; };
 		19622C74186D315000C600F2 /* JSONKit.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = JSONKit.h; sourceTree = "<group>"; };
 		19622C75186D315000C600F2 /* JSONKit.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = JSONKit.m; sourceTree = "<group>"; };
@@ -317,6 +333,10 @@
 				19622C78186D411C00C600F2 /* SpriteSheet.m */,
 				19622C89186D74DC00C600F2 /* Animation.h */,
 				19622C8A186D74DC00C600F2 /* Animation.m */,
+				1938F06418714DEF00E2BE25 /* Content.h */,
+				1938F06518714DEF00E2BE25 /* Content.m */,
+				195FF4B918714E6700100AF1 /* Marker.h */,
+				195FF4BA18714E6700100AF1 /* Marker.m */,
 			);
 			name = Entities;
 			sourceTree = "<group>";
@@ -332,6 +352,10 @@
 				19622C7B186D41F100C600F2 /* SpriteSheetManager.m */,
 				19622C8E186D760D00C600F2 /* AnimationManager.h */,
 				19622C8F186D760D00C600F2 /* AnimationManager.m */,
+				195FF4BC187150B300100AF1 /* ContentManager.h */,
+				195FF4BD187150B300100AF1 /* ContentManager.m */,
+				195FF4BF187152A000100AF1 /* MarkerManager.h */,
+				195FF4C0187152A000100AF1 /* MarkerManager.m */,
 			);
 			name = Manager;
 			sourceTree = "<group>";
@@ -342,6 +366,8 @@
 				19622C72186D30A500C600F2 /* Sprites.json */,
 				19622C7D186D420A00C600F2 /* SpriteSheets.json */,
 				19622C8C186D759000C600F2 /* Animations.json */,
+				195FF4C21871560E00100AF1 /* Marker.json */,
+				195FF4C41871565D00100AF1 /* Contents.json */,
 			);
 			name = Entities;
 			sourceTree = "<group>";
@@ -464,6 +490,7 @@
 				19622C73186D30A500C600F2 /* Sprites.json in Resources */,
 				19185033186BE7F8007B53A8 /* 1.dat in Resources */,
 				19184FE2186BCA75007B53A8 /* Images.xcassets in Resources */,
+				195FF4C31871560E00100AF1 /* Marker.json in Resources */,
 				1918502F186BCFA6007B53A8 /* camera_para_ipadmini640x480.dat in Resources */,
 				1918501E186BCE4E007B53A8 /* VideoFS.glsl in Resources */,
 				19184FD1186BCA75007B53A8 /* InfoPlist.strings in Resources */,
@@ -474,6 +501,7 @@
 				1918501F186BCE4E007B53A8 /* VideoVS.glsl in Resources */,
 				1918501C186BCE4E007B53A8 /* CubeVS.glsl in Resources */,
 				19622C8D186D759000C600F2 /* Animations.json in Resources */,
+				195FF4C51871565D00100AF1 /* Contents.json in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -499,8 +527,11 @@
 				19284FE4186C154C00617DEB /* Sprite.m in Sources */,
 				1918500D186BCAF6007B53A8 /* NewProfileViewController.m in Sources */,
 				1918501D186BCE4E007B53A8 /* GLUEProgram.m in Sources */,
+				195FF4C1187152A000100AF1 /* MarkerManager.m in Sources */,
 				19184FD7186BCA75007B53A8 /* AppDelegate.m in Sources */,
 				19185020186BCE4E007B53A8 /* ViewController.m in Sources */,
+				195FF4BE187150B300100AF1 /* ContentManager.m in Sources */,
+				195FF4BB18714E6700100AF1 /* Marker.m in Sources */,
 				19622C8B186D74DC00C600F2 /* Animation.m in Sources */,
 				19622C90186D760D00C600F2 /* AnimationManager.m in Sources */,
 				1918500E186BCAF6007B53A8 /* ProfileManager.m in Sources */,
@@ -510,6 +541,7 @@
 				19284FE0186C0DF700617DEB /* SpriteRenderer.m in Sources */,
 				19622C76186D315000C600F2 /* JSONKit.m in Sources */,
 				19184FD3186BCA75007B53A8 /* main.m in Sources */,
+				1938F06618714DEF00E2BE25 /* Content.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

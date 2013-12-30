@@ -142,8 +142,10 @@ static float quad[] = {
     assert(GL_NO_ERROR == glGetError());
 }
 //------------------------------------------------------------------------------
-- (void)renderSpriteWithId:(int)id
+- (void)renderSprite:(int)id WithView:(GLfloat*)view AndProjection:(GLfloat*)proj;
 {
+    glClear(GL_DEPTH_BUFFER_BIT);
+
     static float elapsed = 0.0;
     static float prevId = -1;
     
@@ -190,6 +192,8 @@ static float quad[] = {
     float asp = texInfo.width/(texInfo.height*ss.numFrames);
     [self.program setUniform:@"frameAspect" WithFloat:asp];
     [self.program setUniform:@"numFrames" WithInt:ss.numFrames];
+    [self.program setUniform:@"V" WithMat4:view];
+    [self.program setUniform:@"P" WithMat4:proj];
     
     int currentFrame = ((int)(elapsed/a.duration*ss.numFrames) + s.frame)% ss.numFrames;
     [self.program setUniform:@"curFrame" WithInt:currentFrame];

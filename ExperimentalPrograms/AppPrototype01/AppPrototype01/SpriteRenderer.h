@@ -15,5 +15,5 @@
 @interface SpriteRenderer : NSObject
 - (id)init;
 - (void)dealloc;
-- (void)renderSpriteWithId:(int)id;
+- (void)renderSprite:(int)id WithView:(GLfloat*)view AndProjection:(GLfloat*)proj;
 @end

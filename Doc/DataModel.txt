@@ -29,3 +29,34 @@
 	int 	id 			id of the sprite sheet
 	string 	filename 	filename of the sprite sheet
 	int 	numFrames 	number of the frames in the sprite sheet
+
+2.3 Animation
+	Animations are stored in the "Animations.json" file.
+
+	An aninmation is defined by the following table.
+
+	TYPE 	NAME 		COMMENT
+	======  ==========  ======================================================
+	int 	id 			id of the animation
+	float 	duration 	duration of the animation in seconds
+
+2.4 Marker
+	Marker are stored in the "Marker.json" file.
+
+	A marker is defined by
+
+	TYPE 	NAME 		COMMENT
+	======  ==========  ======================================================
+	int 	id 			id of the marker
+	int 	content 	id of the content that is associated with the marker.
+	string 	filename  	filename of the marker.
+
+2.5 Content
+	Contents are stored in the "Contents.json" file.
+
+	A content is defined by
+
+	TYPE 	NAME 		COMMENT
+	======  ==========  ======================================================
+	int 	id 			id of the content
+	int 	sprite 		id of the sprite associated with the content
