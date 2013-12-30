@@ -108,6 +108,7 @@ static void arg2ConvGLcpara(
     }
     _cube;
 }
+@property(nonatomic, strong) NSMutableDictionary* marker; // maps artoolkit id to maker id
 @property(nonatomic, strong) SpriteRenderer* spriteRenderer;
 @property(nonatomic, strong) GLUEProgram* program;
 @property(nonatomic, strong) GLUEProgram* program2;

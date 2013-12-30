@@ -14,6 +14,7 @@ static const char* FILE_NAME = "/Marker.json";
 //------------------------------------------------------------------------------
 @interface MarkerManager ()
 @property (nonatomic, strong) NSMutableDictionary* marker;
+@property (nonatomic, strong) NSArray* keyArray;
 - (id)init;
 - (void)loadMarker;
 @end
@@ -80,11 +81,28 @@ static const char* FILE_NAME = "/Marker.json";
         
         [self.marker setObject:s forKey:[NSNumber numberWithInt:s.id]];
     }
+    
+    self.keyArray = self.marker.allKeys;
 }
 //------------------------------------------------------------------------------
 - (Marker*)getMarkerForId:(int)id
 {
     return [self.marker objectForKey:[NSNumber numberWithInt:id]];
+}
+//------------------------------------------------------------------------------
+- (NSUInteger)getNumMarker
+{
+    return self.keyArray.count;
+}
+//------------------------------------------------------------------------------
+- (Marker*)getMarkerAtIndex:(int)idx
+{
+    if (idx >= self.keyArray.count)
+    {
+        return nil;
+    }
+    
+    return [self.marker objectForKey:[self.keyArray objectAtIndex:idx]];
 }
 //------------------------------------------------------------------------------
 @end

@@ -12,4 +12,6 @@
 @interface MarkerManager : NSObject
 + (MarkerManager*)instance;
 - (Marker*)getMarkerForId:(int)id;
+- (Marker*)getMarkerAtIndex:(int)idx;
+- (NSUInteger)getNumMarker;
 @end
