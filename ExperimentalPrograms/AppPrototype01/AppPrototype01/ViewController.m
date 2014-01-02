@@ -123,6 +123,7 @@ static void arg2ConvGLcpara(
 @property(strong, nonatomic) EAGLContext *context;
 @property(weak, nonatomic) IBOutlet UILabel *sentence;
 @property(strong, nonatomic) Content* currentContent;
+@property(strong, nonatomic) AVAudioPlayer* audioPlayer;
 - (void)initMarkerDetection;
 - (void)setupGL;
 - (void)initCaptureSession;
@@ -130,6 +131,7 @@ static void arg2ConvGLcpara(
 - (void)renderVideo;
 - (void)renderCubeWithView:(GLfloat*)view AndProjection:(GLfloat*)proj;
 - (void)resetCurrentContent;
+- (void)playSound:(NSString*)filename;
 @end
 //------------------------------------------------------------------------------
 @implementation ViewController
@@ -651,6 +653,37 @@ fromConnection:(AVCaptureConnection *)connection
 - (void)resetCurrentContent
 {
     self.currentContent.activeSentence = 0;
+}
+//------------------------------------------------------------------------------
+- (void)playSound:(NSString*)filename
+{
+    // PLAYS A SOUND REFERENCED BY [filename]. NOTE [filename] SHOULD NOT
+    // CONTAIN THE PATH AS THE SOURCE PATH IS APPENDED IN THIS FUNCTION.
+    
+    NSString* file = [[[[NSBundle mainBundle] resourcePath]
+        stringByAppendingString:@"/"]
+        stringByAppendingString:filename];
+    NSURL *url = [[NSURL alloc] initFileURLWithPath:file];
+
+    NSLog(@"%@", url);
+
+    self.audioPlayer  = [[AVAudioPlayer alloc]
+        initWithContentsOfURL:url error:nil];
+    
+    self.audioPlayer.volume = 1;
+    [self.audioPlayer prepareToPlay];
+
+    [self.audioPlayer play];
+}
+//------------------------------------------------------------------------------
+- (IBAction)playAudio:(id)sender
+{
+    if (!self.currentContent)
+    {
+        return;
+    }
+    
+    [self playSound:self.currentContent.sound];
 }
 //------------------------------------------------------------------------------
 - (IBAction)changeSentence:(id)sender

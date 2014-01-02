@@ -83,6 +83,9 @@ static const char* FILE_NAME = "/Contents.json";
         NSArray* arr = [entry objectForKey:@"sentences"];
         s.sentences = arr;
         
+        NSString* str = [entry objectForKey:@"sound"];
+        s.sound = str;
+        
         if (arr.count > 0)
         {
             s.activeSentence = 0;

@@ -128,6 +128,9 @@
                                 <fontDescription key="fontDescription" type="boldSystem" pointSize="15"/>
                                 <color key="tintColor" cocoaTouchSystemColor="darkTextColor"/>
                                 <state key="normal" title="Play Audio"/>
+                                <connections>
+                                    <action selector="playAudio:" destination="gop-uX-dQb" eventType="touchDown" id="eNr-5C-xaR"/>
+                                </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="sQH-ca-IIJ">
                                 <rect key="frame" x="511" y="962" width="209" height="34"/>

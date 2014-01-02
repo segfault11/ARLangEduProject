@@ -14,7 +14,9 @@
     int _sprite;
     NSArray* _sentences;
     int _activeSentence;
+    NSString* sound;
 }
 @property int id, sprite, activeSentence;
 @property NSArray* sentences;
+@property NSString* sound;
 @end

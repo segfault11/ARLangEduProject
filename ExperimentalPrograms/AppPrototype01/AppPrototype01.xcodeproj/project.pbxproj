@@ -42,6 +42,8 @@
 		19185030186BCFA6007B53A8 /* patt.hiro in Resources */ = {isa = PBXBuildFile; fileRef = 1918502E186BCFA6007B53A8 /* patt.hiro */; };
 		19185033186BE7F8007B53A8 /* 1.dat in Resources */ = {isa = PBXBuildFile; fileRef = 19185031186BE7F8007B53A8 /* 1.dat */; };
 		19185034186BE7F8007B53A8 /* 2.dat in Resources */ = {isa = PBXBuildFile; fileRef = 19185032186BE7F8007B53A8 /* 2.dat */; };
+		191A2EC1187541B4009D0261 /* bass.m4a in Resources */ = {isa = PBXBuildFile; fileRef = 191A2EBF187541B4009D0261 /* bass.m4a */; };
+		191A2EC2187541B4009D0261 /* piano.m4a in Resources */ = {isa = PBXBuildFile; fileRef = 191A2EC0187541B4009D0261 /* piano.m4a */; };
 		19284FE0186C0DF700617DEB /* SpriteRenderer.m in Sources */ = {isa = PBXBuildFile; fileRef = 19284FDF186C0DF700617DEB /* SpriteRenderer.m */; };
 		19284FE4186C154C00617DEB /* Sprite.m in Sources */ = {isa = PBXBuildFile; fileRef = 19284FE3186C154C00617DEB /* Sprite.m */; };
 		19284FE8186C1EBE00617DEB /* SpriteManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 19284FE7186C1EBE00617DEB /* SpriteManager.m */; };
@@ -123,6 +125,8 @@
 		1918502E186BCFA6007B53A8 /* patt.hiro */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = patt.hiro; sourceTree = "<group>"; };
 		19185031186BE7F8007B53A8 /* 1.dat */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = 1.dat; sourceTree = "<group>"; };
 		19185032186BE7F8007B53A8 /* 2.dat */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = 2.dat; sourceTree = "<group>"; };
+		191A2EBF187541B4009D0261 /* bass.m4a */ = {isa = PBXFileReference; lastKnownFileType = file; path = bass.m4a; sourceTree = "<group>"; };
+		191A2EC0187541B4009D0261 /* piano.m4a */ = {isa = PBXFileReference; lastKnownFileType = file; path = piano.m4a; sourceTree = "<group>"; };
 		19284FDE186C0DF700617DEB /* SpriteRenderer.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SpriteRenderer.h; sourceTree = "<group>"; };
 		19284FDF186C0DF700617DEB /* SpriteRenderer.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SpriteRenderer.m; sourceTree = "<group>"; };
 		19284FE2186C154C00617DEB /* Sprite.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Sprite.h; sourceTree = "<group>"; };
@@ -275,6 +279,15 @@
 			name = "Supporting Files";
 			sourceTree = "<group>";
 		};
+		191A2EBE1875419A009D0261 /* Sounds */ = {
+			isa = PBXGroup;
+			children = (
+				191A2EBF187541B4009D0261 /* bass.m4a */,
+				191A2EC0187541B4009D0261 /* piano.m4a */,
+			);
+			name = Sounds;
+			sourceTree = "<group>";
+		};
 		19284FD9186C0CBE00617DEB /* ViewController */ = {
 			isa = PBXGroup;
 			children = (
@@ -308,6 +321,7 @@
 		19284FDC186C0D1A00617DEB /* Resources */ = {
 			isa = PBXGroup;
 			children = (
+				191A2EBE1875419A009D0261 /* Sounds */,
 				19622C83186D48AC00C600F2 /* CameraParameter */,
 				19622C82186D487900C600F2 /* Marker */,
 				19622C7F186D485600C600F2 /* SpriteSheets */,
@@ -486,6 +500,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				191A2EC2187541B4009D0261 /* piano.m4a in Resources */,
 				19622C86186D5FDD00C600F2 /* SpriteRendererVS.glsl in Resources */,
 				19185034186BE7F8007B53A8 /* 2.dat in Resources */,
 				19622C7E186D420A00C600F2 /* SpriteSheets.json in Resources */,
@@ -499,6 +514,7 @@
 				19184FD1186BCA75007B53A8 /* InfoPlist.strings in Resources */,
 				19185030186BCFA6007B53A8 /* patt.hiro in Resources */,
 				19622C81186D486F00C600F2 /* SpriteSheet00.png in Resources */,
+				191A2EC1187541B4009D0261 /* bass.m4a in Resources */,
 				195FF4C91871665100100AF1 /* SpriteSheet01.png in Resources */,
 				19622C88186D607A00C600F2 /* SpriteRendererFS.glsl in Resources */,
 				1918501B186BCE4E007B53A8 /* CubeFS.glsl in Resources */,
