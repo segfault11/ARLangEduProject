@@ -8,12 +8,22 @@
 
 #import <Foundation/Foundation.h>
 
+typedef struct
+{
+    float x, y, z;
+}
+Vec3;
+
 @interface Sprite : NSObject
 {
     int _id;
     int _spriteSheet;
     int _frame;
     int _animation;
+    float _size;
+    Vec3 _translation;
 }
 @property int id, spriteSheet, frame, animation;
+@property float size;
+@property Vec3 translation;
 @end

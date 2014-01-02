@@ -230,4 +230,20 @@
     glUniformMatrix4fv(loc, 1, transposed, v);
 }
 
+- (void)setUniform:(NSString*)name
+        WithVec3WithX:(GLfloat)v0
+        AndWithY:(GLfloat)v1
+        AndWithZ:(GLfloat)v2
+{
+    [self bind];
+    GLint loc = glGetUniformLocation(_program, (const char*)[name UTF8String]);
+    
+    if (-1 == loc) {
+        NSLog(@"Could not find location");
+        return;
+    }
+    
+    glUniform3f(loc, v0, v1, v2);
+}
+
 @end

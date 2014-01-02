@@ -194,6 +194,11 @@ static float quad[] = {
     [self.program setUniform:@"numFrames" WithInt:ss.numFrames];
     [self.program setUniform:@"V" WithMat4:view];
     [self.program setUniform:@"P" WithMat4:proj];
+    [self.program setUniform:@"size" WithFloat:s.size];
+    [self.program setUniform:@"translation"
+        WithVec3WithX:s.translation.x
+        AndWithY:s.translation.y
+        AndWithZ:s.translation.z];
     
     int currentFrame = ((int)(elapsed/a.duration*ss.numFrames) + s.frame)% ss.numFrames;
     [self.program setUniform:@"curFrame" WithInt:currentFrame];

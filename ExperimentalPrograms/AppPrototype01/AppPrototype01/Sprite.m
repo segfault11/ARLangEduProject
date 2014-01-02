@@ -9,5 +9,5 @@
 #import "Sprite.h"
 
 @implementation Sprite
-@synthesize id, spriteSheet, frame, animation;
+@synthesize id, spriteSheet, frame, animation, size, translation;
 @end

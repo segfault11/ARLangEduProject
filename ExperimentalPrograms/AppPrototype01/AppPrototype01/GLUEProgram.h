@@ -19,6 +19,10 @@
 - (void)bind;
 - (void)setUniform:(NSString*)name WithInt:(GLint)v;
 - (void)setUniform:(NSString*)name WithFloat:(GLfloat)v;
+- (void)setUniform:(NSString*)name
+        WithVec3WithX:(GLfloat)v0
+        AndWithY:(GLfloat)v1
+        AndWithZ:(GLfloat)v2;
 - (void)setUniform:(NSString*)name WithMat4:(const float*)v;
 - (void)setUniform:(NSString*)name WithMat4:(const float*)v AndTranspose:(GLboolean) transposed;
 @end
