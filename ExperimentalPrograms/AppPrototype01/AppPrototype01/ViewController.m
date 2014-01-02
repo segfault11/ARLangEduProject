@@ -121,12 +121,15 @@ static void arg2ConvGLcpara(
 @property(nonatomic, strong) AVCaptureVideoDataOutput* output;
 @property(nonatomic, strong) AVCaptureVideoPreviewLayer* previewLayer;
 @property(strong, nonatomic) EAGLContext *context;
+@property(weak, nonatomic) IBOutlet UILabel *sentence;
+@property(strong, nonatomic) Content* currentContent;
 - (void)initMarkerDetection;
 - (void)setupGL;
 - (void)initCaptureSession;
 - (void)tearDownGL;
 - (void)renderVideo;
 - (void)renderCubeWithView:(GLfloat*)view AndProjection:(GLfloat*)proj;
+- (void)resetCurrentContent;
 @end
 //------------------------------------------------------------------------------
 @implementation ViewController
@@ -141,6 +144,7 @@ static void arg2ConvGLcpara(
         NSLog(@"Failed to create ES context");
     }
     
+    
     GLKView *view = (GLKView *)self.view;
     view.context = self.context;
     view.drawableDepthFormat = GLKViewDrawableDepthFormat24;
@@ -149,6 +153,12 @@ static void arg2ConvGLcpara(
     [self initMarkerDetection];
     [self initCaptureSession];
     self.spriteRenderer = [[SpriteRenderer alloc] init];
+    self.currentContent = nil;
+    
+    self.navigationItem.title = @"Augmented Reality View";
+    
+    [ContentManager instance];
+    
 }
 //------------------------------------------------------------------------------
 - (void)initMarkerDetection
@@ -517,25 +527,51 @@ fromConnection:(AVCaptureConnection *)connection
     
     static float trans[3][4];
     GLfloat view[16];
-    
+    NSNumber* activeMid = nil;
+    int currMid;
+
     for (int i = 0; i < numMarkers; i++)
     {
-//        if (_pattId == markerInfo[i].id || _pattId2 == markerInfo[i].id)
         NSNumber* mid = [self.marker
                 objectForKey:[NSNumber numberWithInt:markerInfo[i].id]];
         if (mid != nil)
         {
-            // compute matrices
-//            if (cont == 0)
-            if (true)
-            {
-                arGetTransMatSquare(
-                    _ar3DHandle,
-                    &(markerInfo[i]),
-                    60.0f,
-                    trans
-                );
-            }
+            currMid = i;
+            activeMid = mid;
+        }
+
+    }
+    
+    if (!activeMid)
+    {
+        [self resetCurrentContent];
+        self.currentContent = nil;
+        return; // no marker found
+    }
+    
+    // get content for marker
+    Marker* m = [[MarkerManager instance] getMarkerForId:[activeMid integerValue]];
+    Content* c = [[ContentManager instance] getContentWithId:m.content];
+    
+    if (self.currentContent != c)
+    {
+        [self resetCurrentContent];
+        self.currentContent = c;
+    }
+
+    Sprite* s = [[SpriteManager instance]
+            getSpriteWithId:self.currentContent.sprite];
+    
+    // compute matrices
+    if (true)
+    {
+        arGetTransMatSquare(
+            _ar3DHandle,
+            &(markerInfo[currMid]),
+            m.size,
+            trans
+        );
+    }
 //            else
 //            {
 //                arGetTransMatSquareCont(
@@ -546,24 +582,17 @@ fromConnection:(AVCaptureConnection *)connection
 //                    trans
 //                );
 //            }
-            
-            cont = 1;
+    
+    
+    // prepare view matrix
+    arg2ConvGlpara(trans, view);
+    
+    // display content
+    [self.spriteRenderer renderSprite:s.id WithView:view AndProjection:_proj];
+    //[self renderCubeWithView:view AndProjection:_proj];
 
-            // prepare view matrix
-            arg2ConvGlpara(trans, view);
-            
-            // get content for marker
-            Marker* m = [[MarkerManager instance] getMarkerForId:[mid integerValue]];
-            Content* c = [[ContentManager instance] getContentWithId:m.content];
-            Sprite* s = [[SpriteManager instance] getSpriteWithId:c.sprite];
-            
-            // display content
-            [self.spriteRenderer renderSprite:s.id WithView:view AndProjection:_proj];
-            [self renderCubeWithView:view AndProjection:_proj];
-
-        }
-
-    }
+    self.sentence.text = [c.sentences objectAtIndex:c.activeSentence];
+    
     
     assert(glGetError() == GL_NO_ERROR);
 }
@@ -617,6 +646,24 @@ fromConnection:(AVCaptureConnection *)connection
 {
 
 
+}
+//------------------------------------------------------------------------------
+- (void)resetCurrentContent
+{
+    self.currentContent.activeSentence = 0;
+}
+//------------------------------------------------------------------------------
+- (IBAction)changeSentence:(id)sender
+{
+    if (!self.currentContent)
+    {
+        return;
+    }
+    
+    int as = self.currentContent.activeSentence;
+    int numSentences = self.currentContent.sentences.count;
+    
+    self.currentContent.activeSentence = (as + 1) % numSentences;
 }
 //------------------------------------------------------------------------------
 //- (NSUInteger)supportedInterfaceOrientations

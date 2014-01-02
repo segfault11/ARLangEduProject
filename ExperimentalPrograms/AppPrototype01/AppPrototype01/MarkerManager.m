@@ -76,6 +76,10 @@ static const char* FILE_NAME = "/Marker.json";
         n = [entry objectForKey:@"content"];
         s.content = [n integerValue];
 
+        n = [entry objectForKey:@"size"];
+        s.size = [n floatValue];
+        
+
         NSString* str = [entry objectForKey:@"filename"];
         s.filename = str;
 

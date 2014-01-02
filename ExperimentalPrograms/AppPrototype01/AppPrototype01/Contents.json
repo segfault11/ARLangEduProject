@@ -1,11 +1,13 @@
 [
     {
         "id" : 0,
-        "sprite" : 0
+        "sprite" : 0,
+        "sentences": ["Example Sentence1 for the grim guy", "Example Sentence2 for the grim guy"]
     },
  
     {
         "id" : 1,
-        "sprite" : 1
+        "sprite" : 1,
+        "sentences": ["Example Sentence1 for the coin", "Example Sentence2 for the coin"]
     }
 ]

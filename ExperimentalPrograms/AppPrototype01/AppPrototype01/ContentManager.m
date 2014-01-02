@@ -56,7 +56,7 @@ static const char* FILE_NAME = "/Contents.json";
     
     if (!d)
     {
-        NSLog(@"Could not load sprites");
+        NSLog(@"Could not load content");
         exit(0);
     }
     
@@ -64,7 +64,7 @@ static const char* FILE_NAME = "/Contents.json";
     
     if (!a)
     {
-        NSLog(@"Invalid sprite data");
+        NSLog(@"Invalid content data");
         exit(0);
     }
 
@@ -79,6 +79,18 @@ static const char* FILE_NAME = "/Contents.json";
         
         n = [entry objectForKey:@"sprite"];
         s.sprite = [n integerValue];
+        
+        NSArray* arr = [entry objectForKey:@"sentences"];
+        s.sentences = arr;
+        
+        if (arr.count > 0)
+        {
+            s.activeSentence = 0;
+        }
+        else
+        {
+            s.activeSentence = -1;
+        }
         
         [self.contents setObject:s forKey:[NSNumber numberWithInt:s.id]];
     }

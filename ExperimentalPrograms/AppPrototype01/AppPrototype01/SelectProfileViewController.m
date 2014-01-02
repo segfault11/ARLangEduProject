@@ -137,8 +137,9 @@
 
  - (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath
  {
-    NSLog(@"selected row");
-    [self.navigationController pushViewController:[[ViewController alloc] init] animated:YES];
+    UIStoryboard *storyboard = [UIStoryboard storyboardWithName:@"Main_iPad" bundle: nil];
+    ViewController *vc = [storyboard instantiateViewControllerWithIdentifier:@"ViewController"];
+    [self.navigationController pushViewController:vc animated:YES];
  }
 
 @end

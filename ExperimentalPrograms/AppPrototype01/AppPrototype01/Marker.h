@@ -14,8 +14,10 @@
     int _content;
     NSString* _filename;
     NSString* _suffix;
+    float _size;
 }
 @property int id, content;
 @property NSString* filename;
 @property NSString* suffix;
+@property float size;
 @end

@@ -61,3 +61,5 @@
 	======  ==========  ======================================================
 	int 	id 			id of the content
 	int 	sprite 		id of the sprite associated with the content
+	float   size 		size (actually length) of the (square) marker in 
+						millimeter

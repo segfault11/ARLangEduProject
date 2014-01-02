@@ -93,6 +93,64 @@
             </objects>
             <point key="canvasLocation" x="1905" y="-301"/>
         </scene>
+        <!--View Controller-->
+        <scene sceneID="En6-N9-r0d">
+            <objects>
+                <viewController storyboardIdentifier="ViewController" id="gop-uX-dQb" customClass="ViewController" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="3L5-fQ-uie"/>
+                        <viewControllerLayoutGuide type="bottom" id="amc-dg-KDU"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="4b6-EG-J6Q" customClass="GLKView">
+                        <rect key="frame" x="0.0" y="0.0" width="768" height="1024"/>
+                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                        <subviews>
+                            <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Ein Beispielsatz in Deutsch" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="t2R-ip-3Vh">
+                                <rect key="frame" x="48" y="852" width="672" height="96"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <color key="backgroundColor" red="0.20000000000000001" green="0.59999999999999998" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="24"/>
+                                <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="wap-O1-cI7">
+                                <rect key="frame" x="48" y="962" width="209" height="34"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <color key="backgroundColor" red="0.20000000000000001" green="0.59999999999999998" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                <fontDescription key="fontDescription" type="boldSystem" pointSize="15"/>
+                                <color key="tintColor" cocoaTouchSystemColor="darkTextColor"/>
+                                <state key="normal" title="Translate"/>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="YNm-eO-kdn">
+                                <rect key="frame" x="280" y="962" width="209" height="34"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <color key="backgroundColor" red="0.20000000000000001" green="0.59999999999999998" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                <fontDescription key="fontDescription" type="boldSystem" pointSize="15"/>
+                                <color key="tintColor" cocoaTouchSystemColor="darkTextColor"/>
+                                <state key="normal" title="Play Audio"/>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="sQH-ca-IIJ">
+                                <rect key="frame" x="511" y="962" width="209" height="34"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <color key="backgroundColor" red="0.20000000000000001" green="0.59999999999999998" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                <fontDescription key="fontDescription" type="boldSystem" pointSize="15"/>
+                                <color key="tintColor" cocoaTouchSystemColor="darkTextColor"/>
+                                <state key="normal" title="Change Sentence"/>
+                                <connections>
+                                    <action selector="changeSentence:" destination="gop-uX-dQb" eventType="touchDown" id="9h4-Ng-8am"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
+                    </view>
+                    <connections>
+                        <outlet property="sentence" destination="t2R-ip-3Vh" id="jxM-sj-WjM"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="MNj-jW-shd" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="3938" y="-1042"/>
+        </scene>
         <!--New Profile View Controller - New Profile-->
         <scene sceneID="ell-Mu-wXD">
             <objects>
@@ -117,6 +175,13 @@
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                 <nil key="highlightedColor"/>
                             </label>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="lN2-7y-rGQ">
+                                <rect key="frame" x="574" y="951" width="46" height="30"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <state key="normal" title="Button">
+                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                            </button>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
                     </view>

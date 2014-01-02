@@ -12,6 +12,9 @@
 {
     int _id;
     int _sprite;
+    NSArray* _sentences;
+    int _activeSentence;
 }
-@property int id, sprite;
+@property int id, sprite, activeSentence;
+@property NSArray* sentences;
 @end
