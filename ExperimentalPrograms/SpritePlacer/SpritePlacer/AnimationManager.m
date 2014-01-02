@@ -1,48 +1,50 @@
 //------------------------------------------------------------------------------
 //
-//  SpriteManager.m
+//  AnimationManager.m
 //  AppPrototype01
 //
-//  Created by Arno in Wolde Lübke on 26.12.13.
+//  Created by Arno in Wolde Lübke on 27.12.13.
 //  Copyright (c) 2013 Arno in Wolde Lübke. All rights reserved.
 //
 //------------------------------------------------------------------------------
-#import "SpriteManager.h"
+#import "AnimationManager.h"
 #import "JSONKit.h"
 //------------------------------------------------------------------------------
-static const char* FILE_NAME = "/Sprites.json";
+static const char* FILE_NAME = "/Animations.json";
 //------------------------------------------------------------------------------
-@interface SpriteManager ()
-@property (nonatomic, strong) NSMutableDictionary* sprites;
+@interface AnimationManager ()
+@property (nonatomic, strong) NSMutableDictionary* animations;
 - (id)init;
-- (void)loadSprites;
+- (void)loadAnimations;
 @end
 //------------------------------------------------------------------------------
-@implementation SpriteManager
+@implementation AnimationManager
 //------------------------------------------------------------------------------
-+ (SpriteManager*)instance
++  (AnimationManager*)instance
 {
-    static SpriteManager* instance = NULL;
-    
+    static AnimationManager* instance = nil;
+
     @synchronized(self)
     {
         if (instance == NULL)
+        {
             instance = [[self alloc] init];
+        }
     }
-
+    
     return instance;
 }
 //------------------------------------------------------------------------------
 - (id)init
 {
     self = [super init];
-    [self loadSprites];
+    [self loadAnimations];
     return self;
 }
 //------------------------------------------------------------------------------
-- (void)loadSprites
+- (void)loadAnimations
 {
-    NSString* filename = [[[NSBundle mainBundle] resourcePath]
+   NSString* filename = [[[NSBundle mainBundle] resourcePath]
         stringByAppendingString:[NSString stringWithUTF8String:FILE_NAME]];
 
     NSData* d = [[NSData alloc] initWithContentsOfFile:filename];
@@ -60,45 +62,26 @@ static const char* FILE_NAME = "/Sprites.json";
         NSLog(@"Invalid sprite data");
         exit(0);
     }
-    
-    self.sprites = [[NSMutableDictionary alloc] init];
-    
+
+    self.animations = [[NSMutableDictionary alloc] init];
+
     for (NSDictionary* entry in a)
     {
-        Sprite* s = [[Sprite alloc] init];
+        Animation* s = [[Animation alloc] init];
 
         NSNumber* n = [entry objectForKey:@"id"];
         s.id = [n integerValue];
         
-        n = [entry objectForKey:@"spriteSheet"];
-        s.spriteSheet = [n integerValue];
-
-        n = [entry objectForKey:@"frame"];
-        s.frame = [n integerValue];
+        n = [entry objectForKey:@"duration"];
+        s.duration = [n integerValue];
         
-        n = [entry objectForKey:@"animation"];
-        s.animation = [n integerValue];
-        
-        n = [entry objectForKey:@"size"];
-        s.size = [n floatValue];
-        
-        NSArray* arr = [entry objectForKey:@"translation"];
-        n = [arr objectAtIndex:0];
-        Vec3 t;
-        t.x = [[arr objectAtIndex:0] floatValue];
-        t.y = [[arr objectAtIndex:1] floatValue];
-        t.z = [[arr objectAtIndex:2] floatValue];
-        s.translation = t;
-        
-        [self.sprites setObject:s forKey:[NSNumber numberWithInt:s.id]];
-    } 
-    
+        [self.animations setObject:s forKey:[NSNumber numberWithInt:s.id]];
+    }
 }
 //------------------------------------------------------------------------------
-- (Sprite*)getSpriteWithId:(int)id
+- (Animation*)getAnimationWithId:(int)id
 {
-    return [self.sprites objectForKey:[NSNumber numberWithInt:id]];
+    return [self.animations objectForKey:[NSNumber numberWithInt:id]];
 }
-//------------------------------------------------------------------------------
 @end
 //------------------------------------------------------------------------------

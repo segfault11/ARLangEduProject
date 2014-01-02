@@ -1,46 +1,53 @@
 //------------------------------------------------------------------------------
 //
-//  SpriteManager.m
+//  ContentManager.m
 //  AppPrototype01
 //
-//  Created by Arno in Wolde Lübke on 26.12.13.
+//  Created by Arno in Wolde Lübke on 30.12.13.
 //  Copyright (c) 2013 Arno in Wolde Lübke. All rights reserved.
 //
 //------------------------------------------------------------------------------
-#import "SpriteManager.h"
+#import "ContentManager.h"
 #import "JSONKit.h"
 //------------------------------------------------------------------------------
-static const char* FILE_NAME = "/Sprites.json";
+static const char* FILE_NAME = "/Contents.json";
 //------------------------------------------------------------------------------
-@interface SpriteManager ()
-@property (nonatomic, strong) NSMutableDictionary* sprites;
+@interface ContentManager ()
+@property (nonatomic, strong) NSMutableDictionary* contents;
 - (id)init;
-- (void)loadSprites;
+- (void)loadContents;
 @end
 //------------------------------------------------------------------------------
-@implementation SpriteManager
+@implementation ContentManager
 //------------------------------------------------------------------------------
-+ (SpriteManager*)instance
++ (ContentManager*)instance
 {
-    static SpriteManager* instance = NULL;
-    
+    static ContentManager* instance = nil;
+
     @synchronized(self)
     {
         if (instance == NULL)
+        {
             instance = [[self alloc] init];
+        }
     }
-
+    
     return instance;
 }
 //------------------------------------------------------------------------------
 - (id)init
 {
     self = [super init];
-    [self loadSprites];
+    [self loadContents];
     return self;
 }
 //------------------------------------------------------------------------------
-- (void)loadSprites
+- (Content*)getContentWithId:(int)id
+{
+    return [self.contents objectForKey:[NSNumber numberWithInt:id]];
+}
+//------------------------------------------------------------------------------
+- (void)loadContents
 {
     NSString* filename = [[[NSBundle mainBundle] resourcePath]
         stringByAppendingString:[NSString stringWithUTF8String:FILE_NAME]];
@@ -49,7 +56,7 @@ static const char* FILE_NAME = "/Sprites.json";
     
     if (!d)
     {
-        NSLog(@"Could not load sprites");
+        NSLog(@"Could not load content");
         exit(0);
     }
     
@@ -57,47 +64,39 @@ static const char* FILE_NAME = "/Sprites.json";
     
     if (!a)
     {
-        NSLog(@"Invalid sprite data");
+        NSLog(@"Invalid content data");
         exit(0);
     }
-    
-    self.sprites = [[NSMutableDictionary alloc] init];
-    
+
+    self.contents = [[NSMutableDictionary alloc] init];
+
     for (NSDictionary* entry in a)
     {
-        Sprite* s = [[Sprite alloc] init];
+        Content* s = [[Content alloc] init];
 
         NSNumber* n = [entry objectForKey:@"id"];
         s.id = [n integerValue];
         
-        n = [entry objectForKey:@"spriteSheet"];
-        s.spriteSheet = [n integerValue];
-
-        n = [entry objectForKey:@"frame"];
-        s.frame = [n integerValue];
+        n = [entry objectForKey:@"sprite"];
+        s.sprite = [n integerValue];
         
-        n = [entry objectForKey:@"animation"];
-        s.animation = [n integerValue];
+        NSArray* arr = [entry objectForKey:@"sentences"];
+        s.sentences = arr;
         
-        n = [entry objectForKey:@"size"];
-        s.size = [n floatValue];
+        NSString* str = [entry objectForKey:@"sound"];
+        s.sound = str;
         
-        NSArray* arr = [entry objectForKey:@"translation"];
-        n = [arr objectAtIndex:0];
-        Vec3 t;
-        t.x = [[arr objectAtIndex:0] floatValue];
-        t.y = [[arr objectAtIndex:1] floatValue];
-        t.z = [[arr objectAtIndex:2] floatValue];
-        s.translation = t;
+        if (arr.count > 0)
+        {
+            s.activeSentence = 0;
+        }
+        else
+        {
+            s.activeSentence = -1;
+        }
         
-        [self.sprites setObject:s forKey:[NSNumber numberWithInt:s.id]];
-    } 
-    
-}
-//------------------------------------------------------------------------------
-- (Sprite*)getSpriteWithId:(int)id
-{
-    return [self.sprites objectForKey:[NSNumber numberWithInt:id]];
+        [self.contents setObject:s forKey:[NSNumber numberWithInt:s.id]];
+    }
 }
 //------------------------------------------------------------------------------
 @end

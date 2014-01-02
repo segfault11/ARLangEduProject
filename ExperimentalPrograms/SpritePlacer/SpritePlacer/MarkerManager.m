@@ -1,46 +1,49 @@
 //------------------------------------------------------------------------------
 //
-//  SpriteManager.m
+//  MarkerManager.m
 //  AppPrototype01
 //
-//  Created by Arno in Wolde Lübke on 26.12.13.
+//  Created by Arno in Wolde Lübke on 30.12.13.
 //  Copyright (c) 2013 Arno in Wolde Lübke. All rights reserved.
 //
 //------------------------------------------------------------------------------
-#import "SpriteManager.h"
+#import "MarkerManager.h"
 #import "JSONKit.h"
 //------------------------------------------------------------------------------
-static const char* FILE_NAME = "/Sprites.json";
+static const char* FILE_NAME = "/Marker.json";
 //------------------------------------------------------------------------------
-@interface SpriteManager ()
-@property (nonatomic, strong) NSMutableDictionary* sprites;
+@interface MarkerManager ()
+@property (nonatomic, strong) NSMutableDictionary* marker;
+@property (nonatomic, strong) NSArray* keyArray;
 - (id)init;
-- (void)loadSprites;
+- (void)loadMarker;
 @end
 //------------------------------------------------------------------------------
-@implementation SpriteManager
+@implementation MarkerManager
 //------------------------------------------------------------------------------
-+ (SpriteManager*)instance
++ (MarkerManager*)instance
 {
-    static SpriteManager* instance = NULL;
-    
+    static MarkerManager* instance = nil;
+
     @synchronized(self)
     {
         if (instance == NULL)
+        {
             instance = [[self alloc] init];
+        }
     }
-
+    
     return instance;
 }
 //------------------------------------------------------------------------------
 - (id)init
 {
-    self = [super init];
-    [self loadSprites];
+    self = [super self];
+    [self loadMarker];
     return self;
 }
 //------------------------------------------------------------------------------
-- (void)loadSprites
+- (void)loadMarker
 {
     NSString* filename = [[[NSBundle mainBundle] resourcePath]
         stringByAppendingString:[NSString stringWithUTF8String:FILE_NAME]];
@@ -60,44 +63,53 @@ static const char* FILE_NAME = "/Sprites.json";
         NSLog(@"Invalid sprite data");
         exit(0);
     }
-    
-    self.sprites = [[NSMutableDictionary alloc] init];
-    
+
+    self.marker = [[NSMutableDictionary alloc] init];
+
     for (NSDictionary* entry in a)
     {
-        Sprite* s = [[Sprite alloc] init];
+        Marker* s = [[Marker alloc] init];
 
         NSNumber* n = [entry objectForKey:@"id"];
         s.id = [n integerValue];
         
-        n = [entry objectForKey:@"spriteSheet"];
-        s.spriteSheet = [n integerValue];
+        n = [entry objectForKey:@"content"];
+        s.content = [n integerValue];
 
-        n = [entry objectForKey:@"frame"];
-        s.frame = [n integerValue];
-        
-        n = [entry objectForKey:@"animation"];
-        s.animation = [n integerValue];
-        
         n = [entry objectForKey:@"size"];
         s.size = [n floatValue];
         
-        NSArray* arr = [entry objectForKey:@"translation"];
-        n = [arr objectAtIndex:0];
-        Vec3 t;
-        t.x = [[arr objectAtIndex:0] floatValue];
-        t.y = [[arr objectAtIndex:1] floatValue];
-        t.z = [[arr objectAtIndex:2] floatValue];
-        s.translation = t;
+
+        NSString* str = [entry objectForKey:@"filename"];
+        s.filename = str;
+
+        str = [entry objectForKey:@"suffix"];
+        s.suffix = str;
         
-        [self.sprites setObject:s forKey:[NSNumber numberWithInt:s.id]];
-    } 
+        [self.marker setObject:s forKey:[NSNumber numberWithInt:s.id]];
+    }
     
+    self.keyArray = self.marker.allKeys;
 }
 //------------------------------------------------------------------------------
-- (Sprite*)getSpriteWithId:(int)id
+- (Marker*)getMarkerForId:(int)id
 {
-    return [self.sprites objectForKey:[NSNumber numberWithInt:id]];
+    return [self.marker objectForKey:[NSNumber numberWithInt:id]];
+}
+//------------------------------------------------------------------------------
+- (NSUInteger)getNumMarker
+{
+    return self.keyArray.count;
+}
+//------------------------------------------------------------------------------
+- (Marker*)getMarkerAtIndex:(int)idx
+{
+    if (idx >= self.keyArray.count)
+    {
+        return nil;
+    }
+    
+    return [self.marker objectForKey:[self.keyArray objectAtIndex:idx]];
 }
 //------------------------------------------------------------------------------
 @end

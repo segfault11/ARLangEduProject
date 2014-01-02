@@ -102,8 +102,8 @@ static void arg2ConvGLcpara(
     ARUint8 _imgY[VIDEO_FRAME_WIDTH*VIDEO_FRAME_HEIGHT];
     AR3DHandle* _ar3DHandle;
     GLfloat _proj[16];
+    float _transInc;
     BOOL _cont;
-    
     
     struct
     {
@@ -113,6 +113,7 @@ static void arg2ConvGLcpara(
     }
     _cube;
 }
+@property (weak, nonatomic) IBOutlet UILabel *translationTextField;
 @property(nonatomic, strong) NSMutableDictionary* marker; // maps artoolkit id to maker id
 @property(nonatomic, strong) SpriteRenderer* spriteRenderer;
 @property(nonatomic, strong) GLUEProgram* program;
@@ -123,9 +124,9 @@ static void arg2ConvGLcpara(
 @property(nonatomic, strong) AVCaptureVideoDataOutput* output;
 @property(nonatomic, strong) AVCaptureVideoPreviewLayer* previewLayer;
 @property(strong, nonatomic) EAGLContext *context;
-@property(weak, nonatomic) IBOutlet UILabel *sentence;
 @property(strong, nonatomic) Content* currentContent;
 @property(strong, nonatomic) AVAudioPlayer* audioPlayer;
+@property (weak, nonatomic) IBOutlet UITextField *translationIncrementTextField;
 - (void)initMarkerDetection;
 - (void)setupGL;
 - (void)initCaptureSession;
@@ -148,7 +149,7 @@ static void arg2ConvGLcpara(
         NSLog(@"Failed to create ES context");
     }
     
-    
+    _transInc = 1.0f;
     GLKView *view = (GLKView *)self.view;
     view.context = self.context;
     view.drawableDepthFormat = GLKViewDrawableDepthFormat24;
@@ -580,8 +581,9 @@ fromConnection:(AVCaptureConnection *)connection
     }
     else
     {
+        NSLog(@"bla");
         arGetTransMatSquareCont(
-            _ar3DHandle,
+        _ar3DHandle,
             &(markerInfo[currMid]),
             trans,
             m.size,
@@ -589,18 +591,20 @@ fromConnection:(AVCaptureConnection *)connection
         );
     }
     
+    _cont = YES;
     
     // prepare view matrix
     arg2ConvGlpara(trans, view);
-    _cont = YES;
     
     // display content
     [self.spriteRenderer renderSprite:s.id WithView:view AndProjection:_proj];
     //[self renderCubeWithView:view AndProjection:_proj];
 
-    self.sentence.text = [c.sentences objectAtIndex:c.activeSentence];
+   // self.sentence.text = [c.sentences objectAtIndex:c.activeSentence];
     
-    
+    self.translationTextField.text =
+        [NSString stringWithFormat:@"[x = %f; y = %f; z = %f]",
+        s.translation.x, s.translation.y, s.translation.z];
     assert(glGetError() == GL_NO_ERROR);
 }
 //------------------------------------------------------------------------------
@@ -612,6 +616,95 @@ fromConnection:(AVCaptureConnection *)connection
     [self.program bind];
     glBindVertexArrayOES(_vertexArray);
     glDrawArrays(GL_TRIANGLES, 0, 6);
+}
+//------------------------------------------------------------------------------
+- (IBAction)setTranslationIncrement:(id)sender
+{
+    _transInc = [self.translationIncrementTextField.text floatValue];
+}
+//------------------------------------------------------------------------------
+- (IBAction)decreaseX:(id)sender
+{
+    if (!self.currentContent)
+    {
+        return;
+    }
+
+    Sprite* s = [[SpriteManager instance] getSpriteWithId:self.currentContent.sprite];
+
+    Vec3 t = s.translation;
+    t.x -= _transInc;
+    s.translation = t;
+}
+//------------------------------------------------------------------------------
+- (IBAction)increaseX:(id)sender
+{
+    if (!self.currentContent)
+    {
+        return;
+    }
+
+    Sprite* s = [[SpriteManager instance] getSpriteWithId:self.currentContent.sprite];
+
+    Vec3 t = s.translation;
+    t.x += _transInc;
+    s.translation = t;
+}
+//------------------------------------------------------------------------------
+- (IBAction)decreaseY:(id)sender
+{
+    if (!self.currentContent)
+    {
+        return;
+    }
+
+    Sprite* s = [[SpriteManager instance] getSpriteWithId:self.currentContent.sprite];
+
+    Vec3 t = s.translation;
+    t.y -= _transInc;
+    s.translation = t;
+}
+//------------------------------------------------------------------------------
+- (IBAction)increaseY:(id)sender
+{
+    if (!self.currentContent)
+    {
+        return;
+    }
+
+    Sprite* s = [[SpriteManager instance] getSpriteWithId:self.currentContent.sprite];
+
+    Vec3 t = s.translation;
+    t.y += _transInc;
+    s.translation = t;
+}
+//------------------------------------------------------------------------------
+- (IBAction)decreaseZ:(id)sender
+{
+    if (!self.currentContent)
+    {
+        return;
+    }
+
+    Sprite* s = [[SpriteManager instance] getSpriteWithId:self.currentContent.sprite];
+
+    Vec3 t = s.translation;
+    t.z -= _transInc;
+    s.translation = t;
+}
+//------------------------------------------------------------------------------
+- (IBAction)increaseZ:(id)sender
+{
+    if (!self.currentContent)
+    {
+        return;
+    }
+
+    Sprite* s = [[SpriteManager instance] getSpriteWithId:self.currentContent.sprite];
+
+    Vec3 t = s.translation;
+    t.z += _transInc;
+    s.translation = t;
 }
 //------------------------------------------------------------------------------
 - (void)renderCubeWithView:(GLfloat*)view AndProjection:(GLfloat*)proj;
@@ -657,8 +750,8 @@ fromConnection:(AVCaptureConnection *)connection
 //------------------------------------------------------------------------------
 - (void)resetCurrentContent
 {
-    _cont = NO;
     self.currentContent.activeSentence = 0;
+    _cont = NO;
 }
 //------------------------------------------------------------------------------
 - (void)playSound:(NSString*)filename
@@ -680,29 +773,6 @@ fromConnection:(AVCaptureConnection *)connection
     [self.audioPlayer prepareToPlay];
 
     [self.audioPlayer play];
-}
-//------------------------------------------------------------------------------
-- (IBAction)playAudio:(id)sender
-{
-    if (!self.currentContent)
-    {
-        return;
-    }
-    
-    [self playSound:self.currentContent.sound];
-}
-//------------------------------------------------------------------------------
-- (IBAction)changeSentence:(id)sender
-{
-    if (!self.currentContent)
-    {
-        return;
-    }
-    
-    int as = self.currentContent.activeSentence;
-    int numSentences = self.currentContent.sentences.count;
-    
-    self.currentContent.activeSentence = (as + 1) % numSentences;
 }
 //------------------------------------------------------------------------------
 //- (NSUInteger)supportedInterfaceOrientations

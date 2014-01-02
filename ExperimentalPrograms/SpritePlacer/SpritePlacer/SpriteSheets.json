@@ -1,0 +1,13 @@
+[
+    {
+        "id" : 0,
+        "fileName" : "SpriteSheet00.png",
+        "numFrames" : 8
+    },
+ 
+    {
+        "id" : 1,
+        "fileName" : "SpriteSheet01.png",
+        "numFrames" : 19
+    }
+]

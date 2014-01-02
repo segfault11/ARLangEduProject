@@ -1,0 +1,672 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 46;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		191A2ED018754B1E009D0261 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 191A2ECF18754B1E009D0261 /* Foundation.framework */; };
+		191A2ED218754B1E009D0261 /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 191A2ED118754B1E009D0261 /* CoreGraphics.framework */; };
+		191A2ED418754B1E009D0261 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 191A2ED318754B1E009D0261 /* UIKit.framework */; };
+		191A2EDA18754B1E009D0261 /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = 191A2ED818754B1E009D0261 /* InfoPlist.strings */; };
+		191A2EDC18754B1E009D0261 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 191A2EDB18754B1E009D0261 /* main.m */; };
+		191A2EE018754B1E009D0261 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 191A2EDF18754B1E009D0261 /* AppDelegate.m */; };
+		191A2EE618754B1E009D0261 /* Main_iPad.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 191A2EE418754B1E009D0261 /* Main_iPad.storyboard */; };
+		191A2EE918754B1E009D0261 /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 191A2EE818754B1E009D0261 /* ViewController.m */; };
+		191A2EEB18754B1E009D0261 /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 191A2EEA18754B1E009D0261 /* Images.xcassets */; };
+		191A2EF218754B1E009D0261 /* XCTest.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 191A2EF118754B1E009D0261 /* XCTest.framework */; };
+		191A2EF318754B1E009D0261 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 191A2ECF18754B1E009D0261 /* Foundation.framework */; };
+		191A2EF418754B1E009D0261 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 191A2ED318754B1E009D0261 /* UIKit.framework */; };
+		191A2EFC18754B1E009D0261 /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = 191A2EFA18754B1E009D0261 /* InfoPlist.strings */; };
+		191A2EFE18754B1E009D0261 /* SpritePlacerTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 191A2EFD18754B1E009D0261 /* SpritePlacerTests.m */; };
+		191A2F1318754C07009D0261 /* 1.dat in Resources */ = {isa = PBXBuildFile; fileRef = 191A2F0718754C07009D0261 /* 1.dat */; };
+		191A2F1418754C07009D0261 /* 2.dat in Resources */ = {isa = PBXBuildFile; fileRef = 191A2F0818754C07009D0261 /* 2.dat */; };
+		191A2F1518754C07009D0261 /* Animation.m in Sources */ = {isa = PBXBuildFile; fileRef = 191A2F0A18754C07009D0261 /* Animation.m */; };
+		191A2F1618754C07009D0261 /* AnimationManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 191A2F0C18754C07009D0261 /* AnimationManager.m */; };
+		191A2F1718754C07009D0261 /* Animations.json in Resources */ = {isa = PBXBuildFile; fileRef = 191A2F0D18754C07009D0261 /* Animations.json */; };
+		191A2F1818754C07009D0261 /* bass.m4a in Resources */ = {isa = PBXBuildFile; fileRef = 191A2F0E18754C07009D0261 /* bass.m4a */; };
+		191A2F1918754C07009D0261 /* camera_para_ipadmini640x480.dat in Resources */ = {isa = PBXBuildFile; fileRef = 191A2F0F18754C07009D0261 /* camera_para_ipadmini640x480.dat */; };
+		191A2F1A18754C07009D0261 /* Content.m in Sources */ = {isa = PBXBuildFile; fileRef = 191A2F1118754C07009D0261 /* Content.m */; };
+		191A2F3E18754C33009D0261 /* ContentManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 191A2F1B18754C33009D0261 /* ContentManager.m */; };
+		191A2F3F18754C33009D0261 /* Contents.json in Resources */ = {isa = PBXBuildFile; fileRef = 191A2F1C18754C33009D0261 /* Contents.json */; };
+		191A2F4018754C33009D0261 /* CubeFS.glsl in Resources */ = {isa = PBXBuildFile; fileRef = 191A2F1D18754C33009D0261 /* CubeFS.glsl */; };
+		191A2F4118754C33009D0261 /* CubeVS.glsl in Resources */ = {isa = PBXBuildFile; fileRef = 191A2F1E18754C33009D0261 /* CubeVS.glsl */; };
+		191A2F4218754C33009D0261 /* GLUEProgram.m in Sources */ = {isa = PBXBuildFile; fileRef = 191A2F2018754C33009D0261 /* GLUEProgram.m */; };
+		191A2F4318754C33009D0261 /* JSONKit.m in Sources */ = {isa = PBXBuildFile; fileRef = 191A2F2218754C33009D0261 /* JSONKit.m */; settings = {COMPILER_FLAGS = "-fno-objc-arc"; }; };
+		191A2F4418754C33009D0261 /* Marker.json in Resources */ = {isa = PBXBuildFile; fileRef = 191A2F2418754C33009D0261 /* Marker.json */; };
+		191A2F4518754C33009D0261 /* Marker.m in Sources */ = {isa = PBXBuildFile; fileRef = 191A2F2518754C33009D0261 /* Marker.m */; };
+		191A2F4618754C33009D0261 /* MarkerManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 191A2F2718754C33009D0261 /* MarkerManager.m */; };
+		191A2F4718754C33009D0261 /* patt.hiro in Resources */ = {isa = PBXBuildFile; fileRef = 191A2F2818754C33009D0261 /* patt.hiro */; };
+		191A2F4818754C33009D0261 /* piano.m4a in Resources */ = {isa = PBXBuildFile; fileRef = 191A2F2918754C33009D0261 /* piano.m4a */; };
+		191A2F4918754C33009D0261 /* ProfileManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 191A2F2B18754C33009D0261 /* ProfileManager.m */; };
+		191A2F4A18754C33009D0261 /* Sprite.m in Sources */ = {isa = PBXBuildFile; fileRef = 191A2F2D18754C33009D0261 /* Sprite.m */; };
+		191A2F4B18754C33009D0261 /* SpriteManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 191A2F2F18754C33009D0261 /* SpriteManager.m */; };
+		191A2F4C18754C33009D0261 /* SpriteRenderer.m in Sources */ = {isa = PBXBuildFile; fileRef = 191A2F3118754C33009D0261 /* SpriteRenderer.m */; };
+		191A2F4D18754C33009D0261 /* SpriteRendererFS.glsl in Resources */ = {isa = PBXBuildFile; fileRef = 191A2F3218754C33009D0261 /* SpriteRendererFS.glsl */; };
+		191A2F4E18754C33009D0261 /* SpriteRendererVS.glsl in Resources */ = {isa = PBXBuildFile; fileRef = 191A2F3318754C33009D0261 /* SpriteRendererVS.glsl */; };
+		191A2F4F18754C33009D0261 /* Sprites.json in Resources */ = {isa = PBXBuildFile; fileRef = 191A2F3418754C33009D0261 /* Sprites.json */; };
+		191A2F5018754C33009D0261 /* SpriteSheet.m in Sources */ = {isa = PBXBuildFile; fileRef = 191A2F3618754C33009D0261 /* SpriteSheet.m */; };
+		191A2F5118754C33009D0261 /* SpriteSheet00.png in Resources */ = {isa = PBXBuildFile; fileRef = 191A2F3718754C33009D0261 /* SpriteSheet00.png */; };
+		191A2F5218754C33009D0261 /* SpriteSheet01.png in Resources */ = {isa = PBXBuildFile; fileRef = 191A2F3818754C33009D0261 /* SpriteSheet01.png */; };
+		191A2F5318754C33009D0261 /* SpriteSheetManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 191A2F3A18754C33009D0261 /* SpriteSheetManager.m */; };
+		191A2F5418754C33009D0261 /* SpriteSheets.json in Resources */ = {isa = PBXBuildFile; fileRef = 191A2F3B18754C33009D0261 /* SpriteSheets.json */; };
+		191A2F5518754C33009D0261 /* VideoFS.glsl in Resources */ = {isa = PBXBuildFile; fileRef = 191A2F3C18754C33009D0261 /* VideoFS.glsl */; };
+		191A2F5618754C33009D0261 /* VideoVS.glsl in Resources */ = {isa = PBXBuildFile; fileRef = 191A2F3D18754C33009D0261 /* VideoVS.glsl */; };
+		191A2F5D18754D11009D0261 /* libAR.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 191A2F5718754D11009D0261 /* libAR.a */; };
+		191A2F5E18754D11009D0261 /* libAR2.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 191A2F5818754D11009D0261 /* libAR2.a */; };
+		191A2F5F18754D11009D0261 /* libARUtil.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 191A2F5918754D11009D0261 /* libARUtil.a */; };
+		191A2F6018754D11009D0261 /* libGLES2sub.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 191A2F5A18754D11009D0261 /* libGLES2sub.a */; };
+		191A2F6118754D11009D0261 /* libgluES2.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 191A2F5B18754D11009D0261 /* libgluES2.a */; };
+		191A2F6218754D11009D0261 /* libjpeg.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 191A2F5C18754D11009D0261 /* libjpeg.a */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		191A2EF518754B1E009D0261 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 191A2EC418754B1E009D0261 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 191A2ECB18754B1E009D0261;
+			remoteInfo = SpritePlacer;
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXFileReference section */
+		191A2ECC18754B1E009D0261 /* SpritePlacer.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = SpritePlacer.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		191A2ECF18754B1E009D0261 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
+		191A2ED118754B1E009D0261 /* CoreGraphics.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreGraphics.framework; path = System/Library/Frameworks/CoreGraphics.framework; sourceTree = SDKROOT; };
+		191A2ED318754B1E009D0261 /* UIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UIKit.framework; path = System/Library/Frameworks/UIKit.framework; sourceTree = SDKROOT; };
+		191A2ED718754B1E009D0261 /* SpritePlacer-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "SpritePlacer-Info.plist"; sourceTree = "<group>"; };
+		191A2ED918754B1E009D0261 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
+		191A2EDB18754B1E009D0261 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
+		191A2EDD18754B1E009D0261 /* SpritePlacer-Prefix.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "SpritePlacer-Prefix.pch"; sourceTree = "<group>"; };
+		191A2EDE18754B1E009D0261 /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
+		191A2EDF18754B1E009D0261 /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
+		191A2EE518754B1E009D0261 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main_iPad.storyboard; sourceTree = "<group>"; };
+		191A2EE718754B1E009D0261 /* ViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ViewController.h; sourceTree = "<group>"; };
+		191A2EE818754B1E009D0261 /* ViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ViewController.m; sourceTree = "<group>"; };
+		191A2EEA18754B1E009D0261 /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Images.xcassets; sourceTree = "<group>"; };
+		191A2EF018754B1E009D0261 /* SpritePlacerTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = SpritePlacerTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		191A2EF118754B1E009D0261 /* XCTest.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = XCTest.framework; path = Library/Frameworks/XCTest.framework; sourceTree = DEVELOPER_DIR; };
+		191A2EF918754B1E009D0261 /* SpritePlacerTests-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "SpritePlacerTests-Info.plist"; sourceTree = "<group>"; };
+		191A2EFB18754B1E009D0261 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
+		191A2EFD18754B1E009D0261 /* SpritePlacerTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = SpritePlacerTests.m; sourceTree = "<group>"; };
+		191A2F0718754C07009D0261 /* 1.dat */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = 1.dat; sourceTree = "<group>"; };
+		191A2F0818754C07009D0261 /* 2.dat */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = 2.dat; sourceTree = "<group>"; };
+		191A2F0918754C07009D0261 /* Animation.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Animation.h; sourceTree = "<group>"; };
+		191A2F0A18754C07009D0261 /* Animation.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Animation.m; sourceTree = "<group>"; };
+		191A2F0B18754C07009D0261 /* AnimationManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AnimationManager.h; sourceTree = "<group>"; };
+		191A2F0C18754C07009D0261 /* AnimationManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AnimationManager.m; sourceTree = "<group>"; };
+		191A2F0D18754C07009D0261 /* Animations.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = Animations.json; sourceTree = "<group>"; };
+		191A2F0E18754C07009D0261 /* bass.m4a */ = {isa = PBXFileReference; lastKnownFileType = file; path = bass.m4a; sourceTree = "<group>"; };
+		191A2F0F18754C07009D0261 /* camera_para_ipadmini640x480.dat */ = {isa = PBXFileReference; lastKnownFileType = file; path = camera_para_ipadmini640x480.dat; sourceTree = "<group>"; };
+		191A2F1018754C07009D0261 /* Content.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Content.h; sourceTree = "<group>"; };
+		191A2F1118754C07009D0261 /* Content.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Content.m; sourceTree = "<group>"; };
+		191A2F1218754C07009D0261 /* ContentManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ContentManager.h; sourceTree = "<group>"; };
+		191A2F1B18754C33009D0261 /* ContentManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ContentManager.m; sourceTree = "<group>"; };
+		191A2F1C18754C33009D0261 /* Contents.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = Contents.json; sourceTree = "<group>"; };
+		191A2F1D18754C33009D0261 /* CubeFS.glsl */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = CubeFS.glsl; sourceTree = "<group>"; };
+		191A2F1E18754C33009D0261 /* CubeVS.glsl */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = CubeVS.glsl; sourceTree = "<group>"; };
+		191A2F1F18754C33009D0261 /* GLUEProgram.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GLUEProgram.h; sourceTree = "<group>"; };
+		191A2F2018754C33009D0261 /* GLUEProgram.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GLUEProgram.m; sourceTree = "<group>"; };
+		191A2F2118754C33009D0261 /* JSONKit.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = JSONKit.h; sourceTree = "<group>"; };
+		191A2F2218754C33009D0261 /* JSONKit.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = JSONKit.m; sourceTree = "<group>"; };
+		191A2F2318754C33009D0261 /* Marker.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Marker.h; sourceTree = "<group>"; };
+		191A2F2418754C33009D0261 /* Marker.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = Marker.json; sourceTree = "<group>"; };
+		191A2F2518754C33009D0261 /* Marker.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Marker.m; sourceTree = "<group>"; };
+		191A2F2618754C33009D0261 /* MarkerManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MarkerManager.h; sourceTree = "<group>"; };
+		191A2F2718754C33009D0261 /* MarkerManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MarkerManager.m; sourceTree = "<group>"; };
+		191A2F2818754C33009D0261 /* patt.hiro */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = patt.hiro; sourceTree = "<group>"; };
+		191A2F2918754C33009D0261 /* piano.m4a */ = {isa = PBXFileReference; lastKnownFileType = file; path = piano.m4a; sourceTree = "<group>"; };
+		191A2F2A18754C33009D0261 /* ProfileManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ProfileManager.h; sourceTree = "<group>"; };
+		191A2F2B18754C33009D0261 /* ProfileManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ProfileManager.m; sourceTree = "<group>"; };
+		191A2F2C18754C33009D0261 /* Sprite.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Sprite.h; sourceTree = "<group>"; };
+		191A2F2D18754C33009D0261 /* Sprite.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Sprite.m; sourceTree = "<group>"; };
+		191A2F2E18754C33009D0261 /* SpriteManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SpriteManager.h; sourceTree = "<group>"; };
+		191A2F2F18754C33009D0261 /* SpriteManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SpriteManager.m; sourceTree = "<group>"; };
+		191A2F3018754C33009D0261 /* SpriteRenderer.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SpriteRenderer.h; sourceTree = "<group>"; };
+		191A2F3118754C33009D0261 /* SpriteRenderer.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SpriteRenderer.m; sourceTree = "<group>"; };
+		191A2F3218754C33009D0261 /* SpriteRendererFS.glsl */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = SpriteRendererFS.glsl; sourceTree = "<group>"; };
+		191A2F3318754C33009D0261 /* SpriteRendererVS.glsl */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = SpriteRendererVS.glsl; sourceTree = "<group>"; };
+		191A2F3418754C33009D0261 /* Sprites.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = Sprites.json; sourceTree = "<group>"; };
+		191A2F3518754C33009D0261 /* SpriteSheet.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SpriteSheet.h; sourceTree = "<group>"; };
+		191A2F3618754C33009D0261 /* SpriteSheet.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SpriteSheet.m; sourceTree = "<group>"; };
+		191A2F3718754C33009D0261 /* SpriteSheet00.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = SpriteSheet00.png; sourceTree = "<group>"; };
+		191A2F3818754C33009D0261 /* SpriteSheet01.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = SpriteSheet01.png; sourceTree = "<group>"; };
+		191A2F3918754C33009D0261 /* SpriteSheetManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SpriteSheetManager.h; sourceTree = "<group>"; };
+		191A2F3A18754C33009D0261 /* SpriteSheetManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SpriteSheetManager.m; sourceTree = "<group>"; };
+		191A2F3B18754C33009D0261 /* SpriteSheets.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = SpriteSheets.json; sourceTree = "<group>"; };
+		191A2F3C18754C33009D0261 /* VideoFS.glsl */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = VideoFS.glsl; sourceTree = "<group>"; };
+		191A2F3D18754C33009D0261 /* VideoVS.glsl */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = VideoVS.glsl; sourceTree = "<group>"; };
+		191A2F5718754D11009D0261 /* libAR.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; name = libAR.a; path = ../../../../../../Libraries/ARToolKit/ARToolkit/lib/libAR.a; sourceTree = "<group>"; };
+		191A2F5818754D11009D0261 /* libAR2.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; name = libAR2.a; path = ../../../../../../Libraries/ARToolKit/ARToolkit/lib/libAR2.a; sourceTree = "<group>"; };
+		191A2F5918754D11009D0261 /* libARUtil.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; name = libARUtil.a; path = ../../../../../../Libraries/ARToolKit/ARToolkit/lib/libARUtil.a; sourceTree = "<group>"; };
+		191A2F5A18754D11009D0261 /* libGLES2sub.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; name = libGLES2sub.a; path = ../../../../../../Libraries/ARToolKit/ARToolkit/lib/libGLES2sub.a; sourceTree = "<group>"; };
+		191A2F5B18754D11009D0261 /* libgluES2.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; name = libgluES2.a; path = ../../../../../../Libraries/ARToolKit/ARToolkit/lib/libgluES2.a; sourceTree = "<group>"; };
+		191A2F5C18754D11009D0261 /* libjpeg.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; name = libjpeg.a; path = ../../../../../../Libraries/ARToolKit/ARToolkit/lib/libjpeg.a; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		191A2EC918754B1E009D0261 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				191A2F5D18754D11009D0261 /* libAR.a in Frameworks */,
+				191A2F6018754D11009D0261 /* libGLES2sub.a in Frameworks */,
+				191A2F6218754D11009D0261 /* libjpeg.a in Frameworks */,
+				191A2ED218754B1E009D0261 /* CoreGraphics.framework in Frameworks */,
+				191A2F6118754D11009D0261 /* libgluES2.a in Frameworks */,
+				191A2F5F18754D11009D0261 /* libARUtil.a in Frameworks */,
+				191A2ED418754B1E009D0261 /* UIKit.framework in Frameworks */,
+				191A2F5E18754D11009D0261 /* libAR2.a in Frameworks */,
+				191A2ED018754B1E009D0261 /* Foundation.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		191A2EED18754B1E009D0261 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				191A2EF218754B1E009D0261 /* XCTest.framework in Frameworks */,
+				191A2EF418754B1E009D0261 /* UIKit.framework in Frameworks */,
+				191A2EF318754B1E009D0261 /* Foundation.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		191A2EC318754B1E009D0261 = {
+			isa = PBXGroup;
+			children = (
+				191A2ED518754B1E009D0261 /* SpritePlacer */,
+				191A2EF718754B1E009D0261 /* SpritePlacerTests */,
+				191A2ECE18754B1E009D0261 /* Frameworks */,
+				191A2ECD18754B1E009D0261 /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		191A2ECD18754B1E009D0261 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				191A2ECC18754B1E009D0261 /* SpritePlacer.app */,
+				191A2EF018754B1E009D0261 /* SpritePlacerTests.xctest */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		191A2ECE18754B1E009D0261 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				191A2F5718754D11009D0261 /* libAR.a */,
+				191A2F5818754D11009D0261 /* libAR2.a */,
+				191A2F5918754D11009D0261 /* libARUtil.a */,
+				191A2F5A18754D11009D0261 /* libGLES2sub.a */,
+				191A2F5B18754D11009D0261 /* libgluES2.a */,
+				191A2F5C18754D11009D0261 /* libjpeg.a */,
+				191A2ECF18754B1E009D0261 /* Foundation.framework */,
+				191A2ED118754B1E009D0261 /* CoreGraphics.framework */,
+				191A2ED318754B1E009D0261 /* UIKit.framework */,
+				191A2EF118754B1E009D0261 /* XCTest.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		191A2ED518754B1E009D0261 /* SpritePlacer */ = {
+			isa = PBXGroup;
+			children = (
+				191A2F1B18754C33009D0261 /* ContentManager.m */,
+				191A2F1C18754C33009D0261 /* Contents.json */,
+				191A2F1D18754C33009D0261 /* CubeFS.glsl */,
+				191A2F1E18754C33009D0261 /* CubeVS.glsl */,
+				191A2F1F18754C33009D0261 /* GLUEProgram.h */,
+				191A2F2018754C33009D0261 /* GLUEProgram.m */,
+				191A2F2118754C33009D0261 /* JSONKit.h */,
+				191A2F2218754C33009D0261 /* JSONKit.m */,
+				191A2F2318754C33009D0261 /* Marker.h */,
+				191A2F2418754C33009D0261 /* Marker.json */,
+				191A2F2518754C33009D0261 /* Marker.m */,
+				191A2F2618754C33009D0261 /* MarkerManager.h */,
+				191A2F2718754C33009D0261 /* MarkerManager.m */,
+				191A2F2818754C33009D0261 /* patt.hiro */,
+				191A2F2918754C33009D0261 /* piano.m4a */,
+				191A2F2A18754C33009D0261 /* ProfileManager.h */,
+				191A2F2B18754C33009D0261 /* ProfileManager.m */,
+				191A2F2C18754C33009D0261 /* Sprite.h */,
+				191A2F2D18754C33009D0261 /* Sprite.m */,
+				191A2F2E18754C33009D0261 /* SpriteManager.h */,
+				191A2F2F18754C33009D0261 /* SpriteManager.m */,
+				191A2F3018754C33009D0261 /* SpriteRenderer.h */,
+				191A2F3118754C33009D0261 /* SpriteRenderer.m */,
+				191A2F3218754C33009D0261 /* SpriteRendererFS.glsl */,
+				191A2F3318754C33009D0261 /* SpriteRendererVS.glsl */,
+				191A2F3418754C33009D0261 /* Sprites.json */,
+				191A2F3518754C33009D0261 /* SpriteSheet.h */,
+				191A2F3618754C33009D0261 /* SpriteSheet.m */,
+				191A2F3718754C33009D0261 /* SpriteSheet00.png */,
+				191A2F3818754C33009D0261 /* SpriteSheet01.png */,
+				191A2F3918754C33009D0261 /* SpriteSheetManager.h */,
+				191A2F3A18754C33009D0261 /* SpriteSheetManager.m */,
+				191A2F3B18754C33009D0261 /* SpriteSheets.json */,
+				191A2F3C18754C33009D0261 /* VideoFS.glsl */,
+				191A2F3D18754C33009D0261 /* VideoVS.glsl */,
+				191A2F0718754C07009D0261 /* 1.dat */,
+				191A2F0818754C07009D0261 /* 2.dat */,
+				191A2F0918754C07009D0261 /* Animation.h */,
+				191A2F0A18754C07009D0261 /* Animation.m */,
+				191A2F0B18754C07009D0261 /* AnimationManager.h */,
+				191A2F0C18754C07009D0261 /* AnimationManager.m */,
+				191A2F0D18754C07009D0261 /* Animations.json */,
+				191A2F0E18754C07009D0261 /* bass.m4a */,
+				191A2F0F18754C07009D0261 /* camera_para_ipadmini640x480.dat */,
+				191A2F1018754C07009D0261 /* Content.h */,
+				191A2F1118754C07009D0261 /* Content.m */,
+				191A2F1218754C07009D0261 /* ContentManager.h */,
+				191A2EDE18754B1E009D0261 /* AppDelegate.h */,
+				191A2EDF18754B1E009D0261 /* AppDelegate.m */,
+				191A2EE418754B1E009D0261 /* Main_iPad.storyboard */,
+				191A2EE718754B1E009D0261 /* ViewController.h */,
+				191A2EE818754B1E009D0261 /* ViewController.m */,
+				191A2EEA18754B1E009D0261 /* Images.xcassets */,
+				191A2ED618754B1E009D0261 /* Supporting Files */,
+			);
+			path = SpritePlacer;
+			sourceTree = "<group>";
+		};
+		191A2ED618754B1E009D0261 /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				191A2ED718754B1E009D0261 /* SpritePlacer-Info.plist */,
+				191A2ED818754B1E009D0261 /* InfoPlist.strings */,
+				191A2EDB18754B1E009D0261 /* main.m */,
+				191A2EDD18754B1E009D0261 /* SpritePlacer-Prefix.pch */,
+			);
+			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		191A2EF718754B1E009D0261 /* SpritePlacerTests */ = {
+			isa = PBXGroup;
+			children = (
+				191A2EFD18754B1E009D0261 /* SpritePlacerTests.m */,
+				191A2EF818754B1E009D0261 /* Supporting Files */,
+			);
+			path = SpritePlacerTests;
+			sourceTree = "<group>";
+		};
+		191A2EF818754B1E009D0261 /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				191A2EF918754B1E009D0261 /* SpritePlacerTests-Info.plist */,
+				191A2EFA18754B1E009D0261 /* InfoPlist.strings */,
+			);
+			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		191A2ECB18754B1E009D0261 /* SpritePlacer */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 191A2F0118754B1E009D0261 /* Build configuration list for PBXNativeTarget "SpritePlacer" */;
+			buildPhases = (
+				191A2EC818754B1E009D0261 /* Sources */,
+				191A2EC918754B1E009D0261 /* Frameworks */,
+				191A2ECA18754B1E009D0261 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = SpritePlacer;
+			productName = SpritePlacer;
+			productReference = 191A2ECC18754B1E009D0261 /* SpritePlacer.app */;
+			productType = "com.apple.product-type.application";
+		};
+		191A2EEF18754B1E009D0261 /* SpritePlacerTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 191A2F0418754B1E009D0261 /* Build configuration list for PBXNativeTarget "SpritePlacerTests" */;
+			buildPhases = (
+				191A2EEC18754B1E009D0261 /* Sources */,
+				191A2EED18754B1E009D0261 /* Frameworks */,
+				191A2EEE18754B1E009D0261 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				191A2EF618754B1E009D0261 /* PBXTargetDependency */,
+			);
+			name = SpritePlacerTests;
+			productName = SpritePlacerTests;
+			productReference = 191A2EF018754B1E009D0261 /* SpritePlacerTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		191A2EC418754B1E009D0261 /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastUpgradeCheck = 0500;
+				ORGANIZATIONNAME = "Arno in Wolde Lübke";
+				TargetAttributes = {
+					191A2EEF18754B1E009D0261 = {
+						TestTargetID = 191A2ECB18754B1E009D0261;
+					};
+				};
+			};
+			buildConfigurationList = 191A2EC718754B1E009D0261 /* Build configuration list for PBXProject "SpritePlacer" */;
+			compatibilityVersion = "Xcode 3.2";
+			developmentRegion = English;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = 191A2EC318754B1E009D0261;
+			productRefGroup = 191A2ECD18754B1E009D0261 /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				191A2ECB18754B1E009D0261 /* SpritePlacer */,
+				191A2EEF18754B1E009D0261 /* SpritePlacerTests */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		191A2ECA18754B1E009D0261 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				191A2F5618754C33009D0261 /* VideoVS.glsl in Resources */,
+				191A2F1418754C07009D0261 /* 2.dat in Resources */,
+				191A2F1818754C07009D0261 /* bass.m4a in Resources */,
+				191A2F5418754C33009D0261 /* SpriteSheets.json in Resources */,
+				191A2F4F18754C33009D0261 /* Sprites.json in Resources */,
+				191A2EE618754B1E009D0261 /* Main_iPad.storyboard in Resources */,
+				191A2F1318754C07009D0261 /* 1.dat in Resources */,
+				191A2F4018754C33009D0261 /* CubeFS.glsl in Resources */,
+				191A2F4818754C33009D0261 /* piano.m4a in Resources */,
+				191A2F1718754C07009D0261 /* Animations.json in Resources */,
+				191A2F4718754C33009D0261 /* patt.hiro in Resources */,
+				191A2F5118754C33009D0261 /* SpriteSheet00.png in Resources */,
+				191A2F3F18754C33009D0261 /* Contents.json in Resources */,
+				191A2EEB18754B1E009D0261 /* Images.xcassets in Resources */,
+				191A2F4418754C33009D0261 /* Marker.json in Resources */,
+				191A2F5218754C33009D0261 /* SpriteSheet01.png in Resources */,
+				191A2F4D18754C33009D0261 /* SpriteRendererFS.glsl in Resources */,
+				191A2F1918754C07009D0261 /* camera_para_ipadmini640x480.dat in Resources */,
+				191A2F5518754C33009D0261 /* VideoFS.glsl in Resources */,
+				191A2F4E18754C33009D0261 /* SpriteRendererVS.glsl in Resources */,
+				191A2EDA18754B1E009D0261 /* InfoPlist.strings in Resources */,
+				191A2F4118754C33009D0261 /* CubeVS.glsl in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		191A2EEE18754B1E009D0261 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				191A2EFC18754B1E009D0261 /* InfoPlist.strings in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		191A2EC818754B1E009D0261 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				191A2EE918754B1E009D0261 /* ViewController.m in Sources */,
+				191A2F1A18754C07009D0261 /* Content.m in Sources */,
+				191A2F4318754C33009D0261 /* JSONKit.m in Sources */,
+				191A2F3E18754C33009D0261 /* ContentManager.m in Sources */,
+				191A2EE018754B1E009D0261 /* AppDelegate.m in Sources */,
+				191A2F1618754C07009D0261 /* AnimationManager.m in Sources */,
+				191A2F4218754C33009D0261 /* GLUEProgram.m in Sources */,
+				191A2F4918754C33009D0261 /* ProfileManager.m in Sources */,
+				191A2F5018754C33009D0261 /* SpriteSheet.m in Sources */,
+				191A2F4B18754C33009D0261 /* SpriteManager.m in Sources */,
+				191A2F4A18754C33009D0261 /* Sprite.m in Sources */,
+				191A2F5318754C33009D0261 /* SpriteSheetManager.m in Sources */,
+				191A2F4618754C33009D0261 /* MarkerManager.m in Sources */,
+				191A2F1518754C07009D0261 /* Animation.m in Sources */,
+				191A2F4C18754C33009D0261 /* SpriteRenderer.m in Sources */,
+				191A2EDC18754B1E009D0261 /* main.m in Sources */,
+				191A2F4518754C33009D0261 /* Marker.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		191A2EEC18754B1E009D0261 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				191A2EFE18754B1E009D0261 /* SpritePlacerTests.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		191A2EF618754B1E009D0261 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 191A2ECB18754B1E009D0261 /* SpritePlacer */;
+			targetProxy = 191A2EF518754B1E009D0261 /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin PBXVariantGroup section */
+		191A2ED818754B1E009D0261 /* InfoPlist.strings */ = {
+			isa = PBXVariantGroup;
+			children = (
+				191A2ED918754B1E009D0261 /* en */,
+			);
+			name = InfoPlist.strings;
+			sourceTree = "<group>";
+		};
+		191A2EE418754B1E009D0261 /* Main_iPad.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				191A2EE518754B1E009D0261 /* Base */,
+			);
+			name = Main_iPad.storyboard;
+			sourceTree = "<group>";
+		};
+		191A2EFA18754B1E009D0261 /* InfoPlist.strings */ = {
+			isa = PBXVariantGroup;
+			children = (
+				191A2EFB18754B1E009D0261 /* en */,
+			);
+			name = InfoPlist.strings;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		191A2EFF18754B1E009D0261 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = YES;
+				ARCHS = "$(ARCHS_STANDARD_INCLUDING_64_BIT)";
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_SYMBOLS_PRIVATE_EXTERN = NO;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 7.0;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				USER_HEADER_SEARCH_PATHS = "/Users/scatterbrain/Documents/Libraries/ARToolKit/ARToolkit/include/**";
+			};
+			name = Debug;
+		};
+		191A2F0018754B1E009D0261 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = YES;
+				ARCHS = "$(ARCHS_STANDARD_INCLUDING_64_BIT)";
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = YES;
+				ENABLE_NS_ASSERTIONS = NO;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 7.0;
+				SDKROOT = iphoneos;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				USER_HEADER_SEARCH_PATHS = "/Users/scatterbrain/Documents/Libraries/ARToolKit/ARToolkit/include/**";
+				"USER_HEADER_SEARCH_PATHS[arch=*]" = "";
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		191A2F0218754B1E009D0261 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "SpritePlacer/SpritePlacer-Prefix.pch";
+				INFOPLIST_FILE = "SpritePlacer/SpritePlacer-Info.plist";
+				LIBRARY_SEARCH_PATHS = (
+					"$(inherited)",
+					/Users/scatterbrain/Documents/Libraries/ARToolKit/ARToolkit/lib,
+				);
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				WRAPPER_EXTENSION = app;
+			};
+			name = Debug;
+		};
+		191A2F0318754B1E009D0261 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "SpritePlacer/SpritePlacer-Prefix.pch";
+				INFOPLIST_FILE = "SpritePlacer/SpritePlacer-Info.plist";
+				LIBRARY_SEARCH_PATHS = (
+					"$(inherited)",
+					/Users/scatterbrain/Documents/Libraries/ARToolKit/ARToolkit/lib,
+				);
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				WRAPPER_EXTENSION = app;
+			};
+			name = Release;
+		};
+		191A2F0518754B1E009D0261 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ARCHS = "$(ARCHS_STANDARD_INCLUDING_64_BIT)";
+				BUNDLE_LOADER = "$(BUILT_PRODUCTS_DIR)/SpritePlacer.app/SpritePlacer";
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(SDKROOT)/Developer/Library/Frameworks",
+					"$(inherited)",
+					"$(DEVELOPER_FRAMEWORKS_DIR)",
+				);
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "SpritePlacer/SpritePlacer-Prefix.pch";
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				INFOPLIST_FILE = "SpritePlacerTests/SpritePlacerTests-Info.plist";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TEST_HOST = "$(BUNDLE_LOADER)";
+				WRAPPER_EXTENSION = xctest;
+			};
+			name = Debug;
+		};
+		191A2F0618754B1E009D0261 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ARCHS = "$(ARCHS_STANDARD_INCLUDING_64_BIT)";
+				BUNDLE_LOADER = "$(BUILT_PRODUCTS_DIR)/SpritePlacer.app/SpritePlacer";
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(SDKROOT)/Developer/Library/Frameworks",
+					"$(inherited)",
+					"$(DEVELOPER_FRAMEWORKS_DIR)",
+				);
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "SpritePlacer/SpritePlacer-Prefix.pch";
+				INFOPLIST_FILE = "SpritePlacerTests/SpritePlacerTests-Info.plist";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TEST_HOST = "$(BUNDLE_LOADER)";
+				WRAPPER_EXTENSION = xctest;
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		191A2EC718754B1E009D0261 /* Build configuration list for PBXProject "SpritePlacer" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				191A2EFF18754B1E009D0261 /* Debug */,
+				191A2F0018754B1E009D0261 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		191A2F0118754B1E009D0261 /* Build configuration list for PBXNativeTarget "SpritePlacer" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				191A2F0218754B1E009D0261 /* Debug */,
+				191A2F0318754B1E009D0261 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+		};
+		191A2F0418754B1E009D0261 /* Build configuration list for PBXNativeTarget "SpritePlacerTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				191A2F0518754B1E009D0261 /* Debug */,
+				191A2F0618754B1E009D0261 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = 191A2EC418754B1E009D0261 /* Project object */;
+}

@@ -1,33 +1,37 @@
 //------------------------------------------------------------------------------
 //
-//  SpriteManager.m
+//  SpriteSheetManager.m
 //  AppPrototype01
 //
-//  Created by Arno in Wolde Lübke on 26.12.13.
+//  Created by Arno in Wolde Lübke on 27.12.13.
 //  Copyright (c) 2013 Arno in Wolde Lübke. All rights reserved.
 //
 //------------------------------------------------------------------------------
-#import "SpriteManager.h"
+#import "SpriteSheetManager.h"
+#import "SpriteSheet.h"
 #import "JSONKit.h"
 //------------------------------------------------------------------------------
-static const char* FILE_NAME = "/Sprites.json";
+static const char* FILE_NAME = "/SpriteSheets.json";
 //------------------------------------------------------------------------------
-@interface SpriteManager ()
-@property (nonatomic, strong) NSMutableDictionary* sprites;
+@interface SpriteSheetManager ()
+@property (strong, nonatomic) NSMutableDictionary* spriteSheets;
+@property (strong, nonatomic) NSArray* keyArray;
 - (id)init;
-- (void)loadSprites;
+- (void)loadSpriteSheets;
 @end
 //------------------------------------------------------------------------------
-@implementation SpriteManager
+@implementation SpriteSheetManager
 //------------------------------------------------------------------------------
-+ (SpriteManager*)instance
++ (SpriteSheetManager*)instance
 {
-    static SpriteManager* instance = NULL;
+    static SpriteSheetManager* instance = nil;
     
     @synchronized(self)
     {
         if (instance == NULL)
+        {
             instance = [[self alloc] init];
+        }
     }
 
     return instance;
@@ -36,11 +40,11 @@ static const char* FILE_NAME = "/Sprites.json";
 - (id)init
 {
     self = [super init];
-    [self loadSprites];
+    [self loadSpriteSheets];
     return self;
 }
 //------------------------------------------------------------------------------
-- (void)loadSprites
+- (void)loadSpriteSheets
 {
     NSString* filename = [[[NSBundle mainBundle] resourcePath]
         stringByAppendingString:[NSString stringWithUTF8String:FILE_NAME]];
@@ -61,43 +65,45 @@ static const char* FILE_NAME = "/Sprites.json";
         exit(0);
     }
     
-    self.sprites = [[NSMutableDictionary alloc] init];
+    self.spriteSheets = [[NSMutableDictionary alloc] init];
     
     for (NSDictionary* entry in a)
     {
-        Sprite* s = [[Sprite alloc] init];
+        SpriteSheet* s = [[SpriteSheet alloc] init];
 
         NSNumber* n = [entry objectForKey:@"id"];
         s.id = [n integerValue];
         
-        n = [entry objectForKey:@"spriteSheet"];
-        s.spriteSheet = [n integerValue];
+        NSString* str = [entry objectForKey:@"fileName"];
+        s.fileName = str;
 
-        n = [entry objectForKey:@"frame"];
-        s.frame = [n integerValue];
+        n = [entry objectForKey:@"numFrames"];
+        s.numFrames = [n integerValue];
         
-        n = [entry objectForKey:@"animation"];
-        s.animation = [n integerValue];
-        
-        n = [entry objectForKey:@"size"];
-        s.size = [n floatValue];
-        
-        NSArray* arr = [entry objectForKey:@"translation"];
-        n = [arr objectAtIndex:0];
-        Vec3 t;
-        t.x = [[arr objectAtIndex:0] floatValue];
-        t.y = [[arr objectAtIndex:1] floatValue];
-        t.z = [[arr objectAtIndex:2] floatValue];
-        s.translation = t;
-        
-        [self.sprites setObject:s forKey:[NSNumber numberWithInt:s.id]];
-    } 
+        [self.spriteSheets setObject:s forKey:[NSNumber numberWithInt:s.id]];
+    }
     
+    self.keyArray = self.spriteSheets.allKeys;
 }
 //------------------------------------------------------------------------------
-- (Sprite*)getSpriteWithId:(int)id
+- (NSUInteger)getNumSpriteSheets
 {
-    return [self.sprites objectForKey:[NSNumber numberWithInt:id]];
+    return self.spriteSheets.count;
+}
+//------------------------------------------------------------------------------
+- (SpriteSheet*)getSpriteSheetWithId:(int)id
+{
+    return [self.spriteSheets objectForKey:[NSNumber numberWithInt:id]];
+}
+//------------------------------------------------------------------------------
+- (SpriteSheet*)getSpriteSheetAtIndex:(int)idx
+{
+    if (idx >= self.keyArray.count)
+    {
+        return nil;
+    }
+    
+    return [self.spriteSheets objectForKey:[self.keyArray objectAtIndex:idx]];
 }
 //------------------------------------------------------------------------------
 @end
