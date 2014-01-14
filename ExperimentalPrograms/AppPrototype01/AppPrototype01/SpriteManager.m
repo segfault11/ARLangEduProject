@@ -57,7 +57,7 @@ static const char* FILE_NAME = "/Sprites.json";
     
     if (!a)
     {
-        NSLog(@"Invalid sprite data");
+        NSLog(@"Invalid file [Sprites.json]");
         exit(0);
     }
     
@@ -83,12 +83,20 @@ static const char* FILE_NAME = "/Sprites.json";
         s.size = [n floatValue];
         
         NSArray* arr = [entry objectForKey:@"translation"];
-        n = [arr objectAtIndex:0];
         Vec3 t;
         t.x = [[arr objectAtIndex:0] floatValue];
         t.y = [[arr objectAtIndex:1] floatValue];
         t.z = [[arr objectAtIndex:2] floatValue];
         s.translation = t;
+
+        arr = [entry objectForKey:@"rotation"];
+        Vec3 rot;
+        rot.x = [[arr objectAtIndex:0] floatValue];
+        rot.y = [[arr objectAtIndex:1] floatValue];
+        rot.z = [[arr objectAtIndex:2] floatValue];
+        s.rotation = rot;
+
+
         
         [self.sprites setObject:s forKey:[NSNumber numberWithInt:s.id]];
     } 

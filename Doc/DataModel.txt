@@ -57,9 +57,15 @@
 
 	A content is defined by
 
-	TYPE 	NAME 		COMMENT
-	======  ==========  ======================================================
-	int 	id 			id of the content
-	int 	sprite 		id of the sprite associated with the content
-	float   size 		size (actually length) of the (square) marker in 
-						millimeter
+	TYPE 	 	NAME 			COMMENT
+	==========  ============== 	==============================================
+	int 		id 				id of the content
+	int 		sprite 			id of the sprite associated with the content
+	float   	size 			size (actually length) of the (square) marker  
+								in millimeter
+	string[] 	sentences 		sentences related to the content.
+	int 		activeSentence  index to the active (displayed) sentence in 
+								[sentences].
+	string 	 	translation 	translation of the content
+	bool 		isTraDisp   	wether or not the translation is displayed
+	string 		sound 			name of the sound file to be played.

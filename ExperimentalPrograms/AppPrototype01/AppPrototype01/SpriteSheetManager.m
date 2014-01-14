@@ -61,7 +61,7 @@ static const char* FILE_NAME = "/SpriteSheets.json";
     
     if (!a)
     {
-        NSLog(@"Invalid sprite data");
+        NSLog(@"Invalid file [SpriteSheets.json]");
         exit(0);
     }
     

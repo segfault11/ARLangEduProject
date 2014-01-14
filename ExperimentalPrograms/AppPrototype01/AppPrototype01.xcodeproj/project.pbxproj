@@ -65,6 +65,8 @@
 		19622C8B186D74DC00C600F2 /* Animation.m in Sources */ = {isa = PBXBuildFile; fileRef = 19622C8A186D74DC00C600F2 /* Animation.m */; };
 		19622C8D186D759000C600F2 /* Animations.json in Resources */ = {isa = PBXBuildFile; fileRef = 19622C8C186D759000C600F2 /* Animations.json */; };
 		19622C90186D760D00C600F2 /* AnimationManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 19622C8F186D760D00C600F2 /* AnimationManager.m */; };
+		19E6F8981884D12400981E85 /* Steam.png in Resources */ = {isa = PBXBuildFile; fileRef = 19E6F8961884D12400981E85 /* Steam.png */; };
+		19E6F8991884D12400981E85 /* Water.png in Resources */ = {isa = PBXBuildFile; fileRef = 19E6F8971884D12400981E85 /* Water.png */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -160,6 +162,8 @@
 		19622C8C186D759000C600F2 /* Animations.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = Animations.json; sourceTree = "<group>"; };
 		19622C8E186D760D00C600F2 /* AnimationManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AnimationManager.h; sourceTree = "<group>"; };
 		19622C8F186D760D00C600F2 /* AnimationManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AnimationManager.m; sourceTree = "<group>"; };
+		19E6F8961884D12400981E85 /* Steam.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = Steam.png; sourceTree = "<group>"; };
+		19E6F8971884D12400981E85 /* Water.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = Water.png; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -391,6 +395,8 @@
 		19622C7F186D485600C600F2 /* SpriteSheets */ = {
 			isa = PBXGroup;
 			children = (
+				19E6F8961884D12400981E85 /* Steam.png */,
+				19E6F8971884D12400981E85 /* Water.png */,
 				195FF4C81871665100100AF1 /* SpriteSheet01.png */,
 				19622C80186D486F00C600F2 /* SpriteSheet00.png */,
 			);
@@ -511,9 +517,11 @@
 				195FF4C31871560E00100AF1 /* Marker.json in Resources */,
 				1918502F186BCFA6007B53A8 /* camera_para_ipadmini640x480.dat in Resources */,
 				1918501E186BCE4E007B53A8 /* VideoFS.glsl in Resources */,
+				19E6F8981884D12400981E85 /* Steam.png in Resources */,
 				19184FD1186BCA75007B53A8 /* InfoPlist.strings in Resources */,
 				19185030186BCFA6007B53A8 /* patt.hiro in Resources */,
 				19622C81186D486F00C600F2 /* SpriteSheet00.png in Resources */,
+				19E6F8991884D12400981E85 /* Water.png in Resources */,
 				191A2EC1187541B4009D0261 /* bass.m4a in Resources */,
 				195FF4C91871665100100AF1 /* SpriteSheet01.png in Resources */,
 				19622C88186D607A00C600F2 /* SpriteRendererFS.glsl in Resources */,
@@ -628,7 +636,7 @@
 				CLANG_WARN_INT_CONVERSION = YES;
 				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
 				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
-				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer: Arno Luebke (599X3GRJBJ)";
 				COPY_PHASE_STRIP = NO;
 				GCC_C_LANGUAGE_STANDARD = gnu99;
 				GCC_DYNAMIC_NO_PIC = NO;

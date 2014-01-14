@@ -64,7 +64,7 @@ static const char* FILE_NAME = "/Contents.json";
     
     if (!a)
     {
-        NSLog(@"Invalid content data");
+        NSLog(@"Invalid file [Contents.json]");
         exit(0);
     }
 
@@ -94,6 +94,10 @@ static const char* FILE_NAME = "/Contents.json";
         {
             s.activeSentence = -1;
         }
+        
+        str = [entry objectForKey:@"translation"];
+        s.translation = str;
+        s.isTranslationDisplayed = NO;
         
         [self.contents setObject:s forKey:[NSNumber numberWithInt:s.id]];
     }

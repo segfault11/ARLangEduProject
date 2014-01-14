@@ -124,6 +124,7 @@ static void arg2ConvGLcpara(
 @property(nonatomic, strong) AVCaptureVideoPreviewLayer* previewLayer;
 @property(strong, nonatomic) EAGLContext *context;
 @property(weak, nonatomic) IBOutlet UILabel *sentence;
+@property (weak, nonatomic) IBOutlet UILabel *translation;
 @property(strong, nonatomic) Content* currentContent;
 @property(strong, nonatomic) AVAudioPlayer* audioPlayer;
 - (void)initMarkerDetection;
@@ -584,7 +585,7 @@ fromConnection:(AVCaptureConnection *)connection
             _ar3DHandle,
             &(markerInfo[currMid]),
             trans,
-            m.size,
+            m.size  ,
             trans
         );
     }
@@ -600,6 +601,15 @@ fromConnection:(AVCaptureConnection *)connection
 
     self.sentence.text = [c.sentences objectAtIndex:c.activeSentence];
     
+    if (self.currentContent.isTranslationDisplayed)
+    {
+        self.translation.hidden = NO;
+        self.translation.text = self.currentContent.translation;
+    }
+    else
+    {
+        self.translation.hidden = YES;
+    }
     
     assert(glGetError() == GL_NO_ERROR);
 }
@@ -659,6 +669,8 @@ fromConnection:(AVCaptureConnection *)connection
 {
     _cont = NO;
     self.currentContent.activeSentence = 0;
+    self.currentContent.isTranslationDisplayed = NO;
+    self.translation.hidden = YES;
 }
 //------------------------------------------------------------------------------
 - (void)playSound:(NSString*)filename
@@ -703,6 +715,12 @@ fromConnection:(AVCaptureConnection *)connection
     int numSentences = self.currentContent.sentences.count;
     
     self.currentContent.activeSentence = (as + 1) % numSentences;
+}
+//------------------------------------------------------------------------------
+- (IBAction)translate:(id)sender
+{
+    self.currentContent.isTranslationDisplayed =
+        !self.currentContent.isTranslationDisplayed;
 }
 //------------------------------------------------------------------------------
 //- (NSUInteger)supportedInterfaceOrientations

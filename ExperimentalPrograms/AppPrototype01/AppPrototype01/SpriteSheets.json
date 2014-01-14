@@ -9,5 +9,17 @@
         "id" : 1,
         "fileName" : "SpriteSheet01.png",
         "numFrames" : 19
+    },
+ 
+    {
+        "id" : 2,
+        "fileName" : "Steam.png",
+        "numFrames" : 8
+    },
+ 
+    {
+        "id" : 3,
+        "fileName" : "Water.png",
+        "numFrames" : 5
     }
 ]

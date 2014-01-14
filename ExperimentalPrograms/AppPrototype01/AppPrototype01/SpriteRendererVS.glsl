@@ -6,6 +6,7 @@ uniform int numFrames;
 uniform int curFrame;
 uniform mat4 P;
 uniform mat4 V;
+uniform mat4 R;
 uniform float size;
 uniform vec3 translation;
 //------------------------------------------------------------------------------
@@ -20,7 +21,7 @@ void main()
     highp float x = 0.5*pos.x*frameAspect;
     highp float y = 0.5*pos.y;
 
-    highp vec4 h = P*V*vec4(
+    highp vec4 h = P*V*R*vec4(
             size*pos.x + translation.x,
             translation.z,
             size*pos.y + translation.y,

@@ -120,6 +120,9 @@
                                 <fontDescription key="fontDescription" type="boldSystem" pointSize="15"/>
                                 <color key="tintColor" cocoaTouchSystemColor="darkTextColor"/>
                                 <state key="normal" title="Translate"/>
+                                <connections>
+                                    <action selector="translate:" destination="gop-uX-dQb" eventType="touchUpInside" id="5Uw-dG-hNR"/>
+                                </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="YNm-eO-kdn">
                                 <rect key="frame" x="280" y="962" width="209" height="34"/>
@@ -143,11 +146,20 @@
                                     <action selector="changeSentence:" destination="gop-uX-dQb" eventType="touchDown" id="9h4-Ng-8am"/>
                                 </connections>
                             </button>
+                            <label hidden="YES" opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Label" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="H6C-DY-W6f">
+                                <rect key="frame" x="48" y="150" width="672" height="107"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <color key="backgroundColor" red="0.80000000000000004" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                <fontDescription key="fontDescription" type="boldSystem" pointSize="17"/>
+                                <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                <nil key="highlightedColor"/>
+                            </label>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
                     </view>
                     <connections>
                         <outlet property="sentence" destination="t2R-ip-3Vh" id="jxM-sj-WjM"/>
+                        <outlet property="translation" destination="H6C-DY-W6f" id="02f-Ii-o0y"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="MNj-jW-shd" userLabel="First Responder" sceneMemberID="firstResponder"/>

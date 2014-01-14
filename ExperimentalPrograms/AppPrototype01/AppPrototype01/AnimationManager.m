@@ -59,7 +59,7 @@ static const char* FILE_NAME = "/Animations.json";
     
     if (!a)
     {
-        NSLog(@"Invalid sprite data");
+        NSLog(@"Invalid file [Animations.json]");
         exit(0);
     }
 
@@ -73,7 +73,7 @@ static const char* FILE_NAME = "/Animations.json";
         s.id = [n integerValue];
         
         n = [entry objectForKey:@"duration"];
-        s.duration = [n integerValue];
+        s.duration = [n floatValue];
         
         [self.animations setObject:s forKey:[NSNumber numberWithInt:s.id]];
     }

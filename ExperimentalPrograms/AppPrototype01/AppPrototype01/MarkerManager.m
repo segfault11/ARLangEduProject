@@ -60,7 +60,7 @@ static const char* FILE_NAME = "/Marker.json";
     
     if (!a)
     {
-        NSLog(@"Invalid sprite data");
+        NSLog(@"Invalid file [Markers.json]");
         exit(0);
     }
 
