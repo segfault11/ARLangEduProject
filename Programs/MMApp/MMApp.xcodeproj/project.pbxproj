@@ -7,25 +7,31 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		193B51B918890CEE00364DBD /* Content.m in Sources */ = {isa = PBXBuildFile; fileRef = 196251701889071900448004 /* Content.m */; };
+		193B51BB18890CEE00364DBD /* ProfileManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 196251691888FDDE00448004 /* ProfileManager.m */; };
+		193B51BC18890CEE00364DBD /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 1962513B1888FC6E00448004 /* ViewController.m */; };
+		193B51BD18890CEE00364DBD /* IntroductionViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 1962515C1888FD2500448004 /* IntroductionViewController.m */; };
+		193B51BE18890CEE00364DBD /* NavigationViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 1962515E1888FD2500448004 /* NavigationViewController.m */; };
+		193B51BF18890CEE00364DBD /* NewProfileViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 196251601888FD2500448004 /* NewProfileViewController.m */; };
+		193B51C018890CEE00364DBD /* SelectProfileViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 196251621888FD2500448004 /* SelectProfileViewController.m */; };
+		193B51C118890CEE00364DBD /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 196251321888FC6E00448004 /* AppDelegate.m */; };
+		193B51C218890CEE00364DBD /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 1962512E1888FC6E00448004 /* main.m */; };
+		193B51C418890E2900364DBD /* ContentManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 196251721889071900448004 /* ContentManager.m */; };
+		193B51C61889182400364DBD /* dog2.JPG in Resources */ = {isa = PBXBuildFile; fileRef = 193B51C51889182400364DBD /* dog2.JPG */; };
 		196251231888FC6E00448004 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 196251221888FC6E00448004 /* Foundation.framework */; };
 		196251251888FC6E00448004 /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 196251241888FC6E00448004 /* CoreGraphics.framework */; };
 		196251271888FC6E00448004 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 196251261888FC6E00448004 /* UIKit.framework */; };
 		1962512D1888FC6E00448004 /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = 1962512B1888FC6E00448004 /* InfoPlist.strings */; };
-		1962512F1888FC6E00448004 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 1962512E1888FC6E00448004 /* main.m */; };
-		196251331888FC6E00448004 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 196251321888FC6E00448004 /* AppDelegate.m */; };
 		196251391888FC6E00448004 /* Main_iPad.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 196251371888FC6E00448004 /* Main_iPad.storyboard */; };
-		1962513C1888FC6E00448004 /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 1962513B1888FC6E00448004 /* ViewController.m */; };
 		1962513E1888FC6E00448004 /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 1962513D1888FC6E00448004 /* Images.xcassets */; };
 		196251451888FC6E00448004 /* XCTest.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 196251441888FC6E00448004 /* XCTest.framework */; };
 		196251461888FC6E00448004 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 196251221888FC6E00448004 /* Foundation.framework */; };
 		196251471888FC6E00448004 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 196251261888FC6E00448004 /* UIKit.framework */; };
 		1962514F1888FC6E00448004 /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = 1962514D1888FC6E00448004 /* InfoPlist.strings */; };
 		196251511888FC6E00448004 /* MMAppTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 196251501888FC6E00448004 /* MMAppTests.m */; };
-		196251631888FD2500448004 /* IntroductionViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 1962515C1888FD2500448004 /* IntroductionViewController.m */; };
-		196251641888FD2500448004 /* NavigationViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 1962515E1888FD2500448004 /* NavigationViewController.m */; };
-		196251651888FD2500448004 /* NewProfileViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 196251601888FD2500448004 /* NewProfileViewController.m */; };
-		196251661888FD2500448004 /* SelectProfileViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 196251621888FD2500448004 /* SelectProfileViewController.m */; };
-		1962516A1888FDDE00448004 /* ProfileManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 196251691888FDDE00448004 /* ProfileManager.m */; };
+		1962516E1889037800448004 /* dog.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 1962516D1889037800448004 /* dog.jpg */; };
+		196251781889074200448004 /* Contents.json in Resources */ = {isa = PBXBuildFile; fileRef = 196251771889074200448004 /* Contents.json */; };
+		1962517C1889081300448004 /* JSONKit.m in Sources */ = {isa = PBXBuildFile; fileRef = 1962517B1889081300448004 /* JSONKit.m */; settings = {COMPILER_FLAGS = "-fno-objc-arc"; }; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -39,6 +45,7 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		193B51C51889182400364DBD /* dog2.JPG */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = dog2.JPG; sourceTree = "<group>"; };
 		1962511F1888FC6E00448004 /* MMApp.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = MMApp.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		196251221888FC6E00448004 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
 		196251241888FC6E00448004 /* CoreGraphics.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreGraphics.framework; path = System/Library/Frameworks/CoreGraphics.framework; sourceTree = SDKROOT; };
@@ -68,6 +75,14 @@
 		196251621888FD2500448004 /* SelectProfileViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SelectProfileViewController.m; sourceTree = "<group>"; };
 		196251681888FDDE00448004 /* ProfileManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ProfileManager.h; sourceTree = "<group>"; };
 		196251691888FDDE00448004 /* ProfileManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ProfileManager.m; sourceTree = "<group>"; };
+		1962516D1889037800448004 /* dog.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = dog.jpg; sourceTree = "<group>"; };
+		1962516F1889071900448004 /* Content.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Content.h; sourceTree = "<group>"; };
+		196251701889071900448004 /* Content.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Content.m; sourceTree = "<group>"; };
+		196251711889071900448004 /* ContentManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ContentManager.h; sourceTree = "<group>"; };
+		196251721889071900448004 /* ContentManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ContentManager.m; sourceTree = "<group>"; };
+		196251771889074200448004 /* Contents.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = Contents.json; sourceTree = "<group>"; };
+		1962517A1889081300448004 /* JSONKit.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = JSONKit.h; sourceTree = "<group>"; };
+		1962517B1889081300448004 /* JSONKit.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = JSONKit.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -127,13 +142,14 @@
 		196251281888FC6E00448004 /* MMApp */ = {
 			isa = PBXGroup;
 			children = (
+				19625179188907EF00448004 /* Utilities */,
+				196251751889071E00448004 /* Entities */,
+				1962516B1889033900448004 /* Resources */,
 				196251671888FDD100448004 /* Manager */,
 				1962515A1888FD0D00448004 /* ViewController */,
 				196251311888FC6E00448004 /* AppDelegate.h */,
 				196251321888FC6E00448004 /* AppDelegate.m */,
 				196251371888FC6E00448004 /* Main_iPad.storyboard */,
-				1962513A1888FC6E00448004 /* ViewController.h */,
-				1962513B1888FC6E00448004 /* ViewController.m */,
 				1962513D1888FC6E00448004 /* Images.xcassets */,
 				196251291888FC6E00448004 /* Supporting Files */,
 			);
@@ -172,6 +188,8 @@
 		1962515A1888FD0D00448004 /* ViewController */ = {
 			isa = PBXGroup;
 			children = (
+				1962513A1888FC6E00448004 /* ViewController.h */,
+				1962513B1888FC6E00448004 /* ViewController.m */,
 				1962515B1888FD2500448004 /* IntroductionViewController.h */,
 				1962515C1888FD2500448004 /* IntroductionViewController.m */,
 				1962515D1888FD2500448004 /* NavigationViewController.h */,
@@ -187,10 +205,56 @@
 		196251671888FDD100448004 /* Manager */ = {
 			isa = PBXGroup;
 			children = (
+				196251711889071900448004 /* ContentManager.h */,
+				196251721889071900448004 /* ContentManager.m */,
 				196251681888FDDE00448004 /* ProfileManager.h */,
 				196251691888FDDE00448004 /* ProfileManager.m */,
 			);
 			name = Manager;
+			sourceTree = "<group>";
+		};
+		1962516B1889033900448004 /* Resources */ = {
+			isa = PBXGroup;
+			children = (
+				196251761889073600448004 /* Entities */,
+				1962516C1889034100448004 /* BackgroundImages */,
+			);
+			name = Resources;
+			sourceTree = "<group>";
+		};
+		1962516C1889034100448004 /* BackgroundImages */ = {
+			isa = PBXGroup;
+			children = (
+				193B51C51889182400364DBD /* dog2.JPG */,
+				1962516D1889037800448004 /* dog.jpg */,
+			);
+			name = BackgroundImages;
+			sourceTree = "<group>";
+		};
+		196251751889071E00448004 /* Entities */ = {
+			isa = PBXGroup;
+			children = (
+				1962516F1889071900448004 /* Content.h */,
+				196251701889071900448004 /* Content.m */,
+			);
+			name = Entities;
+			sourceTree = "<group>";
+		};
+		196251761889073600448004 /* Entities */ = {
+			isa = PBXGroup;
+			children = (
+				196251771889074200448004 /* Contents.json */,
+			);
+			name = Entities;
+			sourceTree = "<group>";
+		};
+		19625179188907EF00448004 /* Utilities */ = {
+			isa = PBXGroup;
+			children = (
+				1962517A1889081300448004 /* JSONKit.h */,
+				1962517B1889081300448004 /* JSONKit.m */,
+			);
+			name = Utilities;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -269,7 +333,10 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				196251781889074200448004 /* Contents.json in Resources */,
+				1962516E1889037800448004 /* dog.jpg in Resources */,
 				196251391888FC6E00448004 /* Main_iPad.storyboard in Resources */,
+				193B51C61889182400364DBD /* dog2.JPG in Resources */,
 				1962513E1888FC6E00448004 /* Images.xcassets in Resources */,
 				1962512D1888FC6E00448004 /* InfoPlist.strings in Resources */,
 			);
@@ -290,14 +357,17 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				196251661888FD2500448004 /* SelectProfileViewController.m in Sources */,
-				196251631888FD2500448004 /* IntroductionViewController.m in Sources */,
-				196251651888FD2500448004 /* NewProfileViewController.m in Sources */,
-				1962513C1888FC6E00448004 /* ViewController.m in Sources */,
-				196251641888FD2500448004 /* NavigationViewController.m in Sources */,
-				196251331888FC6E00448004 /* AppDelegate.m in Sources */,
-				1962512F1888FC6E00448004 /* main.m in Sources */,
-				1962516A1888FDDE00448004 /* ProfileManager.m in Sources */,
+				193B51C418890E2900364DBD /* ContentManager.m in Sources */,
+				193B51B918890CEE00364DBD /* Content.m in Sources */,
+				193B51BB18890CEE00364DBD /* ProfileManager.m in Sources */,
+				193B51BC18890CEE00364DBD /* ViewController.m in Sources */,
+				193B51BD18890CEE00364DBD /* IntroductionViewController.m in Sources */,
+				193B51BE18890CEE00364DBD /* NavigationViewController.m in Sources */,
+				193B51BF18890CEE00364DBD /* NewProfileViewController.m in Sources */,
+				193B51C018890CEE00364DBD /* SelectProfileViewController.m in Sources */,
+				193B51C118890CEE00364DBD /* AppDelegate.m in Sources */,
+				193B51C218890CEE00364DBD /* main.m in Sources */,
+				1962517C1889081300448004 /* JSONKit.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -351,7 +421,6 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
-				ARCHS = "$(ARCHS_STANDARD_INCLUDING_64_BIT)";
 				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
 				CLANG_CXX_LIBRARY = "libc++";
 				CLANG_ENABLE_MODULES = YES;
@@ -391,7 +460,6 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
-				ARCHS = "$(ARCHS_STANDARD_INCLUDING_64_BIT)";
 				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
 				CLANG_CXX_LIBRARY = "libc++";
 				CLANG_ENABLE_MODULES = YES;
@@ -450,7 +518,6 @@
 		196251581888FC6E00448004 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
-				ARCHS = "$(ARCHS_STANDARD_INCLUDING_64_BIT)";
 				BUNDLE_LOADER = "$(BUILT_PRODUCTS_DIR)/MMApp.app/MMApp";
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(SDKROOT)/Developer/Library/Frameworks",
@@ -473,7 +540,6 @@
 		196251591888FC6E00448004 /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
-				ARCHS = "$(ARCHS_STANDARD_INCLUDING_64_BIT)";
 				BUNDLE_LOADER = "$(BUILT_PRODUCTS_DIR)/MMApp.app/MMApp";
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(SDKROOT)/Developer/Library/Frameworks",
@@ -508,6 +574,7 @@
 				196251561888FC6E00448004 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		196251571888FC6E00448004 /* Build configuration list for PBXNativeTarget "MMAppTests" */ = {
 			isa = XCConfigurationList;
@@ -516,6 +583,7 @@
 				196251591888FC6E00448004 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};

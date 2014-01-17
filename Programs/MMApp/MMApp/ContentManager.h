@@ -12,4 +12,6 @@
 @interface ContentManager : NSObject
 + (ContentManager*)instance;
 - (Content*)getContentWithId:(int)id;
+- (Content*)getContentAtIndex:(int)idx;
+- (int)getNumContents;
 @end

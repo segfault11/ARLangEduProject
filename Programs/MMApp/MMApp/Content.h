@@ -11,15 +11,15 @@
 @interface Content : NSObject
 {
     int _id;
-    int _sprite;
+    NSString* _bgImage;
     NSArray* _sentences;
     int _activeSentence;
     BOOL _isTranslationDisplayed;
     NSString* _translation;
     NSString* _sound;
 }
-@property int id, sprite, activeSentence;
+@property int id, activeSentence;
 @property NSArray* sentences;
-@property NSString* sound, *translation;
+@property NSString* sound, *translation, *bgImage;
 @property BOOL isTranslationDisplayed;
 @end

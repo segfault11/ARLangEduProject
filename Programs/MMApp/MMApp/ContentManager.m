@@ -47,6 +47,25 @@ static const char* FILE_NAME = "/Contents.json";
     return [self.contents objectForKey:[NSNumber numberWithInt:id]];
 }
 //------------------------------------------------------------------------------
+- (Content*)getContentAtIndex:(int)idx
+{
+    NSArray* keys = self.contents.allKeys;
+ 
+    if (idx >= keys.count)
+    {
+        return nil;
+    }
+    
+    NSNumber* id = [keys objectAtIndex:idx];
+    
+    return [self.contents objectForKey:id];
+}
+//------------------------------------------------------------------------------
+- (int)getNumContents
+{
+    return self.contents.allKeys.count;
+}
+//------------------------------------------------------------------------------
 - (void)loadContents
 {
     NSString* filename = [[[NSBundle mainBundle] resourcePath]
@@ -77,14 +96,14 @@ static const char* FILE_NAME = "/Contents.json";
         NSNumber* n = [entry objectForKey:@"id"];
         s.id = [n integerValue];
         
-        n = [entry objectForKey:@"sprite"];
-        s.sprite = [n integerValue];
-        
         NSArray* arr = [entry objectForKey:@"sentences"];
         s.sentences = arr;
         
         NSString* str = [entry objectForKey:@"sound"];
         s.sound = str;
+        
+        str = [entry objectForKey:@"bgImage"];
+        s.bgImage = str;
         
         if (arr.count > 0)
         {

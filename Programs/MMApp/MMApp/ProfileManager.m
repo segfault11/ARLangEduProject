@@ -10,7 +10,6 @@
 
 @interface ProfileManager ()
 @property(strong, nonatomic) NSMutableArray* profiles;
-
 - (id)init;
 @end
 
