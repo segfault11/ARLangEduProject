@@ -1,0 +1,813 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 46;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		19624F8A1888CA4400448004 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 19624F891888CA4400448004 /* Foundation.framework */; };
+		19624F8C1888CA4400448004 /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 19624F8B1888CA4400448004 /* CoreGraphics.framework */; };
+		19624F8E1888CA4400448004 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 19624F8D1888CA4400448004 /* UIKit.framework */; };
+		19624F941888CA4400448004 /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = 19624F921888CA4400448004 /* InfoPlist.strings */; };
+		19624F961888CA4400448004 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 19624F951888CA4400448004 /* main.m */; };
+		19624F9A1888CA4400448004 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 19624F991888CA4400448004 /* AppDelegate.m */; };
+		19624FA01888CA4400448004 /* Main_iPad.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 19624F9E1888CA4400448004 /* Main_iPad.storyboard */; };
+		19624FA31888CA4400448004 /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 19624FA21888CA4400448004 /* ViewController.m */; };
+		19624FA51888CA4400448004 /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 19624FA41888CA4400448004 /* Images.xcassets */; };
+		19624FAC1888CA4400448004 /* XCTest.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 19624FAB1888CA4400448004 /* XCTest.framework */; };
+		19624FAD1888CA4400448004 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 19624F891888CA4400448004 /* Foundation.framework */; };
+		19624FAE1888CA4400448004 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 19624F8D1888CA4400448004 /* UIKit.framework */; };
+		19624FB61888CA4400448004 /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = 19624FB41888CA4400448004 /* InfoPlist.strings */; };
+		19624FB81888CA4400448004 /* ARAppTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 19624FB71888CA4400448004 /* ARAppTests.m */; };
+		196250081888CC0E00448004 /* 1.dat in Resources */ = {isa = PBXBuildFile; fileRef = 19624FCD1888CC0E00448004 /* 1.dat */; };
+		196250091888CC0E00448004 /* 2.dat in Resources */ = {isa = PBXBuildFile; fileRef = 19624FCE1888CC0E00448004 /* 2.dat */; };
+		1962500A1888CC0E00448004 /* Animation.m in Sources */ = {isa = PBXBuildFile; fileRef = 19624FD01888CC0E00448004 /* Animation.m */; };
+		1962500B1888CC0E00448004 /* AnimationManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 19624FD21888CC0E00448004 /* AnimationManager.m */; };
+		1962500C1888CC0E00448004 /* Animations.json in Resources */ = {isa = PBXBuildFile; fileRef = 19624FD31888CC0E00448004 /* Animations.json */; };
+		1962500D1888CC0E00448004 /* ARViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 19624FD51888CC0E00448004 /* ARViewController.m */; };
+		1962500E1888CC0E00448004 /* bass.m4a in Resources */ = {isa = PBXBuildFile; fileRef = 19624FD61888CC0E00448004 /* bass.m4a */; };
+		1962500F1888CC0E00448004 /* camera_para_ipadmini640x480.dat in Resources */ = {isa = PBXBuildFile; fileRef = 19624FD71888CC0E00448004 /* camera_para_ipadmini640x480.dat */; };
+		196250101888CC0E00448004 /* Content.m in Sources */ = {isa = PBXBuildFile; fileRef = 19624FD91888CC0E00448004 /* Content.m */; };
+		196250111888CC0E00448004 /* ContentManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 19624FDB1888CC0E00448004 /* ContentManager.m */; };
+		196250121888CC0E00448004 /* Contents.json in Resources */ = {isa = PBXBuildFile; fileRef = 19624FDC1888CC0E00448004 /* Contents.json */; };
+		196250131888CC0E00448004 /* CubeFS.glsl in Resources */ = {isa = PBXBuildFile; fileRef = 19624FDD1888CC0E00448004 /* CubeFS.glsl */; };
+		196250141888CC0E00448004 /* CubeVS.glsl in Resources */ = {isa = PBXBuildFile; fileRef = 19624FDE1888CC0E00448004 /* CubeVS.glsl */; };
+		196250151888CC0E00448004 /* GLUEProgram.m in Sources */ = {isa = PBXBuildFile; fileRef = 19624FE01888CC0E00448004 /* GLUEProgram.m */; };
+		196250161888CC0E00448004 /* IntroductionViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 19624FE21888CC0E00448004 /* IntroductionViewController.m */; };
+		196250171888CC0E00448004 /* JSONKit.m in Sources */ = {isa = PBXBuildFile; fileRef = 19624FE41888CC0E00448004 /* JSONKit.m */; settings = {COMPILER_FLAGS = "-fno-objc-arc"; }; };
+		196250181888CC0E00448004 /* Marker.json in Resources */ = {isa = PBXBuildFile; fileRef = 19624FE61888CC0E00448004 /* Marker.json */; };
+		196250191888CC0E00448004 /* Marker.m in Sources */ = {isa = PBXBuildFile; fileRef = 19624FE71888CC0E00448004 /* Marker.m */; };
+		1962501A1888CC0E00448004 /* MarkerManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 19624FE91888CC0E00448004 /* MarkerManager.m */; };
+		1962501B1888CC0E00448004 /* NavigationViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 19624FEB1888CC0E00448004 /* NavigationViewController.m */; };
+		1962501C1888CC0E00448004 /* NewProfileViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 19624FED1888CC0E00448004 /* NewProfileViewController.m */; };
+		1962501D1888CC0E00448004 /* patt.hiro in Resources */ = {isa = PBXBuildFile; fileRef = 19624FEE1888CC0E00448004 /* patt.hiro */; };
+		1962501E1888CC0E00448004 /* piano.m4a in Resources */ = {isa = PBXBuildFile; fileRef = 19624FEF1888CC0E00448004 /* piano.m4a */; };
+		1962501F1888CC0E00448004 /* ProfileManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 19624FF11888CC0E00448004 /* ProfileManager.m */; };
+		196250201888CC0E00448004 /* SelectProfileViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 19624FF31888CC0E00448004 /* SelectProfileViewController.m */; };
+		196250211888CC0E00448004 /* Sprite.m in Sources */ = {isa = PBXBuildFile; fileRef = 19624FF51888CC0E00448004 /* Sprite.m */; };
+		196250221888CC0E00448004 /* SpriteManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 19624FF71888CC0E00448004 /* SpriteManager.m */; };
+		196250231888CC0E00448004 /* SpriteRenderer.m in Sources */ = {isa = PBXBuildFile; fileRef = 19624FF91888CC0E00448004 /* SpriteRenderer.m */; };
+		196250241888CC0E00448004 /* SpriteRendererFS.glsl in Resources */ = {isa = PBXBuildFile; fileRef = 19624FFA1888CC0E00448004 /* SpriteRendererFS.glsl */; };
+		196250251888CC0E00448004 /* SpriteRendererVS.glsl in Resources */ = {isa = PBXBuildFile; fileRef = 19624FFB1888CC0E00448004 /* SpriteRendererVS.glsl */; };
+		196250261888CC0E00448004 /* Sprites.json in Resources */ = {isa = PBXBuildFile; fileRef = 19624FFC1888CC0E00448004 /* Sprites.json */; };
+		196250271888CC0E00448004 /* SpriteSheet.m in Sources */ = {isa = PBXBuildFile; fileRef = 19624FFE1888CC0E00448004 /* SpriteSheet.m */; };
+		196250281888CC0E00448004 /* SpriteSheet00.png in Resources */ = {isa = PBXBuildFile; fileRef = 19624FFF1888CC0E00448004 /* SpriteSheet00.png */; };
+		196250291888CC0E00448004 /* SpriteSheet01.png in Resources */ = {isa = PBXBuildFile; fileRef = 196250001888CC0E00448004 /* SpriteSheet01.png */; };
+		1962502A1888CC0E00448004 /* SpriteSheetManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 196250021888CC0E00448004 /* SpriteSheetManager.m */; };
+		1962502B1888CC0E00448004 /* SpriteSheets.json in Resources */ = {isa = PBXBuildFile; fileRef = 196250031888CC0E00448004 /* SpriteSheets.json */; };
+		1962502C1888CC0E00448004 /* Steam.png in Resources */ = {isa = PBXBuildFile; fileRef = 196250041888CC0E00448004 /* Steam.png */; };
+		1962502D1888CC0E00448004 /* VideoFS.glsl in Resources */ = {isa = PBXBuildFile; fileRef = 196250051888CC0E00448004 /* VideoFS.glsl */; };
+		1962502E1888CC0E00448004 /* VideoVS.glsl in Resources */ = {isa = PBXBuildFile; fileRef = 196250061888CC0E00448004 /* VideoVS.glsl */; };
+		1962502F1888CC0E00448004 /* Water.png in Resources */ = {isa = PBXBuildFile; fileRef = 196250071888CC0E00448004 /* Water.png */; };
+		1962504D1888F4D400448004 /* camera_para_ipad640x480.dat in Resources */ = {isa = PBXBuildFile; fileRef = 1962504C1888F4D400448004 /* camera_para_ipad640x480.dat */; };
+		196250541888F66A00448004 /* libAR.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 1962504E1888F66A00448004 /* libAR.a */; };
+		196250551888F66A00448004 /* libAR2.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 1962504F1888F66A00448004 /* libAR2.a */; };
+		196250561888F66A00448004 /* libARUtil.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 196250501888F66A00448004 /* libARUtil.a */; };
+		196250571888F66A00448004 /* libGLES2sub.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 196250511888F66A00448004 /* libGLES2sub.a */; };
+		196250581888F66A00448004 /* libgluES2.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 196250521888F66A00448004 /* libgluES2.a */; };
+		196250591888F66A00448004 /* libjpeg.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 196250531888F66A00448004 /* libjpeg.a */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		19624FAF1888CA4400448004 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 19624F7E1888CA4400448004 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 19624F851888CA4400448004;
+			remoteInfo = ARApp;
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXFileReference section */
+		19624F861888CA4400448004 /* ARApp.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = ARApp.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		19624F891888CA4400448004 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
+		19624F8B1888CA4400448004 /* CoreGraphics.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreGraphics.framework; path = System/Library/Frameworks/CoreGraphics.framework; sourceTree = SDKROOT; };
+		19624F8D1888CA4400448004 /* UIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UIKit.framework; path = System/Library/Frameworks/UIKit.framework; sourceTree = SDKROOT; };
+		19624F911888CA4400448004 /* ARApp-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "ARApp-Info.plist"; sourceTree = "<group>"; };
+		19624F931888CA4400448004 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
+		19624F951888CA4400448004 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
+		19624F971888CA4400448004 /* ARApp-Prefix.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "ARApp-Prefix.pch"; sourceTree = "<group>"; };
+		19624F981888CA4400448004 /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
+		19624F991888CA4400448004 /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
+		19624F9F1888CA4400448004 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main_iPad.storyboard; sourceTree = "<group>"; };
+		19624FA11888CA4400448004 /* ViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ViewController.h; sourceTree = "<group>"; };
+		19624FA21888CA4400448004 /* ViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ViewController.m; sourceTree = "<group>"; };
+		19624FA41888CA4400448004 /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Images.xcassets; sourceTree = "<group>"; };
+		19624FAA1888CA4400448004 /* ARAppTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = ARAppTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		19624FAB1888CA4400448004 /* XCTest.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = XCTest.framework; path = Library/Frameworks/XCTest.framework; sourceTree = DEVELOPER_DIR; };
+		19624FB31888CA4400448004 /* ARAppTests-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "ARAppTests-Info.plist"; sourceTree = "<group>"; };
+		19624FB51888CA4400448004 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
+		19624FB71888CA4400448004 /* ARAppTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ARAppTests.m; sourceTree = "<group>"; };
+		19624FCD1888CC0E00448004 /* 1.dat */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = 1.dat; sourceTree = "<group>"; };
+		19624FCE1888CC0E00448004 /* 2.dat */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = 2.dat; sourceTree = "<group>"; };
+		19624FCF1888CC0E00448004 /* Animation.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Animation.h; sourceTree = "<group>"; };
+		19624FD01888CC0E00448004 /* Animation.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Animation.m; sourceTree = "<group>"; };
+		19624FD11888CC0E00448004 /* AnimationManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AnimationManager.h; sourceTree = "<group>"; };
+		19624FD21888CC0E00448004 /* AnimationManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AnimationManager.m; sourceTree = "<group>"; };
+		19624FD31888CC0E00448004 /* Animations.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = Animations.json; sourceTree = "<group>"; };
+		19624FD41888CC0E00448004 /* ARViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ARViewController.h; sourceTree = "<group>"; };
+		19624FD51888CC0E00448004 /* ARViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ARViewController.m; sourceTree = "<group>"; };
+		19624FD61888CC0E00448004 /* bass.m4a */ = {isa = PBXFileReference; lastKnownFileType = file; path = bass.m4a; sourceTree = "<group>"; };
+		19624FD71888CC0E00448004 /* camera_para_ipadmini640x480.dat */ = {isa = PBXFileReference; lastKnownFileType = file; path = camera_para_ipadmini640x480.dat; sourceTree = "<group>"; };
+		19624FD81888CC0E00448004 /* Content.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Content.h; sourceTree = "<group>"; };
+		19624FD91888CC0E00448004 /* Content.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Content.m; sourceTree = "<group>"; };
+		19624FDA1888CC0E00448004 /* ContentManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ContentManager.h; sourceTree = "<group>"; };
+		19624FDB1888CC0E00448004 /* ContentManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ContentManager.m; sourceTree = "<group>"; };
+		19624FDC1888CC0E00448004 /* Contents.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = Contents.json; sourceTree = "<group>"; };
+		19624FDD1888CC0E00448004 /* CubeFS.glsl */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = CubeFS.glsl; sourceTree = "<group>"; };
+		19624FDE1888CC0E00448004 /* CubeVS.glsl */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = CubeVS.glsl; sourceTree = "<group>"; };
+		19624FDF1888CC0E00448004 /* GLUEProgram.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GLUEProgram.h; sourceTree = "<group>"; };
+		19624FE01888CC0E00448004 /* GLUEProgram.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GLUEProgram.m; sourceTree = "<group>"; };
+		19624FE11888CC0E00448004 /* IntroductionViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = IntroductionViewController.h; sourceTree = "<group>"; };
+		19624FE21888CC0E00448004 /* IntroductionViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = IntroductionViewController.m; sourceTree = "<group>"; };
+		19624FE31888CC0E00448004 /* JSONKit.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = JSONKit.h; sourceTree = "<group>"; };
+		19624FE41888CC0E00448004 /* JSONKit.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = JSONKit.m; sourceTree = "<group>"; };
+		19624FE51888CC0E00448004 /* Marker.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Marker.h; sourceTree = "<group>"; };
+		19624FE61888CC0E00448004 /* Marker.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = Marker.json; sourceTree = "<group>"; };
+		19624FE71888CC0E00448004 /* Marker.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Marker.m; sourceTree = "<group>"; };
+		19624FE81888CC0E00448004 /* MarkerManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MarkerManager.h; sourceTree = "<group>"; };
+		19624FE91888CC0E00448004 /* MarkerManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MarkerManager.m; sourceTree = "<group>"; };
+		19624FEA1888CC0E00448004 /* NavigationViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = NavigationViewController.h; sourceTree = "<group>"; };
+		19624FEB1888CC0E00448004 /* NavigationViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = NavigationViewController.m; sourceTree = "<group>"; };
+		19624FEC1888CC0E00448004 /* NewProfileViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = NewProfileViewController.h; sourceTree = "<group>"; };
+		19624FED1888CC0E00448004 /* NewProfileViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = NewProfileViewController.m; sourceTree = "<group>"; };
+		19624FEE1888CC0E00448004 /* patt.hiro */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = patt.hiro; sourceTree = "<group>"; };
+		19624FEF1888CC0E00448004 /* piano.m4a */ = {isa = PBXFileReference; lastKnownFileType = file; path = piano.m4a; sourceTree = "<group>"; };
+		19624FF01888CC0E00448004 /* ProfileManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ProfileManager.h; sourceTree = "<group>"; };
+		19624FF11888CC0E00448004 /* ProfileManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ProfileManager.m; sourceTree = "<group>"; };
+		19624FF21888CC0E00448004 /* SelectProfileViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SelectProfileViewController.h; sourceTree = "<group>"; };
+		19624FF31888CC0E00448004 /* SelectProfileViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SelectProfileViewController.m; sourceTree = "<group>"; };
+		19624FF41888CC0E00448004 /* Sprite.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Sprite.h; sourceTree = "<group>"; };
+		19624FF51888CC0E00448004 /* Sprite.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Sprite.m; sourceTree = "<group>"; };
+		19624FF61888CC0E00448004 /* SpriteManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SpriteManager.h; sourceTree = "<group>"; };
+		19624FF71888CC0E00448004 /* SpriteManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SpriteManager.m; sourceTree = "<group>"; };
+		19624FF81888CC0E00448004 /* SpriteRenderer.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SpriteRenderer.h; sourceTree = "<group>"; };
+		19624FF91888CC0E00448004 /* SpriteRenderer.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SpriteRenderer.m; sourceTree = "<group>"; };
+		19624FFA1888CC0E00448004 /* SpriteRendererFS.glsl */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = SpriteRendererFS.glsl; sourceTree = "<group>"; };
+		19624FFB1888CC0E00448004 /* SpriteRendererVS.glsl */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = SpriteRendererVS.glsl; sourceTree = "<group>"; };
+		19624FFC1888CC0E00448004 /* Sprites.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = Sprites.json; sourceTree = "<group>"; };
+		19624FFD1888CC0E00448004 /* SpriteSheet.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SpriteSheet.h; sourceTree = "<group>"; };
+		19624FFE1888CC0E00448004 /* SpriteSheet.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SpriteSheet.m; sourceTree = "<group>"; };
+		19624FFF1888CC0E00448004 /* SpriteSheet00.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = SpriteSheet00.png; sourceTree = "<group>"; };
+		196250001888CC0E00448004 /* SpriteSheet01.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = SpriteSheet01.png; sourceTree = "<group>"; };
+		196250011888CC0E00448004 /* SpriteSheetManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SpriteSheetManager.h; sourceTree = "<group>"; };
+		196250021888CC0E00448004 /* SpriteSheetManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SpriteSheetManager.m; sourceTree = "<group>"; };
+		196250031888CC0E00448004 /* SpriteSheets.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = SpriteSheets.json; sourceTree = "<group>"; };
+		196250041888CC0E00448004 /* Steam.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = Steam.png; sourceTree = "<group>"; };
+		196250051888CC0E00448004 /* VideoFS.glsl */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = VideoFS.glsl; sourceTree = "<group>"; };
+		196250061888CC0E00448004 /* VideoVS.glsl */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = VideoVS.glsl; sourceTree = "<group>"; };
+		196250071888CC0E00448004 /* Water.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = Water.png; sourceTree = "<group>"; };
+		1962504C1888F4D400448004 /* camera_para_ipad640x480.dat */ = {isa = PBXFileReference; lastKnownFileType = file; path = camera_para_ipad640x480.dat; sourceTree = "<group>"; };
+		1962504E1888F66A00448004 /* libAR.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; path = libAR.a; sourceTree = "<group>"; };
+		1962504F1888F66A00448004 /* libAR2.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; path = libAR2.a; sourceTree = "<group>"; };
+		196250501888F66A00448004 /* libARUtil.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; path = libARUtil.a; sourceTree = "<group>"; };
+		196250511888F66A00448004 /* libGLES2sub.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; path = libGLES2sub.a; sourceTree = "<group>"; };
+		196250521888F66A00448004 /* libgluES2.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; path = libgluES2.a; sourceTree = "<group>"; };
+		196250531888F66A00448004 /* libjpeg.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; path = libjpeg.a; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		19624F831888CA4400448004 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				196250541888F66A00448004 /* libAR.a in Frameworks */,
+				196250571888F66A00448004 /* libGLES2sub.a in Frameworks */,
+				196250591888F66A00448004 /* libjpeg.a in Frameworks */,
+				19624F8C1888CA4400448004 /* CoreGraphics.framework in Frameworks */,
+				196250581888F66A00448004 /* libgluES2.a in Frameworks */,
+				196250561888F66A00448004 /* libARUtil.a in Frameworks */,
+				19624F8E1888CA4400448004 /* UIKit.framework in Frameworks */,
+				196250551888F66A00448004 /* libAR2.a in Frameworks */,
+				19624F8A1888CA4400448004 /* Foundation.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		19624FA71888CA4400448004 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				19624FAC1888CA4400448004 /* XCTest.framework in Frameworks */,
+				19624FAE1888CA4400448004 /* UIKit.framework in Frameworks */,
+				19624FAD1888CA4400448004 /* Foundation.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		19624F7D1888CA4400448004 = {
+			isa = PBXGroup;
+			children = (
+				19624F8F1888CA4400448004 /* ARApp */,
+				19624FB11888CA4400448004 /* ARAppTests */,
+				19624F881888CA4400448004 /* Frameworks */,
+				19624F871888CA4400448004 /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		19624F871888CA4400448004 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				19624F861888CA4400448004 /* ARApp.app */,
+				19624FAA1888CA4400448004 /* ARAppTests.xctest */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		19624F881888CA4400448004 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				1962504E1888F66A00448004 /* libAR.a */,
+				1962504F1888F66A00448004 /* libAR2.a */,
+				196250501888F66A00448004 /* libARUtil.a */,
+				196250511888F66A00448004 /* libGLES2sub.a */,
+				196250521888F66A00448004 /* libgluES2.a */,
+				196250531888F66A00448004 /* libjpeg.a */,
+				19624F891888CA4400448004 /* Foundation.framework */,
+				19624F8B1888CA4400448004 /* CoreGraphics.framework */,
+				19624F8D1888CA4400448004 /* UIKit.framework */,
+				19624FAB1888CA4400448004 /* XCTest.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		19624F8F1888CA4400448004 /* ARApp */ = {
+			isa = PBXGroup;
+			children = (
+				1962503B1888E7A000448004 /* Renderer */,
+				196250341888E6A700448004 /* Utilities */,
+				196250331888E67000448004 /* ViewController */,
+				196250321888E65300448004 /* Entities */,
+				196250311888E63500448004 /* Manager */,
+				196250301888E58C00448004 /* Resources */,
+				19624F981888CA4400448004 /* AppDelegate.h */,
+				19624F991888CA4400448004 /* AppDelegate.m */,
+				19624F9E1888CA4400448004 /* Main_iPad.storyboard */,
+				19624FA41888CA4400448004 /* Images.xcassets */,
+				19624F901888CA4400448004 /* Supporting Files */,
+			);
+			path = ARApp;
+			sourceTree = "<group>";
+		};
+		19624F901888CA4400448004 /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				19624F911888CA4400448004 /* ARApp-Info.plist */,
+				19624F921888CA4400448004 /* InfoPlist.strings */,
+				19624F951888CA4400448004 /* main.m */,
+				19624F971888CA4400448004 /* ARApp-Prefix.pch */,
+			);
+			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		19624FB11888CA4400448004 /* ARAppTests */ = {
+			isa = PBXGroup;
+			children = (
+				19624FB71888CA4400448004 /* ARAppTests.m */,
+				19624FB21888CA4400448004 /* Supporting Files */,
+			);
+			path = ARAppTests;
+			sourceTree = "<group>";
+		};
+		19624FB21888CA4400448004 /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				19624FB31888CA4400448004 /* ARAppTests-Info.plist */,
+				19624FB41888CA4400448004 /* InfoPlist.strings */,
+			);
+			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		196250301888E58C00448004 /* Resources */ = {
+			isa = PBXGroup;
+			children = (
+				1962503A1888E76E00448004 /* SpriteSheets */,
+				196250391888E75A00448004 /* MarkerPattern */,
+				196250381888E74700448004 /* Shader */,
+				196250371888E73500448004 /* CameraParameters */,
+				196250361888E6FF00448004 /* Sounds */,
+				196250351888E6D900448004 /* Entities */,
+			);
+			name = Resources;
+			sourceTree = "<group>";
+		};
+		196250311888E63500448004 /* Manager */ = {
+			isa = PBXGroup;
+			children = (
+				19624FE81888CC0E00448004 /* MarkerManager.h */,
+				19624FE91888CC0E00448004 /* MarkerManager.m */,
+				19624FF01888CC0E00448004 /* ProfileManager.h */,
+				19624FF11888CC0E00448004 /* ProfileManager.m */,
+				19624FD11888CC0E00448004 /* AnimationManager.h */,
+				19624FD21888CC0E00448004 /* AnimationManager.m */,
+				19624FDA1888CC0E00448004 /* ContentManager.h */,
+				19624FDB1888CC0E00448004 /* ContentManager.m */,
+				19624FF61888CC0E00448004 /* SpriteManager.h */,
+				19624FF71888CC0E00448004 /* SpriteManager.m */,
+				196250011888CC0E00448004 /* SpriteSheetManager.h */,
+				196250021888CC0E00448004 /* SpriteSheetManager.m */,
+			);
+			name = Manager;
+			sourceTree = "<group>";
+		};
+		196250321888E65300448004 /* Entities */ = {
+			isa = PBXGroup;
+			children = (
+				19624FCF1888CC0E00448004 /* Animation.h */,
+				19624FD01888CC0E00448004 /* Animation.m */,
+				19624FD81888CC0E00448004 /* Content.h */,
+				19624FD91888CC0E00448004 /* Content.m */,
+				19624FE51888CC0E00448004 /* Marker.h */,
+				19624FE71888CC0E00448004 /* Marker.m */,
+				19624FF41888CC0E00448004 /* Sprite.h */,
+				19624FF51888CC0E00448004 /* Sprite.m */,
+				19624FFD1888CC0E00448004 /* SpriteSheet.h */,
+				19624FFE1888CC0E00448004 /* SpriteSheet.m */,
+			);
+			name = Entities;
+			sourceTree = "<group>";
+		};
+		196250331888E67000448004 /* ViewController */ = {
+			isa = PBXGroup;
+			children = (
+				19624FD41888CC0E00448004 /* ARViewController.h */,
+				19624FD51888CC0E00448004 /* ARViewController.m */,
+				19624FE11888CC0E00448004 /* IntroductionViewController.h */,
+				19624FE21888CC0E00448004 /* IntroductionViewController.m */,
+				19624FEA1888CC0E00448004 /* NavigationViewController.h */,
+				19624FEB1888CC0E00448004 /* NavigationViewController.m */,
+				19624FEC1888CC0E00448004 /* NewProfileViewController.h */,
+				19624FED1888CC0E00448004 /* NewProfileViewController.m */,
+				19624FF21888CC0E00448004 /* SelectProfileViewController.h */,
+				19624FF31888CC0E00448004 /* SelectProfileViewController.m */,
+				19624FA11888CA4400448004 /* ViewController.h */,
+				19624FA21888CA4400448004 /* ViewController.m */,
+			);
+			name = ViewController;
+			sourceTree = "<group>";
+		};
+		196250341888E6A700448004 /* Utilities */ = {
+			isa = PBXGroup;
+			children = (
+				19624FDF1888CC0E00448004 /* GLUEProgram.h */,
+				19624FE01888CC0E00448004 /* GLUEProgram.m */,
+				19624FE31888CC0E00448004 /* JSONKit.h */,
+				19624FE41888CC0E00448004 /* JSONKit.m */,
+			);
+			name = Utilities;
+			sourceTree = "<group>";
+		};
+		196250351888E6D900448004 /* Entities */ = {
+			isa = PBXGroup;
+			children = (
+				196250031888CC0E00448004 /* SpriteSheets.json */,
+				19624FD31888CC0E00448004 /* Animations.json */,
+				19624FDC1888CC0E00448004 /* Contents.json */,
+				19624FE61888CC0E00448004 /* Marker.json */,
+				19624FFC1888CC0E00448004 /* Sprites.json */,
+			);
+			name = Entities;
+			sourceTree = "<group>";
+		};
+		196250361888E6FF00448004 /* Sounds */ = {
+			isa = PBXGroup;
+			children = (
+				19624FD61888CC0E00448004 /* bass.m4a */,
+				19624FEF1888CC0E00448004 /* piano.m4a */,
+			);
+			name = Sounds;
+			sourceTree = "<group>";
+		};
+		196250371888E73500448004 /* CameraParameters */ = {
+			isa = PBXGroup;
+			children = (
+				1962504C1888F4D400448004 /* camera_para_ipad640x480.dat */,
+				19624FD71888CC0E00448004 /* camera_para_ipadmini640x480.dat */,
+			);
+			name = CameraParameters;
+			sourceTree = "<group>";
+		};
+		196250381888E74700448004 /* Shader */ = {
+			isa = PBXGroup;
+			children = (
+				19624FDD1888CC0E00448004 /* CubeFS.glsl */,
+				19624FDE1888CC0E00448004 /* CubeVS.glsl */,
+				19624FFA1888CC0E00448004 /* SpriteRendererFS.glsl */,
+				19624FFB1888CC0E00448004 /* SpriteRendererVS.glsl */,
+				196250051888CC0E00448004 /* VideoFS.glsl */,
+				196250061888CC0E00448004 /* VideoVS.glsl */,
+			);
+			name = Shader;
+			sourceTree = "<group>";
+		};
+		196250391888E75A00448004 /* MarkerPattern */ = {
+			isa = PBXGroup;
+			children = (
+				19624FEE1888CC0E00448004 /* patt.hiro */,
+				19624FCD1888CC0E00448004 /* 1.dat */,
+				19624FCE1888CC0E00448004 /* 2.dat */,
+			);
+			name = MarkerPattern;
+			sourceTree = "<group>";
+		};
+		1962503A1888E76E00448004 /* SpriteSheets */ = {
+			isa = PBXGroup;
+			children = (
+				19624FFF1888CC0E00448004 /* SpriteSheet00.png */,
+				196250001888CC0E00448004 /* SpriteSheet01.png */,
+				196250041888CC0E00448004 /* Steam.png */,
+				196250071888CC0E00448004 /* Water.png */,
+			);
+			name = SpriteSheets;
+			sourceTree = "<group>";
+		};
+		1962503B1888E7A000448004 /* Renderer */ = {
+			isa = PBXGroup;
+			children = (
+				19624FF81888CC0E00448004 /* SpriteRenderer.h */,
+				19624FF91888CC0E00448004 /* SpriteRenderer.m */,
+			);
+			name = Renderer;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		19624F851888CA4400448004 /* ARApp */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 19624FBB1888CA4400448004 /* Build configuration list for PBXNativeTarget "ARApp" */;
+			buildPhases = (
+				19624F821888CA4400448004 /* Sources */,
+				19624F831888CA4400448004 /* Frameworks */,
+				19624F841888CA4400448004 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = ARApp;
+			productName = ARApp;
+			productReference = 19624F861888CA4400448004 /* ARApp.app */;
+			productType = "com.apple.product-type.application";
+		};
+		19624FA91888CA4400448004 /* ARAppTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 19624FBE1888CA4400448004 /* Build configuration list for PBXNativeTarget "ARAppTests" */;
+			buildPhases = (
+				19624FA61888CA4400448004 /* Sources */,
+				19624FA71888CA4400448004 /* Frameworks */,
+				19624FA81888CA4400448004 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				19624FB01888CA4400448004 /* PBXTargetDependency */,
+			);
+			name = ARAppTests;
+			productName = ARAppTests;
+			productReference = 19624FAA1888CA4400448004 /* ARAppTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		19624F7E1888CA4400448004 /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastUpgradeCheck = 0500;
+				ORGANIZATIONNAME = "Arno in Wolde Lübke";
+				TargetAttributes = {
+					19624FA91888CA4400448004 = {
+						TestTargetID = 19624F851888CA4400448004;
+					};
+				};
+			};
+			buildConfigurationList = 19624F811888CA4400448004 /* Build configuration list for PBXProject "ARApp" */;
+			compatibilityVersion = "Xcode 3.2";
+			developmentRegion = English;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = 19624F7D1888CA4400448004;
+			productRefGroup = 19624F871888CA4400448004 /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				19624F851888CA4400448004 /* ARApp */,
+				19624FA91888CA4400448004 /* ARAppTests */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		19624F841888CA4400448004 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				1962502E1888CC0E00448004 /* VideoVS.glsl in Resources */,
+				1962500C1888CC0E00448004 /* Animations.json in Resources */,
+				1962504D1888F4D400448004 /* camera_para_ipad640x480.dat in Resources */,
+				196250181888CC0E00448004 /* Marker.json in Resources */,
+				19624FA01888CA4400448004 /* Main_iPad.storyboard in Resources */,
+				196250121888CC0E00448004 /* Contents.json in Resources */,
+				1962500F1888CC0E00448004 /* camera_para_ipadmini640x480.dat in Resources */,
+				1962502C1888CC0E00448004 /* Steam.png in Resources */,
+				196250141888CC0E00448004 /* CubeVS.glsl in Resources */,
+				1962501D1888CC0E00448004 /* patt.hiro in Resources */,
+				196250081888CC0E00448004 /* 1.dat in Resources */,
+				196250241888CC0E00448004 /* SpriteRendererFS.glsl in Resources */,
+				19624FA51888CA4400448004 /* Images.xcassets in Resources */,
+				19624F941888CA4400448004 /* InfoPlist.strings in Resources */,
+				196250261888CC0E00448004 /* Sprites.json in Resources */,
+				1962502B1888CC0E00448004 /* SpriteSheets.json in Resources */,
+				1962502F1888CC0E00448004 /* Water.png in Resources */,
+				196250091888CC0E00448004 /* 2.dat in Resources */,
+				196250251888CC0E00448004 /* SpriteRendererVS.glsl in Resources */,
+				196250281888CC0E00448004 /* SpriteSheet00.png in Resources */,
+				1962500E1888CC0E00448004 /* bass.m4a in Resources */,
+				1962502D1888CC0E00448004 /* VideoFS.glsl in Resources */,
+				1962501E1888CC0E00448004 /* piano.m4a in Resources */,
+				196250131888CC0E00448004 /* CubeFS.glsl in Resources */,
+				196250291888CC0E00448004 /* SpriteSheet01.png in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		19624FA81888CA4400448004 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				19624FB61888CA4400448004 /* InfoPlist.strings in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		19624F821888CA4400448004 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				196250271888CC0E00448004 /* SpriteSheet.m in Sources */,
+				19624FA31888CA4400448004 /* ViewController.m in Sources */,
+				196250191888CC0E00448004 /* Marker.m in Sources */,
+				1962501B1888CC0E00448004 /* NavigationViewController.m in Sources */,
+				196250111888CC0E00448004 /* ContentManager.m in Sources */,
+				1962501C1888CC0E00448004 /* NewProfileViewController.m in Sources */,
+				1962500D1888CC0E00448004 /* ARViewController.m in Sources */,
+				196250151888CC0E00448004 /* GLUEProgram.m in Sources */,
+				1962501F1888CC0E00448004 /* ProfileManager.m in Sources */,
+				196250211888CC0E00448004 /* Sprite.m in Sources */,
+				19624F9A1888CA4400448004 /* AppDelegate.m in Sources */,
+				196250221888CC0E00448004 /* SpriteManager.m in Sources */,
+				1962501A1888CC0E00448004 /* MarkerManager.m in Sources */,
+				1962500B1888CC0E00448004 /* AnimationManager.m in Sources */,
+				196250161888CC0E00448004 /* IntroductionViewController.m in Sources */,
+				1962500A1888CC0E00448004 /* Animation.m in Sources */,
+				196250101888CC0E00448004 /* Content.m in Sources */,
+				196250201888CC0E00448004 /* SelectProfileViewController.m in Sources */,
+				196250231888CC0E00448004 /* SpriteRenderer.m in Sources */,
+				19624F961888CA4400448004 /* main.m in Sources */,
+				1962502A1888CC0E00448004 /* SpriteSheetManager.m in Sources */,
+				196250171888CC0E00448004 /* JSONKit.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		19624FA61888CA4400448004 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				19624FB81888CA4400448004 /* ARAppTests.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		19624FB01888CA4400448004 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 19624F851888CA4400448004 /* ARApp */;
+			targetProxy = 19624FAF1888CA4400448004 /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin PBXVariantGroup section */
+		19624F921888CA4400448004 /* InfoPlist.strings */ = {
+			isa = PBXVariantGroup;
+			children = (
+				19624F931888CA4400448004 /* en */,
+			);
+			name = InfoPlist.strings;
+			sourceTree = "<group>";
+		};
+		19624F9E1888CA4400448004 /* Main_iPad.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				19624F9F1888CA4400448004 /* Base */,
+			);
+			name = Main_iPad.storyboard;
+			sourceTree = "<group>";
+		};
+		19624FB41888CA4400448004 /* InfoPlist.strings */ = {
+			isa = PBXVariantGroup;
+			children = (
+				19624FB51888CA4400448004 /* en */,
+			);
+			name = InfoPlist.strings;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		19624FB91888CA4400448004 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				ARCHS = "$(ARCHS_STANDARD_INCLUDING_64_BIT)";
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_SYMBOLS_PRIVATE_EXTERN = NO;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 7.0;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		19624FBA1888CA4400448004 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				ARCHS = "$(ARCHS_STANDARD_INCLUDING_64_BIT)";
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = YES;
+				ENABLE_NS_ASSERTIONS = NO;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 7.0;
+				SDKROOT = iphoneos;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		19624FBC1888CA4400448004 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = YES;
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "ARApp/ARApp-Prefix.pch";
+				INFOPLIST_FILE = "ARApp/ARApp-Info.plist";
+				LIBRARY_SEARCH_PATHS = (
+					"$(inherited)",
+					/Users/scatterbrain/Documents/Projects/Public/Marc/ARLangEduProject/Programs/ARApp,
+				);
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				USER_HEADER_SEARCH_PATHS = "/Users/scatterbrain/Documents/Libraries/ARToolKit/ARToolkit/include/**";
+				WRAPPER_EXTENSION = app;
+			};
+			name = Debug;
+		};
+		19624FBD1888CA4400448004 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = YES;
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "ARApp/ARApp-Prefix.pch";
+				INFOPLIST_FILE = "ARApp/ARApp-Info.plist";
+				LIBRARY_SEARCH_PATHS = (
+					"$(inherited)",
+					/Users/scatterbrain/Documents/Projects/Public/Marc/ARLangEduProject/Programs/ARApp,
+				);
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				USER_HEADER_SEARCH_PATHS = "/Users/scatterbrain/Documents/Libraries/ARToolKit/ARToolkit/include/**";
+				WRAPPER_EXTENSION = app;
+			};
+			name = Release;
+		};
+		19624FBF1888CA4400448004 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ARCHS = "$(ARCHS_STANDARD_INCLUDING_64_BIT)";
+				BUNDLE_LOADER = "$(BUILT_PRODUCTS_DIR)/ARApp.app/ARApp";
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(SDKROOT)/Developer/Library/Frameworks",
+					"$(inherited)",
+					"$(DEVELOPER_FRAMEWORKS_DIR)",
+				);
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "ARApp/ARApp-Prefix.pch";
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				INFOPLIST_FILE = "ARAppTests/ARAppTests-Info.plist";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TEST_HOST = "$(BUNDLE_LOADER)";
+				WRAPPER_EXTENSION = xctest;
+			};
+			name = Debug;
+		};
+		19624FC01888CA4400448004 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ARCHS = "$(ARCHS_STANDARD_INCLUDING_64_BIT)";
+				BUNDLE_LOADER = "$(BUILT_PRODUCTS_DIR)/ARApp.app/ARApp";
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(SDKROOT)/Developer/Library/Frameworks",
+					"$(inherited)",
+					"$(DEVELOPER_FRAMEWORKS_DIR)",
+				);
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "ARApp/ARApp-Prefix.pch";
+				INFOPLIST_FILE = "ARAppTests/ARAppTests-Info.plist";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TEST_HOST = "$(BUNDLE_LOADER)";
+				WRAPPER_EXTENSION = xctest;
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		19624F811888CA4400448004 /* Build configuration list for PBXProject "ARApp" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				19624FB91888CA4400448004 /* Debug */,
+				19624FBA1888CA4400448004 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		19624FBB1888CA4400448004 /* Build configuration list for PBXNativeTarget "ARApp" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				19624FBC1888CA4400448004 /* Debug */,
+				19624FBD1888CA4400448004 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		19624FBE1888CA4400448004 /* Build configuration list for PBXNativeTarget "ARAppTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				19624FBF1888CA4400448004 /* Debug */,
+				19624FC01888CA4400448004 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = 19624F7E1888CA4400448004 /* Project object */;
+}

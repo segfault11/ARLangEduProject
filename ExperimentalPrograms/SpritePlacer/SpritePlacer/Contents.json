@@ -1,7 +1,7 @@
 [
     {
         "id" : 0,
-        "sprite" : 0,
+        "sprite" : 1,
         "sentences": ["Example Sentence1 for the grim guy", "Example Sentence2 for the grim guy"],
         "sound" : "bass.m4a"
     },

@@ -1,0 +1,20 @@
+[
+    {
+        "id" : 0,
+        "spriteSheet" : 0,
+        "frame" : 0,
+        "animation" : 0,
+        "size" : 70.0,
+        "translation" : [0.0, 70.0, 0.0],
+        "rotation" : [0.0, 0.0, 0.0]
+    },
+    {
+        "id" : 1,
+        "spriteSheet" : 1,
+        "frame" : 0,
+        "animation" : 1,
+        "size" : 70.0,
+        "translation" : [0, 70.0, 0.0],
+        "rotation" : [0.0, 0.0, 0.0] 
+    }
+]

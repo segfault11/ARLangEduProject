@@ -60,6 +60,8 @@
 		191A2F6018754D11009D0261 /* libGLES2sub.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 191A2F5A18754D11009D0261 /* libGLES2sub.a */; };
 		191A2F6118754D11009D0261 /* libgluES2.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 191A2F5B18754D11009D0261 /* libgluES2.a */; };
 		191A2F6218754D11009D0261 /* libjpeg.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 191A2F5C18754D11009D0261 /* libjpeg.a */; };
+		19E6F89C1884F12500981E85 /* Steam.png in Resources */ = {isa = PBXBuildFile; fileRef = 19E6F89A1884F12500981E85 /* Steam.png */; };
+		19E6F89D1884F12500981E85 /* Water.png in Resources */ = {isa = PBXBuildFile; fileRef = 19E6F89B1884F12500981E85 /* Water.png */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -145,6 +147,8 @@
 		191A2F5A18754D11009D0261 /* libGLES2sub.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; name = libGLES2sub.a; path = ../../../../../../Libraries/ARToolKit/ARToolkit/lib/libGLES2sub.a; sourceTree = "<group>"; };
 		191A2F5B18754D11009D0261 /* libgluES2.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; name = libgluES2.a; path = ../../../../../../Libraries/ARToolKit/ARToolkit/lib/libgluES2.a; sourceTree = "<group>"; };
 		191A2F5C18754D11009D0261 /* libjpeg.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; name = libjpeg.a; path = ../../../../../../Libraries/ARToolKit/ARToolkit/lib/libjpeg.a; sourceTree = "<group>"; };
+		19E6F89A1884F12500981E85 /* Steam.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = Steam.png; sourceTree = "<group>"; };
+		19E6F89B1884F12500981E85 /* Water.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = Water.png; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -216,6 +220,8 @@
 		191A2ED518754B1E009D0261 /* SpritePlacer */ = {
 			isa = PBXGroup;
 			children = (
+				19E6F89A1884F12500981E85 /* Steam.png */,
+				19E6F89B1884F12500981E85 /* Water.png */,
 				191A2F1B18754C33009D0261 /* ContentManager.m */,
 				191A2F1C18754C33009D0261 /* Contents.json */,
 				191A2F1D18754C33009D0261 /* CubeFS.glsl */,
@@ -390,9 +396,11 @@
 				191A2F4818754C33009D0261 /* piano.m4a in Resources */,
 				191A2F1718754C07009D0261 /* Animations.json in Resources */,
 				191A2F4718754C33009D0261 /* patt.hiro in Resources */,
+				19E6F89C1884F12500981E85 /* Steam.png in Resources */,
 				191A2F5118754C33009D0261 /* SpriteSheet00.png in Resources */,
 				191A2F3F18754C33009D0261 /* Contents.json in Resources */,
 				191A2EEB18754B1E009D0261 /* Images.xcassets in Resources */,
+				19E6F89D1884F12500981E85 /* Water.png in Resources */,
 				191A2F4418754C33009D0261 /* Marker.json in Resources */,
 				191A2F5218754C33009D0261 /* SpriteSheet01.png in Resources */,
 				191A2F4D18754C33009D0261 /* SpriteRendererFS.glsl in Resources */,
@@ -657,6 +665,7 @@
 				191A2F0318754B1E009D0261 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		191A2F0418754B1E009D0261 /* Build configuration list for PBXNativeTarget "SpritePlacerTests" */ = {
 			isa = XCConfigurationList;
@@ -665,6 +674,7 @@
 				191A2F0618754B1E009D0261 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
