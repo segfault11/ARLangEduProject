@@ -139,6 +139,7 @@
  {
     UIStoryboard *storyboard = [UIStoryboard storyboardWithName:@"Main_iPad" bundle: nil];
     ViewController *vc = [storyboard instantiateViewControllerWithIdentifier:@"ViewController"];
+    [vc setProfileName:[[ProfileManager instance] getProfileAtIndex:indexPath.row]];
     [self.navigationController pushViewController:vc animated:YES];
  }
 

@@ -18,11 +18,15 @@
 #import "SpriteManager.h"
 #import "SpriteRenderer.h"
 #import "GLUEProgram.h"
+#import <CoreMotion/CoreMotion.h>
+#import "Timer.h"
 //------------------------------------------------------------------------------
 #define VIDEO_FRAME_WIDTH 640
 #define VIDEO_FRAME_HEIGHT 480
 #define ROT_NOISE_RANGE 0.03
-#define TRANS_NOISE_RANGE 10.0
+#define TRANS_NOISE_RANGE 40.0
+#define NUM_NOISE 1000
+#define NOISE_RESET_TIME 5.0
 //------------------------------------------------------------------------------
 static float quad[] = {
         -1.0f, 1.0f,
@@ -105,7 +109,9 @@ static void arg2ConvGLcpara(
     AR3DHandle* _ar3DHandle;
     GLfloat _proj[16];
     BOOL _cont;
-    
+    NSString* _profileName;
+    int _curMarkerID;
+    float _noise[3][4];
     
     struct
     {
@@ -129,6 +135,9 @@ static void arg2ConvGLcpara(
 @property (weak, nonatomic) IBOutlet UILabel *translation;
 @property(strong, nonatomic) Content* currentContent;
 @property(strong, nonatomic) AVAudioPlayer* audioPlayer;
+@property(strong, nonatomic) CMMotionManager* manager;
+@property(strong, nonatomic) Logger* logger;
+@property(strong, nonatomic) Timer* timer;
 - (void)initMarkerDetection;
 - (void)setupGL;
 - (void)initCaptureSession;
@@ -137,6 +146,7 @@ static void arg2ConvGLcpara(
 - (void)renderCubeWithView:(GLfloat*)view AndProjection:(GLfloat*)proj;
 - (void)resetCurrentContent;
 - (void)playSound:(NSString*)filename;
+- (void)logUserData;
 @end
 //------------------------------------------------------------------------------
 @implementation ViewController
@@ -157,6 +167,7 @@ static void arg2ConvGLcpara(
     view.drawableDepthFormat = GLKViewDrawableDepthFormat24;
     
     _cont = NO;
+    _curMarkerID = -1;
     
     [self setupGL];
     [self initMarkerDetection];
@@ -167,7 +178,23 @@ static void arg2ConvGLcpara(
     self.navigationItem.title = @"Augmented Reality View";
     
     [ContentManager instance];
+
+    // set up motion capture
+    self.manager = [[CMMotionManager alloc] init];
+    self.manager.deviceMotionUpdateInterval = 1.0/60.0;
+    self.manager.showsDeviceMovementDisplay = YES;
+
+    [self.manager
+        startDeviceMotionUpdatesUsingReferenceFrame:CMAttitudeReferenceFrameXArbitraryZVertical
+        toQueue:[NSOperationQueue currentQueue]
+        withHandler:nil];
     
+    // set up logger
+    self.logger = [[Logger alloc] initWithProfileName:_profileName];
+    
+    // start timer
+    self.timer = [[Timer alloc] init];
+    [self.timer start];
 }
 //------------------------------------------------------------------------------
 - (void)initMarkerDetection
@@ -341,7 +368,8 @@ static void arg2ConvGLcpara(
 }
 //------------------------------------------------------------------------------
 - (void)dealloc
-{    
+{
+    [self.manager stopDeviceMotionUpdates];
     [self tearDownGL];
     
     if ([EAGLContext currentContext] == self.context)
@@ -476,6 +504,20 @@ static void arg2ConvGLcpara(
 didOutputSampleBuffer:(CMSampleBufferRef)sampleBuffer
 fromConnection:(AVCaptureConnection *)connection
 {
+    // start logging
+    [self.logger
+        logOrientationForMarker:_curMarkerID
+        WithYaw:self.manager.deviceMotion.attitude.yaw
+        AndWithPitch:self.manager.deviceMotion.attitude.pitch
+        AndWithRoll:self.manager.deviceMotion.attitude.roll];
+    
+    [self.logger
+        logAccelerationForMarker:_curMarkerID
+        WithX:self.manager.deviceMotion.userAcceleration.x
+        AndWithY:self.manager.deviceMotion.userAcceleration.y
+        AndWithZ:self.manager.deviceMotion.userAcceleration.z];
+    
+
     CVImageBufferRef imageBuffer = CMSampleBufferGetImageBuffer(sampleBuffer);
 
     CVPixelBufferLockBaseAddress(imageBuffer, 0);
@@ -501,21 +543,6 @@ fromConnection:(AVCaptureConnection *)connection
 
     memcpy(_imgY, baseAddress, VIDEO_FRAME_WIDTH*VIDEO_FRAME_HEIGHT);
 
-    glActiveTexture(GL_TEXTURE0);
-    glBindTexture(GL_TEXTURE_2D, _luminanceTex);
-    
-    // insert random noise
-    for (int i = 0; i < 20000; i++)
-    {
-        int rn = arc4random() % (widthy*heighty);
-        _imgY[rn] = 0;
-    }
-    
-    glTexSubImage2D(
-        GL_TEXTURE_2D, 0, 0, 0, VIDEO_FRAME_WIDTH, VIDEO_FRAME_HEIGHT,
-        GL_RED_EXT, GL_UNSIGNED_BYTE, _imgY
-    );
-
     //
     // Process chrominance input of the video
     //
@@ -535,6 +562,22 @@ fromConnection:(AVCaptureConnection *)connection
     assert(glGetError() == GL_NO_ERROR);
     
     CVPixelBufferUnlockBaseAddress(imageBuffer, 0);
+    
+    glActiveTexture(GL_TEXTURE0);
+    glBindTexture(GL_TEXTURE_2D, _luminanceTex);
+    
+    // insert random noise
+    for (int i = 0; i < NUM_NOISE; i++)
+    {
+        int rn = arc4random() % (widthy*heighty);
+        _imgY[rn] = 0;
+    }
+    
+    glTexSubImage2D(
+        GL_TEXTURE_2D, 0, 0, 0, VIDEO_FRAME_WIDTH, VIDEO_FRAME_HEIGHT,
+        GL_RED_EXT, GL_UNSIGNED_BYTE, _imgY
+    );
+    
     
     // render the video
     [self renderVideo];
@@ -575,10 +618,12 @@ fromConnection:(AVCaptureConnection *)connection
     {
         [self resetCurrentContent];
         self.currentContent = nil;
+        _curMarkerID = -1;
         return; // no marker found
     }
     
     // get content for marker
+    _curMarkerID = [activeMid integerValue];
     Marker* m = [[MarkerManager instance] getMarkerForId:[activeMid integerValue]];
     Content* c = [[ContentManager instance] getContentWithId:m.content];
     
@@ -612,23 +657,64 @@ fromConnection:(AVCaptureConnection *)connection
         );
     }
     
+    if ([self.timer getElapsed] > NOISE_RESET_TIME)
+    {
+        //NSLog(@"%lf", [self.timer getElapsed]);
     
-    // add noise to matrix
+        // compute noise to matrix
+        memset(_noise, 0, sizeof(_noise));
     
-    // noise to rot part
+        // noise to rot part
+        for (int i = 0; i < 3; i++)
+        {
+            for (int j = 0; j < 3; j++)
+            {
+                _noise[i][j] = (2.0*(arc4random() % 100000)/100000.0 - 1.0)*ROT_NOISE_RANGE;
+            }
+        }
+    
+        // noise to translation part
+        for (int i = 0; i < 3; i++)
+        {
+            _noise[i][3] = (2.0*(arc4random() % 100000)/100000.0 - 1.0)*TRANS_NOISE_RANGE;
+        }
+        
+        [self.timer reset];
+    }
+    
+    // add noise to the transformation matrix
     for (int i = 0; i < 3; i++)
     {
-        for (int j = 0; j < 3; j++)
+        for (int j = 0; j < 4; j++)
         {
-            trans[i][j] += (2.0*(arc4random() % 100000)/100000.0 - 1.0)*ROT_NOISE_RANGE;
+            trans[i][j] += _noise[i][j];
         }
     }
     
-    // noise to translation part
-    for (int i = 0; i < 3; i++)
-    {
-        trans[i][3] += (2.0*(arc4random() % 100000)/100000.0 - 1.0)*TRANS_NOISE_RANGE;
-    }
+    // make rotational part orthonormal
+    GLKVector3 u, v, w;
+    u = GLKVector3Make(trans[0][0], trans[1][0], trans[2][0]);
+    v = GLKVector3Make(trans[0][1], trans[1][1], trans[2][1]);
+    w = GLKVector3Make(trans[0][2], trans[1][2], trans[2][2]);
+    
+    w = GLKVector3CrossProduct(u, v);
+    v = GLKVector3CrossProduct(w, u);
+    
+    u = GLKVector3Normalize(u);
+    v = GLKVector3Normalize(v);
+    w = GLKVector3Normalize(w);
+    
+    trans[0][0] = u.x;
+    trans[1][0] = u.y;
+    trans[2][0] = u.z;
+
+    trans[0][1] = v.x;
+    trans[1][1] = v.y;
+    trans[2][1] = v.z;
+
+    trans[0][2] = w.x;
+    trans[1][2] = w.y;
+    trans[2][2] = w.z;
     
     // prepare view matrix
     arg2ConvGlpara(trans, view);
@@ -735,6 +821,11 @@ fromConnection:(AVCaptureConnection *)connection
 //------------------------------------------------------------------------------
 - (IBAction)playAudio:(id)sender
 {
+    UIButton* b = sender;
+    [self.logger
+        logButtonPressForMarker:_curMarkerID
+        WithLabel:b.titleLabel.text];
+
     if (!self.currentContent)
     {
         return;
@@ -745,6 +836,11 @@ fromConnection:(AVCaptureConnection *)connection
 //------------------------------------------------------------------------------
 - (IBAction)changeSentence:(id)sender
 {
+    UIButton* b = sender;
+    [self.logger
+        logButtonPressForMarker:_curMarkerID
+        WithLabel:b.titleLabel.text];
+
     if (!self.currentContent)
     {
         return;
@@ -758,8 +854,18 @@ fromConnection:(AVCaptureConnection *)connection
 //------------------------------------------------------------------------------
 - (IBAction)translate:(id)sender
 {
+    UIButton* b = sender;
+    [self.logger
+        logButtonPressForMarker:_curMarkerID
+        WithLabel:b.titleLabel.text];
+
     self.currentContent.isTranslationDisplayed =
         !self.currentContent.isTranslationDisplayed;
+}
+//------------------------------------------------------------------------------
+- (void)setProfileName:(NSString*)profileName
+{
+    _profileName = profileName;
 }
 //------------------------------------------------------------------------------
 //- (NSUInteger)supportedInterfaceOrientations

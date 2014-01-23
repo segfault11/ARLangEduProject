@@ -62,12 +62,13 @@
 		1962502E1888CC0E00448004 /* VideoVS.glsl in Resources */ = {isa = PBXBuildFile; fileRef = 196250061888CC0E00448004 /* VideoVS.glsl */; };
 		1962502F1888CC0E00448004 /* Water.png in Resources */ = {isa = PBXBuildFile; fileRef = 196250071888CC0E00448004 /* Water.png */; };
 		1962504D1888F4D400448004 /* camera_para_ipad640x480.dat in Resources */ = {isa = PBXBuildFile; fileRef = 1962504C1888F4D400448004 /* camera_para_ipad640x480.dat */; };
-		196250541888F66A00448004 /* libAR.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 1962504E1888F66A00448004 /* libAR.a */; };
-		196250551888F66A00448004 /* libAR2.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 1962504F1888F66A00448004 /* libAR2.a */; };
-		196250561888F66A00448004 /* libARUtil.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 196250501888F66A00448004 /* libARUtil.a */; };
-		196250571888F66A00448004 /* libGLES2sub.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 196250511888F66A00448004 /* libGLES2sub.a */; };
-		196250581888F66A00448004 /* libgluES2.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 196250521888F66A00448004 /* libgluES2.a */; };
-		196250591888F66A00448004 /* libjpeg.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 196250531888F66A00448004 /* libjpeg.a */; };
+		19910126188F8E0300B2B558 /* Logger.m in Sources */ = {isa = PBXBuildFile; fileRef = 19910125188F8E0300B2B558 /* Logger.m */; };
+		1991012D188F8E6800B2B558 /* libAR.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 19910127188F8E6800B2B558 /* libAR.a */; };
+		1991012E188F8E6800B2B558 /* libAR2.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 19910128188F8E6800B2B558 /* libAR2.a */; };
+		1991012F188F8E6800B2B558 /* libARUtil.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 19910129188F8E6800B2B558 /* libARUtil.a */; };
+		19910130188F8E6800B2B558 /* libGLES2sub.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 1991012A188F8E6800B2B558 /* libGLES2sub.a */; };
+		19910131188F8E6800B2B558 /* libgluES2.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 1991012B188F8E6800B2B558 /* libgluES2.a */; };
+		19910132188F8E6800B2B558 /* libjpeg.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 1991012C188F8E6800B2B558 /* libjpeg.a */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -160,12 +161,14 @@
 		196250061888CC0E00448004 /* VideoVS.glsl */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = VideoVS.glsl; sourceTree = "<group>"; };
 		196250071888CC0E00448004 /* Water.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = Water.png; sourceTree = "<group>"; };
 		1962504C1888F4D400448004 /* camera_para_ipad640x480.dat */ = {isa = PBXFileReference; lastKnownFileType = file; path = camera_para_ipad640x480.dat; sourceTree = "<group>"; };
-		1962504E1888F66A00448004 /* libAR.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; path = libAR.a; sourceTree = "<group>"; };
-		1962504F1888F66A00448004 /* libAR2.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; path = libAR2.a; sourceTree = "<group>"; };
-		196250501888F66A00448004 /* libARUtil.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; path = libARUtil.a; sourceTree = "<group>"; };
-		196250511888F66A00448004 /* libGLES2sub.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; path = libGLES2sub.a; sourceTree = "<group>"; };
-		196250521888F66A00448004 /* libgluES2.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; path = libgluES2.a; sourceTree = "<group>"; };
-		196250531888F66A00448004 /* libjpeg.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; path = libjpeg.a; sourceTree = "<group>"; };
+		19910124188F8E0300B2B558 /* Logger.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Logger.h; sourceTree = "<group>"; };
+		19910125188F8E0300B2B558 /* Logger.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Logger.m; sourceTree = "<group>"; };
+		19910127188F8E6800B2B558 /* libAR.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; name = libAR.a; path = ../../../../../../Libraries/ARToolKit/ARToolkit/lib/libAR.a; sourceTree = "<group>"; };
+		19910128188F8E6800B2B558 /* libAR2.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; name = libAR2.a; path = ../../../../../../Libraries/ARToolKit/ARToolkit/lib/libAR2.a; sourceTree = "<group>"; };
+		19910129188F8E6800B2B558 /* libARUtil.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; name = libARUtil.a; path = ../../../../../../Libraries/ARToolKit/ARToolkit/lib/libARUtil.a; sourceTree = "<group>"; };
+		1991012A188F8E6800B2B558 /* libGLES2sub.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; name = libGLES2sub.a; path = ../../../../../../Libraries/ARToolKit/ARToolkit/lib/libGLES2sub.a; sourceTree = "<group>"; };
+		1991012B188F8E6800B2B558 /* libgluES2.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; name = libgluES2.a; path = ../../../../../../Libraries/ARToolKit/ARToolkit/lib/libgluES2.a; sourceTree = "<group>"; };
+		1991012C188F8E6800B2B558 /* libjpeg.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; name = libjpeg.a; path = ../../../../../../Libraries/ARToolKit/ARToolkit/lib/libjpeg.a; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -173,14 +176,14 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				196250541888F66A00448004 /* libAR.a in Frameworks */,
-				196250571888F66A00448004 /* libGLES2sub.a in Frameworks */,
-				196250591888F66A00448004 /* libjpeg.a in Frameworks */,
+				1991012D188F8E6800B2B558 /* libAR.a in Frameworks */,
+				19910130188F8E6800B2B558 /* libGLES2sub.a in Frameworks */,
+				19910132188F8E6800B2B558 /* libjpeg.a in Frameworks */,
 				19624F8C1888CA4400448004 /* CoreGraphics.framework in Frameworks */,
-				196250581888F66A00448004 /* libgluES2.a in Frameworks */,
-				196250561888F66A00448004 /* libARUtil.a in Frameworks */,
+				19910131188F8E6800B2B558 /* libgluES2.a in Frameworks */,
+				1991012F188F8E6800B2B558 /* libARUtil.a in Frameworks */,
 				19624F8E1888CA4400448004 /* UIKit.framework in Frameworks */,
-				196250551888F66A00448004 /* libAR2.a in Frameworks */,
+				1991012E188F8E6800B2B558 /* libAR2.a in Frameworks */,
 				19624F8A1888CA4400448004 /* Foundation.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -220,12 +223,12 @@
 		19624F881888CA4400448004 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
-				1962504E1888F66A00448004 /* libAR.a */,
-				1962504F1888F66A00448004 /* libAR2.a */,
-				196250501888F66A00448004 /* libARUtil.a */,
-				196250511888F66A00448004 /* libGLES2sub.a */,
-				196250521888F66A00448004 /* libgluES2.a */,
-				196250531888F66A00448004 /* libjpeg.a */,
+				19910127188F8E6800B2B558 /* libAR.a */,
+				19910128188F8E6800B2B558 /* libAR2.a */,
+				19910129188F8E6800B2B558 /* libARUtil.a */,
+				1991012A188F8E6800B2B558 /* libGLES2sub.a */,
+				1991012B188F8E6800B2B558 /* libgluES2.a */,
+				1991012C188F8E6800B2B558 /* libjpeg.a */,
 				19624F891888CA4400448004 /* Foundation.framework */,
 				19624F8B1888CA4400448004 /* CoreGraphics.framework */,
 				19624F8D1888CA4400448004 /* UIKit.framework */,
@@ -237,6 +240,7 @@
 		19624F8F1888CA4400448004 /* ARApp */ = {
 			isa = PBXGroup;
 			children = (
+				19910123188F8DEE00B2B558 /* Logger */,
 				1962503B1888E7A000448004 /* Renderer */,
 				196250341888E6A700448004 /* Utilities */,
 				196250331888E67000448004 /* ViewController */,
@@ -433,6 +437,15 @@
 			name = Renderer;
 			sourceTree = "<group>";
 		};
+		19910123188F8DEE00B2B558 /* Logger */ = {
+			isa = PBXGroup;
+			children = (
+				19910124188F8E0300B2B558 /* Logger.h */,
+				19910125188F8E0300B2B558 /* Logger.m */,
+			);
+			name = Logger;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -567,6 +580,7 @@
 				1962501A1888CC0E00448004 /* MarkerManager.m in Sources */,
 				1962500B1888CC0E00448004 /* AnimationManager.m in Sources */,
 				196250161888CC0E00448004 /* IntroductionViewController.m in Sources */,
+				19910126188F8E0300B2B558 /* Logger.m in Sources */,
 				1962500A1888CC0E00448004 /* Animation.m in Sources */,
 				196250101888CC0E00448004 /* Content.m in Sources */,
 				196250201888CC0E00448004 /* SelectProfileViewController.m in Sources */,
@@ -709,6 +723,7 @@
 				LIBRARY_SEARCH_PATHS = (
 					"$(inherited)",
 					/Users/scatterbrain/Documents/Projects/Public/Marc/ARLangEduProject/Programs/ARApp,
+					/Users/scatterbrain/Documents/Libraries/ARToolKit/ARToolkit/lib,
 				);
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				USER_HEADER_SEARCH_PATHS = "/Users/scatterbrain/Documents/Libraries/ARToolKit/ARToolkit/include/**";
@@ -728,6 +743,7 @@
 				LIBRARY_SEARCH_PATHS = (
 					"$(inherited)",
 					/Users/scatterbrain/Documents/Projects/Public/Marc/ARLangEduProject/Programs/ARApp,
+					/Users/scatterbrain/Documents/Libraries/ARToolKit/ARToolkit/lib,
 				);
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				USER_HEADER_SEARCH_PATHS = "/Users/scatterbrain/Documents/Libraries/ARToolKit/ARToolkit/include/**";

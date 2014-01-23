@@ -9,8 +9,8 @@
 #import <UIKit/UIKit.h>
 #import <GLKit/GLKit.h>
 #import <AVFoundation/AVFoundation.h>
-
+#import "Logger.h"
 
 @interface ViewController : GLKViewController <AVCaptureVideoDataOutputSampleBufferDelegate>
-
+- (void)setProfileName:(NSString*)profileName;
 @end

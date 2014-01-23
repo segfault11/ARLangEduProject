@@ -18,9 +18,12 @@
 #import "SpriteManager.h"
 #import "SpriteRenderer.h"
 #import "GLUEProgram.h"
+#import <CoreMotion/CoreMotion.h>
 //------------------------------------------------------------------------------
 #define VIDEO_FRAME_WIDTH 640
 #define VIDEO_FRAME_HEIGHT 480
+#define ROT_NOISE_RANGE 0.03
+#define TRANS_NOISE_RANGE 10.0
 //------------------------------------------------------------------------------
 static float quad[] = {
         -1.0f, 1.0f,
@@ -103,7 +106,8 @@ static void arg2ConvGLcpara(
     AR3DHandle* _ar3DHandle;
     GLfloat _proj[16];
     BOOL _cont;
-    
+    NSString* _profileName;
+    int _curMarkerID;
     
     struct
     {
@@ -127,6 +131,8 @@ static void arg2ConvGLcpara(
 @property (weak, nonatomic) IBOutlet UILabel *translation;
 @property(strong, nonatomic) Content* currentContent;
 @property(strong, nonatomic) AVAudioPlayer* audioPlayer;
+@property(strong, nonatomic) CMMotionManager* manager;
+@property(strong, nonatomic) Logger* logger;
 - (void)initMarkerDetection;
 - (void)setupGL;
 - (void)initCaptureSession;
@@ -135,6 +141,7 @@ static void arg2ConvGLcpara(
 - (void)renderCubeWithView:(GLfloat*)view AndProjection:(GLfloat*)proj;
 - (void)resetCurrentContent;
 - (void)playSound:(NSString*)filename;
+- (void)logUserData;
 @end
 //------------------------------------------------------------------------------
 @implementation ViewController
@@ -155,6 +162,7 @@ static void arg2ConvGLcpara(
     view.drawableDepthFormat = GLKViewDrawableDepthFormat24;
     
     _cont = NO;
+    _curMarkerID = -1;
     
     [self setupGL];
     [self initMarkerDetection];
@@ -165,7 +173,19 @@ static void arg2ConvGLcpara(
     self.navigationItem.title = @"Augmented Reality View";
     
     [ContentManager instance];
+
+    // set up motion capture
+    self.manager = [[CMMotionManager alloc] init];
+    self.manager.deviceMotionUpdateInterval = 1.0/60.0;
+    self.manager.showsDeviceMovementDisplay = YES;
+
+    [self.manager
+        startDeviceMotionUpdatesUsingReferenceFrame:CMAttitudeReferenceFrameXArbitraryZVertical
+        toQueue:[NSOperationQueue currentQueue]
+        withHandler:nil];
     
+    // set up logger
+    self.logger = [[Logger alloc] initWithProfileName:_profileName];
 }
 //------------------------------------------------------------------------------
 - (void)initMarkerDetection
@@ -339,7 +359,8 @@ static void arg2ConvGLcpara(
 }
 //------------------------------------------------------------------------------
 - (void)dealloc
-{    
+{
+    [self.manager stopDeviceMotionUpdates];
     [self tearDownGL];
     
     if ([EAGLContext currentContext] == self.context)
@@ -474,6 +495,20 @@ static void arg2ConvGLcpara(
 didOutputSampleBuffer:(CMSampleBufferRef)sampleBuffer
 fromConnection:(AVCaptureConnection *)connection
 {
+    // start logging
+    [self.logger
+        logOrientationForMarker:_curMarkerID
+        WithYaw:self.manager.deviceMotion.attitude.yaw
+        AndWithPitch:self.manager.deviceMotion.attitude.pitch
+        AndWithRoll:self.manager.deviceMotion.attitude.roll];
+    
+    [self.logger
+        logAccelerationForMarker:_curMarkerID
+        WithX:self.manager.deviceMotion.userAcceleration.x
+        AndWithY:self.manager.deviceMotion.userAcceleration.y
+        AndWithZ:self.manager.deviceMotion.userAcceleration.z];
+    
+
     CVImageBufferRef imageBuffer = CMSampleBufferGetImageBuffer(sampleBuffer);
 
     CVPixelBufferLockBaseAddress(imageBuffer, 0);
@@ -486,12 +521,12 @@ fromConnection:(AVCaptureConnection *)connection
         );
     
     size_t bytesPerRow = CVPixelBufferGetBytesPerRowOfPlane(imageBuffer, 0);
-    size_t width = CVPixelBufferGetWidthOfPlane(imageBuffer, 0);
-    size_t height = CVPixelBufferGetHeightOfPlane(imageBuffer, 0);
+    size_t widthy = CVPixelBufferGetWidthOfPlane(imageBuffer, 0);
+    size_t heighty = CVPixelBufferGetHeightOfPlane(imageBuffer, 0);
 
     if (NULL == baseAddress
-        || width != VIDEO_FRAME_WIDTH
-        || height != VIDEO_FRAME_HEIGHT
+        || widthy != VIDEO_FRAME_WIDTH
+        || heighty != VIDEO_FRAME_HEIGHT
     )
     {
         NSLog(@"Couldnt get image");
@@ -499,21 +534,13 @@ fromConnection:(AVCaptureConnection *)connection
 
     memcpy(_imgY, baseAddress, VIDEO_FRAME_WIDTH*VIDEO_FRAME_HEIGHT);
 
-    glActiveTexture(GL_TEXTURE0);
-    glBindTexture(GL_TEXTURE_2D, _luminanceTex);
-    
-    glTexSubImage2D(
-        GL_TEXTURE_2D, 0, 0, 0, VIDEO_FRAME_WIDTH, VIDEO_FRAME_HEIGHT,
-        GL_RED_EXT, GL_UNSIGNED_BYTE, baseAddress
-    );
-
     //
     // Process chrominance input of the video
     //
     baseAddress = (uint8_t *)CVPixelBufferGetBaseAddressOfPlane(imageBuffer, 1);
     bytesPerRow = CVPixelBufferGetBytesPerRowOfPlane(imageBuffer, 1);
-    width = CVPixelBufferGetWidthOfPlane(imageBuffer, 1);
-    height = CVPixelBufferGetHeightOfPlane(imageBuffer, 1);
+    size_t width = CVPixelBufferGetWidthOfPlane(imageBuffer, 1);
+    size_t height = CVPixelBufferGetHeightOfPlane(imageBuffer, 1);
 
     glActiveTexture(GL_TEXTURE1);
     glBindTexture(GL_TEXTURE_2D, _chrominanceTex);
@@ -527,8 +554,17 @@ fromConnection:(AVCaptureConnection *)connection
     
     CVPixelBufferUnlockBaseAddress(imageBuffer, 0);
     
-    [self renderVideo];
+    glActiveTexture(GL_TEXTURE0);
+    glBindTexture(GL_TEXTURE_2D, _luminanceTex);
     
+    glTexSubImage2D(
+        GL_TEXTURE_2D, 0, 0, 0, VIDEO_FRAME_WIDTH, VIDEO_FRAME_HEIGHT,
+        GL_RED_EXT, GL_UNSIGNED_BYTE, _imgY
+    );
+    
+    
+    // render the video
+    [self renderVideo];
     
     //
     //  FIND THE MARKER, MR PROGRAM CODE!!
@@ -566,10 +602,12 @@ fromConnection:(AVCaptureConnection *)connection
     {
         [self resetCurrentContent];
         self.currentContent = nil;
+        _curMarkerID = -1;
         return; // no marker found
     }
     
     // get content for marker
+    _curMarkerID = [activeMid integerValue];
     Marker* m = [[MarkerManager instance] getMarkerForId:[activeMid integerValue]];
     Content* c = [[ContentManager instance] getContentWithId:m.content];
     
@@ -598,11 +636,10 @@ fromConnection:(AVCaptureConnection *)connection
             _ar3DHandle,
             &(markerInfo[currMid]),
             trans,
-            m.size  ,
+            m.size,
             trans
         );
     }
-    
     
     // prepare view matrix
     arg2ConvGlpara(trans, view);
@@ -709,6 +746,15 @@ fromConnection:(AVCaptureConnection *)connection
 //------------------------------------------------------------------------------
 - (IBAction)playAudio:(id)sender
 {
+    UIButton* b = sender;
+    [self.logger
+        logButtonPressForMarker:_curMarkerID
+        WithLabel:b.titleLabel.text];
+
+    [self.logger
+        logButtonPressForMarker:_curMarkerID
+        WithLabel:@"NASA"];
+
     if (!self.currentContent)
     {
         return;
@@ -719,6 +765,11 @@ fromConnection:(AVCaptureConnection *)connection
 //------------------------------------------------------------------------------
 - (IBAction)changeSentence:(id)sender
 {
+    UIButton* b = sender;
+    [self.logger
+        logButtonPressForMarker:_curMarkerID
+        WithLabel:b.titleLabel.text];
+
     if (!self.currentContent)
     {
         return;
@@ -732,8 +783,18 @@ fromConnection:(AVCaptureConnection *)connection
 //------------------------------------------------------------------------------
 - (IBAction)translate:(id)sender
 {
+    UIButton* b = sender;
+    [self.logger
+        logButtonPressForMarker:_curMarkerID
+        WithLabel:b.titleLabel.text];
+
     self.currentContent.isTranslationDisplayed =
         !self.currentContent.isTranslationDisplayed;
+}
+//------------------------------------------------------------------------------
+- (void)setProfileName:(NSString*)profileName
+{
+    _profileName = profileName;
 }
 //------------------------------------------------------------------------------
 //- (NSUInteger)supportedInterfaceOrientations

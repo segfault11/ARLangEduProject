@@ -59,15 +59,18 @@
 		19398309188CE45100C4198C /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 193982EE188CE45100C4198C /* ViewController.m */; };
 		1939830A188CE45100C4198C /* Water.png in Resources */ = {isa = PBXBuildFile; fileRef = 193982EF188CE45100C4198C /* Water.png */; };
 		1939830D188CE50600C4198C /* Main_iPad.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 1939830B188CE50600C4198C /* Main_iPad.storyboard */; };
-		19398314188CE59300C4198C /* libAR.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 1939830E188CE59200C4198C /* libAR.a */; };
-		19398315188CE59300C4198C /* libAR2.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 1939830F188CE59200C4198C /* libAR2.a */; };
-		19398316188CE59300C4198C /* libARUtil.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 19398310188CE59300C4198C /* libARUtil.a */; };
-		19398317188CE59300C4198C /* libGLES2sub.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 19398311188CE59300C4198C /* libGLES2sub.a */; };
-		19398318188CE59300C4198C /* libgluES2.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 19398312188CE59300C4198C /* libgluES2.a */; };
-		19398319188CE59300C4198C /* libjpeg.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 19398313188CE59300C4198C /* libjpeg.a */; };
 		1939831D188CE6EB00C4198C /* Contents.json in Resources */ = {isa = PBXBuildFile; fileRef = 1939831A188CE6EB00C4198C /* Contents.json */; };
 		1939831E188CE6EB00C4198C /* CubeFS.glsl in Resources */ = {isa = PBXBuildFile; fileRef = 1939831B188CE6EB00C4198C /* CubeFS.glsl */; };
 		1939831F188CE6EB00C4198C /* CubeVS.glsl in Resources */ = {isa = PBXBuildFile; fileRef = 1939831C188CE6EB00C4198C /* CubeVS.glsl */; };
+		1948698E1890BA9B0048AE2E /* Timer.m in Sources */ = {isa = PBXBuildFile; fileRef = 1948698D1890BA9B0048AE2E /* Timer.m */; };
+		19893B88188D2C1F00289B42 /* CoreMotion.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 19893B87188D2C1F00289B42 /* CoreMotion.framework */; };
+		19893B8F188D2C9B00289B42 /* libAR.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 19893B89188D2C9B00289B42 /* libAR.a */; };
+		19893B90188D2C9B00289B42 /* libAR2.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 19893B8A188D2C9B00289B42 /* libAR2.a */; };
+		19893B91188D2C9B00289B42 /* libARUtil.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 19893B8B188D2C9B00289B42 /* libARUtil.a */; };
+		19893B92188D2C9B00289B42 /* libGLES2sub.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 19893B8C188D2C9B00289B42 /* libGLES2sub.a */; };
+		19893B93188D2C9B00289B42 /* libgluES2.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 19893B8D188D2C9B00289B42 /* libgluES2.a */; };
+		19893B94188D2C9B00289B42 /* libjpeg.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 19893B8E188D2C9B00289B42 /* libjpeg.a */; };
+		19910121188E3DF300B2B558 /* Logger.m in Sources */ = {isa = PBXBuildFile; fileRef = 19910120188E3DF300B2B558 /* Logger.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -157,15 +160,20 @@
 		193982EE188CE45100C4198C /* ViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ViewController.m; sourceTree = "<group>"; };
 		193982EF188CE45100C4198C /* Water.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = Water.png; sourceTree = "<group>"; };
 		1939830C188CE50600C4198C /* en */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = en; path = en.lproj/Main_iPad.storyboard; sourceTree = "<group>"; };
-		1939830E188CE59200C4198C /* libAR.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; path = libAR.a; sourceTree = "<group>"; };
-		1939830F188CE59200C4198C /* libAR2.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; path = libAR2.a; sourceTree = "<group>"; };
-		19398310188CE59300C4198C /* libARUtil.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; path = libARUtil.a; sourceTree = "<group>"; };
-		19398311188CE59300C4198C /* libGLES2sub.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; path = libGLES2sub.a; sourceTree = "<group>"; };
-		19398312188CE59300C4198C /* libgluES2.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; path = libgluES2.a; sourceTree = "<group>"; };
-		19398313188CE59300C4198C /* libjpeg.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; path = libjpeg.a; sourceTree = "<group>"; };
 		1939831A188CE6EB00C4198C /* Contents.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = Contents.json; sourceTree = "<group>"; };
 		1939831B188CE6EB00C4198C /* CubeFS.glsl */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = CubeFS.glsl; sourceTree = "<group>"; };
 		1939831C188CE6EB00C4198C /* CubeVS.glsl */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = CubeVS.glsl; sourceTree = "<group>"; };
+		1948698C1890BA9B0048AE2E /* Timer.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Timer.h; sourceTree = "<group>"; };
+		1948698D1890BA9B0048AE2E /* Timer.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Timer.m; sourceTree = "<group>"; };
+		19893B87188D2C1F00289B42 /* CoreMotion.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreMotion.framework; path = System/Library/Frameworks/CoreMotion.framework; sourceTree = SDKROOT; };
+		19893B89188D2C9B00289B42 /* libAR.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; name = libAR.a; path = ../../../../../../Libraries/ARToolKit/ARToolkit/lib/libAR.a; sourceTree = "<group>"; };
+		19893B8A188D2C9B00289B42 /* libAR2.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; name = libAR2.a; path = ../../../../../../Libraries/ARToolKit/ARToolkit/lib/libAR2.a; sourceTree = "<group>"; };
+		19893B8B188D2C9B00289B42 /* libARUtil.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; name = libARUtil.a; path = ../../../../../../Libraries/ARToolKit/ARToolkit/lib/libARUtil.a; sourceTree = "<group>"; };
+		19893B8C188D2C9B00289B42 /* libGLES2sub.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; name = libGLES2sub.a; path = ../../../../../../Libraries/ARToolKit/ARToolkit/lib/libGLES2sub.a; sourceTree = "<group>"; };
+		19893B8D188D2C9B00289B42 /* libgluES2.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; name = libgluES2.a; path = ../../../../../../Libraries/ARToolKit/ARToolkit/lib/libgluES2.a; sourceTree = "<group>"; };
+		19893B8E188D2C9B00289B42 /* libjpeg.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; name = libjpeg.a; path = ../../../../../../Libraries/ARToolKit/ARToolkit/lib/libjpeg.a; sourceTree = "<group>"; };
+		1991011F188E3DF300B2B558 /* Logger.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Logger.h; sourceTree = "<group>"; };
+		19910120188E3DF300B2B558 /* Logger.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Logger.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -173,14 +181,15 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				19398314188CE59300C4198C /* libAR.a in Frameworks */,
-				19398317188CE59300C4198C /* libGLES2sub.a in Frameworks */,
-				19398319188CE59300C4198C /* libjpeg.a in Frameworks */,
+				19893B91188D2C9B00289B42 /* libARUtil.a in Frameworks */,
+				19893B88188D2C1F00289B42 /* CoreMotion.framework in Frameworks */,
+				19893B93188D2C9B00289B42 /* libgluES2.a in Frameworks */,
+				19893B94188D2C9B00289B42 /* libjpeg.a in Frameworks */,
+				19893B92188D2C9B00289B42 /* libGLES2sub.a in Frameworks */,
 				19398270188CE33000C4198C /* CoreGraphics.framework in Frameworks */,
-				19398318188CE59300C4198C /* libgluES2.a in Frameworks */,
-				19398316188CE59300C4198C /* libARUtil.a in Frameworks */,
 				19398272188CE33000C4198C /* UIKit.framework in Frameworks */,
-				19398315188CE59300C4198C /* libAR2.a in Frameworks */,
+				19893B90188D2C9B00289B42 /* libAR2.a in Frameworks */,
+				19893B8F188D2C9B00289B42 /* libAR.a in Frameworks */,
 				1939826E188CE33000C4198C /* Foundation.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -220,12 +229,13 @@
 		1939826C188CE33000C4198C /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
-				1939830E188CE59200C4198C /* libAR.a */,
-				1939830F188CE59200C4198C /* libAR2.a */,
-				19398310188CE59300C4198C /* libARUtil.a */,
-				19398311188CE59300C4198C /* libGLES2sub.a */,
-				19398312188CE59300C4198C /* libgluES2.a */,
-				19398313188CE59300C4198C /* libjpeg.a */,
+				19893B89188D2C9B00289B42 /* libAR.a */,
+				19893B8A188D2C9B00289B42 /* libAR2.a */,
+				19893B8B188D2C9B00289B42 /* libARUtil.a */,
+				19893B8C188D2C9B00289B42 /* libGLES2sub.a */,
+				19893B8D188D2C9B00289B42 /* libgluES2.a */,
+				19893B8E188D2C9B00289B42 /* libjpeg.a */,
+				19893B87188D2C1F00289B42 /* CoreMotion.framework */,
 				1939826D188CE33000C4198C /* Foundation.framework */,
 				1939826F188CE33000C4198C /* CoreGraphics.framework */,
 				19398271188CE33000C4198C /* UIKit.framework */,
@@ -237,6 +247,7 @@
 		19398273188CE33000C4198C /* BadARApp */ = {
 			isa = PBXGroup;
 			children = (
+				19910122188F830E00B2B558 /* Logger */,
 				19398325188CE9A300C4198C /* Resources */,
 				19398324188CE99500C4198C /* Utilities */,
 				19398323188CE97600C4198C /* Controller */,
@@ -320,8 +331,8 @@
 		19398322188CE95F00C4198C /* Renderer */ = {
 			isa = PBXGroup;
 			children = (
-				193982DE188CE45100C4198C /* SpriteRenderer.h */,
 				193982DF188CE45100C4198C /* SpriteRenderer.m */,
+				193982DE188CE45100C4198C /* SpriteRenderer.h */,
 			);
 			name = Renderer;
 			sourceTree = "<group>";
@@ -348,6 +359,8 @@
 		19398324188CE99500C4198C /* Utilities */ = {
 			isa = PBXGroup;
 			children = (
+				1948698C1890BA9B0048AE2E /* Timer.h */,
+				1948698D1890BA9B0048AE2E /* Timer.m */,
 				193982B8188CE43D00C4198C /* GLUEProgram.h */,
 				193982B9188CE43D00C4198C /* GLUEProgram.m */,
 				193982C9188CE45100C4198C /* JSONKit.h */,
@@ -431,6 +444,15 @@
 				193982EC188CE45100C4198C /* VideoVS.glsl */,
 			);
 			name = Shader;
+			sourceTree = "<group>";
+		};
+		19910122188F830E00B2B558 /* Logger */ = {
+			isa = PBXGroup;
+			children = (
+				1991011F188E3DF300B2B558 /* Logger.h */,
+				19910120188E3DF300B2B558 /* Logger.m */,
+			);
+			name = Logger;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -555,6 +577,7 @@
 				193982BD188CE43D00C4198C /* AnimationManager.m in Sources */,
 				193982FB188CE45100C4198C /* Sprite.m in Sources */,
 				193982F6188CE45100C4198C /* NewProfileViewController.m in Sources */,
+				1948698E1890BA9B0048AE2E /* Timer.m in Sources */,
 				193982C4188CE43D00C4198C /* Content.m in Sources */,
 				193982F0188CE45100C4198C /* IntroductionViewController.m in Sources */,
 				193982F9188CE45100C4198C /* ProfileManager.m in Sources */,
@@ -567,6 +590,7 @@
 				1939827A188CE33000C4198C /* main.m in Sources */,
 				193982F5188CE45100C4198C /* NavigationViewController.m in Sources */,
 				193982FD188CE45100C4198C /* SpriteRenderer.m in Sources */,
+				19910121188E3DF300B2B558 /* Logger.m in Sources */,
 				193982C6188CE43D00C4198C /* GLUEProgram.m in Sources */,
 				19398309188CE45100C4198C /* ViewController.m in Sources */,
 				193982F3188CE45100C4198C /* Marker.m in Sources */,
@@ -709,6 +733,7 @@
 				LIBRARY_SEARCH_PATHS = (
 					"$(inherited)",
 					/Users/scatterbrain/Documents/Projects/Public/Marc/ARLangEduProject/Programs/BadARApp,
+					/Users/scatterbrain/Documents/Libraries/ARToolKit/ARToolkit/lib,
 				);
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				USER_HEADER_SEARCH_PATHS = "/Users/scatterbrain/Documents/Libraries/ARToolKit/ARToolkit/include/**";
@@ -728,6 +753,7 @@
 				LIBRARY_SEARCH_PATHS = (
 					"$(inherited)",
 					/Users/scatterbrain/Documents/Projects/Public/Marc/ARLangEduProject/Programs/BadARApp,
+					/Users/scatterbrain/Documents/Libraries/ARToolKit/ARToolkit/lib,
 				);
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				USER_HEADER_SEARCH_PATHS = "/Users/scatterbrain/Documents/Libraries/ARToolKit/ARToolkit/include/**";
@@ -796,6 +822,7 @@
 				193982A1188CE33000C4198C /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		193982A2188CE33000C4198C /* Build configuration list for PBXNativeTarget "BadARAppTests" */ = {
 			isa = XCConfigurationList;
@@ -804,6 +831,7 @@
 				193982A4188CE33000C4198C /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
