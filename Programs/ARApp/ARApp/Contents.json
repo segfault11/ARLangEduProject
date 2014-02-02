@@ -1,17 +1,184 @@
 [
-    {
-        "id" : 0,
-        "sprite" : 0,
-        "sentences": ["Example Sentence1 for the grim guy", "Example Sentence2 for the grim guy"],
-        "sound" : "bass.m4a",
-        "translation" : "translation for id 0"
-    },
- 
-    {
-        "id" : 1,
-        "sprite" : 1,
-        "sentences": ["Example Sentence1 for the coin", "Example Sentence2 for the coin"],
-        "sound" : "piano.m4a",
-        "translation" : "translation for id 1"
-    }
+ {
+ "id" : 0,
+ "sprite" : 0,
+ "sentences": [" ", " "],
+ "sound" : "bass.m4a",
+ "translation" : "water"
+ },
+ {
+ "id" : 1,
+ "sprite" : 1,
+ "sentences": [" ", " "],
+ "sound" : "piano.m4a",
+ "translation" : "a list"
+ },
+ {
+ "id" : 2,
+ "sprite" : 2,
+ "sentences": [" ", " "],
+ "sound" : "piano.m4a",
+ "translation" : "a magnet"
+ },
+ {
+ "id" : 3,
+ "sprite" : 3,
+ "sentences": [" ", " "],
+ "sound" : "piano.m4a",
+ "translation" : "a clock"
+ },
+ {
+ "id" : 4,
+ "sprite" : 4,
+ "sentences": [" ", " "],
+ "sound" : "piano.m4a",
+ "translation" : "a window"
+ },
+ {
+ "id" : 5,
+ "sprite" : 5,
+ "sentences": [" ", " "],
+ "sound" : "piano.m4a",
+ "translation" : "to look outside"
+ },
+ {
+ "id" : 6,
+ "sprite" : 6,
+ "sentences": [" ", " "],
+ "sound" : "piano.m4a",
+ "translation" : "beverages"
+ },
+ {
+ "id" : 7,
+ "sprite" : 7,
+ "sentences": [" ", " "],
+ "sound" : "piano.m4a",
+ "translation" : "food"
+ },
+ {
+ "id" : 8,
+ "sprite" : 8,
+ "sentences": [" ", " "],
+ "sound" : "piano.m4a",
+ "translation" : "to serve"
+ },
+ {
+ "id" : 9,
+ "sprite" : 9,
+ "sentences": [" ", " "],
+ "sound" : "piano.m4a",
+ "translation" : "to peep"
+ },
+ {
+ "id" : 10,
+ "sprite" : 10,
+ "sentences": [" ", " "],
+ "sound" : "piano.m4a",
+ "translation" : "a trash can"
+ },
+ {
+ "id" : 11,
+ "sprite" : 11,
+ "sentences": [" ", " "],
+ "sound" : "piano.m4a",
+ "translation" : "a bottle"
+ },
+ {
+ "id" : 12,
+ "sprite" : 12,
+ "sentences": [" ", " "],
+ "sound" : "piano.m4a",
+ "translation" : "a can"
+ },
+ {
+ "id" : 13,
+ "sprite" : 13,
+ "sentences": [" ", " "],
+ "sound" : "piano.m4a",
+ "translation" : "a cabinet"
+ },
+ {
+ "id" : 14,
+ "sprite" : 14,
+ "sentences": [" ", " "],
+ "sound" : "piano.m4a",
+ "translation" : "to open"
+ },
+ {
+ "id" : 15,
+ "sprite" : 15,
+ "sentences": [" ", " "],
+ "sound" : "piano.m4a",
+ "translation" : "to press"
+ },
+ {
+ "id" : 16,
+ "sprite" : 16,
+ "sentences": [" ", " "],
+ "sound" : "piano.m4a",
+ "translation" : "to write"
+ },
+ {
+ "id" : 17,
+ "sprite" : 17,
+ "sentences": [" ", " "],
+ "sound" : "piano.m4a",
+ "translation" : "to plug in"
+ },
+ {
+ "id" : 18,
+ "sprite" : 18,
+ "sentences": [" ", " "],
+ "sound" : "piano.m4a",
+ "translation" : "a calendar"
+ },
+ {
+ "id" : 19,
+ "sprite" : 19,
+ "sentences": [" ", " "],
+ "sound" : "piano.m4a",
+ "translation" : "to water"
+ },
+ {
+ "id" : 20,
+ "sprite" : 20,
+ "sentences": [" ", " "],
+ "sound" : "piano.m4a",
+ "translation" : "to read"
+ },
+ {
+ "id" : 21,
+ "sprite" : 21,
+ "sentences": [" ", " "],
+ "sound" : "piano.m4a",
+ "translation" : "to hit"
+ },
+ {
+ "id" : 22,
+ "sprite" : 22,
+ "sentences": ["to watch the television", "to watch a game"],
+ "sound" : "piano.m4a",
+ "translation" : "to watch"
+ },
+ {
+ "id" : 23,
+ "sprite" : 23,
+ "sentences": [" ", " "],
+ "sound" : "piano.m4a",
+ "translation" : "to pay"
+ },
+ {
+ "id" : 24,
+ "sprite" : 24,
+ "sentences": [" ", " "],
+ "sound" : "piano.m4a",
+ "translation" : "to sit"
+ },
+ {
+ "id" : 25,
+ "sprite" : 25,
+ "sentences": [" ", " "],
+ "sound" : "piano.m4a",
+ "translation" : "sugar"
+ }
 ]

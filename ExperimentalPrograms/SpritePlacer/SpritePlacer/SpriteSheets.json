@@ -1,13 +1,132 @@
 [
-    {
-        "id" : 0,
-        "fileName" : "Steam.png",
-        "numFrames" : 8
-    },
- 
-    {
-        "id" : 1,
-        "fileName" : "Water.png",
-        "numFrames" : 5
-    }
+ {
+ "id" : 0,
+ "fileName" : "tubig.png",
+ "numFrames" : 1
+ },
+ {
+ "id" : 1,
+ "fileName" : "talaan.png",
+ "numFrames" : 1
+ },
+ {
+ "id" : 2,
+ "fileName" : "batubalani.png",
+ "numFrames" : 1
+ },
+ {
+ "id" : 3,
+ "fileName" : "oras.png",
+ "numFrames" : 1
+ },
+ {
+ "id" : 4,
+ "fileName" : "bintana.png",
+ "numFrames" : 1
+ },
+ {
+ "id" : 5,
+ "fileName" : "dumungaw.png",
+ "numFrames" : 1
+ },
+ {
+ "id" : 6,
+ "fileName" : "inumin.png",
+ "numFrames" : 1
+ },
+ {
+ "id" : 7,
+ "fileName" : "pagkain.png",
+ "numFrames" : 1
+ },
+ {
+ "id" : 8,
+ "fileName" : "ihain.png",
+ "numFrames" : 8
+ },
+ {
+ "id" : 9,
+ "fileName" : "sumilip.png",
+ "numFrames" : 1
+ },
+ {
+ "id" : 10,
+ "fileName" : "basurahan.png",
+ "numFrames" : 1
+ },
+ {
+ "id" : 11,
+ "fileName" : "bote.png",
+ "numFrames" : 1
+ },
+ {
+ "id" : 12,
+ "fileName" : "lata.png",
+ "numFrames" : 1
+ },
+ {
+ "id" : 13,
+ "fileName" : "aparador.png",
+ "numFrames" : 1
+ },
+ {
+ "id" : 14,
+ "fileName" : "buksan.png",
+ "numFrames" : 1
+ },
+ {
+ "id" : 15,
+ "fileName" : "pindutin.png",
+ "numFrames" : 8
+ },
+ {
+ "id" : 16,
+ "fileName" : "isulat.png",
+ "numFrames" : 1
+ },
+ {
+ "id" : 17,
+ "fileName" : "isaksak.png",
+ "numFrames" : 8
+ },
+ {
+ "id" : 18,
+ "fileName" : "talaarawan.png",
+ "numFrames" : 1
+ },
+ {
+ "id" : 19,
+ "fileName" : "diligan.png",
+ "numFrames" : 8
+ },
+ {
+ "id" : 20,
+ "fileName" : "basahin.png",
+ "numFrames" : 8
+ },
+ {
+ "id" : 21,
+ "fileName" : "tamaan.png",
+ "numFrames" : 8
+ },
+ {
+ "id" : 22,
+ "fileName" : "manuod.png",
+ "numFrames" : 8
+ },
+ {
+ "id" : 23,
+ "fileName" : "magbayad.png",
+ "numFrames" : 8
+ },
+ {
+ "id" : 24,
+ "fileName" : "maupo.png",
+ "numFrames" : 1
+ },
+ {
+ "id" : 25,
+ "fileName" : "asukal.png",
+ "numFrames" : 1
+ }
 ]
