@@ -180,5 +180,271 @@
  "sentences": [" ", " "],
  "sound" : "piano.m4a",
  "translation" : "sugar"
+ },
+ {
+ "id" : 26,
+ "sprite" : 26,
+ "sentences": [" ", " "],
+ "sound" : "piano.m4a",
+ "translation" : "an eraser"
+ },
+ {
+ "id" : 27,
+ "sprite" : 27,
+ "sentences": [" ", " "],
+ "sound" : "piano.m4a",
+ "translation" : "a book"
+ },
+ {
+ "id" : 28,
+ "sprite" : 28,
+ "sentences": [" ", " "],
+ "sound" : "piano.m4a",
+ "translation" : "a pen"
+ },
+ {
+ "id" : 29,
+ "sprite" : 29,
+ "sentences": [" ", " "],
+ "sound" : "piano.m4a",
+ "translation" : "a building"
+ },
+ {
+ "id" : 30,
+ "sprite" : 30,
+ "sentences": [" ", " "],
+ "sound" : "piano.m4a",
+ "translation" : "a key"
+ },
+ {
+ "id" : 31,
+ "sprite" : 31,
+ "sentences": [" ", " "],
+ "sound" : "piano.m4a",
+ "translation" : "a chair"
+ },
+ {
+ "id" : 32,
+ "sprite" : 32,
+ "sentences": [" ", " "],
+ "sound" : "piano.m4a",
+ "translation" : "a box"
+ },
+ {
+ "id" : 33,
+ "sprite" : 33,
+ "sentences": [" ", " "],
+ "sound" : "piano.m4a",
+ "translation" : "glass (material)"
+ },
+ {
+ "id" : 34,
+ "sprite" : 34,
+ "sentences": [" ", " "],
+ "sound" : "piano.m4a",
+ "translation" : "to call"
+ },
+ {
+ "id" : 35,
+ "sprite" : 35,
+ "sentences": [" ", " "],
+ "sound" : "piano.m4a",
+ "translation" : "to erase"
+ },
+ {
+ "id" : 36,
+ "sprite" : 36,
+ "sentences": [" ", " "],
+ "sound" : "piano.m4a",
+ "translation" : "a wire"
+ },
+ {
+ "id" : 37,
+ "sprite" : 37,
+ "sentences": [" ", " "],
+ "sound" : "piano.m4a",
+ "translation" : "to pull"
+ },
+ {
+ "id" : 38,
+ "sprite" : 38,
+ "sentences": [" ", " "],
+ "sound" : "piano.m4a",
+ "translation" : "to push"
+ },
+ {
+ "id" : 39,
+ "sprite" : 39,
+ "sentences": [" ", " "],
+ "sound" : "piano.m4a",
+ "translation" : "to put on top"
+ },
+ {
+ "id" : 40,
+ "sprite" : 40,
+ "sentences": [" ", " "],
+ "sound" : "piano.m4a",
+ "translation" : "to hang"
+ },
+ {
+ "id" : 41,
+ "sprite" : 41,
+ "sentences": [" ", " "],
+ "sound" : "piano.m4a",
+ "translation" : "a door"
+ },
+ {
+ "id" : 42,
+ "sprite" : 42,
+ "sentences": [" ", " "],
+ "sound" : "piano.m4a",
+ "translation" : "an announcement"
+ },
+ {
+ "id" : 43,
+ "sprite" : 43,
+ "sentences": [" ", " "],
+ "sound" : "piano.m4a",
+ "translation" : "an instruction"
+ },
+ {
+ "id" : 44,
+ "sprite" : 44,
+ "sentences": [" ", " "],
+ "sound" : "piano.m4a",
+ "translation" : "a hinge"
+ },
+ {
+ "id" : 45,
+ "sprite" : 45,
+ "sentences": [" ", " "],
+ "sound" : "piano.m4a",
+ "translation" : "a conference"
+ },
+ {
+ "id" : 46,
+ "sprite" : 46,
+ "sentences": [" ", " "],
+ "sound" : "piano.m4a",
+ "translation" : "to schedule"
+ },
+ {
+ "id" : 47,
+ "sprite" : 47,
+ "sentences": [" ", " "],
+ "sound" : "piano.m4a",
+ "translation" : "to increase"
+ },
+ {
+ "id" : 48,
+ "sprite" : 48,
+ "sentences": [" ", " "],
+ "sound" : "piano.m4a",
+ "translation" : "to decrease"
+ },
+ {
+ "id" : 49,
+ "sprite" : 49,
+ "sentences": [" ", " "],
+ "sound" : "piano.m4a",
+ "translation" : "to smile"
+ },
+ {
+ "id" : 50,
+ "sprite" : 50,
+ "sentences": [" ", " "],
+ "sound" : "piano.m4a",
+ "translation" : "to break"
+ },
+ {
+ "id" : 51,
+ "sprite" : 51,
+ "sentences": [" ", " "],
+ "sound" : "piano.m4a",
+ "translation" : "a fire extinguisher"
+ },
+ {
+ "id" : 52,
+ "sprite" : 52,
+ "sentences": [" ", " "],
+ "sound" : "piano.m4a",
+ "translation" : "to frown"
+ },
+ {
+ "id" : 53,
+ "sprite" : 53,
+ "sentences": [" ", " "],
+ "sound" : "piano.m4a",
+ "translation" : "to knock"
+ },
+ {
+ "id" : 54,
+ "sprite" : 54,
+ "sentences": [" ", " "],
+ "sound" : "piano.m4a",
+ "translation" : "to stir"
+ },
+ {
+ "id" : 55,
+ "sprite" : 55,
+ "sentences": [" ", " "],
+ "sound" : "piano.m4a",
+ "translation" : "to flow"
+ },
+ {
+ "id" : 56,
+ "sprite" : 56,
+ "sentences": [" ", " "],
+ "sound" : "piano.m4a",
+ "translation" : "a seed"
+ },
+ {
+ "id" : 57,
+ "sprite" : 57,
+ "sentences": [" ", " "],
+ "sound" : "piano.m4a",
+ "translation" : "to put salt"
+ },
+ {
+ "id" : 58,
+ "sprite" : 58,
+ "sentences": [" ", " "],
+ "sound" : "piano.m4a",
+ "translation" : "wine"
+ },
+ {
+ "id" : 59,
+ "sprite" : 59,
+ "sentences": [" ", " "],
+ "sound" : "piano.m4a",
+ "translation" : "hook"
+ },
+ {
+ "id" : 60,
+ "sprite" : 60,
+ "sentences": [" ", " "],
+ "sound" : "piano.m4a",
+ "translation" : "a drinking glass"
+ },
+ {
+ "id" : 61,
+ "sprite" : 61,
+ "sentences": [" ", " "],
+ "sound" : "piano.m4a",
+ "translation" : "a reading material"
+ },
+ {
+ "id" : 62,
+ "sprite" : 62,
+ "sentences": [" ", " "],
+ "sound" : "piano.m4a",
+ "translation" : "a banana"
+ },
+ {
+ "id" : 63,
+ "sprite" : 63,
+ "sentences": [" ", " "],
+ "sound" : "piano.m4a",
+ "translation" : "to throw away"
  }
 ]
