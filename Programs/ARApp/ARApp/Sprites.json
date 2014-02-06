@@ -232,5 +232,347 @@
  "size" : 15.0,
  "translation" : [0.0, 0.0, 0.0],
  "rotation" : [-90.0, -90.0, 0.0]
+ },
+ {
+ "id" : 26,
+ "spriteSheet" : 26,
+ "frame" : 0,
+ "animation" : 1,
+ "size" : 15.0,
+ "translation" : [0.0, 0.0, 0.0],
+ "rotation" : [-90.0, 0.0, 0.0]
+ },
+ {
+ "id" : 27,
+ "spriteSheet" : 27,
+ "frame" : 0,
+ "animation" : 0,
+ "size" : 15.0,
+ "translation" : [0.0, 0.0, 0.0],
+ "rotation" : [-90.0, -90.0, 0.0]
+ },
+ {
+ "id" : 28,
+ "spriteSheet" : 28,
+ "frame" : 0,
+ "animation" : 0,
+ "size" : 15.0,
+ "translation" : [0.0, 0.0, 0.0],
+ "rotation" : [-90.0, -90.0, 0.0]
+ },
+ {
+ "id" : 29,
+ "spriteSheet" : 29,
+ "frame" : 0,
+ "animation" : 1,
+ "size" : 15.0,
+ "translation" : [0.0, 0.0, 0.0],
+ "rotation" : [-90.0, 0.0, 0.0]
+ },
+ {
+ "id" : 30,
+ "spriteSheet" : 30,
+ "frame" : 0,
+ "animation" : 0,
+ "size" : 15.0,
+ "translation" : [0.0, 0.0, 0.0],
+ "rotation" : [-90.0, -90.0, 0.0]
+ },
+ {
+ "id" : 31,
+ "spriteSheet" : 31,
+ "frame" : 0,
+ "animation" : 0,
+ "size" : 15.0,
+ "translation" : [0.0, 0.0, 0.0],
+ "rotation" : [-90.0, -90.0, 0.0]
+ },
+ {
+ "id" : 32,
+ "spriteSheet" : 32,
+ "frame" : 0,
+ "animation" : 1,
+ "size" : 15.0,
+ "translation" : [0.0, 0.0, 0.0],
+ "rotation" : [-90.0, 0.0, 0.0]
+ },
+ {
+ "id" : 33,
+ "spriteSheet" : 33,
+ "frame" : 0,
+ "animation" : 0,
+ "size" : 15.0,
+ "translation" : [0.0, 0.0, 0.0],
+ "rotation" : [-90.0, -90.0, 0.0]
+ },
+ {
+ "id" : 34,
+ "spriteSheet" : 34,
+ "frame" : 0,
+ "animation" : 0,
+ "size" : 15.0,
+ "translation" : [0.0, 0.0, 0.0],
+ "rotation" : [-90.0, -90.0, 0.0]
+ },
+ {
+ "id" : 35,
+ "spriteSheet" : 35,
+ "frame" : 0,
+ "animation" : 1,
+ "size" : 15.0,
+ "translation" : [0.0, 0.0, 0.0],
+ "rotation" : [-90.0, 0.0, 0.0]
+ },
+ {
+ "id" : 36,
+ "spriteSheet" : 36,
+ "frame" : 0,
+ "animation" : 0,
+ "size" : 15.0,
+ "translation" : [0.0, 0.0, 0.0],
+ "rotation" : [-90.0, -90.0, 0.0]
+ },
+ {
+ "id" : 37,
+ "spriteSheet" : 37,
+ "frame" : 0,
+ "animation" : 0,
+ "size" : 15.0,
+ "translation" : [0.0, 0.0, 0.0],
+ "rotation" : [-90.0, -90.0, 0.0]
+ },
+ {
+ "id" : 38,
+ "spriteSheet" : 38,
+ "frame" : 0,
+ "animation" : 1,
+ "size" : 15.0,
+ "translation" : [0.0, 0.0, 0.0],
+ "rotation" : [-90.0, 0.0, 0.0]
+ },
+ {
+ "id" : 39,
+ "spriteSheet" : 39,
+ "frame" : 0,
+ "animation" : 0,
+ "size" : 15.0,
+ "translation" : [0.0, 0.0, 0.0],
+ "rotation" : [-90.0, -90.0, 0.0]
+ },
+ {
+ "id" : 40,
+ "spriteSheet" : 40,
+ "frame" : 0,
+ "animation" : 0,
+ "size" : 15.0,
+ "translation" : [0.0, 0.0, 0.0],
+ "rotation" : [-90.0, -90.0, 0.0]
+ },
+ {
+ "id" : 41,
+ "spriteSheet" : 41,
+ "frame" : 0,
+ "animation" : 1,
+ "size" : 15.0,
+ "translation" : [0.0, 0.0, 0.0],
+ "rotation" : [-90.0, 0.0, 0.0]
+ },
+ {
+ "id" : 42,
+ "spriteSheet" : 42,
+ "frame" : 0,
+ "animation" : 0,
+ "size" : 15.0,
+ "translation" : [0.0, 0.0, 0.0],
+ "rotation" : [-90.0, -90.0, 0.0]
+ },
+ {
+ "id" : 43,
+ "spriteSheet" : 43,
+ "frame" : 0,
+ "animation" : 0,
+ "size" : 15.0,
+ "translation" : [0.0, 0.0, 0.0],
+ "rotation" : [-90.0, -90.0, 0.0]
+ },
+ {
+ "id" : 44,
+ "spriteSheet" : 44,
+ "frame" : 0,
+ "animation" : 1,
+ "size" : 15.0,
+ "translation" : [0.0, 0.0, 0.0],
+ "rotation" : [-90.0, 0.0, 0.0]
+ },
+ {
+ "id" : 45,
+ "spriteSheet" : 45,
+ "frame" : 0,
+ "animation" : 0,
+ "size" : 15.0,
+ "translation" : [0.0, 0.0, 0.0],
+ "rotation" : [-90.0, -90.0, 0.0]
+ },
+ {
+ "id" : 46,
+ "spriteSheet" : 46,
+ "frame" : 0,
+ "animation" : 0,
+ "size" : 15.0,
+ "translation" : [0.0, 0.0, 0.0],
+ "rotation" : [-90.0, -90.0, 0.0]
+ },
+ {
+ "id" : 47,
+ "spriteSheet" : 47,
+ "frame" : 0,
+ "animation" : 1,
+ "size" : 15.0,
+ "translation" : [0.0, 0.0, 0.0],
+ "rotation" : [-90.0, 0.0, 0.0]
+ },
+ {
+ "id" : 48,
+ "spriteSheet" : 48,
+ "frame" : 0,
+ "animation" : 0,
+ "size" : 15.0,
+ "translation" : [0.0, 0.0, 0.0],
+ "rotation" : [-90.0, -90.0, 0.0]
+ },
+ {
+ "id" : 49,
+ "spriteSheet" : 49,
+ "frame" : 0,
+ "animation" : 0,
+ "size" : 15.0,
+ "translation" : [0.0, 0.0, 0.0],
+ "rotation" : [-90.0, -90.0, 0.0]
+ },
+ {
+ "id" : 50,
+ "spriteSheet" : 50,
+ "frame" : 0,
+ "animation" : 1,
+ "size" : 15.0,
+ "translation" : [0.0, 0.0, 0.0],
+ "rotation" : [-90.0, 0.0, 0.0]
+ },
+ {
+ "id" : 51,
+ "spriteSheet" : 51,
+ "frame" : 0,
+ "animation" : 0,
+ "size" : 15.0,
+ "translation" : [0.0, 0.0, 0.0],
+ "rotation" : [-90.0, -90.0, 0.0]
+ },
+ {
+ "id" : 52,
+ "spriteSheet" : 52,
+ "frame" : 0,
+ "animation" : 0,
+ "size" : 15.0,
+ "translation" : [0.0, 0.0, 0.0],
+ "rotation" : [-90.0, -90.0, 0.0]
+ },
+ {
+ "id" : 53,
+ "spriteSheet" : 53,
+ "frame" : 0,
+ "animation" : 1,
+ "size" : 15.0,
+ "translation" : [0.0, 0.0, 0.0],
+ "rotation" : [-90.0, 0.0, 0.0]
+ },
+ {
+ "id" : 54,
+ "spriteSheet" : 54,
+ "frame" : 0,
+ "animation" : 0,
+ "size" : 15.0,
+ "translation" : [0.0, 0.0, 0.0],
+ "rotation" : [-90.0, -90.0, 0.0]
+ },
+ {
+ "id" : 55,
+ "spriteSheet" : 55,
+ "frame" : 0,
+ "animation" : 0,
+ "size" : 15.0,
+ "translation" : [0.0, 0.0, 0.0],
+ "rotation" : [-90.0, -90.0, 0.0]
+ },
+ {
+ "id" : 56,
+ "spriteSheet" : 56,
+ "frame" : 0,
+ "animation" : 1,
+ "size" : 15.0,
+ "translation" : [0.0, 0.0, 0.0],
+ "rotation" : [-90.0, 0.0, 0.0]
+ },
+ {
+ "id" : 57,
+ "spriteSheet" : 57,
+ "frame" : 0,
+ "animation" : 0,
+ "size" : 15.0,
+ "translation" : [0.0, 0.0, 0.0],
+ "rotation" : [-90.0, -90.0, 0.0]
+ },
+ {
+ "id" : 58,
+ "spriteSheet" : 58,
+ "frame" : 0,
+ "animation" : 0,
+ "size" : 15.0,
+ "translation" : [0.0, 0.0, 0.0],
+ "rotation" : [-90.0, -90.0, 0.0]
+ },
+ {
+ "id" : 59,
+ "spriteSheet" : 59,
+ "frame" : 0,
+ "animation" : 1,
+ "size" : 15.0,
+ "translation" : [0.0, 0.0, 0.0],
+ "rotation" : [-90.0, 0.0, 0.0]
+ },
+ {
+ "id" : 60,
+ "spriteSheet" : 60,
+ "frame" : 0,
+ "animation" : 0,
+ "size" : 15.0,
+ "translation" : [0.0, 0.0, 0.0],
+ "rotation" : [-90.0, -90.0, 0.0]
+ },
+ {
+ "id" : 61,
+ "spriteSheet" : 61,
+ "frame" : 0,
+ "animation" : 0,
+ "size" : 15.0,
+ "translation" : [0.0, 0.0, 0.0],
+ "rotation" : [-90.0, -90.0, 0.0]
+ },
+ {
+ "id" : 62,
+ "spriteSheet" : 62,
+ "frame" : 0,
+ "animation" : 1,
+ "size" : 15.0,
+ "translation" : [0.0, 0.0, 0.0],
+ "rotation" : [-90.0, 0.0, 0.0]
+ },
+ {
+ "id" : 63,
+ "spriteSheet" : 63,
+ "frame" : 0,
+ "animation" : 0,
+ "size" : 15.0,
+ "translation" : [0.0, 0.0, 0.0],
+ "rotation" : [-90.0, -90.0, 0.0]
  }
 ]
