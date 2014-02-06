@@ -144,6 +144,17 @@ static float quad[] = {
 //------------------------------------------------------------------------------
 - (void)renderSprite:(int)id WithView:(GLfloat*)view AndProjection:(GLfloat*)proj;
 {
+    static NSDate* prevTime = nil;
+    NSTimeInterval dTime;
+
+    if (prevTime)
+    {
+        dTime = [[NSDate date] timeIntervalSinceDate:prevTime];
+//        NSLog(@"dTime = %lf", dTime);
+    }
+
+    prevTime = [NSDate date];
+
     glClear(GL_DEPTH_BUFFER_BIT);
 
     static float elapsed = 0.0;
@@ -151,14 +162,13 @@ static float quad[] = {
     
     if (prevId == id)
     {
-        elapsed += 0.02;
+        elapsed += dTime;
     }
     else
     {
         elapsed = 0.0;
     }
     
-
     Sprite* s = [[SpriteManager instance] getSpriteWithId:id];
 
     if (!s)
@@ -184,8 +194,29 @@ static float quad[] = {
         exit(0);
     }
 
+    // create rotation matrix for the sprite
+    GLKMatrix4 rotX = GLKMatrix4MakeRotation(
+            GLKMathDegreesToRadians(s.rotation.x),
+            1.0, 0.0, 0.0
+        );
+    
+    GLKMatrix4 rotY = GLKMatrix4MakeRotation(
+            GLKMathDegreesToRadians(s.rotation.y),
+            0.0, 1.0, 0.0
+        );
+    
+    GLKMatrix4 rotZ = GLKMatrix4MakeRotation(
+            GLKMathDegreesToRadians(s.rotation.z),
+            0.0, 0.0, 1.0
+        );
+
+    GLKMatrix4 rot = GLKMatrix4Multiply(rotX, rotY);
+    rot = GLKMatrix4Multiply(rot, rotZ);
+
     GLKTextureInfo* texInfo = [self.sheetTextures
         objectForKey:[NSNumber numberWithInt:ss.id]];
+
+    NSLog(@"%f %f %f", s.translation.x, s.translation.y, s.translation.z);
 
     [self.program bind];
     
@@ -199,8 +230,10 @@ static float quad[] = {
         WithVec3WithX:s.translation.x
         AndWithY:s.translation.y
         AndWithZ:s.translation.z];
+    [self.program setUniform:@"R" WithMat4:rot.m];
     
-    int currentFrame = ((int)(elapsed/a.duration*ss.numFrames) + s.frame)% ss.numFrames;
+    int currentFrame = ((int)(elapsed/a.duration*ss.numFrames) + s.frame) % ss.numFrames;
+    
     [self.program setUniform:@"curFrame" WithInt:currentFrame];
     
     if (!texInfo)

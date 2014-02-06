@@ -62,6 +62,8 @@
 		19987E8818A327ED00CE9878 /* libGLES2sub.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 19987E8218A327ED00CE9878 /* libGLES2sub.a */; };
 		19987E8918A327ED00CE9878 /* libgluES2.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 19987E8318A327ED00CE9878 /* libgluES2.a */; };
 		19987E8A18A327ED00CE9878 /* libjpeg.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 19987E8418A327ED00CE9878 /* libjpeg.a */; };
+		19C38F7B18A344DA00CCE2C1 /* panuto.png in Resources */ = {isa = PBXBuildFile; fileRef = 19C38F7A18A344DA00CCE2C1 /* panuto.png */; };
+		19C38F8118A347CC00CCE2C1 /* kawit.png in Resources */ = {isa = PBXBuildFile; fileRef = 19C38F8018A347CC00CCE2C1 /* kawit.png */; };
 		DE0BDCC118991C6D008528C0 /* 0.dat in Resources */ = {isa = PBXBuildFile; fileRef = DE0BDC8118991C6C008528C0 /* 0.dat */; };
 		DE0BDCC218991C6D008528C0 /* 1.dat in Resources */ = {isa = PBXBuildFile; fileRef = DE0BDC8218991C6C008528C0 /* 1.dat */; };
 		DE0BDCC318991C6D008528C0 /* 2.dat in Resources */ = {isa = PBXBuildFile; fileRef = DE0BDC8318991C6C008528C0 /* 2.dat */; };
@@ -280,6 +282,8 @@
 		19987E8218A327ED00CE9878 /* libGLES2sub.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; path = libGLES2sub.a; sourceTree = "<group>"; };
 		19987E8318A327ED00CE9878 /* libgluES2.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; path = libgluES2.a; sourceTree = "<group>"; };
 		19987E8418A327ED00CE9878 /* libjpeg.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; path = libjpeg.a; sourceTree = "<group>"; };
+		19C38F7A18A344DA00CCE2C1 /* panuto.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = panuto.png; path = sprites/panuto.png; sourceTree = "<group>"; };
+		19C38F8018A347CC00CCE2C1 /* kawit.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = kawit.png; path = sprites/kawit.png; sourceTree = "<group>"; };
 		DE0BDC8118991C6C008528C0 /* 0.dat */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; name = 0.dat; path = markers/0.dat; sourceTree = "<group>"; };
 		DE0BDC8218991C6C008528C0 /* 1.dat */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; name = 1.dat; path = markers/1.dat; sourceTree = "<group>"; };
 		DE0BDC8318991C6C008528C0 /* 2.dat */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; name = 2.dat; path = markers/2.dat; sourceTree = "<group>"; };
@@ -717,6 +721,8 @@
 		1962503A1888E76E00448004 /* SpriteSheets */ = {
 			isa = PBXGroup;
 			children = (
+				19C38F8018A347CC00CCE2C1 /* kawit.png */,
+				19C38F7A18A344DA00CCE2C1 /* panuto.png */,
 				DE18550718A33061003BC1D7 /* aklat.png */,
 				DE18550818A33061003BC1D7 /* alak.png */,
 				DE18550918A33061003BC1D7 /* asinan.png */,
@@ -880,6 +886,7 @@
 				DE50350C189E35940044911C /* isulat.png in Resources */,
 				DE0BDCEB18991C6D008528C0 /* 42.dat in Resources */,
 				DE0BDCDE18991C6D008528C0 /* 29.dat in Resources */,
+				19C38F7B18A344DA00CCE2C1 /* panuto.png in Resources */,
 				DE0BDCE818991C6D008528C0 /* 39.dat in Resources */,
 				DE0BDCE018991C6D008528C0 /* 31.dat in Resources */,
 				DE50350D189E35940044911C /* lata.png in Resources */,
@@ -963,6 +970,7 @@
 				196250241888CC0E00448004 /* SpriteRendererFS.glsl in Resources */,
 				DE18554A18A33062003BC1D7 /* tumawag.png in Resources */,
 				DE0BDCDB18991C6D008528C0 /* 26.dat in Resources */,
+				19C38F8118A347CC00CCE2C1 /* kawit.png in Resources */,
 				DE0BDCF118991C6D008528C0 /* 48.dat in Resources */,
 				DE18554218A33062003BC1D7 /* patalastas.png in Resources */,
 				DE503503189E35940044911C /* bintana.png in Resources */,

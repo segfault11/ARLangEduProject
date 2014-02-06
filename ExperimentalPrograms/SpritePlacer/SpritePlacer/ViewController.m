@@ -43,6 +43,13 @@ static float cube[] = {
         -1.0,  1.0, -1.0
     };
 //------------------------------------------------------------------------------
+typedef enum
+{
+  MODE_TRANSLATION = 0,
+  MODE_ROTATION
+}
+Mode;
+//------------------------------------------------------------------------------
 //static float cube[] = {
 //        1.0, -1.0, -1.0,
 //        1.0, -1.0,  1.0,
@@ -112,6 +119,8 @@ static void arg2ConvGLcpara(
         GLuint indexBuffer;
     }
     _cube;
+    
+    Mode _mode;
 }
 @property (weak, nonatomic) IBOutlet UILabel *translationTextField;
 @property(nonatomic, strong) NSMutableDictionary* marker; // maps artoolkit id to maker id
@@ -127,6 +136,7 @@ static void arg2ConvGLcpara(
 @property(strong, nonatomic) Content* currentContent;
 @property(strong, nonatomic) AVAudioPlayer* audioPlayer;
 @property (weak, nonatomic) IBOutlet UITextField *translationIncrementTextField;
+@property (weak, nonatomic) IBOutlet UITextField *sizeTextField;
 - (void)initMarkerDetection;
 - (void)setupGL;
 - (void)initCaptureSession;
@@ -165,6 +175,8 @@ static void arg2ConvGLcpara(
     self.navigationItem.title = @"Augmented Reality View";
     
     [ContentManager instance];
+    
+    _mode = MODE_TRANSLATION;
     
 }
 //------------------------------------------------------------------------------
@@ -581,9 +593,8 @@ fromConnection:(AVCaptureConnection *)connection
     }
     else
     {
-        NSLog(@"bla");
         arGetTransMatSquareCont(
-        _ar3DHandle,
+            _ar3DHandle,
             &(markerInfo[currMid]),
             trans,
             m.size,
@@ -601,10 +612,23 @@ fromConnection:(AVCaptureConnection *)connection
     //[self renderCubeWithView:view AndProjection:_proj];
 
    // self.sentence.text = [c.sentences objectAtIndex:c.activeSentence];
+    switch (_mode)
+    {
+    case MODE_TRANSLATION:
+        self.translationTextField.text =
+            [NSString stringWithFormat:@"Translation [x = %f; y = %f; z = %f]",
+            s.translation.x, s.translation.y, s.translation.z];
+        break;
+
+    case MODE_ROTATION:
+        self.translationTextField.text =
+            [NSString stringWithFormat:@"Rotation [x = %f; y = %f; z = %f]",
+            s.rotation.x, s.rotation.y, s.rotation.z];
+        break;
+    default:
+        break;
+    }
     
-    self.translationTextField.text =
-        [NSString stringWithFormat:@"[x = %f; y = %f; z = %f]",
-        s.translation.x, s.translation.y, s.translation.z];
     assert(glGetError() == GL_NO_ERROR);
 }
 //------------------------------------------------------------------------------
@@ -618,9 +642,19 @@ fromConnection:(AVCaptureConnection *)connection
     glDrawArrays(GL_TRIANGLES, 0, 6);
 }
 //------------------------------------------------------------------------------
+- (IBAction)setModeRotation:(id)sender
+{
+    _mode = MODE_ROTATION;
+}
+//------------------------------------------------------------------------------
 - (IBAction)setTranslationIncrement:(id)sender
 {
     _transInc = [self.translationIncrementTextField.text floatValue];
+}
+//------------------------------------------------------------------------------
+- (IBAction)setModeTranslation:(id)sender
+{
+    _mode = MODE_TRANSLATION;
 }
 //------------------------------------------------------------------------------
 - (IBAction)decreaseX:(id)sender
@@ -631,10 +665,24 @@ fromConnection:(AVCaptureConnection *)connection
     }
 
     Sprite* s = [[SpriteManager instance] getSpriteWithId:self.currentContent.sprite];
-
     Vec3 t = s.translation;
-    t.x -= _transInc;
-    s.translation = t;
+    Vec3 r = s.rotation;
+    
+    switch (_mode)
+    {
+        case MODE_TRANSLATION:
+            t.x -= _transInc;
+            s.translation = t;
+            break;
+
+        case MODE_ROTATION:
+            r.x -= _transInc;
+            s.rotation = r;
+            break;
+
+        default:
+            break;
+    }
 }
 //------------------------------------------------------------------------------
 - (IBAction)increaseX:(id)sender
@@ -645,10 +693,24 @@ fromConnection:(AVCaptureConnection *)connection
     }
 
     Sprite* s = [[SpriteManager instance] getSpriteWithId:self.currentContent.sprite];
-
     Vec3 t = s.translation;
-    t.x += _transInc;
-    s.translation = t;
+    Vec3 r = s.rotation;
+    
+    switch (_mode)
+    {
+        case MODE_TRANSLATION:
+            t.x += _transInc;
+            s.translation = t;
+            break;
+
+        case MODE_ROTATION:
+            r.x += _transInc;
+            s.rotation = r;
+            break;
+
+        default:
+            break;
+    }
 }
 //------------------------------------------------------------------------------
 - (IBAction)decreaseY:(id)sender
@@ -659,10 +721,24 @@ fromConnection:(AVCaptureConnection *)connection
     }
 
     Sprite* s = [[SpriteManager instance] getSpriteWithId:self.currentContent.sprite];
-
     Vec3 t = s.translation;
-    t.y -= _transInc;
-    s.translation = t;
+    Vec3 r = s.rotation;
+    
+    switch (_mode)
+    {
+        case MODE_TRANSLATION:
+            t.y -= _transInc;
+            s.translation = t;
+            break;
+
+        case MODE_ROTATION:
+            r.y -= _transInc;
+            s.rotation = r;
+            break;
+            
+        default:
+            break;
+    }
 }
 //------------------------------------------------------------------------------
 - (IBAction)increaseY:(id)sender
@@ -673,10 +749,24 @@ fromConnection:(AVCaptureConnection *)connection
     }
 
     Sprite* s = [[SpriteManager instance] getSpriteWithId:self.currentContent.sprite];
-
     Vec3 t = s.translation;
-    t.y += _transInc;
-    s.translation = t;
+    Vec3 r = s.rotation;
+    
+    switch (_mode)
+    {
+        case MODE_TRANSLATION:
+            t.y += _transInc;
+            s.translation = t;
+            break;
+
+        case MODE_ROTATION:
+            r.y += _transInc;
+            s.rotation = r;
+            break;
+
+        default:
+            break;
+    }
 }
 //------------------------------------------------------------------------------
 - (IBAction)decreaseZ:(id)sender
@@ -687,10 +777,24 @@ fromConnection:(AVCaptureConnection *)connection
     }
 
     Sprite* s = [[SpriteManager instance] getSpriteWithId:self.currentContent.sprite];
-
     Vec3 t = s.translation;
-    t.z -= _transInc;
-    s.translation = t;
+    Vec3 r = s.rotation;
+    
+    switch (_mode)
+    {
+        case MODE_TRANSLATION:
+            t.z -= _transInc;
+            s.translation = t;
+            break;
+
+        case MODE_ROTATION:
+            r.z -= _transInc;
+            s.rotation = r;
+            break;
+            
+        default:
+            break;
+    }
 }
 //------------------------------------------------------------------------------
 - (IBAction)increaseZ:(id)sender
@@ -701,10 +805,36 @@ fromConnection:(AVCaptureConnection *)connection
     }
 
     Sprite* s = [[SpriteManager instance] getSpriteWithId:self.currentContent.sprite];
-
     Vec3 t = s.translation;
-    t.z += _transInc;
-    s.translation = t;
+    Vec3 r = s.rotation;
+    
+    switch (_mode)
+    {
+        case MODE_TRANSLATION:
+            t.z += _transInc;
+            s.translation = t;
+            break;
+
+        case MODE_ROTATION:
+            r.z += _transInc;
+            s.rotation = r;
+            break;
+            
+        default:
+            break;
+    }
+}
+//------------------------------------------------------------------------------
+- (IBAction)setSize:(id)sender
+{
+    if (!self.currentContent)
+    {
+        return;
+    }
+
+    Sprite* s = [[SpriteManager instance] getSpriteWithId:self.currentContent.sprite];
+
+    s.size = [self.sizeTextField.text floatValue];
 }
 //------------------------------------------------------------------------------
 - (void)renderCubeWithView:(GLfloat*)view AndProjection:(GLfloat*)proj;
