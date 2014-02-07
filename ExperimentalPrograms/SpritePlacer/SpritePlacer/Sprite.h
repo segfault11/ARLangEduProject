@@ -22,8 +22,10 @@ Vec3;
     int _animation;
     float _size;
     Vec3 _translation;
+    Vec3 _rotation;
 }
 @property int id, spriteSheet, frame, animation;
 @property float size;
 @property Vec3 translation;
+@property Vec3 rotation;
 @end

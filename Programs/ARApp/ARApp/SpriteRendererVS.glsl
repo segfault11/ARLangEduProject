@@ -21,12 +21,18 @@ void main()
     highp float x = 0.5*pos.x*frameAspect;
     highp float y = 0.5*pos.y;
 
-    highp vec4 h = P*V*R*vec4(
-            size*pos.x + translation.x,
-            translation.z,
-            size*pos.y + translation.y,
+    highp vec4 h = R*vec4(
+            size*pos.x,
+            0.0,
+            size*pos.y,
             1.0
         );
+    
+    h.x += translation.x;
+    h.y += translation.y;
+    h.z += translation.z;
+    
+    h = P*V*h;
     
     gl_Position = vec4(h.y, -h.x, h.z, h.w);
 }
