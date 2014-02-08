@@ -49,12 +49,6 @@
 		191A2F5418754C33009D0261 /* SpriteSheets.json in Resources */ = {isa = PBXBuildFile; fileRef = 191A2F3B18754C33009D0261 /* SpriteSheets.json */; };
 		191A2F5518754C33009D0261 /* VideoFS.glsl in Resources */ = {isa = PBXBuildFile; fileRef = 191A2F3C18754C33009D0261 /* VideoFS.glsl */; };
 		191A2F5618754C33009D0261 /* VideoVS.glsl in Resources */ = {isa = PBXBuildFile; fileRef = 191A2F3D18754C33009D0261 /* VideoVS.glsl */; };
-		19C38F8818A34A0200CCE2C1 /* libAR.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 19C38F8218A34A0200CCE2C1 /* libAR.a */; };
-		19C38F8918A34A0200CCE2C1 /* libAR2.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 19C38F8318A34A0200CCE2C1 /* libAR2.a */; };
-		19C38F8A18A34A0200CCE2C1 /* libARUtil.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 19C38F8418A34A0200CCE2C1 /* libARUtil.a */; };
-		19C38F8B18A34A0200CCE2C1 /* libGLES2sub.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 19C38F8518A34A0200CCE2C1 /* libGLES2sub.a */; };
-		19C38F8C18A34A0200CCE2C1 /* libgluES2.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 19C38F8618A34A0200CCE2C1 /* libgluES2.a */; };
-		19C38F8D18A34A0200CCE2C1 /* libjpeg.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 19C38F8718A34A0200CCE2C1 /* libjpeg.a */; };
 		DE503569189E53810044911C /* 0.dat in Resources */ = {isa = PBXBuildFile; fileRef = DE503529189E53810044911C /* 0.dat */; };
 		DE50356A189E53810044911C /* 1.dat in Resources */ = {isa = PBXBuildFile; fileRef = DE50352A189E53810044911C /* 1.dat */; };
 		DE50356B189E53810044911C /* 2.dat in Resources */ = {isa = PBXBuildFile; fileRef = DE50352B189E53810044911C /* 2.dat */; };
@@ -145,6 +139,12 @@
 		DE5035DC189E53F70044911C /* talaarawan.png in Resources */ = {isa = PBXBuildFile; fileRef = DE5035C2189E53F70044911C /* talaarawan.png */; };
 		DE5035DD189E53F70044911C /* tamaan.png in Resources */ = {isa = PBXBuildFile; fileRef = DE5035C3189E53F70044911C /* tamaan.png */; };
 		DE5035DE189E53F70044911C /* tubig.png in Resources */ = {isa = PBXBuildFile; fileRef = DE5035C4189E53F70044911C /* tubig.png */; };
+		DEA93D1818A500C70046FF83 /* libAR.a in Frameworks */ = {isa = PBXBuildFile; fileRef = DEA93D1218A500C60046FF83 /* libAR.a */; };
+		DEA93D1918A500C70046FF83 /* libAR2.a in Frameworks */ = {isa = PBXBuildFile; fileRef = DEA93D1318A500C60046FF83 /* libAR2.a */; };
+		DEA93D1A18A500C70046FF83 /* libARUtil.a in Frameworks */ = {isa = PBXBuildFile; fileRef = DEA93D1418A500C60046FF83 /* libARUtil.a */; };
+		DEA93D1B18A500C70046FF83 /* libGLES2sub.a in Frameworks */ = {isa = PBXBuildFile; fileRef = DEA93D1518A500C60046FF83 /* libGLES2sub.a */; };
+		DEA93D1C18A500C70046FF83 /* libgluES2.a in Frameworks */ = {isa = PBXBuildFile; fileRef = DEA93D1618A500C70046FF83 /* libgluES2.a */; };
+		DEA93D1D18A500C70046FF83 /* libjpeg.a in Frameworks */ = {isa = PBXBuildFile; fileRef = DEA93D1718A500C70046FF83 /* libjpeg.a */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -219,12 +219,6 @@
 		191A2F3B18754C33009D0261 /* SpriteSheets.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = SpriteSheets.json; sourceTree = "<group>"; };
 		191A2F3C18754C33009D0261 /* VideoFS.glsl */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = VideoFS.glsl; sourceTree = "<group>"; };
 		191A2F3D18754C33009D0261 /* VideoVS.glsl */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = VideoVS.glsl; sourceTree = "<group>"; };
-		19C38F8218A34A0200CCE2C1 /* libAR.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; path = libAR.a; sourceTree = "<group>"; };
-		19C38F8318A34A0200CCE2C1 /* libAR2.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; path = libAR2.a; sourceTree = "<group>"; };
-		19C38F8418A34A0200CCE2C1 /* libARUtil.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; path = libARUtil.a; sourceTree = "<group>"; };
-		19C38F8518A34A0200CCE2C1 /* libGLES2sub.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; path = libGLES2sub.a; sourceTree = "<group>"; };
-		19C38F8618A34A0200CCE2C1 /* libgluES2.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; path = libgluES2.a; sourceTree = "<group>"; };
-		19C38F8718A34A0200CCE2C1 /* libjpeg.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; path = libjpeg.a; sourceTree = "<group>"; };
 		DE503529189E53810044911C /* 0.dat */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; name = 0.dat; path = markers/0.dat; sourceTree = "<group>"; };
 		DE50352A189E53810044911C /* 1.dat */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; name = 1.dat; path = markers/1.dat; sourceTree = "<group>"; };
 		DE50352B189E53810044911C /* 2.dat */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; name = 2.dat; path = markers/2.dat; sourceTree = "<group>"; };
@@ -315,6 +309,12 @@
 		DE5035C2189E53F70044911C /* talaarawan.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = talaarawan.png; path = sprites/talaarawan.png; sourceTree = "<group>"; };
 		DE5035C3189E53F70044911C /* tamaan.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = tamaan.png; path = sprites/tamaan.png; sourceTree = "<group>"; };
 		DE5035C4189E53F70044911C /* tubig.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = tubig.png; path = sprites/tubig.png; sourceTree = "<group>"; };
+		DEA93D1218A500C60046FF83 /* libAR.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; name = libAR.a; path = ../../../Documents/Libraries/ARToolkit/lib/libAR.a; sourceTree = "<group>"; };
+		DEA93D1318A500C60046FF83 /* libAR2.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; name = libAR2.a; path = ../../../Documents/Libraries/ARToolkit/lib/libAR2.a; sourceTree = "<group>"; };
+		DEA93D1418A500C60046FF83 /* libARUtil.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; name = libARUtil.a; path = ../../../Documents/Libraries/ARToolkit/lib/libARUtil.a; sourceTree = "<group>"; };
+		DEA93D1518A500C60046FF83 /* libGLES2sub.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; name = libGLES2sub.a; path = ../../../Documents/Libraries/ARToolkit/lib/libGLES2sub.a; sourceTree = "<group>"; };
+		DEA93D1618A500C70046FF83 /* libgluES2.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; name = libgluES2.a; path = ../../../Documents/Libraries/ARToolkit/lib/libgluES2.a; sourceTree = "<group>"; };
+		DEA93D1718A500C70046FF83 /* libjpeg.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; name = libjpeg.a; path = ../../../Documents/Libraries/ARToolkit/lib/libjpeg.a; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -322,14 +322,14 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				19C38F8818A34A0200CCE2C1 /* libAR.a in Frameworks */,
-				19C38F8B18A34A0200CCE2C1 /* libGLES2sub.a in Frameworks */,
-				19C38F8D18A34A0200CCE2C1 /* libjpeg.a in Frameworks */,
+				DEA93D1818A500C70046FF83 /* libAR.a in Frameworks */,
+				DEA93D1B18A500C70046FF83 /* libGLES2sub.a in Frameworks */,
+				DEA93D1D18A500C70046FF83 /* libjpeg.a in Frameworks */,
 				191A2ED218754B1E009D0261 /* CoreGraphics.framework in Frameworks */,
-				19C38F8C18A34A0200CCE2C1 /* libgluES2.a in Frameworks */,
-				19C38F8A18A34A0200CCE2C1 /* libARUtil.a in Frameworks */,
+				DEA93D1C18A500C70046FF83 /* libgluES2.a in Frameworks */,
+				DEA93D1A18A500C70046FF83 /* libARUtil.a in Frameworks */,
 				191A2ED418754B1E009D0261 /* UIKit.framework in Frameworks */,
-				19C38F8918A34A0200CCE2C1 /* libAR2.a in Frameworks */,
+				DEA93D1918A500C70046FF83 /* libAR2.a in Frameworks */,
 				191A2ED018754B1E009D0261 /* Foundation.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -369,12 +369,12 @@
 		191A2ECE18754B1E009D0261 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
-				19C38F8218A34A0200CCE2C1 /* libAR.a */,
-				19C38F8318A34A0200CCE2C1 /* libAR2.a */,
-				19C38F8418A34A0200CCE2C1 /* libARUtil.a */,
-				19C38F8518A34A0200CCE2C1 /* libGLES2sub.a */,
-				19C38F8618A34A0200CCE2C1 /* libgluES2.a */,
-				19C38F8718A34A0200CCE2C1 /* libjpeg.a */,
+				DEA93D1218A500C60046FF83 /* libAR.a */,
+				DEA93D1318A500C60046FF83 /* libAR2.a */,
+				DEA93D1418A500C60046FF83 /* libARUtil.a */,
+				DEA93D1518A500C60046FF83 /* libGLES2sub.a */,
+				DEA93D1618A500C70046FF83 /* libgluES2.a */,
+				DEA93D1718A500C70046FF83 /* libjpeg.a */,
 				191A2ECF18754B1E009D0261 /* Foundation.framework */,
 				191A2ED118754B1E009D0261 /* CoreGraphics.framework */,
 				191A2ED318754B1E009D0261 /* UIKit.framework */,
@@ -1013,7 +1013,7 @@
 					/Users/scatterbrain/Documents/Projects/Public/Marc/ARLangEduProject/ExperimentalPrograms/SpritePlacer,
 				);
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				USER_HEADER_SEARCH_PATHS = "/Users/scatterbrain/Documents/Libraries/ARToolKit/ARToolkit/include/**";
+				USER_HEADER_SEARCH_PATHS = "/Users/marcericson/Documents/Libraries/ARToolkit/include/**";
 				WRAPPER_EXTENSION = app;
 			};
 			name = Debug;
