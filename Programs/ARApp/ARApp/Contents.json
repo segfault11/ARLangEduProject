@@ -25,7 +25,7 @@
  "sprite" : 3,
  "sentences": [" ", " "],
  "sound" : "piano.m4a",
- "translation" : "a clock"
+ "translation" : "time"
  },
  {
  "id" : 4,
@@ -39,181 +39,174 @@
  "sprite" : 5,
  "sentences": [" ", " "],
  "sound" : "piano.m4a",
- "translation" : "to look outside"
+ "translation" : "beverages"
  },
  {
  "id" : 6,
  "sprite" : 6,
  "sentences": [" ", " "],
  "sound" : "piano.m4a",
- "translation" : "beverages"
+ "translation" : "food"
  },
  {
  "id" : 7,
  "sprite" : 7,
  "sentences": [" ", " "],
  "sound" : "piano.m4a",
- "translation" : "food"
+ "translation" : "a trash can"
  },
  {
  "id" : 8,
  "sprite" : 8,
  "sentences": [" ", " "],
  "sound" : "piano.m4a",
- "translation" : "to serve"
+ "translation" : "a glass bottle"
  },
  {
  "id" : 9,
  "sprite" : 9,
  "sentences": [" ", " "],
  "sound" : "piano.m4a",
- "translation" : "to peep"
+ "translation" : "a can"
  },
  {
  "id" : 10,
  "sprite" : 10,
  "sentences": [" ", " "],
  "sound" : "piano.m4a",
- "translation" : "a trash can"
+ "translation" : "a reading material"
  },
  {
  "id" : 11,
  "sprite" : 11,
  "sentences": [" ", " "],
  "sound" : "piano.m4a",
- "translation" : "a bottle"
+ "translation" : "a calendar"
  },
  {
  "id" : 12,
  "sprite" : 12,
  "sentences": [" ", " "],
  "sound" : "piano.m4a",
- "translation" : "a can"
+ "translation" : "sugar"
  },
  {
  "id" : 13,
  "sprite" : 13,
  "sentences": [" ", " "],
  "sound" : "piano.m4a",
- "translation" : "a cabinet"
+ "translation" : "a drinking glass"
  },
  {
  "id" : 14,
  "sprite" : 14,
  "sentences": [" ", " "],
  "sound" : "piano.m4a",
- "translation" : "to open"
+ "translation" : "wine"
  },
  {
  "id" : 15,
  "sprite" : 15,
  "sentences": [" ", " "],
  "sound" : "piano.m4a",
- "translation" : "to press"
+ "translation" : "to throw away"
  },
  {
  "id" : 16,
  "sprite" : 16,
  "sentences": [" ", " "],
  "sound" : "piano.m4a",
- "translation" : "to write"
+ "translation" : "to serve"
  },
  {
  "id" : 17,
  "sprite" : 17,
  "sentences": [" ", " "],
  "sound" : "piano.m4a",
- "translation" : "to plug in"
+ "translation" : "to put on top"
  },
  {
  "id" : 18,
  "sprite" : 18,
  "sentences": [" ", " "],
  "sound" : "piano.m4a",
- "translation" : "a calendar"
+ "translation" : "to push in"
  },
  {
  "id" : 19,
  "sprite" : 19,
  "sentences": [" ", " "],
  "sound" : "piano.m4a",
- "translation" : "to water"
+ "translation" : "to press"
  },
  {
  "id" : 20,
  "sprite" : 20,
  "sentences": [" ", " "],
  "sound" : "piano.m4a",
- "translation" : "to read"
+ "translation" : "to erase"
  },
  {
  "id" : 21,
  "sprite" : 21,
  "sentences": [" ", " "],
  "sound" : "piano.m4a",
- "translation" : "to hit"
+ "translation" : "to plug in"
  },
  {
  "id" : 22,
  "sprite" : 22,
  "sentences": ["to watch the television", "to watch a game"],
  "sound" : "piano.m4a",
- "translation" : "to watch"
+ "translation" : "to add salt"
  },
  {
  "id" : 23,
  "sprite" : 23,
  "sentences": [" ", " "],
  "sound" : "piano.m4a",
- "translation" : "to pay"
+ "translation" : "to read"
  },
  {
  "id" : 24,
  "sprite" : 24,
  "sentences": [" ", " "],
  "sound" : "piano.m4a",
- "translation" : "to sit"
+ "translation" : "to hit"
  },
  {
  "id" : 25,
  "sprite" : 25,
  "sentences": [" ", " "],
  "sound" : "piano.m4a",
- "translation" : "sugar"
+ "translation" : "to watch"
  },
  {
  "id" : 26,
  "sprite" : 26,
  "sentences": [" ", " "],
  "sound" : "piano.m4a",
- "translation" : "an eraser"
+ "translation" : "to pay"
  },
  {
  "id" : 27,
  "sprite" : 27,
  "sentences": [" ", " "],
  "sound" : "piano.m4a",
- "translation" : "a book"
+ "translation" : "to sit"
  },
  {
  "id" : 28,
  "sprite" : 28,
  "sentences": [" ", " "],
  "sound" : "piano.m4a",
- "translation" : "a pen"
+ "translation" : "to stir"
  },
  {
  "id" : 29,
  "sprite" : 29,
  "sentences": [" ", " "],
  "sound" : "piano.m4a",
- "translation" : "a building"
- },
- {
- "id" : 30,
- "sprite" : 30,
- "sentences": [" ", " "],
- "sound" : "piano.m4a",
- "translation" : "a key"
+ "translation" : "to flow"
  }
 ]
