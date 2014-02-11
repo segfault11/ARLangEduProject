@@ -79,72 +79,42 @@
 		DE503584189E53810044911C /* 27.dat in Resources */ = {isa = PBXBuildFile; fileRef = DE503544189E53810044911C /* 27.dat */; };
 		DE503585189E53810044911C /* 28.dat in Resources */ = {isa = PBXBuildFile; fileRef = DE503545189E53810044911C /* 28.dat */; };
 		DE503586189E53810044911C /* 29.dat in Resources */ = {isa = PBXBuildFile; fileRef = DE503546189E53810044911C /* 29.dat */; };
-		DE503587189E53810044911C /* 30.dat in Resources */ = {isa = PBXBuildFile; fileRef = DE503547189E53810044911C /* 30.dat */; };
-		DE503588189E53810044911C /* 31.dat in Resources */ = {isa = PBXBuildFile; fileRef = DE503548189E53810044911C /* 31.dat */; };
-		DE503589189E53810044911C /* 32.dat in Resources */ = {isa = PBXBuildFile; fileRef = DE503549189E53810044911C /* 32.dat */; };
-		DE50358A189E53810044911C /* 33.dat in Resources */ = {isa = PBXBuildFile; fileRef = DE50354A189E53810044911C /* 33.dat */; };
-		DE50358B189E53810044911C /* 34.dat in Resources */ = {isa = PBXBuildFile; fileRef = DE50354B189E53810044911C /* 34.dat */; };
-		DE50358C189E53810044911C /* 35.dat in Resources */ = {isa = PBXBuildFile; fileRef = DE50354C189E53810044911C /* 35.dat */; };
-		DE50358D189E53810044911C /* 36.dat in Resources */ = {isa = PBXBuildFile; fileRef = DE50354D189E53810044911C /* 36.dat */; };
-		DE50358E189E53810044911C /* 37.dat in Resources */ = {isa = PBXBuildFile; fileRef = DE50354E189E53810044911C /* 37.dat */; };
-		DE50358F189E53810044911C /* 38.dat in Resources */ = {isa = PBXBuildFile; fileRef = DE50354F189E53810044911C /* 38.dat */; };
-		DE503590189E53810044911C /* 39.dat in Resources */ = {isa = PBXBuildFile; fileRef = DE503550189E53810044911C /* 39.dat */; };
-		DE503591189E53810044911C /* 40.dat in Resources */ = {isa = PBXBuildFile; fileRef = DE503551189E53810044911C /* 40.dat */; };
-		DE503592189E53810044911C /* 41.dat in Resources */ = {isa = PBXBuildFile; fileRef = DE503552189E53810044911C /* 41.dat */; };
-		DE503593189E53810044911C /* 42.dat in Resources */ = {isa = PBXBuildFile; fileRef = DE503553189E53810044911C /* 42.dat */; };
-		DE503594189E53810044911C /* 43.dat in Resources */ = {isa = PBXBuildFile; fileRef = DE503554189E53810044911C /* 43.dat */; };
-		DE503595189E53810044911C /* 44.dat in Resources */ = {isa = PBXBuildFile; fileRef = DE503555189E53810044911C /* 44.dat */; };
-		DE503596189E53810044911C /* 45.dat in Resources */ = {isa = PBXBuildFile; fileRef = DE503556189E53810044911C /* 45.dat */; };
-		DE503597189E53810044911C /* 46.dat in Resources */ = {isa = PBXBuildFile; fileRef = DE503557189E53810044911C /* 46.dat */; };
-		DE503598189E53810044911C /* 47.dat in Resources */ = {isa = PBXBuildFile; fileRef = DE503558189E53810044911C /* 47.dat */; };
-		DE503599189E53810044911C /* 48.dat in Resources */ = {isa = PBXBuildFile; fileRef = DE503559189E53810044911C /* 48.dat */; };
-		DE50359A189E53810044911C /* 49.dat in Resources */ = {isa = PBXBuildFile; fileRef = DE50355A189E53810044911C /* 49.dat */; };
-		DE50359B189E53810044911C /* 50.dat in Resources */ = {isa = PBXBuildFile; fileRef = DE50355B189E53810044911C /* 50.dat */; };
-		DE50359C189E53810044911C /* 51.dat in Resources */ = {isa = PBXBuildFile; fileRef = DE50355C189E53810044911C /* 51.dat */; };
-		DE50359D189E53810044911C /* 52.dat in Resources */ = {isa = PBXBuildFile; fileRef = DE50355D189E53810044911C /* 52.dat */; };
-		DE50359E189E53810044911C /* 53.dat in Resources */ = {isa = PBXBuildFile; fileRef = DE50355E189E53810044911C /* 53.dat */; };
-		DE50359F189E53810044911C /* 54.dat in Resources */ = {isa = PBXBuildFile; fileRef = DE50355F189E53810044911C /* 54.dat */; };
-		DE5035A0189E53810044911C /* 55.dat in Resources */ = {isa = PBXBuildFile; fileRef = DE503560189E53810044911C /* 55.dat */; };
-		DE5035A1189E53810044911C /* 56.dat in Resources */ = {isa = PBXBuildFile; fileRef = DE503561189E53810044911C /* 56.dat */; };
-		DE5035A2189E53810044911C /* 57.dat in Resources */ = {isa = PBXBuildFile; fileRef = DE503562189E53810044911C /* 57.dat */; };
-		DE5035A3189E53810044911C /* 58.dat in Resources */ = {isa = PBXBuildFile; fileRef = DE503563189E53810044911C /* 58.dat */; };
-		DE5035A4189E53810044911C /* 59.dat in Resources */ = {isa = PBXBuildFile; fileRef = DE503564189E53810044911C /* 59.dat */; };
-		DE5035A5189E53810044911C /* 60.dat in Resources */ = {isa = PBXBuildFile; fileRef = DE503565189E53810044911C /* 60.dat */; };
-		DE5035A6189E53810044911C /* 61.dat in Resources */ = {isa = PBXBuildFile; fileRef = DE503566189E53810044911C /* 61.dat */; };
-		DE5035A7189E53810044911C /* 62.dat in Resources */ = {isa = PBXBuildFile; fileRef = DE503567189E53810044911C /* 62.dat */; };
-		DE5035A8189E53810044911C /* 63.dat in Resources */ = {isa = PBXBuildFile; fileRef = DE503568189E53810044911C /* 63.dat */; };
-		DE5035C5189E53F70044911C /* aparador.png in Resources */ = {isa = PBXBuildFile; fileRef = DE5035AB189E53F70044911C /* aparador.png */; };
-		DE5035C6189E53F70044911C /* asukal.png in Resources */ = {isa = PBXBuildFile; fileRef = DE5035AC189E53F70044911C /* asukal.png */; };
-		DE5035C7189E53F70044911C /* basahin.png in Resources */ = {isa = PBXBuildFile; fileRef = DE5035AD189E53F70044911C /* basahin.png */; };
-		DE5035C8189E53F70044911C /* basurahan.png in Resources */ = {isa = PBXBuildFile; fileRef = DE5035AE189E53F70044911C /* basurahan.png */; };
-		DE5035C9189E53F70044911C /* batubalani.png in Resources */ = {isa = PBXBuildFile; fileRef = DE5035AF189E53F70044911C /* batubalani.png */; };
-		DE5035CA189E53F70044911C /* bintana.png in Resources */ = {isa = PBXBuildFile; fileRef = DE5035B0189E53F70044911C /* bintana.png */; };
-		DE5035CB189E53F70044911C /* bote.png in Resources */ = {isa = PBXBuildFile; fileRef = DE5035B1189E53F70044911C /* bote.png */; };
-		DE5035CC189E53F70044911C /* buksan.png in Resources */ = {isa = PBXBuildFile; fileRef = DE5035B2189E53F70044911C /* buksan.png */; };
-		DE5035CD189E53F70044911C /* diligan.png in Resources */ = {isa = PBXBuildFile; fileRef = DE5035B3189E53F70044911C /* diligan.png */; };
-		DE5035CE189E53F70044911C /* dumungaw.png in Resources */ = {isa = PBXBuildFile; fileRef = DE5035B4189E53F70044911C /* dumungaw.png */; };
-		DE5035CF189E53F70044911C /* ihain.png in Resources */ = {isa = PBXBuildFile; fileRef = DE5035B5189E53F70044911C /* ihain.png */; };
-		DE5035D0189E53F70044911C /* inumin.png in Resources */ = {isa = PBXBuildFile; fileRef = DE5035B6189E53F70044911C /* inumin.png */; };
-		DE5035D1189E53F70044911C /* isaksak.png in Resources */ = {isa = PBXBuildFile; fileRef = DE5035B7189E53F70044911C /* isaksak.png */; };
-		DE5035D2189E53F70044911C /* isulat.png in Resources */ = {isa = PBXBuildFile; fileRef = DE5035B8189E53F70044911C /* isulat.png */; };
-		DE5035D3189E53F70044911C /* lata.png in Resources */ = {isa = PBXBuildFile; fileRef = DE5035B9189E53F70044911C /* lata.png */; };
-		DE5035D4189E53F70044911C /* magbayad.png in Resources */ = {isa = PBXBuildFile; fileRef = DE5035BA189E53F70044911C /* magbayad.png */; };
-		DE5035D5189E53F70044911C /* manuod.png in Resources */ = {isa = PBXBuildFile; fileRef = DE5035BB189E53F70044911C /* manuod.png */; };
-		DE5035D6189E53F70044911C /* maupo.png in Resources */ = {isa = PBXBuildFile; fileRef = DE5035BC189E53F70044911C /* maupo.png */; };
-		DE5035D7189E53F70044911C /* oras.png in Resources */ = {isa = PBXBuildFile; fileRef = DE5035BD189E53F70044911C /* oras.png */; };
-		DE5035D8189E53F70044911C /* pagkain.png in Resources */ = {isa = PBXBuildFile; fileRef = DE5035BE189E53F70044911C /* pagkain.png */; };
-		DE5035D9189E53F70044911C /* pindutin.png in Resources */ = {isa = PBXBuildFile; fileRef = DE5035BF189E53F70044911C /* pindutin.png */; };
-		DE5035DA189E53F70044911C /* sumilip.png in Resources */ = {isa = PBXBuildFile; fileRef = DE5035C0189E53F70044911C /* sumilip.png */; };
-		DE5035DB189E53F70044911C /* talaan.png in Resources */ = {isa = PBXBuildFile; fileRef = DE5035C1189E53F70044911C /* talaan.png */; };
-		DE5035DC189E53F70044911C /* talaarawan.png in Resources */ = {isa = PBXBuildFile; fileRef = DE5035C2189E53F70044911C /* talaarawan.png */; };
-		DE5035DD189E53F70044911C /* tamaan.png in Resources */ = {isa = PBXBuildFile; fileRef = DE5035C3189E53F70044911C /* tamaan.png */; };
-		DE5035DE189E53F70044911C /* tubig.png in Resources */ = {isa = PBXBuildFile; fileRef = DE5035C4189E53F70044911C /* tubig.png */; };
 		DEA93D1818A500C70046FF83 /* libAR.a in Frameworks */ = {isa = PBXBuildFile; fileRef = DEA93D1218A500C60046FF83 /* libAR.a */; };
 		DEA93D1918A500C70046FF83 /* libAR2.a in Frameworks */ = {isa = PBXBuildFile; fileRef = DEA93D1318A500C60046FF83 /* libAR2.a */; };
 		DEA93D1A18A500C70046FF83 /* libARUtil.a in Frameworks */ = {isa = PBXBuildFile; fileRef = DEA93D1418A500C60046FF83 /* libARUtil.a */; };
 		DEA93D1B18A500C70046FF83 /* libGLES2sub.a in Frameworks */ = {isa = PBXBuildFile; fileRef = DEA93D1518A500C60046FF83 /* libGLES2sub.a */; };
 		DEA93D1C18A500C70046FF83 /* libgluES2.a in Frameworks */ = {isa = PBXBuildFile; fileRef = DEA93D1618A500C70046FF83 /* libgluES2.a */; };
 		DEA93D1D18A500C70046FF83 /* libjpeg.a in Frameworks */ = {isa = PBXBuildFile; fileRef = DEA93D1718A500C70046FF83 /* libjpeg.a */; };
+		DEEBF15018AA4EBD008422F4 /* alak.png in Resources */ = {isa = PBXBuildFile; fileRef = DEEBF13218AA4EBD008422F4 /* alak.png */; };
+		DEEBF15118AA4EBD008422F4 /* asinan.png in Resources */ = {isa = PBXBuildFile; fileRef = DEEBF13318AA4EBD008422F4 /* asinan.png */; };
+		DEEBF15218AA4EBD008422F4 /* asukal.png in Resources */ = {isa = PBXBuildFile; fileRef = DEEBF13418AA4EBD008422F4 /* asukal.png */; };
+		DEEBF15318AA4EBD008422F4 /* babasahin.png in Resources */ = {isa = PBXBuildFile; fileRef = DEEBF13518AA4EBD008422F4 /* babasahin.png */; };
+		DEEBF15418AA4EBD008422F4 /* baso.png in Resources */ = {isa = PBXBuildFile; fileRef = DEEBF13618AA4EBD008422F4 /* baso.png */; };
+		DEEBF15518AA4EBD008422F4 /* basurahan.png in Resources */ = {isa = PBXBuildFile; fileRef = DEEBF13718AA4EBD008422F4 /* basurahan.png */; };
+		DEEBF15618AA4EBD008422F4 /* batubalani.png in Resources */ = {isa = PBXBuildFile; fileRef = DEEBF13818AA4EBD008422F4 /* batubalani.png */; };
+		DEEBF15718AA4EBD008422F4 /* bintana.png in Resources */ = {isa = PBXBuildFile; fileRef = DEEBF13918AA4EBD008422F4 /* bintana.png */; };
+		DEEBF15818AA4EBD008422F4 /* bote.png in Resources */ = {isa = PBXBuildFile; fileRef = DEEBF13A18AA4EBD008422F4 /* bote.png */; };
+		DEEBF15918AA4EBD008422F4 /* burahin.png in Resources */ = {isa = PBXBuildFile; fileRef = DEEBF13B18AA4EBD008422F4 /* burahin.png */; };
+		DEEBF15A18AA4EBD008422F4 /* haluin.png in Resources */ = {isa = PBXBuildFile; fileRef = DEEBF13C18AA4EBD008422F4 /* haluin.png */; };
+		DEEBF15B18AA4EBD008422F4 /* ihain.png in Resources */ = {isa = PBXBuildFile; fileRef = DEEBF13D18AA4EBD008422F4 /* ihain.png */; };
+		DEEBF15C18AA4EBD008422F4 /* inumin.png in Resources */ = {isa = PBXBuildFile; fileRef = DEEBF13E18AA4EBD008422F4 /* inumin.png */; };
+		DEEBF15D18AA4EBD008422F4 /* ipatong.png in Resources */ = {isa = PBXBuildFile; fileRef = DEEBF13F18AA4EBD008422F4 /* ipatong.png */; };
+		DEEBF15E18AA4EBD008422F4 /* isaksak.png in Resources */ = {isa = PBXBuildFile; fileRef = DEEBF14018AA4EBD008422F4 /* isaksak.png */; };
+		DEEBF15F18AA4EBD008422F4 /* itapon.png in Resources */ = {isa = PBXBuildFile; fileRef = DEEBF14118AA4EBD008422F4 /* itapon.png */; };
+		DEEBF16018AA4EBD008422F4 /* itulak.png in Resources */ = {isa = PBXBuildFile; fileRef = DEEBF14218AA4EBD008422F4 /* itulak.png */; };
+		DEEBF16118AA4EBD008422F4 /* lata.png in Resources */ = {isa = PBXBuildFile; fileRef = DEEBF14318AA4EBD008422F4 /* lata.png */; };
+		DEEBF16218AA4EBD008422F4 /* magbasa.png in Resources */ = {isa = PBXBuildFile; fileRef = DEEBF14418AA4EBD008422F4 /* magbasa.png */; };
+		DEEBF16318AA4EBD008422F4 /* magbayad.png in Resources */ = {isa = PBXBuildFile; fileRef = DEEBF14518AA4EBD008422F4 /* magbayad.png */; };
+		DEEBF16418AA4EBD008422F4 /* manuod.png in Resources */ = {isa = PBXBuildFile; fileRef = DEEBF14618AA4EBD008422F4 /* manuod.png */; };
+		DEEBF16518AA4EBD008422F4 /* maupo.png in Resources */ = {isa = PBXBuildFile; fileRef = DEEBF14718AA4EBD008422F4 /* maupo.png */; };
+		DEEBF16618AA4EBD008422F4 /* oras.png in Resources */ = {isa = PBXBuildFile; fileRef = DEEBF14818AA4EBD008422F4 /* oras.png */; };
+		DEEBF16718AA4EBD008422F4 /* pagkain.png in Resources */ = {isa = PBXBuildFile; fileRef = DEEBF14918AA4EBD008422F4 /* pagkain.png */; };
+		DEEBF16818AA4EBD008422F4 /* pindutin.png in Resources */ = {isa = PBXBuildFile; fileRef = DEEBF14A18AA4EBD008422F4 /* pindutin.png */; };
+		DEEBF16918AA4EBD008422F4 /* talaan.png in Resources */ = {isa = PBXBuildFile; fileRef = DEEBF14B18AA4EBD008422F4 /* talaan.png */; };
+		DEEBF16A18AA4EBD008422F4 /* talaarawan.png in Resources */ = {isa = PBXBuildFile; fileRef = DEEBF14C18AA4EBD008422F4 /* talaarawan.png */; };
+		DEEBF16B18AA4EBD008422F4 /* tamaan.png in Resources */ = {isa = PBXBuildFile; fileRef = DEEBF14D18AA4EBD008422F4 /* tamaan.png */; };
+		DEEBF16C18AA4EBD008422F4 /* tubig.png in Resources */ = {isa = PBXBuildFile; fileRef = DEEBF14E18AA4EBD008422F4 /* tubig.png */; };
+		DEEBF16D18AA4EBD008422F4 /* umagos.png in Resources */ = {isa = PBXBuildFile; fileRef = DEEBF14F18AA4EBD008422F4 /* umagos.png */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -249,72 +219,42 @@
 		DE503544189E53810044911C /* 27.dat */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; name = 27.dat; path = markers/27.dat; sourceTree = "<group>"; };
 		DE503545189E53810044911C /* 28.dat */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; name = 28.dat; path = markers/28.dat; sourceTree = "<group>"; };
 		DE503546189E53810044911C /* 29.dat */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; name = 29.dat; path = markers/29.dat; sourceTree = "<group>"; };
-		DE503547189E53810044911C /* 30.dat */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; name = 30.dat; path = markers/30.dat; sourceTree = "<group>"; };
-		DE503548189E53810044911C /* 31.dat */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; name = 31.dat; path = markers/31.dat; sourceTree = "<group>"; };
-		DE503549189E53810044911C /* 32.dat */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; name = 32.dat; path = markers/32.dat; sourceTree = "<group>"; };
-		DE50354A189E53810044911C /* 33.dat */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; name = 33.dat; path = markers/33.dat; sourceTree = "<group>"; };
-		DE50354B189E53810044911C /* 34.dat */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; name = 34.dat; path = markers/34.dat; sourceTree = "<group>"; };
-		DE50354C189E53810044911C /* 35.dat */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; name = 35.dat; path = markers/35.dat; sourceTree = "<group>"; };
-		DE50354D189E53810044911C /* 36.dat */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; name = 36.dat; path = markers/36.dat; sourceTree = "<group>"; };
-		DE50354E189E53810044911C /* 37.dat */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; name = 37.dat; path = markers/37.dat; sourceTree = "<group>"; };
-		DE50354F189E53810044911C /* 38.dat */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; name = 38.dat; path = markers/38.dat; sourceTree = "<group>"; };
-		DE503550189E53810044911C /* 39.dat */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; name = 39.dat; path = markers/39.dat; sourceTree = "<group>"; };
-		DE503551189E53810044911C /* 40.dat */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; name = 40.dat; path = markers/40.dat; sourceTree = "<group>"; };
-		DE503552189E53810044911C /* 41.dat */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; name = 41.dat; path = markers/41.dat; sourceTree = "<group>"; };
-		DE503553189E53810044911C /* 42.dat */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; name = 42.dat; path = markers/42.dat; sourceTree = "<group>"; };
-		DE503554189E53810044911C /* 43.dat */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; name = 43.dat; path = markers/43.dat; sourceTree = "<group>"; };
-		DE503555189E53810044911C /* 44.dat */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; name = 44.dat; path = markers/44.dat; sourceTree = "<group>"; };
-		DE503556189E53810044911C /* 45.dat */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; name = 45.dat; path = markers/45.dat; sourceTree = "<group>"; };
-		DE503557189E53810044911C /* 46.dat */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; name = 46.dat; path = markers/46.dat; sourceTree = "<group>"; };
-		DE503558189E53810044911C /* 47.dat */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; name = 47.dat; path = markers/47.dat; sourceTree = "<group>"; };
-		DE503559189E53810044911C /* 48.dat */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; name = 48.dat; path = markers/48.dat; sourceTree = "<group>"; };
-		DE50355A189E53810044911C /* 49.dat */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; name = 49.dat; path = markers/49.dat; sourceTree = "<group>"; };
-		DE50355B189E53810044911C /* 50.dat */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; name = 50.dat; path = markers/50.dat; sourceTree = "<group>"; };
-		DE50355C189E53810044911C /* 51.dat */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; name = 51.dat; path = markers/51.dat; sourceTree = "<group>"; };
-		DE50355D189E53810044911C /* 52.dat */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; name = 52.dat; path = markers/52.dat; sourceTree = "<group>"; };
-		DE50355E189E53810044911C /* 53.dat */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; name = 53.dat; path = markers/53.dat; sourceTree = "<group>"; };
-		DE50355F189E53810044911C /* 54.dat */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; name = 54.dat; path = markers/54.dat; sourceTree = "<group>"; };
-		DE503560189E53810044911C /* 55.dat */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; name = 55.dat; path = markers/55.dat; sourceTree = "<group>"; };
-		DE503561189E53810044911C /* 56.dat */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; name = 56.dat; path = markers/56.dat; sourceTree = "<group>"; };
-		DE503562189E53810044911C /* 57.dat */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; name = 57.dat; path = markers/57.dat; sourceTree = "<group>"; };
-		DE503563189E53810044911C /* 58.dat */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; name = 58.dat; path = markers/58.dat; sourceTree = "<group>"; };
-		DE503564189E53810044911C /* 59.dat */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; name = 59.dat; path = markers/59.dat; sourceTree = "<group>"; };
-		DE503565189E53810044911C /* 60.dat */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; name = 60.dat; path = markers/60.dat; sourceTree = "<group>"; };
-		DE503566189E53810044911C /* 61.dat */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; name = 61.dat; path = markers/61.dat; sourceTree = "<group>"; };
-		DE503567189E53810044911C /* 62.dat */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; name = 62.dat; path = markers/62.dat; sourceTree = "<group>"; };
-		DE503568189E53810044911C /* 63.dat */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; name = 63.dat; path = markers/63.dat; sourceTree = "<group>"; };
-		DE5035AB189E53F70044911C /* aparador.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = aparador.png; path = sprites/aparador.png; sourceTree = "<group>"; };
-		DE5035AC189E53F70044911C /* asukal.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = asukal.png; path = sprites/asukal.png; sourceTree = "<group>"; };
-		DE5035AD189E53F70044911C /* basahin.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = basahin.png; path = sprites/basahin.png; sourceTree = "<group>"; };
-		DE5035AE189E53F70044911C /* basurahan.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = basurahan.png; path = sprites/basurahan.png; sourceTree = "<group>"; };
-		DE5035AF189E53F70044911C /* batubalani.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = batubalani.png; path = sprites/batubalani.png; sourceTree = "<group>"; };
-		DE5035B0189E53F70044911C /* bintana.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = bintana.png; path = sprites/bintana.png; sourceTree = "<group>"; };
-		DE5035B1189E53F70044911C /* bote.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = bote.png; path = sprites/bote.png; sourceTree = "<group>"; };
-		DE5035B2189E53F70044911C /* buksan.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = buksan.png; path = sprites/buksan.png; sourceTree = "<group>"; };
-		DE5035B3189E53F70044911C /* diligan.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = diligan.png; path = sprites/diligan.png; sourceTree = "<group>"; };
-		DE5035B4189E53F70044911C /* dumungaw.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = dumungaw.png; path = sprites/dumungaw.png; sourceTree = "<group>"; };
-		DE5035B5189E53F70044911C /* ihain.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = ihain.png; path = sprites/ihain.png; sourceTree = "<group>"; };
-		DE5035B6189E53F70044911C /* inumin.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = inumin.png; path = sprites/inumin.png; sourceTree = "<group>"; };
-		DE5035B7189E53F70044911C /* isaksak.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = isaksak.png; path = sprites/isaksak.png; sourceTree = "<group>"; };
-		DE5035B8189E53F70044911C /* isulat.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = isulat.png; path = sprites/isulat.png; sourceTree = "<group>"; };
-		DE5035B9189E53F70044911C /* lata.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = lata.png; path = sprites/lata.png; sourceTree = "<group>"; };
-		DE5035BA189E53F70044911C /* magbayad.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = magbayad.png; path = sprites/magbayad.png; sourceTree = "<group>"; };
-		DE5035BB189E53F70044911C /* manuod.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = manuod.png; path = sprites/manuod.png; sourceTree = "<group>"; };
-		DE5035BC189E53F70044911C /* maupo.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = maupo.png; path = sprites/maupo.png; sourceTree = "<group>"; };
-		DE5035BD189E53F70044911C /* oras.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = oras.png; path = sprites/oras.png; sourceTree = "<group>"; };
-		DE5035BE189E53F70044911C /* pagkain.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = pagkain.png; path = sprites/pagkain.png; sourceTree = "<group>"; };
-		DE5035BF189E53F70044911C /* pindutin.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = pindutin.png; path = sprites/pindutin.png; sourceTree = "<group>"; };
-		DE5035C0189E53F70044911C /* sumilip.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = sumilip.png; path = sprites/sumilip.png; sourceTree = "<group>"; };
-		DE5035C1189E53F70044911C /* talaan.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = talaan.png; path = sprites/talaan.png; sourceTree = "<group>"; };
-		DE5035C2189E53F70044911C /* talaarawan.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = talaarawan.png; path = sprites/talaarawan.png; sourceTree = "<group>"; };
-		DE5035C3189E53F70044911C /* tamaan.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = tamaan.png; path = sprites/tamaan.png; sourceTree = "<group>"; };
-		DE5035C4189E53F70044911C /* tubig.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = tubig.png; path = sprites/tubig.png; sourceTree = "<group>"; };
 		DEA93D1218A500C60046FF83 /* libAR.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; name = libAR.a; path = ../../../Documents/Libraries/ARToolkit/lib/libAR.a; sourceTree = "<group>"; };
 		DEA93D1318A500C60046FF83 /* libAR2.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; name = libAR2.a; path = ../../../Documents/Libraries/ARToolkit/lib/libAR2.a; sourceTree = "<group>"; };
 		DEA93D1418A500C60046FF83 /* libARUtil.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; name = libARUtil.a; path = ../../../Documents/Libraries/ARToolkit/lib/libARUtil.a; sourceTree = "<group>"; };
 		DEA93D1518A500C60046FF83 /* libGLES2sub.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; name = libGLES2sub.a; path = ../../../Documents/Libraries/ARToolkit/lib/libGLES2sub.a; sourceTree = "<group>"; };
 		DEA93D1618A500C70046FF83 /* libgluES2.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; name = libgluES2.a; path = ../../../Documents/Libraries/ARToolkit/lib/libgluES2.a; sourceTree = "<group>"; };
 		DEA93D1718A500C70046FF83 /* libjpeg.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; name = libjpeg.a; path = ../../../Documents/Libraries/ARToolkit/lib/libjpeg.a; sourceTree = "<group>"; };
+		DEEBF13218AA4EBD008422F4 /* alak.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = alak.png; path = sprites/alak.png; sourceTree = "<group>"; };
+		DEEBF13318AA4EBD008422F4 /* asinan.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = asinan.png; path = sprites/asinan.png; sourceTree = "<group>"; };
+		DEEBF13418AA4EBD008422F4 /* asukal.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = asukal.png; path = sprites/asukal.png; sourceTree = "<group>"; };
+		DEEBF13518AA4EBD008422F4 /* babasahin.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = babasahin.png; path = sprites/babasahin.png; sourceTree = "<group>"; };
+		DEEBF13618AA4EBD008422F4 /* baso.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = baso.png; path = sprites/baso.png; sourceTree = "<group>"; };
+		DEEBF13718AA4EBD008422F4 /* basurahan.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = basurahan.png; path = sprites/basurahan.png; sourceTree = "<group>"; };
+		DEEBF13818AA4EBD008422F4 /* batubalani.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = batubalani.png; path = sprites/batubalani.png; sourceTree = "<group>"; };
+		DEEBF13918AA4EBD008422F4 /* bintana.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = bintana.png; path = sprites/bintana.png; sourceTree = "<group>"; };
+		DEEBF13A18AA4EBD008422F4 /* bote.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = bote.png; path = sprites/bote.png; sourceTree = "<group>"; };
+		DEEBF13B18AA4EBD008422F4 /* burahin.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = burahin.png; path = sprites/burahin.png; sourceTree = "<group>"; };
+		DEEBF13C18AA4EBD008422F4 /* haluin.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = haluin.png; path = sprites/haluin.png; sourceTree = "<group>"; };
+		DEEBF13D18AA4EBD008422F4 /* ihain.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = ihain.png; path = sprites/ihain.png; sourceTree = "<group>"; };
+		DEEBF13E18AA4EBD008422F4 /* inumin.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = inumin.png; path = sprites/inumin.png; sourceTree = "<group>"; };
+		DEEBF13F18AA4EBD008422F4 /* ipatong.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = ipatong.png; path = sprites/ipatong.png; sourceTree = "<group>"; };
+		DEEBF14018AA4EBD008422F4 /* isaksak.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = isaksak.png; path = sprites/isaksak.png; sourceTree = "<group>"; };
+		DEEBF14118AA4EBD008422F4 /* itapon.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = itapon.png; path = sprites/itapon.png; sourceTree = "<group>"; };
+		DEEBF14218AA4EBD008422F4 /* itulak.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = itulak.png; path = sprites/itulak.png; sourceTree = "<group>"; };
+		DEEBF14318AA4EBD008422F4 /* lata.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = lata.png; path = sprites/lata.png; sourceTree = "<group>"; };
+		DEEBF14418AA4EBD008422F4 /* magbasa.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = magbasa.png; path = sprites/magbasa.png; sourceTree = "<group>"; };
+		DEEBF14518AA4EBD008422F4 /* magbayad.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = magbayad.png; path = sprites/magbayad.png; sourceTree = "<group>"; };
+		DEEBF14618AA4EBD008422F4 /* manuod.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = manuod.png; path = sprites/manuod.png; sourceTree = "<group>"; };
+		DEEBF14718AA4EBD008422F4 /* maupo.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = maupo.png; path = sprites/maupo.png; sourceTree = "<group>"; };
+		DEEBF14818AA4EBD008422F4 /* oras.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = oras.png; path = sprites/oras.png; sourceTree = "<group>"; };
+		DEEBF14918AA4EBD008422F4 /* pagkain.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = pagkain.png; path = sprites/pagkain.png; sourceTree = "<group>"; };
+		DEEBF14A18AA4EBD008422F4 /* pindutin.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = pindutin.png; path = sprites/pindutin.png; sourceTree = "<group>"; };
+		DEEBF14B18AA4EBD008422F4 /* talaan.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = talaan.png; path = sprites/talaan.png; sourceTree = "<group>"; };
+		DEEBF14C18AA4EBD008422F4 /* talaarawan.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = talaarawan.png; path = sprites/talaarawan.png; sourceTree = "<group>"; };
+		DEEBF14D18AA4EBD008422F4 /* tamaan.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = tamaan.png; path = sprites/tamaan.png; sourceTree = "<group>"; };
+		DEEBF14E18AA4EBD008422F4 /* tubig.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = tubig.png; path = sprites/tubig.png; sourceTree = "<group>"; };
+		DEEBF14F18AA4EBD008422F4 /* umagos.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = umagos.png; path = sprites/umagos.png; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -463,40 +403,6 @@
 				DE503544189E53810044911C /* 27.dat */,
 				DE503545189E53810044911C /* 28.dat */,
 				DE503546189E53810044911C /* 29.dat */,
-				DE503547189E53810044911C /* 30.dat */,
-				DE503548189E53810044911C /* 31.dat */,
-				DE503549189E53810044911C /* 32.dat */,
-				DE50354A189E53810044911C /* 33.dat */,
-				DE50354B189E53810044911C /* 34.dat */,
-				DE50354C189E53810044911C /* 35.dat */,
-				DE50354D189E53810044911C /* 36.dat */,
-				DE50354E189E53810044911C /* 37.dat */,
-				DE50354F189E53810044911C /* 38.dat */,
-				DE503550189E53810044911C /* 39.dat */,
-				DE503551189E53810044911C /* 40.dat */,
-				DE503552189E53810044911C /* 41.dat */,
-				DE503553189E53810044911C /* 42.dat */,
-				DE503554189E53810044911C /* 43.dat */,
-				DE503555189E53810044911C /* 44.dat */,
-				DE503556189E53810044911C /* 45.dat */,
-				DE503557189E53810044911C /* 46.dat */,
-				DE503558189E53810044911C /* 47.dat */,
-				DE503559189E53810044911C /* 48.dat */,
-				DE50355A189E53810044911C /* 49.dat */,
-				DE50355B189E53810044911C /* 50.dat */,
-				DE50355C189E53810044911C /* 51.dat */,
-				DE50355D189E53810044911C /* 52.dat */,
-				DE50355E189E53810044911C /* 53.dat */,
-				DE50355F189E53810044911C /* 54.dat */,
-				DE503560189E53810044911C /* 55.dat */,
-				DE503561189E53810044911C /* 56.dat */,
-				DE503562189E53810044911C /* 57.dat */,
-				DE503563189E53810044911C /* 58.dat */,
-				DE503564189E53810044911C /* 59.dat */,
-				DE503565189E53810044911C /* 60.dat */,
-				DE503566189E53810044911C /* 61.dat */,
-				DE503567189E53810044911C /* 62.dat */,
-				DE503568189E53810044911C /* 63.dat */,
 			);
 			name = MarkerPattern;
 			sourceTree = "<group>";
@@ -516,32 +422,36 @@
 		DE5035AA189E53E30044911C /* SpriteSheets */ = {
 			isa = PBXGroup;
 			children = (
-				DE5035AB189E53F70044911C /* aparador.png */,
-				DE5035AC189E53F70044911C /* asukal.png */,
-				DE5035AD189E53F70044911C /* basahin.png */,
-				DE5035AE189E53F70044911C /* basurahan.png */,
-				DE5035AF189E53F70044911C /* batubalani.png */,
-				DE5035B0189E53F70044911C /* bintana.png */,
-				DE5035B1189E53F70044911C /* bote.png */,
-				DE5035B2189E53F70044911C /* buksan.png */,
-				DE5035B3189E53F70044911C /* diligan.png */,
-				DE5035B4189E53F70044911C /* dumungaw.png */,
-				DE5035B5189E53F70044911C /* ihain.png */,
-				DE5035B6189E53F70044911C /* inumin.png */,
-				DE5035B7189E53F70044911C /* isaksak.png */,
-				DE5035B8189E53F70044911C /* isulat.png */,
-				DE5035B9189E53F70044911C /* lata.png */,
-				DE5035BA189E53F70044911C /* magbayad.png */,
-				DE5035BB189E53F70044911C /* manuod.png */,
-				DE5035BC189E53F70044911C /* maupo.png */,
-				DE5035BD189E53F70044911C /* oras.png */,
-				DE5035BE189E53F70044911C /* pagkain.png */,
-				DE5035BF189E53F70044911C /* pindutin.png */,
-				DE5035C0189E53F70044911C /* sumilip.png */,
-				DE5035C1189E53F70044911C /* talaan.png */,
-				DE5035C2189E53F70044911C /* talaarawan.png */,
-				DE5035C3189E53F70044911C /* tamaan.png */,
-				DE5035C4189E53F70044911C /* tubig.png */,
+				DEEBF13218AA4EBD008422F4 /* alak.png */,
+				DEEBF13318AA4EBD008422F4 /* asinan.png */,
+				DEEBF13418AA4EBD008422F4 /* asukal.png */,
+				DEEBF13518AA4EBD008422F4 /* babasahin.png */,
+				DEEBF13618AA4EBD008422F4 /* baso.png */,
+				DEEBF13718AA4EBD008422F4 /* basurahan.png */,
+				DEEBF13818AA4EBD008422F4 /* batubalani.png */,
+				DEEBF13918AA4EBD008422F4 /* bintana.png */,
+				DEEBF13A18AA4EBD008422F4 /* bote.png */,
+				DEEBF13B18AA4EBD008422F4 /* burahin.png */,
+				DEEBF13C18AA4EBD008422F4 /* haluin.png */,
+				DEEBF13D18AA4EBD008422F4 /* ihain.png */,
+				DEEBF13E18AA4EBD008422F4 /* inumin.png */,
+				DEEBF13F18AA4EBD008422F4 /* ipatong.png */,
+				DEEBF14018AA4EBD008422F4 /* isaksak.png */,
+				DEEBF14118AA4EBD008422F4 /* itapon.png */,
+				DEEBF14218AA4EBD008422F4 /* itulak.png */,
+				DEEBF14318AA4EBD008422F4 /* lata.png */,
+				DEEBF14418AA4EBD008422F4 /* magbasa.png */,
+				DEEBF14518AA4EBD008422F4 /* magbayad.png */,
+				DEEBF14618AA4EBD008422F4 /* manuod.png */,
+				DEEBF14718AA4EBD008422F4 /* maupo.png */,
+				DEEBF14818AA4EBD008422F4 /* oras.png */,
+				DEEBF14918AA4EBD008422F4 /* pagkain.png */,
+				DEEBF14A18AA4EBD008422F4 /* pindutin.png */,
+				DEEBF14B18AA4EBD008422F4 /* talaan.png */,
+				DEEBF14C18AA4EBD008422F4 /* talaarawan.png */,
+				DEEBF14D18AA4EBD008422F4 /* tamaan.png */,
+				DEEBF14E18AA4EBD008422F4 /* tubig.png */,
+				DEEBF14F18AA4EBD008422F4 /* umagos.png */,
 			);
 			name = SpriteSheets;
 			sourceTree = "<group>";
@@ -730,113 +640,83 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				DE503593189E53810044911C /* 42.dat in Resources */,
-				DE5035D4189E53F70044911C /* magbayad.png in Resources */,
 				DE503586189E53810044911C /* 29.dat in Resources */,
-				DE503590189E53810044911C /* 39.dat in Resources */,
-				DE503588189E53810044911C /* 31.dat in Resources */,
 				DE50357B189E53810044911C /* 18.dat in Resources */,
 				DE503579189E53810044911C /* 16.dat in Resources */,
-				DE5035DE189E53F70044911C /* tubig.png in Resources */,
-				DE5035C6189E53F70044911C /* asukal.png in Resources */,
-				DE5035D2189E53F70044911C /* isulat.png in Resources */,
+				DEEBF16C18AA4EBD008422F4 /* tubig.png in Resources */,
+				DEEBF16D18AA4EBD008422F4 /* umagos.png in Resources */,
 				191A2F5618754C33009D0261 /* VideoVS.glsl in Resources */,
+				DEEBF15218AA4EBD008422F4 /* asukal.png in Resources */,
+				DEEBF15818AA4EBD008422F4 /* bote.png in Resources */,
+				DEEBF16618AA4EBD008422F4 /* oras.png in Resources */,
+				DEEBF15A18AA4EBD008422F4 /* haluin.png in Resources */,
+				DEEBF16318AA4EBD008422F4 /* magbayad.png in Resources */,
+				DEEBF16018AA4EBD008422F4 /* itulak.png in Resources */,
 				DE50356E189E53810044911C /* 5.dat in Resources */,
-				DE5035D9189E53F70044911C /* pindutin.png in Resources */,
 				191A2F1818754C07009D0261 /* bass.m4a in Resources */,
-				DE50359F189E53810044911C /* 54.dat in Resources */,
+				DEEBF16718AA4EBD008422F4 /* pagkain.png in Resources */,
+				DEEBF15E18AA4EBD008422F4 /* isaksak.png in Resources */,
 				DE50357F189E53810044911C /* 22.dat in Resources */,
 				DE503574189E53810044911C /* 11.dat in Resources */,
+				DEEBF15F18AA4EBD008422F4 /* itapon.png in Resources */,
 				DE50357A189E53810044911C /* 17.dat in Resources */,
+				DEEBF15118AA4EBD008422F4 /* asinan.png in Resources */,
 				DE503573189E53810044911C /* 10.dat in Resources */,
-				DE5035CD189E53F70044911C /* diligan.png in Resources */,
-				DE5035DC189E53F70044911C /* talaarawan.png in Resources */,
+				DEEBF15618AA4EBD008422F4 /* batubalani.png in Resources */,
 				DE503575189E53810044911C /* 12.dat in Resources */,
-				DE5035A4189E53810044911C /* 59.dat in Resources */,
 				191A2F5418754C33009D0261 /* SpriteSheets.json in Resources */,
-				DE5035D1189E53F70044911C /* isaksak.png in Resources */,
-				DE5035D6189E53F70044911C /* maupo.png in Resources */,
-				DE503597189E53810044911C /* 46.dat in Resources */,
-				DE5035CC189E53F70044911C /* buksan.png in Resources */,
 				DE50356D189E53810044911C /* 4.dat in Resources */,
-				DE503591189E53810044911C /* 40.dat in Resources */,
 				DE503572189E53810044911C /* 9.dat in Resources */,
-				DE5035A3189E53810044911C /* 58.dat in Resources */,
 				DE50357D189E53810044911C /* 20.dat in Resources */,
-				DE503592189E53810044911C /* 41.dat in Resources */,
-				DE50359B189E53810044911C /* 50.dat in Resources */,
 				DE503576189E53810044911C /* 13.dat in Resources */,
 				DE503569189E53810044911C /* 0.dat in Resources */,
-				DE5035A2189E53810044911C /* 57.dat in Resources */,
-				DE5035A1189E53810044911C /* 56.dat in Resources */,
-				DE5035D3189E53F70044911C /* lata.png in Resources */,
-				DE5035C9189E53F70044911C /* batubalani.png in Resources */,
 				191A2F4F18754C33009D0261 /* Sprites.json in Resources */,
-				DE50358B189E53810044911C /* 34.dat in Resources */,
-				DE503594189E53810044911C /* 43.dat in Resources */,
-				DE5035D7189E53F70044911C /* oras.png in Resources */,
+				DEEBF15418AA4EBD008422F4 /* baso.png in Resources */,
 				191A2EE618754B1E009D0261 /* Main_iPad.storyboard in Resources */,
+				DEEBF16918AA4EBD008422F4 /* talaan.png in Resources */,
 				191A2F4018754C33009D0261 /* CubeFS.glsl in Resources */,
-				DE50358D189E53810044911C /* 36.dat in Resources */,
+				DEEBF15918AA4EBD008422F4 /* burahin.png in Resources */,
+				DEEBF15018AA4EBD008422F4 /* alak.png in Resources */,
 				DE503570189E53810044911C /* 7.dat in Resources */,
-				DE5035C8189E53F70044911C /* basurahan.png in Resources */,
 				DE503584189E53810044911C /* 27.dat in Resources */,
-				DE5035A5189E53810044911C /* 60.dat in Resources */,
-				DE5035CB189E53F70044911C /* bote.png in Resources */,
 				DE503582189E53810044911C /* 25.dat in Resources */,
-				DE5035D0189E53F70044911C /* inumin.png in Resources */,
+				DEEBF15B18AA4EBD008422F4 /* ihain.png in Resources */,
+				DEEBF16518AA4EBD008422F4 /* maupo.png in Resources */,
 				191A2F4818754C33009D0261 /* piano.m4a in Resources */,
+				DEEBF15718AA4EBD008422F4 /* bintana.png in Resources */,
 				191A2F1718754C07009D0261 /* Animations.json in Resources */,
-				DE50359D189E53810044911C /* 52.dat in Resources */,
+				DEEBF16818AA4EBD008422F4 /* pindutin.png in Resources */,
+				DEEBF16218AA4EBD008422F4 /* magbasa.png in Resources */,
 				DE50356B189E53810044911C /* 2.dat in Resources */,
 				DE503578189E53810044911C /* 15.dat in Resources */,
 				DE503583189E53810044911C /* 26.dat in Resources */,
-				DE503599189E53810044911C /* 48.dat in Resources */,
+				DEEBF16118AA4EBD008422F4 /* lata.png in Resources */,
+				DEEBF16B18AA4EBD008422F4 /* tamaan.png in Resources */,
 				191A2F3F18754C33009D0261 /* Contents.json in Resources */,
-				DE50359A189E53810044911C /* 49.dat in Resources */,
+				DEEBF16418AA4EBD008422F4 /* manuod.png in Resources */,
 				191A2EEB18754B1E009D0261 /* Images.xcassets in Resources */,
-				DE5035A6189E53810044911C /* 61.dat in Resources */,
 				DE503571189E53810044911C /* 8.dat in Resources */,
-				DE5035D8189E53F70044911C /* pagkain.png in Resources */,
-				DE50358A189E53810044911C /* 33.dat in Resources */,
-				DE5035DB189E53F70044911C /* talaan.png in Resources */,
 				DE503581189E53810044911C /* 24.dat in Resources */,
 				DE503577189E53810044911C /* 14.dat in Resources */,
+				DEEBF16A18AA4EBD008422F4 /* talaarawan.png in Resources */,
 				DE503580189E53810044911C /* 23.dat in Resources */,
-				DE5035C5189E53F70044911C /* aparador.png in Resources */,
-				DE5035CF189E53F70044911C /* ihain.png in Resources */,
 				191A2F4418754C33009D0261 /* Marker.json in Resources */,
+				DEEBF15318AA4EBD008422F4 /* babasahin.png in Resources */,
+				DEEBF15518AA4EBD008422F4 /* basurahan.png in Resources */,
 				DE50357E189E53810044911C /* 21.dat in Resources */,
-				DE503598189E53810044911C /* 47.dat in Resources */,
-				DE50359C189E53810044911C /* 51.dat in Resources */,
-				DE5035CE189E53F70044911C /* dumungaw.png in Resources */,
-				DE50359E189E53810044911C /* 53.dat in Resources */,
-				DE503596189E53810044911C /* 45.dat in Resources */,
 				191A2F4D18754C33009D0261 /* SpriteRendererFS.glsl in Resources */,
-				DE50358C189E53810044911C /* 35.dat in Resources */,
-				DE503595189E53810044911C /* 44.dat in Resources */,
+				DEEBF15C18AA4EBD008422F4 /* inumin.png in Resources */,
 				DE50357C189E53810044911C /* 19.dat in Resources */,
-				DE5035A7189E53810044911C /* 62.dat in Resources */,
-				DE5035CA189E53F70044911C /* bintana.png in Resources */,
-				DE50358F189E53810044911C /* 38.dat in Resources */,
-				DE5035A0189E53810044911C /* 55.dat in Resources */,
 				DE50356C189E53810044911C /* 3.dat in Resources */,
-				DE5035DA189E53F70044911C /* sumilip.png in Resources */,
 				191A2F1918754C07009D0261 /* camera_para_ipadmini640x480.dat in Resources */,
 				DE50356F189E53810044911C /* 6.dat in Resources */,
-				DE5035A8189E53810044911C /* 63.dat in Resources */,
 				191A2F5518754C33009D0261 /* VideoFS.glsl in Resources */,
+				DEEBF15D18AA4EBD008422F4 /* ipatong.png in Resources */,
 				191A2F4E18754C33009D0261 /* SpriteRendererVS.glsl in Resources */,
 				DE503585189E53810044911C /* 28.dat in Resources */,
-				DE503589189E53810044911C /* 32.dat in Resources */,
-				DE5035DD189E53F70044911C /* tamaan.png in Resources */,
-				DE50358E189E53810044911C /* 37.dat in Resources */,
-				DE5035C7189E53F70044911C /* basahin.png in Resources */,
 				DE50356A189E53810044911C /* 1.dat in Resources */,
 				191A2EDA18754B1E009D0261 /* InfoPlist.strings in Resources */,
 				191A2F4118754C33009D0261 /* CubeVS.glsl in Resources */,
-				DE503587189E53810044911C /* 30.dat in Resources */,
-				DE5035D5189E53F70044911C /* manuod.png in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
