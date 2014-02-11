@@ -40,15 +40,17 @@
     printf("%s", _fnOri);
     
     // open files (append if necessary)
-    _fileAcc = fopen(_fnAcc, "w");
-    _fileOri = fopen(_fnOri, "w");
-    _fileBut = fopen(_fnBut, "w");
+    _fileAcc = fopen(_fnAcc, "a");
+    _fileOri = fopen(_fnOri, "a");
+    _fileBut = fopen(_fnBut, "a");
     
     return self;
 }
 //------------------------------------------------------------------------------
 - (void)dealloc
 {
+    NSLog(@"dealloc");
+    
     // close files
     fclose(_fileAcc);
     fclose(_fileOri);
@@ -71,6 +73,8 @@
         [dateString UTF8String],
         id, yaw, pitch, roll
     );
+    
+    //fflush(_fileOri);
 }
 //------------------------------------------------------------------------------
 - (void)logAccelerationForMarker:(int) id WithX:(float)x AndWithY:(float)y AndWithZ:(float)z
@@ -89,6 +93,8 @@
         [dateString UTF8String],
         id, x, y, z
     );
+    
+    //fflush(_fileAcc);
 }
 //------------------------------------------------------------------------------
 - (void)logButtonPressForMarker:(int)id WithLabel:(NSString*)label
@@ -109,6 +115,8 @@
         [label UTF8String]
     );
 
+    
+    fflush(_fileBut);
 }
 @end
 //------------------------------------------------------------------------------

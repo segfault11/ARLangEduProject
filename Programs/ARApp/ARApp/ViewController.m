@@ -127,6 +127,7 @@ static void arg2ConvGLcpara(
 @property(nonatomic, strong) AVCaptureVideoDataOutput* output;
 @property(nonatomic, strong) AVCaptureVideoPreviewLayer* previewLayer;
 @property(strong, nonatomic) EAGLContext *context;
+@property (weak, nonatomic) IBOutlet UITextField *profileNameTextfield;
 @property(weak, nonatomic) IBOutlet UILabel *sentence;
 @property (weak, nonatomic) IBOutlet UILabel *translation;
 @property(strong, nonatomic) Content* currentContent;
@@ -141,7 +142,7 @@ static void arg2ConvGLcpara(
 - (void)renderCubeWithView:(GLfloat*)view AndProjection:(GLfloat*)proj;
 - (void)resetCurrentContent;
 - (void)playSound:(NSString*)filename;
-- (void)logUserData;
+//- (void)logUserData;
 @end
 //------------------------------------------------------------------------------
 @implementation ViewController
@@ -149,7 +150,7 @@ static void arg2ConvGLcpara(
 - (void)viewDidLoad
 {
     [super viewDidLoad];
-    
+    self.profileNameTextfield.text = _profileName;
     self.context = [[EAGLContext alloc] initWithAPI:kEAGLRenderingAPIOpenGLES2];
 
     if (!self.context) {
@@ -539,8 +540,8 @@ fromConnection:(AVCaptureConnection *)connection
     //
     baseAddress = (uint8_t *)CVPixelBufferGetBaseAddressOfPlane(imageBuffer, 1);
     bytesPerRow = CVPixelBufferGetBytesPerRowOfPlane(imageBuffer, 1);
-    size_t width = CVPixelBufferGetWidthOfPlane(imageBuffer, 1);
-    size_t height = CVPixelBufferGetHeightOfPlane(imageBuffer, 1);
+    //size_t width = CVPixelBufferGetWidthOfPlane(imageBuffer, 1);
+    //size_t height = CVPixelBufferGetHeightOfPlane(imageBuffer, 1);
 
     glActiveTexture(GL_TEXTURE1);
     glBindTexture(GL_TEXTURE_2D, _chrominanceTex);
