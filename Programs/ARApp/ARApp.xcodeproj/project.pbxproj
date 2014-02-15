@@ -23,7 +23,6 @@
 		19624FB81888CA4400448004 /* ARAppTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 19624FB71888CA4400448004 /* ARAppTests.m */; };
 		1962500A1888CC0E00448004 /* Animation.m in Sources */ = {isa = PBXBuildFile; fileRef = 19624FD01888CC0E00448004 /* Animation.m */; };
 		1962500B1888CC0E00448004 /* AnimationManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 19624FD21888CC0E00448004 /* AnimationManager.m */; };
-		1962500C1888CC0E00448004 /* Animations.json in Resources */ = {isa = PBXBuildFile; fileRef = 19624FD31888CC0E00448004 /* Animations.json */; };
 		1962500D1888CC0E00448004 /* ARViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 19624FD51888CC0E00448004 /* ARViewController.m */; };
 		1962500E1888CC0E00448004 /* bass.m4a in Resources */ = {isa = PBXBuildFile; fileRef = 19624FD61888CC0E00448004 /* bass.m4a */; };
 		1962500F1888CC0E00448004 /* camera_para_ipadmini640x480.dat in Resources */ = {isa = PBXBuildFile; fileRef = 19624FD71888CC0E00448004 /* camera_para_ipadmini640x480.dat */; };
@@ -34,7 +33,6 @@
 		196250151888CC0E00448004 /* GLUEProgram.m in Sources */ = {isa = PBXBuildFile; fileRef = 19624FE01888CC0E00448004 /* GLUEProgram.m */; };
 		196250161888CC0E00448004 /* IntroductionViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 19624FE21888CC0E00448004 /* IntroductionViewController.m */; };
 		196250171888CC0E00448004 /* JSONKit.m in Sources */ = {isa = PBXBuildFile; fileRef = 19624FE41888CC0E00448004 /* JSONKit.m */; settings = {COMPILER_FLAGS = "-fno-objc-arc"; }; };
-		196250181888CC0E00448004 /* Marker.json in Resources */ = {isa = PBXBuildFile; fileRef = 19624FE61888CC0E00448004 /* Marker.json */; };
 		196250191888CC0E00448004 /* Marker.m in Sources */ = {isa = PBXBuildFile; fileRef = 19624FE71888CC0E00448004 /* Marker.m */; };
 		1962501A1888CC0E00448004 /* MarkerManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 19624FE91888CC0E00448004 /* MarkerManager.m */; };
 		1962501B1888CC0E00448004 /* NavigationViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 19624FEB1888CC0E00448004 /* NavigationViewController.m */; };
@@ -47,10 +45,8 @@
 		196250231888CC0E00448004 /* SpriteRenderer.m in Sources */ = {isa = PBXBuildFile; fileRef = 19624FF91888CC0E00448004 /* SpriteRenderer.m */; };
 		196250241888CC0E00448004 /* SpriteRendererFS.glsl in Resources */ = {isa = PBXBuildFile; fileRef = 19624FFA1888CC0E00448004 /* SpriteRendererFS.glsl */; };
 		196250251888CC0E00448004 /* SpriteRendererVS.glsl in Resources */ = {isa = PBXBuildFile; fileRef = 19624FFB1888CC0E00448004 /* SpriteRendererVS.glsl */; };
-		196250261888CC0E00448004 /* Sprites.json in Resources */ = {isa = PBXBuildFile; fileRef = 19624FFC1888CC0E00448004 /* Sprites.json */; };
 		196250271888CC0E00448004 /* SpriteSheet.m in Sources */ = {isa = PBXBuildFile; fileRef = 19624FFE1888CC0E00448004 /* SpriteSheet.m */; };
 		1962502A1888CC0E00448004 /* SpriteSheetManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 196250021888CC0E00448004 /* SpriteSheetManager.m */; };
-		1962502B1888CC0E00448004 /* SpriteSheets.json in Resources */ = {isa = PBXBuildFile; fileRef = 196250031888CC0E00448004 /* SpriteSheets.json */; };
 		1962502D1888CC0E00448004 /* VideoFS.glsl in Resources */ = {isa = PBXBuildFile; fileRef = 196250051888CC0E00448004 /* VideoFS.glsl */; };
 		1962502E1888CC0E00448004 /* VideoVS.glsl in Resources */ = {isa = PBXBuildFile; fileRef = 196250061888CC0E00448004 /* VideoVS.glsl */; };
 		1962504D1888F4D400448004 /* camera_para_ipad640x480.dat in Resources */ = {isa = PBXBuildFile; fileRef = 1962504C1888F4D400448004 /* camera_para_ipad640x480.dat */; };
@@ -87,7 +83,11 @@
 		DE0BDCDE18991C6D008528C0 /* 29.dat in Resources */ = {isa = PBXBuildFile; fileRef = DE0BDC9E18991C6C008528C0 /* 29.dat */; };
 		DE0EFA1018AF3BC100AC0694 /* ihain2.png in Resources */ = {isa = PBXBuildFile; fileRef = DE0EFA0E18AF3BC100AC0694 /* ihain2.png */; };
 		DE0EFA1118AF3BC100AC0694 /* tamaan2.png in Resources */ = {isa = PBXBuildFile; fileRef = DE0EFA0F18AF3BC100AC0694 /* tamaan2.png */; };
-		DE0EFA1318AF3E1900AC0694 /* Contents.json in Resources */ = {isa = PBXBuildFile; fileRef = DE0EFA1218AF3E1900AC0694 /* Contents.json */; };
+		DE0EFA1918AF42DF00AC0694 /* Animations.json in Resources */ = {isa = PBXBuildFile; fileRef = DE0EFA1418AF42DF00AC0694 /* Animations.json */; };
+		DE0EFA1A18AF42DF00AC0694 /* Contents.json in Resources */ = {isa = PBXBuildFile; fileRef = DE0EFA1518AF42DF00AC0694 /* Contents.json */; };
+		DE0EFA1B18AF42DF00AC0694 /* Marker.json in Resources */ = {isa = PBXBuildFile; fileRef = DE0EFA1618AF42DF00AC0694 /* Marker.json */; };
+		DE0EFA1C18AF42DF00AC0694 /* Sprites.json in Resources */ = {isa = PBXBuildFile; fileRef = DE0EFA1718AF42DF00AC0694 /* Sprites.json */; };
+		DE0EFA1D18AF42DF00AC0694 /* SpriteSheets.json in Resources */ = {isa = PBXBuildFile; fileRef = DE0EFA1818AF42DF00AC0694 /* SpriteSheets.json */; };
 		DEEBF0B118A9F33D008422F4 /* libAR.a in Frameworks */ = {isa = PBXBuildFile; fileRef = DEEBF0AB18A9F33D008422F4 /* libAR.a */; };
 		DEEBF0B218A9F33D008422F4 /* libAR2.a in Frameworks */ = {isa = PBXBuildFile; fileRef = DEEBF0AC18A9F33D008422F4 /* libAR2.a */; };
 		DEEBF0B318A9F33D008422F4 /* libARUtil.a in Frameworks */ = {isa = PBXBuildFile; fileRef = DEEBF0AD18A9F33D008422F4 /* libARUtil.a */; };
@@ -159,7 +159,6 @@
 		19624FD01888CC0E00448004 /* Animation.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Animation.m; sourceTree = "<group>"; };
 		19624FD11888CC0E00448004 /* AnimationManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AnimationManager.h; sourceTree = "<group>"; };
 		19624FD21888CC0E00448004 /* AnimationManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AnimationManager.m; sourceTree = "<group>"; };
-		19624FD31888CC0E00448004 /* Animations.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = Animations.json; sourceTree = "<group>"; };
 		19624FD41888CC0E00448004 /* ARViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ARViewController.h; sourceTree = "<group>"; };
 		19624FD51888CC0E00448004 /* ARViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ARViewController.m; sourceTree = "<group>"; };
 		19624FD61888CC0E00448004 /* bass.m4a */ = {isa = PBXFileReference; lastKnownFileType = file; path = bass.m4a; sourceTree = "<group>"; };
@@ -177,7 +176,6 @@
 		19624FE31888CC0E00448004 /* JSONKit.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = JSONKit.h; sourceTree = "<group>"; };
 		19624FE41888CC0E00448004 /* JSONKit.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = JSONKit.m; sourceTree = "<group>"; };
 		19624FE51888CC0E00448004 /* Marker.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Marker.h; sourceTree = "<group>"; };
-		19624FE61888CC0E00448004 /* Marker.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = Marker.json; sourceTree = "<group>"; };
 		19624FE71888CC0E00448004 /* Marker.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Marker.m; sourceTree = "<group>"; };
 		19624FE81888CC0E00448004 /* MarkerManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MarkerManager.h; sourceTree = "<group>"; };
 		19624FE91888CC0E00448004 /* MarkerManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MarkerManager.m; sourceTree = "<group>"; };
@@ -198,12 +196,10 @@
 		19624FF91888CC0E00448004 /* SpriteRenderer.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SpriteRenderer.m; sourceTree = "<group>"; };
 		19624FFA1888CC0E00448004 /* SpriteRendererFS.glsl */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = SpriteRendererFS.glsl; sourceTree = "<group>"; };
 		19624FFB1888CC0E00448004 /* SpriteRendererVS.glsl */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = SpriteRendererVS.glsl; sourceTree = "<group>"; };
-		19624FFC1888CC0E00448004 /* Sprites.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = Sprites.json; sourceTree = "<group>"; };
 		19624FFD1888CC0E00448004 /* SpriteSheet.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SpriteSheet.h; sourceTree = "<group>"; };
 		19624FFE1888CC0E00448004 /* SpriteSheet.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SpriteSheet.m; sourceTree = "<group>"; };
 		196250011888CC0E00448004 /* SpriteSheetManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SpriteSheetManager.h; sourceTree = "<group>"; };
 		196250021888CC0E00448004 /* SpriteSheetManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SpriteSheetManager.m; sourceTree = "<group>"; };
-		196250031888CC0E00448004 /* SpriteSheets.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = SpriteSheets.json; sourceTree = "<group>"; };
 		196250051888CC0E00448004 /* VideoFS.glsl */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = VideoFS.glsl; sourceTree = "<group>"; };
 		196250061888CC0E00448004 /* VideoVS.glsl */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = VideoVS.glsl; sourceTree = "<group>"; };
 		1962504C1888F4D400448004 /* camera_para_ipad640x480.dat */ = {isa = PBXFileReference; lastKnownFileType = file; path = camera_para_ipad640x480.dat; sourceTree = "<group>"; };
@@ -241,7 +237,11 @@
 		DE0BDC9E18991C6C008528C0 /* 29.dat */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; name = 29.dat; path = markers/29.dat; sourceTree = "<group>"; };
 		DE0EFA0E18AF3BC100AC0694 /* ihain2.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = ihain2.png; path = sprites/ihain2.png; sourceTree = "<group>"; };
 		DE0EFA0F18AF3BC100AC0694 /* tamaan2.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = tamaan2.png; path = sprites/tamaan2.png; sourceTree = "<group>"; };
-		DE0EFA1218AF3E1900AC0694 /* Contents.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = Contents.json; sourceTree = "<group>"; };
+		DE0EFA1418AF42DF00AC0694 /* Animations.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; name = Animations.json; path = json/Animations.json; sourceTree = "<group>"; };
+		DE0EFA1518AF42DF00AC0694 /* Contents.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; name = Contents.json; path = json/Contents.json; sourceTree = "<group>"; };
+		DE0EFA1618AF42DF00AC0694 /* Marker.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; name = Marker.json; path = json/Marker.json; sourceTree = "<group>"; };
+		DE0EFA1718AF42DF00AC0694 /* Sprites.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; name = Sprites.json; path = json/Sprites.json; sourceTree = "<group>"; };
+		DE0EFA1818AF42DF00AC0694 /* SpriteSheets.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; name = SpriteSheets.json; path = json/SpriteSheets.json; sourceTree = "<group>"; };
 		DEEBF0AB18A9F33D008422F4 /* libAR.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; name = libAR.a; path = ../../../Documents/Libraries/ARToolkit/lib/libAR.a; sourceTree = "<group>"; };
 		DEEBF0AC18A9F33D008422F4 /* libAR2.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; name = libAR2.a; path = ../../../Documents/Libraries/ARToolkit/lib/libAR2.a; sourceTree = "<group>"; };
 		DEEBF0AD18A9F33D008422F4 /* libARUtil.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; name = libARUtil.a; path = ../../../Documents/Libraries/ARToolkit/lib/libARUtil.a; sourceTree = "<group>"; };
@@ -478,11 +478,11 @@
 		196250351888E6D900448004 /* Entities */ = {
 			isa = PBXGroup;
 			children = (
-				19624FD31888CC0E00448004 /* Animations.json */,
-				DE0EFA1218AF3E1900AC0694 /* Contents.json */,
-				19624FE61888CC0E00448004 /* Marker.json */,
-				19624FFC1888CC0E00448004 /* Sprites.json */,
-				196250031888CC0E00448004 /* SpriteSheets.json */,
+				DE0EFA1418AF42DF00AC0694 /* Animations.json */,
+				DE0EFA1518AF42DF00AC0694 /* Contents.json */,
+				DE0EFA1618AF42DF00AC0694 /* Marker.json */,
+				DE0EFA1718AF42DF00AC0694 /* Sprites.json */,
+				DE0EFA1818AF42DF00AC0694 /* SpriteSheets.json */,
 			);
 			name = Entities;
 			sourceTree = "<group>";
@@ -691,6 +691,7 @@
 				DEEBF12718AA4D8B008422F4 /* magbayad.png in Resources */,
 				DEEBF12918AA4D8B008422F4 /* maupo.png in Resources */,
 				DE0BDCDE18991C6D008528C0 /* 29.dat in Resources */,
+				DE0EFA1A18AF42DF00AC0694 /* Contents.json in Resources */,
 				DEEBF11718AA4D8B008422F4 /* babasahin.png in Resources */,
 				DE0BDCD318991C6D008528C0 /* 18.dat in Resources */,
 				DE0BDCD118991C6D008528C0 /* 16.dat in Resources */,
@@ -699,7 +700,7 @@
 				DEEBF12E18AA4D8B008422F4 /* talaarawan.png in Resources */,
 				DE0BDCC618991C6D008528C0 /* 5.dat in Resources */,
 				DEEBF12318AA4D8B008422F4 /* itapon.png in Resources */,
-				1962500C1888CC0E00448004 /* Animations.json in Resources */,
+				DE0EFA1D18AF42DF00AC0694 /* SpriteSheets.json in Resources */,
 				DEEBF11E18AA4D8B008422F4 /* haluin.png in Resources */,
 				DE0BDCD718991C6D008528C0 /* 22.dat in Resources */,
 				DEEBF12D18AA4D8B008422F4 /* talaan.png in Resources */,
@@ -719,13 +720,14 @@
 				DE0BDCCE18991C6D008528C0 /* 13.dat in Resources */,
 				DE0BDCC118991C6D008528C0 /* 0.dat in Resources */,
 				DEEBF11918AA4D8B008422F4 /* basurahan.png in Resources */,
-				196250181888CC0E00448004 /* Marker.json in Resources */,
 				19624FA01888CA4400448004 /* Main_iPad.storyboard in Resources */,
 				DE0BDCC818991C6D008528C0 /* 7.dat in Resources */,
 				DE0BDCDC18991C6D008528C0 /* 27.dat in Resources */,
+				DE0EFA1C18AF42DF00AC0694 /* Sprites.json in Resources */,
 				DE0BDCDA18991C6D008528C0 /* 25.dat in Resources */,
 				1962500F1888CC0E00448004 /* camera_para_ipadmini640x480.dat in Resources */,
 				DE0BDCC318991C6D008528C0 /* 2.dat in Resources */,
+				DE0EFA1918AF42DF00AC0694 /* Animations.json in Resources */,
 				196250141888CC0E00448004 /* CubeVS.glsl in Resources */,
 				DEEBF12A18AA4D8B008422F4 /* oras.png in Resources */,
 				DE0BDCD018991C6D008528C0 /* 15.dat in Resources */,
@@ -733,9 +735,7 @@
 				DE0BDCDB18991C6D008528C0 /* 26.dat in Resources */,
 				19624FA51888CA4400448004 /* Images.xcassets in Resources */,
 				19624F941888CA4400448004 /* InfoPlist.strings in Resources */,
-				196250261888CC0E00448004 /* Sprites.json in Resources */,
 				DE0BDCC918991C6D008528C0 /* 8.dat in Resources */,
-				1962502B1888CC0E00448004 /* SpriteSheets.json in Resources */,
 				DE0BDCD918991C6D008528C0 /* 24.dat in Resources */,
 				DE0BDCCF18991C6D008528C0 /* 14.dat in Resources */,
 				DE0BDCD818991C6D008528C0 /* 23.dat in Resources */,
@@ -745,7 +745,6 @@
 				196250251888CC0E00448004 /* SpriteRendererVS.glsl in Resources */,
 				DEEBF11418AA4D8B008422F4 /* alak.png in Resources */,
 				DE0BDCD418991C6D008528C0 /* 19.dat in Resources */,
-				DE0EFA1318AF3E1900AC0694 /* Contents.json in Resources */,
 				DE0BDCC418991C6D008528C0 /* 3.dat in Resources */,
 				DEEBF12818AA4D8B008422F4 /* manuod.png in Resources */,
 				1962500E1888CC0E00448004 /* bass.m4a in Resources */,
@@ -754,6 +753,7 @@
 				DE0BDCC718991C6D008528C0 /* 6.dat in Resources */,
 				1962502D1888CC0E00448004 /* VideoFS.glsl in Resources */,
 				DEEBF11618AA4D8B008422F4 /* asukal.png in Resources */,
+				DE0EFA1B18AF42DF00AC0694 /* Marker.json in Resources */,
 				DEEBF12418AA4D8B008422F4 /* itulak.png in Resources */,
 				DEEBF12018AA4D8B008422F4 /* inumin.png in Resources */,
 				DEEBF11C18AA4D8B008422F4 /* bote.png in Resources */,

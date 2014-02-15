@@ -1,0 +1,152 @@
+[
+ {
+ "id" : 0,
+ "fileName" : "tubig.png",
+ "numFrames" : 1
+ },
+ {
+ "id" : 1,
+ "fileName" : "talaan.png",
+ "numFrames" : 1
+ },
+ {
+ "id" : 2,
+ "fileName" : "batubalani.png",
+ "numFrames" : 1
+ },
+ {
+ "id" : 3,
+ "fileName" : "oras.png",
+ "numFrames" : 1
+ },
+ {
+ "id" : 4,
+ "fileName" : "bintana.png",
+ "numFrames" : 1
+ },
+ {
+ "id" : 5,
+ "fileName" : "inumin.png",
+ "numFrames" : 1
+ },
+ {
+ "id" : 6,
+ "fileName" : "pagkain.png",
+ "numFrames" : 1
+ },
+ {
+ "id" : 7,
+ "fileName" : "basurahan.png",
+ "numFrames" : 1
+ },
+ {
+ "id" : 8,
+ "fileName" : "bote.png",
+ "numFrames" : 1
+ },
+ {
+ "id" : 9,
+ "fileName" : "lata.png",
+ "numFrames" : 1
+ },
+ {
+ "id" : 10,
+ "fileName" : "babasahin.png",
+ "numFrames" : 1
+ },
+ {
+ "id" : 11,
+ "fileName" : "talaarawan.png",
+ "numFrames" : 1
+ },
+ {
+ "id" : 12,
+ "fileName" : "asukal.png",
+ "numFrames" : 1
+ },
+ {
+ "id" : 13,
+ "fileName" : "baso.png",
+ "numFrames" : 1
+ },
+ {
+ "id" : 14,
+ "fileName" : "alak.png",
+ "numFrames" : 1
+ },
+ {
+ "id" : 15,
+ "fileName" : "itapon.png",
+ "numFrames" : 8
+ },
+ {
+ "id" : 16,
+ "fileName" : "ihain2.png",
+ "numFrames" : 1
+ },
+ {
+ "id" : 17,
+ "fileName" : "ipatong.png",
+ "numFrames" : 8
+ },
+ {
+ "id" : 18,
+ "fileName" : "itulak.png",
+ "numFrames" : 8
+ },
+ {
+ "id" : 19,
+ "fileName" : "pindutin.png",
+ "numFrames" : 8
+ },
+ {
+ "id" : 20,
+ "fileName" : "burahin.png",
+ "numFrames" : 8
+ },
+ {
+ "id" : 21,
+ "fileName" : "isaksak.png",
+ "numFrames" : 8
+ },
+ {
+ "id" : 22,
+ "fileName" : "asinan.png",
+ "numFrames" : 6
+ },
+ {
+ "id" : 23,
+ "fileName" : "magbasa.png",
+ "numFrames" : 8
+ },
+ {
+ "id" : 24,
+ "fileName" : "tamaan2.png",
+ "numFrames" : 1
+ },
+ {
+ "id" : 25,
+ "fileName" : "manuod.png",
+ "numFrames" : 8
+ },
+ {
+ "id" : 26,
+ "fileName" : "magbayad.png",
+ "numFrames" : 8
+ },
+ {
+ "id" : 27,
+ "fileName" : "maupo.png",
+ "numFrames" : 1
+ },
+ {
+ "id" : 28,
+ "fileName" : "haluin.png",
+ "numFrames" : 8
+ },
+ {
+ "id" : 29,
+ "fileName" : "umagos.png",
+ "numFrames" : 5
+ }
+]
