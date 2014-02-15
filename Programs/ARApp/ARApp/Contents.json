@@ -2,98 +2,154 @@
  {
  "id" : 0,
  "sprite" : 0,
- "sentences": [" ", " "],
+ "sentences": [
+               "There is 'water' in the water dispenser.",
+               "'Water' is 'tubig' in Filipino.",
+               "This dispenser has hot 'tubig' and cold 'tubig'."
+               ],
  "sound" : "bass.m4a",
  "translation" : "water"
  },
  {
  "id" : 1,
  "sprite" : 1,
- "sentences": [" ", " "],
+ "sentences": [
+               "This is a 'list' of money owed to the lab.",
+               "A 'list' is 'talaan' in Filipino.",
+               "In this 'talaan', how much do you need to pay?"
+               ],
  "sound" : "piano.m4a",
  "translation" : "a list"
  },
  {
  "id" : 2,
  "sprite" : 2,
- "sentences": [" ", " "],
+ "sentences": [
+               "The 'magnet' sticks to the refrigerator.",
+               "A 'magnet' is 'batubalani' in Filipino.",
+               "Use a 'batubalani' to attach your memo."
+               ],
  "sound" : "piano.m4a",
  "translation" : "a magnet"
  },
  {
  "id" : 3,
  "sprite" : 3,
- "sentences": [" ", " "],
+ "sentences": [
+               "This clock displays 'time'.",
+               "'Time' is oras in Filipino.",
+               "What is the 'oras' now?"
+               ],
  "sound" : "piano.m4a",
  "translation" : "time"
  },
  {
  "id" : 4,
  "sprite" : 4,
- "sentences": [" ", " "],
+ "sentences": [
+               "You can see the field through the 'window'.",
+               "A 'window' is 'bintana' in Filipino.",
+               "Looking out the 'bintana' is relaxing."
+               ],
  "sound" : "piano.m4a",
  "translation" : "a window"
  },
  {
  "id" : 5,
  "sprite" : 5,
- "sentences": [" ", " "],
+ "sentences": [
+               "Green tea is a kind of 'beverage'.",
+               "'Beverage' is 'inumin' in Filipino",
+               "You need an 'inumin' when you're thirsty."
+               ],
  "sound" : "piano.m4a",
- "translation" : "beverages"
+ "translation" : "beverage"
  },
  {
  "id" : 6,
  "sprite" : 6,
- "sentences": [" ", " "],
+ "sentences": [
+               "This shelf is for 'food'.",
+               "'Food' is 'pagkain' in Filipino.",
+               "What's you're favorite 'pagkain'?"
+               ],
  "sound" : "piano.m4a",
  "translation" : "food"
  },
  {
  "id" : 7,
  "sprite" : 7,
- "sentences": [" ", " "],
+ "sentences": [
+               "We collect trash in this 'trash can'.",
+               "A 'trash can' is 'basurahan' in Filipino.",
+               "Please make sure the 'basurahan' is not full."
+               ],
  "sound" : "piano.m4a",
  "translation" : "a trash can"
  },
  {
  "id" : 8,
  "sprite" : 8,
- "sentences": [" ", " "],
+ "sentences": [
+               "We collect 'glass bottles' in this bin.",
+               "A 'glass bottle' is 'bote' in Filipino.",
+               "We collect 'bote' for recycling."
+               ],
  "sound" : "piano.m4a",
  "translation" : "a glass bottle"
  },
  {
  "id" : 9,
  "sprite" : 9,
- "sentences": [" ", " "],
+ "sentences": [
+               "We collect 'cans' in this bin.",
+               "A 'can' is 'lata' in Filipino.",
+               "We collect 'lata' for recycling."
+               ],
  "sound" : "piano.m4a",
  "translation" : "a can"
  },
  {
  "id" : 10,
  "sprite" : 10,
- "sentences": [" ", " "],
+ "sentences": [
+               "You can read some 'reading materials' to relax.",
+               "'Reading materials' is 'babasahin' in Filipino.",
+               "Kansai scene is a kind of 'babasahin.'"
+               ],
  "sound" : "piano.m4a",
  "translation" : "a reading material"
  },
  {
  "id" : 11,
  "sprite" : 11,
- "sentences": [" ", " "],
+ "sentences": [
+               "This 'calendar' shows some baseball players",
+               "A 'calendar' is 'talaarawan' in Filipino.",
+               "The 'talaarawan' shows the days of the year."
+               ],
  "sound" : "piano.m4a",
  "translation" : "a calendar"
  },
  {
  "id" : 12,
  "sprite" : 12,
- "sentences": [" ", " "],
+ "sentences": [
+               "These are 'sugar' in sticks.",
+               "'Sugar' is 'asukal' in Filipino.",
+               "Do you like 'asukal' in your coffee?"
+               ],
  "sound" : "piano.m4a",
  "translation" : "sugar"
  },
  {
  "id" : 13,
  "sprite" : 13,
- "sentences": [" ", " "],
+ "sentences": [
+               "There is a 'drinking glass' in the shelf.",
+               "A 'drinking glass' is 'baso' in Filipino.",
+               "Who owns this 'baso'?"
+               ],
  "sound" : "piano.m4a",
  "translation" : "a drinking glass"
  },

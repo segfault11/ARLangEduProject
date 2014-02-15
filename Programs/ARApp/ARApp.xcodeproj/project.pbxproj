@@ -29,7 +29,6 @@
 		1962500F1888CC0E00448004 /* camera_para_ipadmini640x480.dat in Resources */ = {isa = PBXBuildFile; fileRef = 19624FD71888CC0E00448004 /* camera_para_ipadmini640x480.dat */; };
 		196250101888CC0E00448004 /* Content.m in Sources */ = {isa = PBXBuildFile; fileRef = 19624FD91888CC0E00448004 /* Content.m */; };
 		196250111888CC0E00448004 /* ContentManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 19624FDB1888CC0E00448004 /* ContentManager.m */; };
-		196250121888CC0E00448004 /* Contents.json in Resources */ = {isa = PBXBuildFile; fileRef = 19624FDC1888CC0E00448004 /* Contents.json */; };
 		196250131888CC0E00448004 /* CubeFS.glsl in Resources */ = {isa = PBXBuildFile; fileRef = 19624FDD1888CC0E00448004 /* CubeFS.glsl */; };
 		196250141888CC0E00448004 /* CubeVS.glsl in Resources */ = {isa = PBXBuildFile; fileRef = 19624FDE1888CC0E00448004 /* CubeVS.glsl */; };
 		196250151888CC0E00448004 /* GLUEProgram.m in Sources */ = {isa = PBXBuildFile; fileRef = 19624FE01888CC0E00448004 /* GLUEProgram.m */; };
@@ -88,6 +87,7 @@
 		DE0BDCDE18991C6D008528C0 /* 29.dat in Resources */ = {isa = PBXBuildFile; fileRef = DE0BDC9E18991C6C008528C0 /* 29.dat */; };
 		DE0EFA1018AF3BC100AC0694 /* ihain2.png in Resources */ = {isa = PBXBuildFile; fileRef = DE0EFA0E18AF3BC100AC0694 /* ihain2.png */; };
 		DE0EFA1118AF3BC100AC0694 /* tamaan2.png in Resources */ = {isa = PBXBuildFile; fileRef = DE0EFA0F18AF3BC100AC0694 /* tamaan2.png */; };
+		DE0EFA1318AF3E1900AC0694 /* Contents.json in Resources */ = {isa = PBXBuildFile; fileRef = DE0EFA1218AF3E1900AC0694 /* Contents.json */; };
 		DEEBF0B118A9F33D008422F4 /* libAR.a in Frameworks */ = {isa = PBXBuildFile; fileRef = DEEBF0AB18A9F33D008422F4 /* libAR.a */; };
 		DEEBF0B218A9F33D008422F4 /* libAR2.a in Frameworks */ = {isa = PBXBuildFile; fileRef = DEEBF0AC18A9F33D008422F4 /* libAR2.a */; };
 		DEEBF0B318A9F33D008422F4 /* libARUtil.a in Frameworks */ = {isa = PBXBuildFile; fileRef = DEEBF0AD18A9F33D008422F4 /* libARUtil.a */; };
@@ -168,7 +168,6 @@
 		19624FD91888CC0E00448004 /* Content.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Content.m; sourceTree = "<group>"; };
 		19624FDA1888CC0E00448004 /* ContentManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ContentManager.h; sourceTree = "<group>"; };
 		19624FDB1888CC0E00448004 /* ContentManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ContentManager.m; sourceTree = "<group>"; };
-		19624FDC1888CC0E00448004 /* Contents.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = Contents.json; sourceTree = "<group>"; };
 		19624FDD1888CC0E00448004 /* CubeFS.glsl */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = CubeFS.glsl; sourceTree = "<group>"; };
 		19624FDE1888CC0E00448004 /* CubeVS.glsl */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = CubeVS.glsl; sourceTree = "<group>"; };
 		19624FDF1888CC0E00448004 /* GLUEProgram.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GLUEProgram.h; sourceTree = "<group>"; };
@@ -242,6 +241,7 @@
 		DE0BDC9E18991C6C008528C0 /* 29.dat */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; name = 29.dat; path = markers/29.dat; sourceTree = "<group>"; };
 		DE0EFA0E18AF3BC100AC0694 /* ihain2.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = ihain2.png; path = sprites/ihain2.png; sourceTree = "<group>"; };
 		DE0EFA0F18AF3BC100AC0694 /* tamaan2.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = tamaan2.png; path = sprites/tamaan2.png; sourceTree = "<group>"; };
+		DE0EFA1218AF3E1900AC0694 /* Contents.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = Contents.json; sourceTree = "<group>"; };
 		DEEBF0AB18A9F33D008422F4 /* libAR.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; name = libAR.a; path = ../../../Documents/Libraries/ARToolkit/lib/libAR.a; sourceTree = "<group>"; };
 		DEEBF0AC18A9F33D008422F4 /* libAR2.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; name = libAR2.a; path = ../../../Documents/Libraries/ARToolkit/lib/libAR2.a; sourceTree = "<group>"; };
 		DEEBF0AD18A9F33D008422F4 /* libARUtil.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; name = libARUtil.a; path = ../../../Documents/Libraries/ARToolkit/lib/libARUtil.a; sourceTree = "<group>"; };
@@ -479,7 +479,7 @@
 			isa = PBXGroup;
 			children = (
 				19624FD31888CC0E00448004 /* Animations.json */,
-				19624FDC1888CC0E00448004 /* Contents.json */,
+				DE0EFA1218AF3E1900AC0694 /* Contents.json */,
 				19624FE61888CC0E00448004 /* Marker.json */,
 				19624FFC1888CC0E00448004 /* Sprites.json */,
 				196250031888CC0E00448004 /* SpriteSheets.json */,
@@ -721,7 +721,6 @@
 				DEEBF11918AA4D8B008422F4 /* basurahan.png in Resources */,
 				196250181888CC0E00448004 /* Marker.json in Resources */,
 				19624FA01888CA4400448004 /* Main_iPad.storyboard in Resources */,
-				196250121888CC0E00448004 /* Contents.json in Resources */,
 				DE0BDCC818991C6D008528C0 /* 7.dat in Resources */,
 				DE0BDCDC18991C6D008528C0 /* 27.dat in Resources */,
 				DE0BDCDA18991C6D008528C0 /* 25.dat in Resources */,
@@ -746,6 +745,7 @@
 				196250251888CC0E00448004 /* SpriteRendererVS.glsl in Resources */,
 				DEEBF11418AA4D8B008422F4 /* alak.png in Resources */,
 				DE0BDCD418991C6D008528C0 /* 19.dat in Resources */,
+				DE0EFA1318AF3E1900AC0694 /* Contents.json in Resources */,
 				DE0BDCC418991C6D008528C0 /* 3.dat in Resources */,
 				DEEBF12818AA4D8B008422F4 /* manuod.png in Resources */,
 				1962500E1888CC0E00448004 /* bass.m4a in Resources */,
