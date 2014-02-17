@@ -49,6 +49,12 @@
 		1962502E1888CC0E00448004 /* VideoVS.glsl in Resources */ = {isa = PBXBuildFile; fileRef = 196250061888CC0E00448004 /* VideoVS.glsl */; };
 		1962504D1888F4D400448004 /* camera_para_ipad640x480.dat in Resources */ = {isa = PBXBuildFile; fileRef = 1962504C1888F4D400448004 /* camera_para_ipad640x480.dat */; };
 		19910126188F8E0300B2B558 /* Logger.m in Sources */ = {isa = PBXBuildFile; fileRef = 19910125188F8E0300B2B558 /* Logger.m */; };
+		A85A077818B1925600D9E970 /* libAR.a in Frameworks */ = {isa = PBXBuildFile; fileRef = A85A077218B1925500D9E970 /* libAR.a */; };
+		A85A077918B1925600D9E970 /* libAR2.a in Frameworks */ = {isa = PBXBuildFile; fileRef = A85A077318B1925500D9E970 /* libAR2.a */; };
+		A85A077A18B1925600D9E970 /* libARUtil.a in Frameworks */ = {isa = PBXBuildFile; fileRef = A85A077418B1925600D9E970 /* libARUtil.a */; };
+		A85A077B18B1925600D9E970 /* libGLES2sub.a in Frameworks */ = {isa = PBXBuildFile; fileRef = A85A077518B1925600D9E970 /* libGLES2sub.a */; };
+		A85A077C18B1925600D9E970 /* libgluES2.a in Frameworks */ = {isa = PBXBuildFile; fileRef = A85A077618B1925600D9E970 /* libgluES2.a */; };
+		A85A077D18B1925600D9E970 /* libjpeg.a in Frameworks */ = {isa = PBXBuildFile; fileRef = A85A077718B1925600D9E970 /* libjpeg.a */; };
 		DE0BDCC118991C6D008528C0 /* 0.dat in Resources */ = {isa = PBXBuildFile; fileRef = DE0BDC8118991C6C008528C0 /* 0.dat */; };
 		DE0BDCC218991C6D008528C0 /* 1.dat in Resources */ = {isa = PBXBuildFile; fileRef = DE0BDC8218991C6C008528C0 /* 1.dat */; };
 		DE0BDCC318991C6D008528C0 /* 2.dat in Resources */ = {isa = PBXBuildFile; fileRef = DE0BDC8318991C6C008528C0 /* 2.dat */; };
@@ -116,12 +122,6 @@
 		DE22302F18AFB4F5006A239A /* tamaan.m4a in Resources */ = {isa = PBXBuildFile; fileRef = DE22301118AFB4F5006A239A /* tamaan.m4a */; };
 		DE22303018AFB4F5006A239A /* tubig.m4a in Resources */ = {isa = PBXBuildFile; fileRef = DE22301218AFB4F5006A239A /* tubig.m4a */; };
 		DE22303118AFB4F5006A239A /* umagos.m4a in Resources */ = {isa = PBXBuildFile; fileRef = DE22301318AFB4F5006A239A /* umagos.m4a */; };
-		DE33900218B18E380051AC9F /* libAR.a in Frameworks */ = {isa = PBXBuildFile; fileRef = DE338FFC18B18E380051AC9F /* libAR.a */; };
-		DE33900318B18E380051AC9F /* libAR2.a in Frameworks */ = {isa = PBXBuildFile; fileRef = DE338FFD18B18E380051AC9F /* libAR2.a */; };
-		DE33900418B18E380051AC9F /* libARUtil.a in Frameworks */ = {isa = PBXBuildFile; fileRef = DE338FFE18B18E380051AC9F /* libARUtil.a */; };
-		DE33900518B18E380051AC9F /* libGLES2sub.a in Frameworks */ = {isa = PBXBuildFile; fileRef = DE338FFF18B18E380051AC9F /* libGLES2sub.a */; };
-		DE33900618B18E380051AC9F /* libgluES2.a in Frameworks */ = {isa = PBXBuildFile; fileRef = DE33900018B18E380051AC9F /* libgluES2.a */; };
-		DE33900718B18E380051AC9F /* libjpeg.a in Frameworks */ = {isa = PBXBuildFile; fileRef = DE33900118B18E380051AC9F /* libjpeg.a */; };
 		DEEBF0B918A9F64E008422F4 /* Profile.m in Sources */ = {isa = PBXBuildFile; fileRef = DEEBF0B818A9F64E008422F4 /* Profile.m */; };
 		DEEBF11418AA4D8B008422F4 /* alak.png in Resources */ = {isa = PBXBuildFile; fileRef = DEEBF0F618AA4D8B008422F4 /* alak.png */; };
 		DEEBF11518AA4D8B008422F4 /* asinan.png in Resources */ = {isa = PBXBuildFile; fileRef = DEEBF0F718AA4D8B008422F4 /* asinan.png */; };
@@ -231,6 +231,12 @@
 		1962504C1888F4D400448004 /* camera_para_ipad640x480.dat */ = {isa = PBXFileReference; lastKnownFileType = file; path = camera_para_ipad640x480.dat; sourceTree = "<group>"; };
 		19910124188F8E0300B2B558 /* Logger.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Logger.h; sourceTree = "<group>"; };
 		19910125188F8E0300B2B558 /* Logger.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Logger.m; sourceTree = "<group>"; };
+		A85A077218B1925500D9E970 /* libAR.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; name = libAR.a; path = ../../../../../../Libraries/ARToolkit/lib/libAR.a; sourceTree = "<group>"; };
+		A85A077318B1925500D9E970 /* libAR2.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; name = libAR2.a; path = ../../../../../../Libraries/ARToolkit/lib/libAR2.a; sourceTree = "<group>"; };
+		A85A077418B1925600D9E970 /* libARUtil.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; name = libARUtil.a; path = ../../../../../../Libraries/ARToolkit/lib/libARUtil.a; sourceTree = "<group>"; };
+		A85A077518B1925600D9E970 /* libGLES2sub.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; name = libGLES2sub.a; path = ../../../../../../Libraries/ARToolkit/lib/libGLES2sub.a; sourceTree = "<group>"; };
+		A85A077618B1925600D9E970 /* libgluES2.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; name = libgluES2.a; path = ../../../../../../Libraries/ARToolkit/lib/libgluES2.a; sourceTree = "<group>"; };
+		A85A077718B1925600D9E970 /* libjpeg.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; name = libjpeg.a; path = ../../../../../../Libraries/ARToolkit/lib/libjpeg.a; sourceTree = "<group>"; };
 		DE0BDC8118991C6C008528C0 /* 0.dat */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; name = 0.dat; path = markers/0.dat; sourceTree = "<group>"; };
 		DE0BDC8218991C6C008528C0 /* 1.dat */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; name = 1.dat; path = markers/1.dat; sourceTree = "<group>"; };
 		DE0BDC8318991C6C008528C0 /* 2.dat */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; name = 2.dat; path = markers/2.dat; sourceTree = "<group>"; };
@@ -298,12 +304,6 @@
 		DE22301118AFB4F5006A239A /* tamaan.m4a */ = {isa = PBXFileReference; lastKnownFileType = file; name = tamaan.m4a; path = sounds/tamaan.m4a; sourceTree = "<group>"; };
 		DE22301218AFB4F5006A239A /* tubig.m4a */ = {isa = PBXFileReference; lastKnownFileType = file; name = tubig.m4a; path = sounds/tubig.m4a; sourceTree = "<group>"; };
 		DE22301318AFB4F5006A239A /* umagos.m4a */ = {isa = PBXFileReference; lastKnownFileType = file; name = umagos.m4a; path = sounds/umagos.m4a; sourceTree = "<group>"; };
-		DE338FFC18B18E380051AC9F /* libAR.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; name = libAR.a; path = ../../../Documents/Libraries/ARToolkit/lib/libAR.a; sourceTree = "<group>"; };
-		DE338FFD18B18E380051AC9F /* libAR2.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; name = libAR2.a; path = ../../../Documents/Libraries/ARToolkit/lib/libAR2.a; sourceTree = "<group>"; };
-		DE338FFE18B18E380051AC9F /* libARUtil.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; name = libARUtil.a; path = ../../../Documents/Libraries/ARToolkit/lib/libARUtil.a; sourceTree = "<group>"; };
-		DE338FFF18B18E380051AC9F /* libGLES2sub.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; name = libGLES2sub.a; path = ../../../Documents/Libraries/ARToolkit/lib/libGLES2sub.a; sourceTree = "<group>"; };
-		DE33900018B18E380051AC9F /* libgluES2.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; name = libgluES2.a; path = ../../../Documents/Libraries/ARToolkit/lib/libgluES2.a; sourceTree = "<group>"; };
-		DE33900118B18E380051AC9F /* libjpeg.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; name = libjpeg.a; path = ../../../Documents/Libraries/ARToolkit/lib/libjpeg.a; sourceTree = "<group>"; };
 		DEEBF0B718A9F64E008422F4 /* Profile.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Profile.h; sourceTree = "<group>"; };
 		DEEBF0B818A9F64E008422F4 /* Profile.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Profile.m; sourceTree = "<group>"; };
 		DEEBF0F618AA4D8B008422F4 /* alak.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = alak.png; path = sprites/alak.png; sourceTree = "<group>"; };
@@ -341,14 +341,14 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				DE33900218B18E380051AC9F /* libAR.a in Frameworks */,
-				DE33900518B18E380051AC9F /* libGLES2sub.a in Frameworks */,
-				DE33900718B18E380051AC9F /* libjpeg.a in Frameworks */,
+				A85A077818B1925600D9E970 /* libAR.a in Frameworks */,
+				A85A077B18B1925600D9E970 /* libGLES2sub.a in Frameworks */,
+				A85A077D18B1925600D9E970 /* libjpeg.a in Frameworks */,
 				19624F8C1888CA4400448004 /* CoreGraphics.framework in Frameworks */,
-				DE33900618B18E380051AC9F /* libgluES2.a in Frameworks */,
-				DE33900418B18E380051AC9F /* libARUtil.a in Frameworks */,
+				A85A077C18B1925600D9E970 /* libgluES2.a in Frameworks */,
+				A85A077A18B1925600D9E970 /* libARUtil.a in Frameworks */,
 				19624F8E1888CA4400448004 /* UIKit.framework in Frameworks */,
-				DE33900318B18E380051AC9F /* libAR2.a in Frameworks */,
+				A85A077918B1925600D9E970 /* libAR2.a in Frameworks */,
 				19624F8A1888CA4400448004 /* Foundation.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -388,12 +388,12 @@
 		19624F881888CA4400448004 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
-				DE338FFC18B18E380051AC9F /* libAR.a */,
-				DE338FFD18B18E380051AC9F /* libAR2.a */,
-				DE338FFE18B18E380051AC9F /* libARUtil.a */,
-				DE338FFF18B18E380051AC9F /* libGLES2sub.a */,
-				DE33900018B18E380051AC9F /* libgluES2.a */,
-				DE33900118B18E380051AC9F /* libjpeg.a */,
+				A85A077218B1925500D9E970 /* libAR.a */,
+				A85A077318B1925500D9E970 /* libAR2.a */,
+				A85A077418B1925600D9E970 /* libARUtil.a */,
+				A85A077518B1925600D9E970 /* libGLES2sub.a */,
+				A85A077618B1925600D9E970 /* libgluES2.a */,
+				A85A077718B1925600D9E970 /* libjpeg.a */,
 				19624F891888CA4400448004 /* Foundation.framework */,
 				19624F8B1888CA4400448004 /* CoreGraphics.framework */,
 				19624F8D1888CA4400448004 /* UIKit.framework */,
@@ -1056,9 +1056,10 @@
 					/Users/marcericson/Documents/Libraries/ARToolkit/lib,
 					/Users/scatterbrain/Documents/Projects/Public/Marc/ARLangEduProject/Programs/ARApp,
 					/Users/marcericson/ARLangEduProject/Programs/ARApp/ARApp,
+					/Users/scttrbrn/Documents/Libraries/ARToolkit/lib,
 				);
 				PRODUCT_NAME = "Fil App";
-				USER_HEADER_SEARCH_PATHS = "/Users/marcericson/Documents/Libraries/ARToolkit/include/**";
+				USER_HEADER_SEARCH_PATHS = "/Users/scttrbrn/Documents/Libraries/ARToolkit/include/**";
 				WRAPPER_EXTENSION = app;
 			};
 			name = Debug;
@@ -1078,9 +1079,10 @@
 					/Users/marcericson/Documents/Libraries/ARToolkit/lib,
 					/Users/scatterbrain/Documents/Projects/Public/Marc/ARLangEduProject/Programs/ARApp,
 					/Users/marcericson/ARLangEduProject/Programs/ARApp/ARApp,
+					/Users/scttrbrn/Documents/Libraries/ARToolkit/lib,
 				);
 				PRODUCT_NAME = "Fil App";
-				USER_HEADER_SEARCH_PATHS = "/Users/marcericson/Documents/Libraries/ARToolkit/include/**";
+				USER_HEADER_SEARCH_PATHS = "/Users/scttrbrn/Documents/Libraries/ARToolkit/include/**";
 				WRAPPER_EXTENSION = app;
 			};
 			name = Release;

@@ -22,8 +22,8 @@
 //------------------------------------------------------------------------------
 #define VIDEO_FRAME_WIDTH 640
 #define VIDEO_FRAME_HEIGHT 480
-#define ROT_NOISE_RANGE 0.03
-#define TRANS_NOISE_RANGE 10.0
+#define BAD_AR 0
+#define NUM_NOISE 10000
 //------------------------------------------------------------------------------
 static float quad[] = {
         -1.0f, 1.0f,
@@ -557,11 +557,19 @@ fromConnection:(AVCaptureConnection *)connection
     
     glActiveTexture(GL_TEXTURE0);
     glBindTexture(GL_TEXTURE_2D, _luminanceTex);
-    
     glTexSubImage2D(
         GL_TEXTURE_2D, 0, 0, 0, VIDEO_FRAME_WIDTH, VIDEO_FRAME_HEIGHT,
         GL_RED_EXT, GL_UNSIGNED_BYTE, _imgY
     );
+    
+#if BAD_AR
+    // insert random noise
+    for (int i = 0; i < NUM_NOISE; i++)
+    {
+        int rn = arc4random() % (widthy*heighty);
+        _imgY[rn] = 0;
+    }
+#endif
     
     
     // render the video
@@ -591,7 +599,9 @@ fromConnection:(AVCaptureConnection *)connection
     {
         NSNumber* mid = [self.marker
                 objectForKey:[NSNumber numberWithInt:markerInfo[i].id]];
-        if (mid != nil)
+        
+        
+        if (mid != nil && markerInfo[i].cf > 0.95f)
         {
             currMid = i;
             activeMid = mid;
@@ -617,9 +627,6 @@ fromConnection:(AVCaptureConnection *)connection
         [self resetCurrentContent];
         self.currentContent = c;
     }
-
-    Sprite* s = [[SpriteManager instance]
-            getSpriteWithId:self.currentContent.sprite];
     
     // compute matrices
     if (!_cont)
@@ -645,10 +652,12 @@ fromConnection:(AVCaptureConnection *)connection
     // prepare view matrix
     arg2ConvGlpara(trans, view);
     _cont = YES;
-    
+
     // display content
+    Sprite* s = [[SpriteManager instance]
+            getSpriteWithId:self.currentContent.sprite];
+    
     [self.spriteRenderer renderSprite:s.id WithView:view AndProjection:_proj];
-    //[self renderCubeWithView:view AndProjection:_proj];
 
     self.sentence.text = [c.sentences objectAtIndex:c.activeSentence];
     
@@ -674,36 +683,7 @@ fromConnection:(AVCaptureConnection *)connection
     glBindVertexArrayOES(_vertexArray);
     glDrawArrays(GL_TRIANGLES, 0, 6);
 }
-//------------------------------------------------------------------------------
-- (void)renderCubeWithView:(GLfloat*)view AndProjection:(GLfloat*)proj;
-{
-    assert(glGetError() == GL_NO_ERROR);
-
-    glClear(GL_DEPTH_BUFFER_BIT);
-    
-    [self.program2 bind];
-    [self.program2 setUniform:@"P" WithMat4:proj];
-    [self.program2 setUniform:@"V" WithMat4:view];
-
-    GLint err = glGetError();
- 
-    if (err != GL_NO_ERROR)
-    {
-        NSLog(@"err %d", err);
-    
-        exit(0);
-    }
-
-    assert(glGetError() == GL_NO_ERROR);
-
-    glBindVertexArrayOES(_cube.vertexArray);
-//    glDrawArrays(GL_POINTS, 0, 1);
-//    glDrawElements(GL_TRIANGLES, 36, GL_UNSIGNED_SHORT, NULL);
-    glDrawElements(GL_POINTS, 36, GL_UNSIGNED_SHORT, NULL);
-    assert(glGetError() == GL_NO_ERROR);
-    
-}
-//------------------------------------------------------------------------------
+//-----------------------------------------------------------------------------
 - (void)update
 {
 
@@ -719,9 +699,10 @@ fromConnection:(AVCaptureConnection *)connection
 - (void)resetCurrentContent
 {
     _cont = NO;
-    self.currentContent.activeSentence = 0;
-    self.currentContent.isTranslationDisplayed = NO;
+    //self.currentContent.activeSentence = 0;
+    //self.currentContent.isTranslationDisplayed = NO;
     self.translation.hidden = YES;
+    self.sentence.text = @"";
 }
 //------------------------------------------------------------------------------
 - (void)playSound:(NSString*)filename
@@ -752,9 +733,9 @@ fromConnection:(AVCaptureConnection *)connection
         logButtonPressForMarker:_curMarkerID
         WithLabel:b.titleLabel.text];
 
-    [self.logger
-        logButtonPressForMarker:_curMarkerID
-        WithLabel:@"NASA"];
+//    [self.logger
+//        logButtonPressForMarker:_curMarkerID
+//        WithLabel:@"NASA"];
 
     if (!self.currentContent)
     {

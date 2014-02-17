@@ -5,34 +5,34 @@
 	<key>IDESourceControlProjectFavoriteDictionaryKey</key>
 	<false/>
 	<key>IDESourceControlProjectIdentifier</key>
-	<string>11434795-0EC7-4BA5-9EF1-9CA4959C9E6D</string>
+	<string>95BF7AC9-62BD-4EBA-97AE-068A09DC47B5</string>
 	<key>IDESourceControlProjectName</key>
 	<string>ARApp</string>
 	<key>IDESourceControlProjectOriginsDictionary</key>
 	<dict>
-		<key>6E2D425E-BF8A-4A93-A76E-AEBA3E1E5BFB</key>
-		<string>https://github.com/irscttrbrn/ARLangEduProject.git</string>
+		<key>35B2FEE8-F8B2-458A-80D1-EC419E3391CB</key>
+		<string>https://github.com/irscttrbrn/ARLangEduProject</string>
 	</dict>
 	<key>IDESourceControlProjectPath</key>
 	<string>Programs/ARApp/ARApp.xcodeproj/project.xcworkspace</string>
 	<key>IDESourceControlProjectRelativeInstallPathDictionary</key>
 	<dict>
-		<key>6E2D425E-BF8A-4A93-A76E-AEBA3E1E5BFB</key>
+		<key>35B2FEE8-F8B2-458A-80D1-EC419E3391CB</key>
 		<string>../../../..</string>
 	</dict>
 	<key>IDESourceControlProjectURL</key>
-	<string>https://github.com/irscttrbrn/ARLangEduProject.git</string>
+	<string>https://github.com/irscttrbrn/ARLangEduProject</string>
 	<key>IDESourceControlProjectVersion</key>
 	<integer>110</integer>
 	<key>IDESourceControlProjectWCCIdentifier</key>
-	<string>6E2D425E-BF8A-4A93-A76E-AEBA3E1E5BFB</string>
+	<string>35B2FEE8-F8B2-458A-80D1-EC419E3391CB</string>
 	<key>IDESourceControlProjectWCConfigurations</key>
 	<array>
 		<dict>
 			<key>IDESourceControlRepositoryExtensionIdentifierKey</key>
 			<string>public.vcs.git</string>
 			<key>IDESourceControlWCCIdentifierKey</key>
-			<string>6E2D425E-BF8A-4A93-A76E-AEBA3E1E5BFB</string>
+			<string>35B2FEE8-F8B2-458A-80D1-EC419E3391CB</string>
 			<key>IDESourceControlWCCName</key>
 			<string>ARLangEduProject</string>
 		</dict>
