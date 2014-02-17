@@ -99,6 +99,9 @@ static const char* FILE_NAME = "/Contents.json";
         s.translation = str;
         s.isTranslationDisplayed = NO;
         
+        str = [entry objectForKey:@"word"];
+        s.word =str;
+        
         [self.contents setObject:s forKey:[NSNumber numberWithInt:s.id]];
     }
 }

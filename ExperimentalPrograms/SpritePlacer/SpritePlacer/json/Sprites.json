@@ -22,7 +22,7 @@
  "spriteSheet" : 2,
  "frame" : 0,
  "animation" : 0,
- "size" : 10.0, //too small
+ "size" : 30.0,
  "translation" : [50.0, 10.0, 0.0],
  "rotation" : [-90.0, 0.0, 0.0]
  },
@@ -87,14 +87,14 @@
  "animation" : 0,
  "size" : 40.0,
  "translation" : [5.0, 5.0, 0.0],
- "rotation" : [-90.0, -90.0, -70.0] //rotated
+ "rotation" : [-90.0, -90.0, 0.0]
  },
  {
  "id" : 10,
  "spriteSheet" : 10,
  "frame" : 0,
  "animation" : 0,
- "size" : 100.0, //too big
+ "size" : 20.0,
  "translation" : [-45.0, 40.0, 0.0],
  "rotation" : [-90.0, -90.0, 0.0]
  },
@@ -114,14 +114,14 @@
  "animation" : 0,
  "size" : 30.0,
  "translation" : [-40.0, 0.0, -90.0],
- "rotation" : [-90.0, -90.0, 60.0] //rotated
+ "rotation" : [-90.0, -90.0, 0.0]
  },
  {
  "id" : 13,
  "spriteSheet" : 13,
  "frame" : 0,
  "animation" : 0,
- "size" : 8.0, //too small
+ "size" : 15.0,
  "translation" : [-40.0, 0.0, 0.0],
  "rotation" : [-90.0, -90.0, 0.0]
  },
@@ -141,7 +141,7 @@
  "animation" : 1,
  "size" : 60.0,
  "translation" : [30.0, -25.0, 0.0],
- "rotation" : [-75.0, -75.0, -80.0]
+ "rotation" : [-75.0, -75.0, 0.0]
  },
  {
  "id" : 16,
@@ -195,7 +195,7 @@
  "animation" : 1,
  "size" : 40.0,
  "translation" : [-34.0, -30.0, 0.0],
- "rotation" : [--170.0, 150.0, 100.0] //rotation
+ "rotation" : [-90.0, -90.0, 0.0]
  },
  {
  "id" : 22,

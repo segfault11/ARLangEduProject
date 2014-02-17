@@ -132,6 +132,7 @@ static void arg2ConvGLcpara(
 @property (weak, nonatomic) IBOutlet UITextField *profileNameTextfield;
 @property(weak, nonatomic) IBOutlet UILabel *sentence;
 @property (weak, nonatomic) IBOutlet UILabel *translation;
+@property (weak, nonatomic) IBOutlet UILabel *translationMidScreen;
 @property(strong, nonatomic) Content* currentContent;
 @property(strong, nonatomic) AVAudioPlayer* audioPlayer;
 @property(strong, nonatomic) CMMotionManager* manager;
@@ -144,6 +145,7 @@ static void arg2ConvGLcpara(
 //- (void)renderCubeWithView:(GLfloat*)view AndProjection:(GLfloat*)proj;
 - (void)resetCurrentContent;
 - (void)playSound:(NSString*)filename;
+- (void)displayTranslationMidscreen;
 //- (void)logUserData;
 @end
 //------------------------------------------------------------------------------
@@ -667,6 +669,8 @@ fromConnection:(AVCaptureConnection *)connection
     _cont = YES;
 
     // display content
+    [self displayTranslationMidscreen];
+    
     Sprite* s = [[SpriteManager instance]
             getSpriteWithId:self.currentContent.sprite];
     
@@ -726,6 +730,7 @@ fromConnection:(AVCaptureConnection *)connection
     //self.currentContent.isTranslationDisplayed = NO;
     self.translation.hidden = YES;
     self.sentence.text = @"";
+    self.translationMidScreen.hidden = YES;
 }
 //------------------------------------------------------------------------------
 - (void)playSound:(NSString*)filename
@@ -749,16 +754,20 @@ fromConnection:(AVCaptureConnection *)connection
     [self.audioPlayer play];
 }
 //------------------------------------------------------------------------------
+- (void)displayTranslationMidscreen
+{
+    if (![_currentContent.word isEqualToString:@""]) {
+        self.translationMidScreen.hidden = NO;
+        self.translationMidScreen.text = _currentContent.word;
+    }
+}
+//------------------------------------------------------------------------------
 - (IBAction)playAudio:(id)sender
 {
     UIButton* b = sender;
     [self.logger
         logButtonPressForMarker:_curMarkerID
         WithLabel:b.titleLabel.text];
-
-//    [self.logger
-//        logButtonPressForMarker:_curMarkerID
-//        WithLabel:@"NASA"];
 
     if (!self.currentContent)
     {

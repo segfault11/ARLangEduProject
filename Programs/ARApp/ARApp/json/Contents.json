@@ -3,330 +3,375 @@
  "id" : 0,
  "sprite" : 0,
  "sentences": [
+               " ",
                "There is 'water' in the water dispenser.",
                "'Water' is 'tubig' in Filipino.",
                "This dispenser has hot 'tubig' and cold 'tubig'."
                ],
  "sound" : "tubig.m4a",
+ "word" : "",
  "translation" : "water"
  },
  {
  "id" : 1,
  "sprite" : 1,
  "sentences": [
+               " ",
                "This is a 'list' of money owed to the lab.",
                "A 'list' is 'talaan' in Filipino.",
                "In this 'talaan', how much do you need to pay?"
                ],
  "sound" : "talaan.m4a",
+ "word" : "",
  "translation" : "a list"
  },
  {
  "id" : 2,
  "sprite" : 2,
  "sentences": [
+               " ",
                "The 'magnet' sticks to the refrigerator.",
                "A 'magnet' is 'batubalani' in Filipino.",
                "Use a 'batubalani' to attach your memo."
                ],
  "sound" : "batubalani.m4a",
+ "word" : "",
  "translation" : "a magnet"
  },
  {
  "id" : 3,
  "sprite" : 3,
  "sentences": [
+               " ",
                "This clock displays 'time'.",
                "'Time' is oras in Filipino.",
                "What is the 'oras' now?"
                ],
  "sound" : "oras.m4a",
+ "word" : "",
  "translation" : "time"
  },
  {
  "id" : 4,
  "sprite" : 4,
  "sentences": [
+               " ",
                "You can see the field through the 'window'.",
                "A 'window' is 'bintana' in Filipino.",
                "Looking out the 'bintana' is relaxing."
                ],
  "sound" : "bintana.m4a",
+ "word" : "",
  "translation" : "a window"
  },
  {
  "id" : 5,
  "sprite" : 5,
  "sentences": [
+               " ",
                "Green tea is a kind of 'beverage'.",
                "'Beverage' is 'inumin' in Filipino",
                "You need an 'inumin' when you're thirsty."
                ],
  "sound" : "inumin.m4a",
+ "word" : "",
  "translation" : "beverage"
  },
  {
  "id" : 6,
  "sprite" : 6,
  "sentences": [
+               " ",
                "This shelf is for 'food'.",
                "'Food' is 'pagkain' in Filipino.",
                "What's you're favorite 'pagkain'?"
                ],
  "sound" : "pagkain.m4a",
+ "word" : "",
  "translation" : "food"
  },
  {
  "id" : 7,
  "sprite" : 7,
  "sentences": [
+               " ",
                "We collect trash in this 'trash can'.",
                "A 'trash can' is 'basurahan' in Filipino.",
                "Please make sure the 'basurahan' is not full."
                ],
  "sound" : "basurahan.m4a",
+ "word" : "",
  "translation" : "a trash can"
  },
  {
  "id" : 8,
  "sprite" : 8,
  "sentences": [
+               " ",
                "We collect 'glass bottles' in this bin.",
                "A 'glass bottle' is 'bote' in Filipino.",
                "We collect 'bote' for recycling."
                ],
  "sound" : "bote.m4a",
+ "word" : "",
  "translation" : "a glass bottle"
  },
  {
  "id" : 9,
  "sprite" : 9,
  "sentences": [
+               " ",
                "We collect 'cans' in this bin.",
                "A 'can' is 'lata' in Filipino.",
                "We collect 'lata' for recycling."
                ],
  "sound" : "lata.m4a",
+ "word" : "",
  "translation" : "a can"
  },
  {
  "id" : 10,
  "sprite" : 10,
  "sentences": [
+               " ",
                "You can read some 'reading materials' to relax.",
                "'Reading materials' is 'babasahin' in Filipino.",
                "Kansai scene is a kind of 'babasahin.'"
                ],
  "sound" : "babasahin.m4a",
+ "word" : "",
  "translation" : "a reading material"
  },
  {
  "id" : 11,
  "sprite" : 11,
  "sentences": [
+               " ",
                "This 'calendar' shows some baseball players",
                "A 'calendar' is 'talaarawan' in Filipino.",
                "The 'talaarawan' shows the days of the year."
                ],
  "sound" : "talaarawan.m4a",
+ "word" : "",
  "translation" : "a calendar"
  },
  {
  "id" : 12,
  "sprite" : 12,
  "sentences": [
+               " ",
                "These are 'sugar' in sticks.",
                "'Sugar' is 'asukal' in Filipino.",
                "Do you like 'asukal' in your coffee?"
                ],
  "sound" : "asukal.m4a",
+ "word" : "",
  "translation" : "sugar"
  },
  {
  "id" : 13,
  "sprite" : 13,
  "sentences": [
+               " ",
                "There is a 'drinking glass' in the shelf.",
                "A 'drinking glass' is 'baso' in Filipino.",
                "Who owns this 'baso'?"
                ],
  "sound" : "baso.m4a",
+ "word" : "",
  "translation" : "a drinking glass"
  },
  {
  "id" : 14,
  "sprite" : 14,
  "sentences": [
+               " ",
                "This 'wine' is made from coconut",
                "'Wine is 'alak' in Filipino",
                "Which do you prefer, beer or 'alak'?"
                ],
  "sound" : "alak.m4a",
+ "word" : "",
  "translation" : "wine"
  },
  {
  "id" : 15,
  "sprite" : 15,
  "sentences": [
-               "itapon",
+               " ",
                "'To throw' is 'itapon' in Filipino.",
                "We 'throw' PET bottles in this bin."
                ],
  "sound" : "itapon.m4a",
+ "word" : "itapon",
  "translation" : "to throw away"
  },
  {
  "id" : 16,
  "sprite" : 16,
  "sentences": [
-               "ihain",
+               " ",
                "'To serve' is 'ihain' in Filipino.",
                "A pie is 'served' on the table."
                ],
  "sound" : "ihain.m4a",
+ "word" : "ihain",
  "translation" : "to serve"
  },
  {
  "id" : 17,
  "sprite" : 17,
  "sentences": [
-               "ipatong",
+               " ",
                "'To put on top' is 'ipatong' in Filipino.",
                "You can 'put' some more books 'on' these manga."
                ],
  "sound" : "ipatong.m4a",
+ "word" : "ipatong",
  "translation" : "to put on top"
  },
  {
  "id" : 18,
  "sprite" : 18,
  "sentences": [
-               "itulak",
+               " ",
                "'To push in' is 'itulak' in Filipino.",
                "You need 'to push' to close this compartment."
                ],
  "sound" : "itulak.m4a",
+ "word" : "itulak",
  "translation" : "to push"
  },
  {
  "id" : 19,
  "sprite" : 19,
  "sentences": [
-               "pindutin",
+               " ",
                "'To press' is 'pindutin' in Filipino.",
                "Press this button to make coffee."
                ],
  "sound" : "pindutin.m4a",
+ "word" : "pindutin",
  "translation" : "to press"
  },
  {
  "id" : 20,
  "sprite" : 20,
  "sentences": [
-               "burahin",
+               " ",
                "'To erase' is 'burahin' in Filipino.",
                "Please 'erase' the whiteboard after using it."
                ],
  "sound" : "burahin.m4a",
+ "word" : "burahin",
  "translation" : "to erase"
  },
  {
  "id" : 21,
  "sprite" : 21,
  "sentences": [
-               "isaksak",
+               " ",
                "'To plug in' is 'isaksak' in Filipino.",
                "Be careful when 'plugging in' your devices"
                ],
  "sound" : "isaksak.m4a",
+ "word" : "isaksak",
  "translation" : "to plug in"
  },
  {
  "id" : 22,
  "sprite" : 22,
  "sentences": [
-               "asinan",
+               " ",
                "'To add salt' is 'asinan' in Filipino.",
                "I like 'to add salt' to some meals."
                ],
  "sound" : "asinan.m4a",
+ "word" : "asinan",
  "translation" : "to add salt"
  },
  {
  "id" : 23,
  "sprite" : 23,
  "sentences": [
-               "magbasa",
+               " ",
                "'To read' is 'magbasa' in Filipino.",
                "This kid likes 'to read'."
                ],
  "sound" : "magbasa.m4a",
+ "word" : "magbasa",
  "translation" : "to read"
  },
  {
  "id" : 24,
  "sprite" : 24,
  "sentences": [
-               "tamaan",
+               " ",
                "'To hit' is 'tamaan' in Filipino.",
                "It's hard 'to hit' a bull's eye."
                ],
  "sound" : "tamaan.m4a",
+ "word" : "tamaan",
  "translation" : "to hit"
  },
  {
  "id" : 25,
  "sprite" : 25,
  "sentences": [
-               "manuod",
+               " ",
                "'To watch' is 'manuod' in Filipino.",
                "Do you like 'to watch' Japanese anime?"
                ],
  "sound" : "manuod.m4a",
+ "word" : "manuod",
  "translation" : "to watch"
  },
  {
  "id" : 26,
  "sprite" : 26,
  "sentences": [
-               "magbayad",
+               " ",
                "'To pay' is 'magbayad' in Filipino.",
                "Drop your coins here 'to pay' the lab."
                ],
  "sound" : "magbayad.m4a",
+ "word" : "magbayad",
  "translation" : "to pay"
  },
  {
  "id" : 27,
  "sprite" : 27,
  "sentences": [
-               "maupo",
+               " ",
                "'To sit' is 'maupo' in Filipino.",
                "This little man is 'sitting' on the couch."
                ],
  "sound" : "maupo.m4a",
+ "word" : "maupo",
  "translation" : "to sit"
  },
  {
  "id" : 28,
  "sprite" : 28,
  "sentences": [
-               "haluin",
+               " ",
                "'To stir' is 'haluin' in Filipino.",
                "I use a spoon 'to stir' my instant coffee."
                ],
  "sound" : "haluin.m4a",
+ "word" : "haluin",
  "translation" : "to stir"
  },
  {
  "id" : 29,
  "sprite" : 29,
  "sentences": [
-               "umagos",
+               " ",
                "'To flow' is 'umagos' in Filipino.",
                "The water is 'flowing' from the water heater."
                ],
  "sound" : "umagos.m4a",
+ "word" : "umagos",
  "translation" : "to flow"
  }
 ]

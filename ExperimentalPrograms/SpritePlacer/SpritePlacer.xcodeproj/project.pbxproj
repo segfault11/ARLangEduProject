@@ -47,7 +47,6 @@
 		DE0EFA2318AF596D00AC0694 /* Animations.json in Resources */ = {isa = PBXBuildFile; fileRef = DE0EFA1E18AF596D00AC0694 /* Animations.json */; };
 		DE0EFA2418AF596D00AC0694 /* Contents.json in Resources */ = {isa = PBXBuildFile; fileRef = DE0EFA1F18AF596D00AC0694 /* Contents.json */; };
 		DE0EFA2518AF596D00AC0694 /* Marker.json in Resources */ = {isa = PBXBuildFile; fileRef = DE0EFA2018AF596D00AC0694 /* Marker.json */; };
-		DE0EFA2618AF596D00AC0694 /* Sprites.json in Resources */ = {isa = PBXBuildFile; fileRef = DE0EFA2118AF596D00AC0694 /* Sprites.json */; };
 		DE0EFA2718AF596D00AC0694 /* SpriteSheets.json in Resources */ = {isa = PBXBuildFile; fileRef = DE0EFA2218AF596D00AC0694 /* SpriteSheets.json */; };
 		DE503569189E53810044911C /* 0.dat in Resources */ = {isa = PBXBuildFile; fileRef = DE503529189E53810044911C /* 0.dat */; };
 		DE50356A189E53810044911C /* 1.dat in Resources */ = {isa = PBXBuildFile; fileRef = DE50352A189E53810044911C /* 1.dat */; };
@@ -79,6 +78,9 @@
 		DE503584189E53810044911C /* 27.dat in Resources */ = {isa = PBXBuildFile; fileRef = DE503544189E53810044911C /* 27.dat */; };
 		DE503585189E53810044911C /* 28.dat in Resources */ = {isa = PBXBuildFile; fileRef = DE503545189E53810044911C /* 28.dat */; };
 		DE503586189E53810044911C /* 29.dat in Resources */ = {isa = PBXBuildFile; fileRef = DE503546189E53810044911C /* 29.dat */; };
+		DE73CC5918B1DA6D00781C11 /* ihain2.png in Resources */ = {isa = PBXBuildFile; fileRef = DE73CC5718B1DA6D00781C11 /* ihain2.png */; };
+		DE73CC5A18B1DA6D00781C11 /* tamaan2.png in Resources */ = {isa = PBXBuildFile; fileRef = DE73CC5818B1DA6D00781C11 /* tamaan2.png */; };
+		DE73CC5C18B1E13900781C11 /* Sprites.json in Resources */ = {isa = PBXBuildFile; fileRef = DE73CC5B18B1E13900781C11 /* Sprites.json */; };
 		DEA93D1818A500C70046FF83 /* libAR.a in Frameworks */ = {isa = PBXBuildFile; fileRef = DEA93D1218A500C60046FF83 /* libAR.a */; };
 		DEA93D1918A500C70046FF83 /* libAR2.a in Frameworks */ = {isa = PBXBuildFile; fileRef = DEA93D1318A500C60046FF83 /* libAR2.a */; };
 		DEA93D1A18A500C70046FF83 /* libARUtil.a in Frameworks */ = {isa = PBXBuildFile; fileRef = DEA93D1418A500C60046FF83 /* libARUtil.a */; };
@@ -187,7 +189,6 @@
 		DE0EFA1E18AF596D00AC0694 /* Animations.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; name = Animations.json; path = json/Animations.json; sourceTree = "<group>"; };
 		DE0EFA1F18AF596D00AC0694 /* Contents.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; name = Contents.json; path = json/Contents.json; sourceTree = "<group>"; };
 		DE0EFA2018AF596D00AC0694 /* Marker.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; name = Marker.json; path = json/Marker.json; sourceTree = "<group>"; };
-		DE0EFA2118AF596D00AC0694 /* Sprites.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; name = Sprites.json; path = json/Sprites.json; sourceTree = "<group>"; };
 		DE0EFA2218AF596D00AC0694 /* SpriteSheets.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; name = SpriteSheets.json; path = json/SpriteSheets.json; sourceTree = "<group>"; };
 		DE503529189E53810044911C /* 0.dat */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; name = 0.dat; path = markers/0.dat; sourceTree = "<group>"; };
 		DE50352A189E53810044911C /* 1.dat */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; name = 1.dat; path = markers/1.dat; sourceTree = "<group>"; };
@@ -219,6 +220,9 @@
 		DE503544189E53810044911C /* 27.dat */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; name = 27.dat; path = markers/27.dat; sourceTree = "<group>"; };
 		DE503545189E53810044911C /* 28.dat */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; name = 28.dat; path = markers/28.dat; sourceTree = "<group>"; };
 		DE503546189E53810044911C /* 29.dat */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; name = 29.dat; path = markers/29.dat; sourceTree = "<group>"; };
+		DE73CC5718B1DA6D00781C11 /* ihain2.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = ihain2.png; path = sprites/ihain2.png; sourceTree = "<group>"; };
+		DE73CC5818B1DA6D00781C11 /* tamaan2.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = tamaan2.png; path = sprites/tamaan2.png; sourceTree = "<group>"; };
+		DE73CC5B18B1E13900781C11 /* Sprites.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; name = Sprites.json; path = json/Sprites.json; sourceTree = "<group>"; };
 		DEA93D1218A500C60046FF83 /* libAR.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; name = libAR.a; path = ../../../Documents/Libraries/ARToolkit/lib/libAR.a; sourceTree = "<group>"; };
 		DEA93D1318A500C60046FF83 /* libAR2.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; name = libAR2.a; path = ../../../Documents/Libraries/ARToolkit/lib/libAR2.a; sourceTree = "<group>"; };
 		DEA93D1418A500C60046FF83 /* libARUtil.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; name = libARUtil.a; path = ../../../Documents/Libraries/ARToolkit/lib/libARUtil.a; sourceTree = "<group>"; };
@@ -413,7 +417,7 @@
 				DE0EFA1E18AF596D00AC0694 /* Animations.json */,
 				DE0EFA1F18AF596D00AC0694 /* Contents.json */,
 				DE0EFA2018AF596D00AC0694 /* Marker.json */,
-				DE0EFA2118AF596D00AC0694 /* Sprites.json */,
+				DE73CC5B18B1E13900781C11 /* Sprites.json */,
 				DE0EFA2218AF596D00AC0694 /* SpriteSheets.json */,
 			);
 			name = Entities;
@@ -422,6 +426,8 @@
 		DE5035AA189E53E30044911C /* SpriteSheets */ = {
 			isa = PBXGroup;
 			children = (
+				DE73CC5718B1DA6D00781C11 /* ihain2.png */,
+				DE73CC5818B1DA6D00781C11 /* tamaan2.png */,
 				DEEBF13218AA4EBD008422F4 /* alak.png */,
 				DEEBF13318AA4EBD008422F4 /* asinan.png */,
 				DEEBF13418AA4EBD008422F4 /* asukal.png */,
@@ -658,6 +664,7 @@
 				DEEBF16718AA4EBD008422F4 /* pagkain.png in Resources */,
 				DEEBF15E18AA4EBD008422F4 /* isaksak.png in Resources */,
 				DE50357F189E53810044911C /* 22.dat in Resources */,
+				DE73CC5918B1DA6D00781C11 /* ihain2.png in Resources */,
 				DE503574189E53810044911C /* 11.dat in Resources */,
 				DEEBF15F18AA4EBD008422F4 /* itapon.png in Resources */,
 				DE50357A189E53810044911C /* 17.dat in Resources */,
@@ -671,7 +678,6 @@
 				DE503572189E53810044911C /* 9.dat in Resources */,
 				DE50357D189E53810044911C /* 20.dat in Resources */,
 				DE503576189E53810044911C /* 13.dat in Resources */,
-				DE0EFA2618AF596D00AC0694 /* Sprites.json in Resources */,
 				DE503569189E53810044911C /* 0.dat in Resources */,
 				DEEBF15418AA4EBD008422F4 /* baso.png in Resources */,
 				191A2EE618754B1E009D0261 /* Main_iPad.storyboard in Resources */,
@@ -688,6 +694,8 @@
 				191A2F4818754C33009D0261 /* piano.m4a in Resources */,
 				DEEBF15718AA4EBD008422F4 /* bintana.png in Resources */,
 				DEEBF16818AA4EBD008422F4 /* pindutin.png in Resources */,
+				DE73CC5C18B1E13900781C11 /* Sprites.json in Resources */,
+				DE73CC5A18B1DA6D00781C11 /* tamaan2.png in Resources */,
 				DEEBF16218AA4EBD008422F4 /* magbasa.png in Resources */,
 				DE50356B189E53810044911C /* 2.dat in Resources */,
 				DE503578189E53810044911C /* 15.dat in Resources */,
