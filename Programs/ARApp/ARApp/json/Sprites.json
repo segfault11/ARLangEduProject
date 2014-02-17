@@ -155,10 +155,10 @@
  {
  "id" : 17,
  "spriteSheet" : 17,
- "frame" : 0,
- "animation" : 1,
+ "frame" : 8,
+ "animation" : 0,
  "size" : 100.0,
- "translation" : [-184.0, -112.0, -152.0],
+ "translation" : [177.0, -80.0, -80.0],
  "rotation" : [-90.0, -90.0, 0.0]
  },
  {
