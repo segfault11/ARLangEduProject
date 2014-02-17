@@ -86,6 +86,9 @@ static const char* FILE_NAME = "/Marker.json";
         str = [entry objectForKey:@"suffix"];
         s.suffix = str;
         
+        n = [entry objectForKey:@"bad"];
+        s.bad = [n integerValue];
+        
         [self.marker setObject:s forKey:[NSNumber numberWithInt:s.id]];
     }
     

@@ -9,5 +9,5 @@
 #import "Marker.h"
 
 @implementation Marker
-@synthesize id, content, filename, suffix, size;
+@synthesize id, content, filename, suffix, size, bad;
 @end

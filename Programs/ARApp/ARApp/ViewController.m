@@ -108,6 +108,8 @@ static void arg2ConvGLcpara(
     BOOL _cont;
     NSString* _profileName;
     int _curMarkerID;
+    BOOL _isBadARActive;
+
     
     struct
     {
@@ -139,7 +141,7 @@ static void arg2ConvGLcpara(
 - (void)initCaptureSession;
 - (void)tearDownGL;
 - (void)renderVideo;
-- (void)renderCubeWithView:(GLfloat*)view AndProjection:(GLfloat*)proj;
+//- (void)renderCubeWithView:(GLfloat*)view AndProjection:(GLfloat*)proj;
 - (void)resetCurrentContent;
 - (void)playSound:(NSString*)filename;
 //- (void)logUserData;
@@ -164,6 +166,8 @@ static void arg2ConvGLcpara(
     
     _cont = NO;
     _curMarkerID = -1;
+    _isBadARActive = NO;
+    
     
     [self setupGL];
     [self initMarkerDetection];
@@ -569,6 +573,15 @@ fromConnection:(AVCaptureConnection *)connection
         int rn = arc4random() % (widthy*heighty);
         _imgY[rn] = 0;
     }
+#else
+    if (_isBadARActive)
+    {
+        for (int i = 0; i < NUM_NOISE; i++)
+        {
+            int rn = arc4random() % (widthy*heighty);
+            _imgY[rn] = 0;
+        }
+    }
 #endif
     
     
@@ -672,6 +685,16 @@ fromConnection:(AVCaptureConnection *)connection
     }
     
     assert(glGetError() == GL_NO_ERROR);
+    
+    // activate bad AR if marker is "bad"
+    if (m.bad)
+    {
+        _isBadARActive = YES;
+    }
+    else
+    {
+        _isBadARActive = NO;
+    }
 }
 //------------------------------------------------------------------------------
 - (void)renderVideo
