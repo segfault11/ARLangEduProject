@@ -151,6 +151,8 @@
 		DEEBF12E18AA4D8B008422F4 /* talaarawan.png in Resources */ = {isa = PBXBuildFile; fileRef = DEEBF11018AA4D8B008422F4 /* talaarawan.png */; };
 		DEEBF13018AA4D8B008422F4 /* tubig.png in Resources */ = {isa = PBXBuildFile; fileRef = DEEBF11218AA4D8B008422F4 /* tubig.png */; };
 		DEEBF13118AA4D8B008422F4 /* umagos.png in Resources */ = {isa = PBXBuildFile; fileRef = DEEBF11318AA4D8B008422F4 /* umagos.png */; };
+		DEF39C5418B33AE800B95943 /* textlogo.png in Resources */ = {isa = PBXBuildFile; fileRef = DEF39C5318B33AE800B95943 /* textlogo.png */; };
+		DEF39C5618B3417C00B95943 /* 10.png in Resources */ = {isa = PBXBuildFile; fileRef = DEF39C5518B3417C00B95943 /* 10.png */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -164,7 +166,7 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
-		19624F861888CA4400448004 /* Fil App.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Fil App.app"; sourceTree = BUILT_PRODUCTS_DIR; };
+		19624F861888CA4400448004 /* FlipPin.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = FlipPin.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		19624F891888CA4400448004 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
 		19624F8B1888CA4400448004 /* CoreGraphics.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreGraphics.framework; path = System/Library/Frameworks/CoreGraphics.framework; sourceTree = SDKROOT; };
 		19624F8D1888CA4400448004 /* UIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UIKit.framework; path = System/Library/Frameworks/UIKit.framework; sourceTree = SDKROOT; };
@@ -334,6 +336,8 @@
 		DEEBF11018AA4D8B008422F4 /* talaarawan.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = talaarawan.png; path = sprites/talaarawan.png; sourceTree = "<group>"; };
 		DEEBF11218AA4D8B008422F4 /* tubig.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = tubig.png; path = sprites/tubig.png; sourceTree = "<group>"; };
 		DEEBF11318AA4D8B008422F4 /* umagos.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = umagos.png; path = sprites/umagos.png; sourceTree = "<group>"; };
+		DEF39C5318B33AE800B95943 /* textlogo.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = textlogo.png; path = assets/textlogo.png; sourceTree = "<group>"; };
+		DEF39C5518B3417C00B95943 /* 10.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = 10.png; path = assets/10.png; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -379,7 +383,7 @@
 		19624F871888CA4400448004 /* Products */ = {
 			isa = PBXGroup;
 			children = (
-				19624F861888CA4400448004 /* Fil App.app */,
+				19624F861888CA4400448004 /* FlipPin.app */,
 				19624FAA1888CA4400448004 /* ARAppTests.xctest */,
 			);
 			name = Products;
@@ -415,6 +419,7 @@
 				19624F981888CA4400448004 /* AppDelegate.h */,
 				19624F991888CA4400448004 /* AppDelegate.m */,
 				19624F9E1888CA4400448004 /* Main_iPad.storyboard */,
+				DEF39C5218B33AC300B95943 /* Images */,
 				19624FA41888CA4400448004 /* Images.xcassets */,
 				19624F901888CA4400448004 /* Supporting Files */,
 			);
@@ -694,6 +699,15 @@
 			name = Logger;
 			sourceTree = "<group>";
 		};
+		DEF39C5218B33AC300B95943 /* Images */ = {
+			isa = PBXGroup;
+			children = (
+				DEF39C5518B3417C00B95943 /* 10.png */,
+				DEF39C5318B33AE800B95943 /* textlogo.png */,
+			);
+			name = Images;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -711,7 +725,7 @@
 			);
 			name = ARApp;
 			productName = ARApp;
-			productReference = 19624F861888CA4400448004 /* Fil App.app */;
+			productReference = 19624F861888CA4400448004 /* FlipPin.app */;
 			productType = "com.apple.product-type.application";
 		};
 		19624FA91888CA4400448004 /* ARAppTests */ = {
@@ -856,6 +870,7 @@
 				DE0BDCD418991C6D008528C0 /* 19.dat in Resources */,
 				DE0BDCC418991C6D008528C0 /* 3.dat in Resources */,
 				DEEBF12818AA4D8B008422F4 /* manuod.png in Resources */,
+				DEF39C5618B3417C00B95943 /* 10.png in Resources */,
 				DEEBF12B18AA4D8B008422F4 /* pagkain.png in Resources */,
 				DEEBF12518AA4D8B008422F4 /* lata.png in Resources */,
 				DE0BDCC718991C6D008528C0 /* 6.dat in Resources */,
@@ -874,6 +889,7 @@
 				DEEBF11A18AA4D8B008422F4 /* batubalani.png in Resources */,
 				DE0BDCDD18991C6D008528C0 /* 28.dat in Resources */,
 				DE22302218AFB4F5006A239A /* isaksak.m4a in Resources */,
+				DEF39C5418B33AE800B95943 /* textlogo.png in Resources */,
 				DE0BDCC218991C6D008528C0 /* 1.dat in Resources */,
 				196250131888CC0E00448004 /* CubeFS.glsl in Resources */,
 			);
@@ -1058,7 +1074,7 @@
 					/Users/marcericson/ARLangEduProject/Programs/ARApp/ARApp,
 					/Users/scttrbrn/Documents/Libraries/ARToolkit/lib,
 				);
-				PRODUCT_NAME = "Fil App";
+				PRODUCT_NAME = FlipPin;
 				USER_HEADER_SEARCH_PATHS = "/Users/marcericson/Documents/Libraries/ARToolkit/include/**";
 				WRAPPER_EXTENSION = app;
 			};
@@ -1081,7 +1097,7 @@
 					/Users/marcericson/ARLangEduProject/Programs/ARApp/ARApp,
 					/Users/scttrbrn/Documents/Libraries/ARToolkit/lib,
 				);
-				PRODUCT_NAME = "Fil App";
+				PRODUCT_NAME = FlipPin;
 				USER_HEADER_SEARCH_PATHS = "/Users/marcericson/Documents/Libraries/ARToolkit/include/**";
 				WRAPPER_EXTENSION = app;
 			};

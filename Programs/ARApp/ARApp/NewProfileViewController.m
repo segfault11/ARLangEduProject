@@ -39,8 +39,8 @@
 - (void)viewDidLoad
 {
     [super viewDidLoad];
-	self.nameField.text = @" ";
-    self.lastNameTextField.text = @" ";
+	self.nameField.text = @"";
+    self.lastNameTextField.text = @"";
     
     // Do any additional setup after loading the view.
 }
