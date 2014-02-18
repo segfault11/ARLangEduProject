@@ -9,5 +9,5 @@
 #import "Content.h"
 
 @implementation Content
-@synthesize id, sentences, activeSentence, sound, translation, isTranslationDisplayed, bgImage;
+@synthesize id, sentences, activeSentence, sound, word, translation, isTranslationDisplayed, bgImage;
 @end

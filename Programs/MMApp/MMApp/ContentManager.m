@@ -102,6 +102,9 @@ static const char* FILE_NAME = "/Contents.json";
         NSString* str = [entry objectForKey:@"sound"];
         s.sound = str;
         
+        str = [entry objectForKey:@"word"];
+        s.word = str;
+        
         str = [entry objectForKey:@"bgImage"];
         s.bgImage = str;
         

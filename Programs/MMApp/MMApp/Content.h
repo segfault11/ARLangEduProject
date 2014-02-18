@@ -15,11 +15,12 @@
     NSArray* _sentences;
     int _activeSentence;
     BOOL _isTranslationDisplayed;
+    NSString* _word;
     NSString* _translation;
     NSString* _sound;
 }
 @property int id, activeSentence;
 @property NSArray* sentences;
-@property NSString* sound, *translation, *bgImage;
+@property NSString* sound, *word, *translation, *bgImage;
 @property BOOL isTranslationDisplayed;
 @end

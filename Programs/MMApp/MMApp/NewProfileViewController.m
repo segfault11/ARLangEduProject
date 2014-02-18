@@ -11,6 +11,7 @@
 
 @interface NewProfileViewController ()
 @property (weak, nonatomic) IBOutlet UITextField* nameField;
+@property (weak, nonatomic) IBOutlet UITextField *lastNameField;
 
 @end
 
@@ -18,7 +19,8 @@
 
 - (IBAction)addProfile:(id)sender
 {
-    [[ProfileManager instance] addProfile:self.nameField.text];
+    ProfileManager* pm = [ProfileManager instance];
+    [pm addProfileWithFirstName: self.nameField.text andLastName:self.lastNameField.text];
     
     [self.navigationController popViewControllerAnimated:YES];
 }
@@ -37,8 +39,8 @@
 - (void)viewDidLoad
 {
     [super viewDidLoad];
-	self.nameField.text = @" ";
-    
+	self.nameField.text = @"";
+    self.lastNameField.text = @"";
     
     // Do any additional setup after loading the view.
 }

@@ -5,34 +5,34 @@
 	<key>IDESourceControlProjectFavoriteDictionaryKey</key>
 	<false/>
 	<key>IDESourceControlProjectIdentifier</key>
-	<string>34043FF8-A4CC-44B1-A287-86D1EC5F8A10</string>
+	<string>0C819DE6-3BF2-4E7E-8850-82D6DA7E1AED</string>
 	<key>IDESourceControlProjectName</key>
 	<string>MMApp</string>
 	<key>IDESourceControlProjectOriginsDictionary</key>
 	<dict>
-		<key>35B2FEE8-F8B2-458A-80D1-EC419E3391CB</key>
-		<string>https://github.com/irscttrbrn/ARLangEduProject</string>
+		<key>01C93A4A-573D-4E9E-9959-1E5E42C3D582</key>
+		<string>https://github.com/irscttrbrn/ARLangEduProject.git</string>
 	</dict>
 	<key>IDESourceControlProjectPath</key>
 	<string>Programs/MMApp/MMApp.xcodeproj/project.xcworkspace</string>
 	<key>IDESourceControlProjectRelativeInstallPathDictionary</key>
 	<dict>
-		<key>35B2FEE8-F8B2-458A-80D1-EC419E3391CB</key>
+		<key>01C93A4A-573D-4E9E-9959-1E5E42C3D582</key>
 		<string>../../../..</string>
 	</dict>
 	<key>IDESourceControlProjectURL</key>
-	<string>https://github.com/irscttrbrn/ARLangEduProject</string>
+	<string>https://github.com/irscttrbrn/ARLangEduProject.git</string>
 	<key>IDESourceControlProjectVersion</key>
 	<integer>110</integer>
 	<key>IDESourceControlProjectWCCIdentifier</key>
-	<string>35B2FEE8-F8B2-458A-80D1-EC419E3391CB</string>
+	<string>01C93A4A-573D-4E9E-9959-1E5E42C3D582</string>
 	<key>IDESourceControlProjectWCConfigurations</key>
 	<array>
 		<dict>
 			<key>IDESourceControlRepositoryExtensionIdentifierKey</key>
 			<string>public.vcs.git</string>
 			<key>IDESourceControlWCCIdentifierKey</key>
-			<string>35B2FEE8-F8B2-458A-80D1-EC419E3391CB</string>
+			<string>01C93A4A-573D-4E9E-9959-1E5E42C3D582</string>
 			<key>IDESourceControlWCCName</key>
 			<string>ARLangEduProject</string>
 		</dict>

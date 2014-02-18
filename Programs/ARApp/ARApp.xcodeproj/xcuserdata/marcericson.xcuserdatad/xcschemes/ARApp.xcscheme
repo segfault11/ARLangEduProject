@@ -15,7 +15,7 @@
             <BuildableReference
                BuildableIdentifier = "primary"
                BlueprintIdentifier = "19624F851888CA4400448004"
-               BuildableName = "Fil App.app"
+               BuildableName = "FlipPin.app"
                BlueprintName = "ARApp"
                ReferencedContainer = "container:ARApp.xcodeproj">
             </BuildableReference>
@@ -43,7 +43,7 @@
          <BuildableReference
             BuildableIdentifier = "primary"
             BlueprintIdentifier = "19624F851888CA4400448004"
-            BuildableName = "Fil App.app"
+            BuildableName = "FlipPin.app"
             BlueprintName = "ARApp"
             ReferencedContainer = "container:ARApp.xcodeproj">
          </BuildableReference>
@@ -62,7 +62,7 @@
          <BuildableReference
             BuildableIdentifier = "primary"
             BlueprintIdentifier = "19624F851888CA4400448004"
-            BuildableName = "Fil App.app"
+            BuildableName = "FlipPin.app"
             BlueprintName = "ARApp"
             ReferencedContainer = "container:ARApp.xcodeproj">
          </BuildableReference>
@@ -80,7 +80,7 @@
          <BuildableReference
             BuildableIdentifier = "primary"
             BlueprintIdentifier = "19624F851888CA4400448004"
-            BuildableName = "Fil App.app"
+            BuildableName = "FlipPin.app"
             BlueprintName = "ARApp"
             ReferencedContainer = "container:ARApp.xcodeproj">
          </BuildableReference>

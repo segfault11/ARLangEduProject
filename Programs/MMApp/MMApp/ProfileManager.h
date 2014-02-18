@@ -1,16 +1,17 @@
 //
 //  ProfileManager.h
-//  GUIPrototype
+//  RecogGame
 //
-//  Created by Arno in Wolde Lübke on 25.12.13.
-//  Copyright (c) 2013 Arno in Wolde Lübke. All rights reserved.
+//  Created by Marc Ericson Santos on 2/7/14.
+//  Copyright (c) 2014 Marc Ericson Santos. All rights reserved.
 //
 
 #import <Foundation/Foundation.h>
+#import "Profile.h"
 
 @interface ProfileManager : NSObject
-+ (ProfileManager*)instance;
-- (void)addProfile:(NSString*)name;
-- (NSUInteger)getNumberOfProfiles;
-- (NSString*)getProfileAtIndex:(NSUInteger)index;
++(ProfileManager*)instance;
+-(void)addProfileWithFirstName:(NSString*)firstName andLastName:(NSString*)lastName;
+-(Profile*)getProfileAtIndex:(int)index;
+-(int)getProfilesCount;
 @end

@@ -62,9 +62,8 @@
     // Return the number of rows in the section.
     
     
-    NSLog(@"# profiles %d", [[ProfileManager instance] getNumberOfProfiles]);
-    
-    return [[ProfileManager instance] getNumberOfProfiles];
+    ProfileManager* pm = [ProfileManager instance];
+    return [pm getProfilesCount];
 }
 
 - (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath
@@ -77,7 +76,11 @@
         cell = [[UITableViewCell alloc] initWithStyle:UITableViewCellStyleDefault reuseIdentifier:CellIdentifier];
     }
     
-    cell.textLabel.text = [[ProfileManager instance] getProfileAtIndex:indexPath.row];
+    ProfileManager* pm = [ProfileManager instance];
+    
+    
+    cell.textLabel.text =
+    [[[pm getProfileAtIndex:indexPath.row].firstName stringByAppendingString:@" "] stringByAppendingString:[pm getProfileAtIndex:indexPath.row].lastName];
     
     return cell;
 }
@@ -137,7 +140,9 @@
  {
     UIStoryboard *storyboard = [UIStoryboard storyboardWithName:@"Main_iPad" bundle: nil];
     ViewController *vc = [storyboard instantiateViewControllerWithIdentifier:@"MMViewController"];
-    [vc setProfileName:[[ProfileManager instance] getProfileAtIndex:indexPath.row]];
+    Profile* profile = [[ProfileManager instance] getProfileAtIndex:indexPath.row];
+    NSString* userName = [[profile.firstName stringByAppendingString:@"_"] stringByAppendingString:profile.lastName];
+    [vc setProfileName: userName];
     [self.navigationController pushViewController:vc animated:YES];
  }
 

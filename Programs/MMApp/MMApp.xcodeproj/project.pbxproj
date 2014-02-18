@@ -87,12 +87,13 @@
 		DE3390FC18B1989C0051AC9F /* talaan.m4a in Resources */ = {isa = PBXBuildFile; fileRef = DE3390DD18B1989C0051AC9F /* talaan.m4a */; };
 		DE3390FD18B1989C0051AC9F /* talaarawan.m4a in Resources */ = {isa = PBXBuildFile; fileRef = DE3390DE18B1989C0051AC9F /* talaarawan.m4a */; };
 		DE3390FE18B1989C0051AC9F /* tamaan.m4a in Resources */ = {isa = PBXBuildFile; fileRef = DE3390DF18B1989C0051AC9F /* tamaan.m4a */; };
-		DE3390FF18B1989C0051AC9F /* taman.m4a in Resources */ = {isa = PBXBuildFile; fileRef = DE3390E018B1989C0051AC9F /* taman.m4a */; };
 		DE33910018B1989C0051AC9F /* tubig.m4a in Resources */ = {isa = PBXBuildFile; fileRef = DE3390E118B1989C0051AC9F /* tubig.m4a */; };
 		DE33910118B1989C0051AC9F /* umagos.m4a in Resources */ = {isa = PBXBuildFile; fileRef = DE3390E218B1989C0051AC9F /* umagos.m4a */; };
 		DE33910418B1A2DB0051AC9F /* asukal.png in Resources */ = {isa = PBXBuildFile; fileRef = DE33910218B1A2DB0051AC9F /* asukal.png */; };
 		DE33910518B1A2DB0051AC9F /* oras.png in Resources */ = {isa = PBXBuildFile; fileRef = DE33910318B1A2DB0051AC9F /* oras.png */; };
 		DE33910718B1A3F60051AC9F /* tamaan.png in Resources */ = {isa = PBXBuildFile; fileRef = DE33910618B1A3F60051AC9F /* tamaan.png */; };
+		DEF39C5918B34E5900B95943 /* textlogo.png in Resources */ = {isa = PBXBuildFile; fileRef = DEF39C5818B34E5900B95943 /* textlogo.png */; };
+		DEF39C5C18B3533700B95943 /* Profile.m in Sources */ = {isa = PBXBuildFile; fileRef = DEF39C5B18B3533700B95943 /* Profile.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -108,7 +109,7 @@
 /* Begin PBXFileReference section */
 		194869901890D72A0048AE2E /* Logger.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Logger.h; sourceTree = "<group>"; };
 		194869911890D72A0048AE2E /* Logger.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Logger.m; sourceTree = "<group>"; };
-		1962511F1888FC6E00448004 /* MMApp.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = MMApp.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		1962511F1888FC6E00448004 /* FlipPin.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = FlipPin.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		196251221888FC6E00448004 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
 		196251241888FC6E00448004 /* CoreGraphics.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreGraphics.framework; path = System/Library/Frameworks/CoreGraphics.framework; sourceTree = SDKROOT; };
 		196251261888FC6E00448004 /* UIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UIKit.framework; path = System/Library/Frameworks/UIKit.framework; sourceTree = SDKROOT; };
@@ -200,12 +201,14 @@
 		DE3390DD18B1989C0051AC9F /* talaan.m4a */ = {isa = PBXFileReference; lastKnownFileType = file; name = talaan.m4a; path = sounds/talaan.m4a; sourceTree = "<group>"; };
 		DE3390DE18B1989C0051AC9F /* talaarawan.m4a */ = {isa = PBXFileReference; lastKnownFileType = file; name = talaarawan.m4a; path = sounds/talaarawan.m4a; sourceTree = "<group>"; };
 		DE3390DF18B1989C0051AC9F /* tamaan.m4a */ = {isa = PBXFileReference; lastKnownFileType = file; name = tamaan.m4a; path = sounds/tamaan.m4a; sourceTree = "<group>"; };
-		DE3390E018B1989C0051AC9F /* taman.m4a */ = {isa = PBXFileReference; lastKnownFileType = file; name = taman.m4a; path = sounds/taman.m4a; sourceTree = "<group>"; };
 		DE3390E118B1989C0051AC9F /* tubig.m4a */ = {isa = PBXFileReference; lastKnownFileType = file; name = tubig.m4a; path = sounds/tubig.m4a; sourceTree = "<group>"; };
 		DE3390E218B1989C0051AC9F /* umagos.m4a */ = {isa = PBXFileReference; lastKnownFileType = file; name = umagos.m4a; path = sounds/umagos.m4a; sourceTree = "<group>"; };
 		DE33910218B1A2DB0051AC9F /* asukal.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = asukal.png; path = bgImages/asukal.png; sourceTree = "<group>"; };
 		DE33910318B1A2DB0051AC9F /* oras.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = oras.png; path = bgImages/oras.png; sourceTree = "<group>"; };
 		DE33910618B1A3F60051AC9F /* tamaan.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = tamaan.png; path = bgImages/tamaan.png; sourceTree = "<group>"; };
+		DEF39C5818B34E5900B95943 /* textlogo.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = textlogo.png; path = assets/textlogo.png; sourceTree = "<group>"; };
+		DEF39C5A18B3533700B95943 /* Profile.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Profile.h; sourceTree = "<group>"; };
+		DEF39C5B18B3533700B95943 /* Profile.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Profile.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -254,7 +257,7 @@
 		196251201888FC6E00448004 /* Products */ = {
 			isa = PBXGroup;
 			children = (
-				1962511F1888FC6E00448004 /* MMApp.app */,
+				1962511F1888FC6E00448004 /* FlipPin.app */,
 				196251431888FC6E00448004 /* MMAppTests.xctest */,
 			);
 			name = Products;
@@ -285,6 +288,7 @@
 				196251371888FC6E00448004 /* Main_iPad.storyboard */,
 				1962513D1888FC6E00448004 /* Images.xcassets */,
 				196251291888FC6E00448004 /* Supporting Files */,
+				DEF39C5718B34E3E00B95943 /* Images */,
 			);
 			path = MMApp;
 			sourceTree = "<group>";
@@ -397,6 +401,8 @@
 		196251751889071E00448004 /* Entities */ = {
 			isa = PBXGroup;
 			children = (
+				DEF39C5A18B3533700B95943 /* Profile.h */,
+				DEF39C5B18B3533700B95943 /* Profile.m */,
 				1962516F1889071900448004 /* Content.h */,
 				196251701889071900448004 /* Content.m */,
 			);
@@ -451,11 +457,18 @@
 				DE3390DD18B1989C0051AC9F /* talaan.m4a */,
 				DE3390DE18B1989C0051AC9F /* talaarawan.m4a */,
 				DE3390DF18B1989C0051AC9F /* tamaan.m4a */,
-				DE3390E018B1989C0051AC9F /* taman.m4a */,
 				DE3390E118B1989C0051AC9F /* tubig.m4a */,
 				DE3390E218B1989C0051AC9F /* umagos.m4a */,
 			);
 			name = Sounds;
+			sourceTree = "<group>";
+		};
+		DEF39C5718B34E3E00B95943 /* Images */ = {
+			isa = PBXGroup;
+			children = (
+				DEF39C5818B34E5900B95943 /* textlogo.png */,
+			);
+			name = Images;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -475,7 +488,7 @@
 			);
 			name = MMApp;
 			productName = MMApp;
-			productReference = 1962511F1888FC6E00448004 /* MMApp.app */;
+			productReference = 1962511F1888FC6E00448004 /* FlipPin.app */;
 			productType = "com.apple.product-type.application";
 		};
 		196251421888FC6E00448004 /* MMAppTests */ = {
@@ -546,7 +559,7 @@
 				DE3390B218B1987E0051AC9F /* isaksak.png in Resources */,
 				DE3390BD18B1987E0051AC9F /* talaan.png in Resources */,
 				DE3390F318B1989C0051AC9F /* itulak.m4a in Resources */,
-				DE3390FF18B1989C0051AC9F /* taman.m4a in Resources */,
+				DEF39C5918B34E5900B95943 /* textlogo.png in Resources */,
 				DE3390ED18B1989C0051AC9F /* haluin.m4a in Resources */,
 				DE3390FC18B1989C0051AC9F /* talaan.m4a in Resources */,
 				DE3390FE18B1989C0051AC9F /* tamaan.m4a in Resources */,
@@ -626,6 +639,7 @@
 				193B51BE18890CEE00364DBD /* NavigationViewController.m in Sources */,
 				193B51BF18890CEE00364DBD /* NewProfileViewController.m in Sources */,
 				194869921890D72A0048AE2E /* Logger.m in Sources */,
+				DEF39C5C18B3533700B95943 /* Profile.m in Sources */,
 				193B51C018890CEE00364DBD /* SelectProfileViewController.m in Sources */,
 				193B51C118890CEE00364DBD /* AppDelegate.m in Sources */,
 				193B51C218890CEE00364DBD /* main.m in Sources */,
@@ -695,6 +709,7 @@
 				CLANG_WARN_INT_CONVERSION = YES;
 				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
 				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				COPY_PHASE_STRIP = NO;
 				GCC_C_LANGUAGE_STANDARD = gnu99;
@@ -734,6 +749,7 @@
 				CLANG_WARN_INT_CONVERSION = YES;
 				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
 				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				COPY_PHASE_STRIP = YES;
 				ENABLE_NS_ASSERTIONS = NO;
@@ -759,7 +775,7 @@
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "MMApp/MMApp-Prefix.pch";
 				INFOPLIST_FILE = "MMApp/MMApp-Info.plist";
-				PRODUCT_NAME = "$(TARGET_NAME)";
+				PRODUCT_NAME = FlipPin;
 				WRAPPER_EXTENSION = app;
 			};
 			name = Debug;
@@ -772,7 +788,7 @@
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "MMApp/MMApp-Prefix.pch";
 				INFOPLIST_FILE = "MMApp/MMApp-Info.plist";
-				PRODUCT_NAME = "$(TARGET_NAME)";
+				PRODUCT_NAME = FlipPin;
 				WRAPPER_EXTENSION = app;
 			};
 			name = Release;

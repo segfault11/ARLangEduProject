@@ -19,6 +19,8 @@
     int _currentContentIdx;
     BOOL _shallDisplayTranslation;
 }
+@property (weak, nonatomic) IBOutlet UILabel *word;
+@property (weak, nonatomic) IBOutlet UITextField *currentUser;
 @property (weak, nonatomic) IBOutlet UILabel *sentence;
 @property (weak, nonatomic) IBOutlet UILabel *translation;
 @property (weak, nonatomic) IBOutlet UILabel *currentContent;
@@ -42,7 +44,9 @@
     self.manager = [[CMMotionManager alloc] init];
     self.manager.deviceMotionUpdateInterval = 1.0/60.0;
     self.manager.showsDeviceMovementDisplay = YES;
-
+    
+    self.currentUser.text = _profileName;
+    
     CMDeviceMotionHandler  motionHandler = ^(CMDeviceMotion *motion, NSError *error)
     {
     
@@ -151,6 +155,7 @@
     }
     
     self.sentence.text = [c.sentences objectAtIndex:c.activeSentence];
+    self.word.text = c.word;
     self.translation.text = c.translation;
     NSString* filename = [[[[NSBundle mainBundle] resourcePath] stringByAppendingString:@"/"] stringByAppendingString:c.bgImage];
     
