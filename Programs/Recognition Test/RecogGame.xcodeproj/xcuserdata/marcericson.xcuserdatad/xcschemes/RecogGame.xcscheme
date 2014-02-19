@@ -15,7 +15,7 @@
             <BuildableReference
                BuildableIdentifier = "primary"
                BlueprintIdentifier = "DEA93CCA18A4C9E90046FF83"
-               BuildableName = "RecogGame.app"
+               BuildableName = "Recognize.app"
                BlueprintName = "RecogGame"
                ReferencedContainer = "container:RecogGame.xcodeproj">
             </BuildableReference>
@@ -43,7 +43,7 @@
          <BuildableReference
             BuildableIdentifier = "primary"
             BlueprintIdentifier = "DEA93CCA18A4C9E90046FF83"
-            BuildableName = "RecogGame.app"
+            BuildableName = "Recognize.app"
             BlueprintName = "RecogGame"
             ReferencedContainer = "container:RecogGame.xcodeproj">
          </BuildableReference>
@@ -62,7 +62,7 @@
          <BuildableReference
             BuildableIdentifier = "primary"
             BlueprintIdentifier = "DEA93CCA18A4C9E90046FF83"
-            BuildableName = "RecogGame.app"
+            BuildableName = "Recognize.app"
             BlueprintName = "RecogGame"
             ReferencedContainer = "container:RecogGame.xcodeproj">
          </BuildableReference>
@@ -80,7 +80,7 @@
          <BuildableReference
             BuildableIdentifier = "primary"
             BlueprintIdentifier = "DEA93CCA18A4C9E90046FF83"
-            BuildableName = "RecogGame.app"
+            BuildableName = "Recognize.app"
             BlueprintName = "RecogGame"
             ReferencedContainer = "container:RecogGame.xcodeproj">
          </BuildableReference>

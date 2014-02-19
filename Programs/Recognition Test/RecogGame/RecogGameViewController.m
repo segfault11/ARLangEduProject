@@ -26,7 +26,9 @@
 
 @implementation RecogGameViewController
 
-int currentItem;
+int _currentItem;
+int _currentScore;
+int _point;
 NSMutableArray* testItems;
 
 - (void)setUserName:(NSString*)userName
@@ -66,6 +68,8 @@ NSMutableArray* testItems;
 {
     [super viewDidLoad];
 	// Do any additional setup after loading the view.
+    _currentItem = 0;
+    _currentScore = 0;
     self.userNameTextfield.text = _userName;
     
     NSData* data = [[NSData alloc] initWithContentsOfFile:[[[NSBundle mainBundle] resourcePath] stringByAppendingString:@"/test.json"]];
@@ -84,7 +88,6 @@ NSMutableArray* testItems;
         exit(0);
     }
     
-    currentItem = 0;
     testItems = [self shuffle:entries];
     
     for (NSDictionary* entry in testItems)
@@ -106,16 +109,25 @@ NSMutableArray* testItems;
 
 - (IBAction)answerButton:(id)sender
 {
-    if (currentItem<[testItems count])
+    if (_currentItem<[testItems count])
     {
         UIButton* button = (UIButton*)sender;
         [self.logger logButtonPressForMarker:0 WithLabel: [[button.titleLabel.text stringByAppendingString:@";"] stringByAppendingString:self.wordTextfield.text]];
         
+        if ([button.titleLabel.text isEqualToString:@"YES"])
+        {
+            _currentScore = _currentScore + _point;
+        }
+        else if ([button.titleLabel.text isEqualToString:@"NO"]){
+            _currentScore = _currentScore - _point;
+        }
+        
         self.wordTextfield.text = @" ";
-        self.progressUpdate.text = [NSString stringWithFormat:@"You finished %d of %d.", currentItem, [testItems count]];
+        self.progressUpdate.text = [NSString stringWithFormat:@"You finished %d of %d.", _currentItem, [testItems count]];
         self.yesButton.hidden = YES;
         self.noButton.hidden = YES;
         self.nextButton.hidden = NO;
+        
         
     }
     else
@@ -123,9 +135,17 @@ NSMutableArray* testItems;
         UIButton* button = (UIButton*)sender;
         [self.logger logButtonPressForMarker:0 WithLabel: [[button.titleLabel.text stringByAppendingString:@";"] stringByAppendingString:self.wordTextfield.text]];
         
+        if ([button.titleLabel.text isEqualToString:@"YES"])
+        {
+            _currentScore = _currentScore + _point;
+        }
+        else if ([button.titleLabel.text isEqualToString:@"NO"]){
+            _currentScore = _currentScore - _point;
+        }
+        
         self.wordTextfield.text = @" ";
-        self.instructionTextfield.text = @"The test is finished. Thank you for taking this test!";
-        self.progressUpdate.text = [NSString stringWithFormat:@"You finished %d of %d.", currentItem, [testItems count]];
+        self.instructionTextfield.text = [NSString stringWithFormat:@"Thank you for taking this test! You got %d of %d.", _currentScore, [testItems count]];
+        self.progressUpdate.text = [NSString stringWithFormat:@"You finished %d of %d.", _currentItem, [testItems count]];
         self.yesButton.hidden = YES;
         self.noButton.hidden = YES;
         self.nextButton.hidden = YES;
@@ -134,18 +154,26 @@ NSMutableArray* testItems;
 
 - (IBAction)nextButton:(id)sender
 {
-    if (currentItem<[testItems count])
+    if (_currentItem<[testItems count])
     {
         UIButton* button = (UIButton*)sender;
         [self.logger logButtonPressForMarker:0 WithLabel: [[button.titleLabel.text stringByAppendingString:@";"] stringByAppendingString:self.wordTextfield.text]];
         
-        NSDictionary* currentDictionary = [testItems objectAtIndex:currentItem];
-        self.wordTextfield.text = [currentDictionary objectForKey:@"word"];;
+        if (_currentItem==0)
+        {
+            [self.nextButton setTitle:@"NEXT" forState:UIControlStateNormal];
+        }
+        
+        NSDictionary* currentDictionary = [testItems objectAtIndex:_currentItem];
+        self.wordTextfield.text = [currentDictionary objectForKey:@"word"];
+        
+        NSNumber* p = [currentDictionary objectForKey:@"score"];
+        _point = [p integerValue];
         
         self.yesButton.hidden = NO;
         self.noButton.hidden = NO;
         self.nextButton.hidden = YES;
-        currentItem = currentItem + 1;
+        _currentItem = _currentItem + 1;
     }
 }
 

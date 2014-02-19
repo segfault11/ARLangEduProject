@@ -10,7 +10,8 @@
 		DE33476218A50BE200CCE224 /* RecogGameViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = DE33476118A50BE200CCE224 /* RecogGameViewController.m */; };
 		DE33476518A62F4E00CCE224 /* Logger.m in Sources */ = {isa = PBXBuildFile; fileRef = DE33476418A62F4E00CCE224 /* Logger.m */; };
 		DE33476818A62FE100CCE224 /* JSONKit.m in Sources */ = {isa = PBXBuildFile; fileRef = DE33476718A62FE100CCE224 /* JSONKit.m */; settings = {COMPILER_FLAGS = "-fno-objc-arc"; }; };
-		DE33476A18A635EC00CCE224 /* test.json in Resources */ = {isa = PBXBuildFile; fileRef = DE33476918A635EC00CCE224 /* test.json */; };
+		DE33687518B45E8A003E9C01 /* test.json in Resources */ = {isa = PBXBuildFile; fileRef = DE33687418B45E8A003E9C01 /* test.json */; };
+		DE33687718B46609003E9C01 /* textlogo.png in Resources */ = {isa = PBXBuildFile; fileRef = DE33687618B46609003E9C01 /* textlogo.png */; };
 		DEA93CCF18A4C9E90046FF83 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = DEA93CCE18A4C9E90046FF83 /* Foundation.framework */; };
 		DEA93CD118A4C9E90046FF83 /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = DEA93CD018A4C9E90046FF83 /* CoreGraphics.framework */; };
 		DEA93CD318A4C9E90046FF83 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = DEA93CD218A4C9E90046FF83 /* UIKit.framework */; };
@@ -48,8 +49,9 @@
 		DE33476418A62F4E00CCE224 /* Logger.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Logger.m; sourceTree = "<group>"; };
 		DE33476618A62FE100CCE224 /* JSONKit.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = JSONKit.h; sourceTree = "<group>"; };
 		DE33476718A62FE100CCE224 /* JSONKit.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = JSONKit.m; sourceTree = "<group>"; };
-		DE33476918A635EC00CCE224 /* test.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = test.json; sourceTree = "<group>"; };
-		DEA93CCB18A4C9E90046FF83 /* RecogGame.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = RecogGame.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		DE33687418B45E8A003E9C01 /* test.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = test.json; sourceTree = "<group>"; };
+		DE33687618B46609003E9C01 /* textlogo.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = textlogo.png; sourceTree = "<group>"; };
+		DEA93CCB18A4C9E90046FF83 /* Recognize.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Recognize.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		DEA93CCE18A4C9E90046FF83 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
 		DEA93CD018A4C9E90046FF83 /* CoreGraphics.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreGraphics.framework; path = System/Library/Frameworks/CoreGraphics.framework; sourceTree = SDKROOT; };
 		DEA93CD218A4C9E90046FF83 /* UIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UIKit.framework; path = System/Library/Frameworks/UIKit.framework; sourceTree = SDKROOT; };
@@ -102,6 +104,15 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		DE33687818B46612003E9C01 /* files */ = {
+			isa = PBXGroup;
+			children = (
+				DE33687618B46609003E9C01 /* textlogo.png */,
+				DE33687418B45E8A003E9C01 /* test.json */,
+			);
+			name = files;
+			sourceTree = "<group>";
+		};
 		DEA93CC218A4C9E90046FF83 = {
 			isa = PBXGroup;
 			children = (
@@ -115,7 +126,7 @@
 		DEA93CCC18A4C9E90046FF83 /* Products */ = {
 			isa = PBXGroup;
 			children = (
-				DEA93CCB18A4C9E90046FF83 /* RecogGame.app */,
+				DEA93CCB18A4C9E90046FF83 /* Recognize.app */,
 				DEA93CEC18A4C9E90046FF83 /* RecogGameTests.xctest */,
 			);
 			name = Products;
@@ -135,6 +146,7 @@
 		DEA93CD418A4C9E90046FF83 /* RecogGame */ = {
 			isa = PBXGroup;
 			children = (
+				DE33687818B46612003E9C01 /* files */,
 				DEA93CDD18A4C9E90046FF83 /* IMDAppDelegate.h */,
 				DEA93CDE18A4C9E90046FF83 /* IMDAppDelegate.m */,
 				DE33476618A62FE100CCE224 /* JSONKit.h */,
@@ -154,7 +166,6 @@
 				DEA93D0918A4CF030046FF83 /* SelectProfileViewController.h */,
 				DEA93D0A18A4CF030046FF83 /* SelectProfileViewController.m */,
 				DEA93CE018A4C9E90046FF83 /* Main.storyboard */,
-				DE33476918A635EC00CCE224 /* test.json */,
 				DEA93CE618A4C9E90046FF83 /* Images.xcassets */,
 				DEA93CD518A4C9E90046FF83 /* Supporting Files */,
 			);
@@ -207,7 +218,7 @@
 			);
 			name = RecogGame;
 			productName = RecogGame;
-			productReference = DEA93CCB18A4C9E90046FF83 /* RecogGame.app */;
+			productReference = DEA93CCB18A4C9E90046FF83 /* Recognize.app */;
 			productType = "com.apple.product-type.application";
 		};
 		DEA93CEB18A4C9E90046FF83 /* RecogGameTests */ = {
@@ -271,9 +282,10 @@
 			buildActionMask = 2147483647;
 			files = (
 				DEA93CE718A4C9E90046FF83 /* Images.xcassets in Resources */,
-				DE33476A18A635EC00CCE224 /* test.json in Resources */,
+				DE33687518B45E8A003E9C01 /* test.json in Resources */,
 				DEA93CD918A4C9E90046FF83 /* InfoPlist.strings in Resources */,
 				DEA93CE218A4C9E90046FF83 /* Main.storyboard in Resources */,
+				DE33687718B46609003E9C01 /* textlogo.png in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -435,7 +447,7 @@
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "RecogGame/RecogGame-Prefix.pch";
 				INFOPLIST_FILE = "RecogGame/RecogGame-Info.plist";
-				PRODUCT_NAME = "$(TARGET_NAME)";
+				PRODUCT_NAME = Recognize;
 				PROVISIONING_PROFILE = "";
 				WRAPPER_EXTENSION = app;
 			};
@@ -451,7 +463,7 @@
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "RecogGame/RecogGame-Prefix.pch";
 				INFOPLIST_FILE = "RecogGame/RecogGame-Info.plist";
-				PRODUCT_NAME = "$(TARGET_NAME)";
+				PRODUCT_NAME = Recognize;
 				PROVISIONING_PROFILE = "";
 				WRAPPER_EXTENSION = app;
 			};
