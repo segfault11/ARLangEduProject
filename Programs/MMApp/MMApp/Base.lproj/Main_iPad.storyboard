@@ -412,6 +412,7 @@
                     </view>
                     <connections>
                         <outlet property="backgroundImage" destination="t5z-ul-lg9" id="7Y1-Z8-0e9"/>
+                        <outlet property="currentContent" destination="KeW-5n-iJg" id="sg0-hR-dre"/>
                         <outlet property="currentUser" destination="0s7-E5-eWk" id="FMS-Jr-51t"/>
                         <outlet property="sentence" destination="8FO-Bg-BcX" id="fVL-e5-XJI"/>
                         <outlet property="translation" destination="j2D-nP-pGc" id="qOT-4M-dvO"/>

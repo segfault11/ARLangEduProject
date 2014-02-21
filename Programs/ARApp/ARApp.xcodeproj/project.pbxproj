@@ -81,11 +81,6 @@
 		DE0BDCDE18991C6D008528C0 /* 29.dat in Resources */ = {isa = PBXBuildFile; fileRef = DE0BDC9E18991C6C008528C0 /* 29.dat */; };
 		DE0EFA1018AF3BC100AC0694 /* ihain2.png in Resources */ = {isa = PBXBuildFile; fileRef = DE0EFA0E18AF3BC100AC0694 /* ihain2.png */; };
 		DE0EFA1118AF3BC100AC0694 /* tamaan2.png in Resources */ = {isa = PBXBuildFile; fileRef = DE0EFA0F18AF3BC100AC0694 /* tamaan2.png */; };
-		DE0EFA1918AF42DF00AC0694 /* Animations.json in Resources */ = {isa = PBXBuildFile; fileRef = DE0EFA1418AF42DF00AC0694 /* Animations.json */; };
-		DE0EFA1A18AF42DF00AC0694 /* Contents.json in Resources */ = {isa = PBXBuildFile; fileRef = DE0EFA1518AF42DF00AC0694 /* Contents.json */; };
-		DE0EFA1B18AF42DF00AC0694 /* Marker.json in Resources */ = {isa = PBXBuildFile; fileRef = DE0EFA1618AF42DF00AC0694 /* Marker.json */; };
-		DE0EFA1C18AF42DF00AC0694 /* Sprites.json in Resources */ = {isa = PBXBuildFile; fileRef = DE0EFA1718AF42DF00AC0694 /* Sprites.json */; };
-		DE0EFA1D18AF42DF00AC0694 /* SpriteSheets.json in Resources */ = {isa = PBXBuildFile; fileRef = DE0EFA1818AF42DF00AC0694 /* SpriteSheets.json */; };
 		DE22301418AFB4F5006A239A /* alak.m4a in Resources */ = {isa = PBXBuildFile; fileRef = DE222FF618AFB4F5006A239A /* alak.m4a */; };
 		DE22301518AFB4F5006A239A /* asinan.m4a in Resources */ = {isa = PBXBuildFile; fileRef = DE222FF718AFB4F5006A239A /* asinan.m4a */; };
 		DE22301618AFB4F5006A239A /* asukal.m4a in Resources */ = {isa = PBXBuildFile; fileRef = DE222FF818AFB4F5006A239A /* asukal.m4a */; };
@@ -116,6 +111,11 @@
 		DE22302F18AFB4F5006A239A /* tamaan.m4a in Resources */ = {isa = PBXBuildFile; fileRef = DE22301118AFB4F5006A239A /* tamaan.m4a */; };
 		DE22303018AFB4F5006A239A /* tubig.m4a in Resources */ = {isa = PBXBuildFile; fileRef = DE22301218AFB4F5006A239A /* tubig.m4a */; };
 		DE22303118AFB4F5006A239A /* umagos.m4a in Resources */ = {isa = PBXBuildFile; fileRef = DE22301318AFB4F5006A239A /* umagos.m4a */; };
+		DE33687E18B71DC5003E9C01 /* Animations.json in Resources */ = {isa = PBXBuildFile; fileRef = DE33687918B71DC5003E9C01 /* Animations.json */; };
+		DE33687F18B71DC5003E9C01 /* Contents.json in Resources */ = {isa = PBXBuildFile; fileRef = DE33687A18B71DC5003E9C01 /* Contents.json */; };
+		DE33688018B71DC5003E9C01 /* Marker.json in Resources */ = {isa = PBXBuildFile; fileRef = DE33687B18B71DC5003E9C01 /* Marker.json */; };
+		DE33688118B71DC5003E9C01 /* Sprites.json in Resources */ = {isa = PBXBuildFile; fileRef = DE33687C18B71DC5003E9C01 /* Sprites.json */; };
+		DE33688218B71DC5003E9C01 /* SpriteSheets.json in Resources */ = {isa = PBXBuildFile; fileRef = DE33687D18B71DC5003E9C01 /* SpriteSheets.json */; };
 		DE5C8CB418B1BB0D00C9A1A3 /* libAR.a in Frameworks */ = {isa = PBXBuildFile; fileRef = DE5C8CAE18B1BB0D00C9A1A3 /* libAR.a */; };
 		DE5C8CB518B1BB0D00C9A1A3 /* libAR2.a in Frameworks */ = {isa = PBXBuildFile; fileRef = DE5C8CAF18B1BB0D00C9A1A3 /* libAR2.a */; };
 		DE5C8CB618B1BB0D00C9A1A3 /* libARUtil.a in Frameworks */ = {isa = PBXBuildFile; fileRef = DE5C8CB018B1BB0D00C9A1A3 /* libARUtil.a */; };
@@ -265,11 +265,6 @@
 		DE0BDC9E18991C6C008528C0 /* 29.dat */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; name = 29.dat; path = markers/29.dat; sourceTree = "<group>"; };
 		DE0EFA0E18AF3BC100AC0694 /* ihain2.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = ihain2.png; path = sprites/ihain2.png; sourceTree = "<group>"; };
 		DE0EFA0F18AF3BC100AC0694 /* tamaan2.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = tamaan2.png; path = sprites/tamaan2.png; sourceTree = "<group>"; };
-		DE0EFA1418AF42DF00AC0694 /* Animations.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; name = Animations.json; path = json/Animations.json; sourceTree = "<group>"; };
-		DE0EFA1518AF42DF00AC0694 /* Contents.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; name = Contents.json; path = json/Contents.json; sourceTree = "<group>"; };
-		DE0EFA1618AF42DF00AC0694 /* Marker.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; name = Marker.json; path = json/Marker.json; sourceTree = "<group>"; };
-		DE0EFA1718AF42DF00AC0694 /* Sprites.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; name = Sprites.json; path = json/Sprites.json; sourceTree = "<group>"; };
-		DE0EFA1818AF42DF00AC0694 /* SpriteSheets.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; name = SpriteSheets.json; path = json/SpriteSheets.json; sourceTree = "<group>"; };
 		DE222FF618AFB4F5006A239A /* alak.m4a */ = {isa = PBXFileReference; lastKnownFileType = file; name = alak.m4a; path = sounds/alak.m4a; sourceTree = "<group>"; };
 		DE222FF718AFB4F5006A239A /* asinan.m4a */ = {isa = PBXFileReference; lastKnownFileType = file; name = asinan.m4a; path = sounds/asinan.m4a; sourceTree = "<group>"; };
 		DE222FF818AFB4F5006A239A /* asukal.m4a */ = {isa = PBXFileReference; lastKnownFileType = file; name = asukal.m4a; path = sounds/asukal.m4a; sourceTree = "<group>"; };
@@ -300,6 +295,11 @@
 		DE22301118AFB4F5006A239A /* tamaan.m4a */ = {isa = PBXFileReference; lastKnownFileType = file; name = tamaan.m4a; path = sounds/tamaan.m4a; sourceTree = "<group>"; };
 		DE22301218AFB4F5006A239A /* tubig.m4a */ = {isa = PBXFileReference; lastKnownFileType = file; name = tubig.m4a; path = sounds/tubig.m4a; sourceTree = "<group>"; };
 		DE22301318AFB4F5006A239A /* umagos.m4a */ = {isa = PBXFileReference; lastKnownFileType = file; name = umagos.m4a; path = sounds/umagos.m4a; sourceTree = "<group>"; };
+		DE33687918B71DC5003E9C01 /* Animations.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; name = Animations.json; path = badJson/Animations.json; sourceTree = "<group>"; };
+		DE33687A18B71DC5003E9C01 /* Contents.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; name = Contents.json; path = badJson/Contents.json; sourceTree = "<group>"; };
+		DE33687B18B71DC5003E9C01 /* Marker.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; name = Marker.json; path = badJson/Marker.json; sourceTree = "<group>"; };
+		DE33687C18B71DC5003E9C01 /* Sprites.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; name = Sprites.json; path = badJson/Sprites.json; sourceTree = "<group>"; };
+		DE33687D18B71DC5003E9C01 /* SpriteSheets.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; name = SpriteSheets.json; path = badJson/SpriteSheets.json; sourceTree = "<group>"; };
 		DE5C8CAE18B1BB0D00C9A1A3 /* libAR.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; name = libAR.a; path = ../../../Documents/Libraries/ARToolkit/lib/libAR.a; sourceTree = "<group>"; };
 		DE5C8CAF18B1BB0D00C9A1A3 /* libAR2.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; name = libAR2.a; path = ../../../Documents/Libraries/ARToolkit/lib/libAR2.a; sourceTree = "<group>"; };
 		DE5C8CB018B1BB0D00C9A1A3 /* libARUtil.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; name = libARUtil.a; path = ../../../Documents/Libraries/ARToolkit/lib/libARUtil.a; sourceTree = "<group>"; };
@@ -539,11 +539,11 @@
 		196250351888E6D900448004 /* Entities */ = {
 			isa = PBXGroup;
 			children = (
-				DE0EFA1418AF42DF00AC0694 /* Animations.json */,
-				DE0EFA1518AF42DF00AC0694 /* Contents.json */,
-				DE0EFA1618AF42DF00AC0694 /* Marker.json */,
-				DE0EFA1718AF42DF00AC0694 /* Sprites.json */,
-				DE0EFA1818AF42DF00AC0694 /* SpriteSheets.json */,
+				DE33687918B71DC5003E9C01 /* Animations.json */,
+				DE33687A18B71DC5003E9C01 /* Contents.json */,
+				DE33687B18B71DC5003E9C01 /* Marker.json */,
+				DE33687C18B71DC5003E9C01 /* Sprites.json */,
+				DE33687D18B71DC5003E9C01 /* SpriteSheets.json */,
 			);
 			name = Entities;
 			sourceTree = "<group>";
@@ -791,7 +791,6 @@
 				DEEBF12918AA4D8B008422F4 /* maupo.png in Resources */,
 				DE22301918AFB4F5006A239A /* basurahan.m4a in Resources */,
 				DE0BDCDE18991C6D008528C0 /* 29.dat in Resources */,
-				DE0EFA1A18AF42DF00AC0694 /* Contents.json in Resources */,
 				DEEBF11718AA4D8B008422F4 /* babasahin.png in Resources */,
 				DE0BDCD318991C6D008528C0 /* 18.dat in Resources */,
 				DE0BDCD118991C6D008528C0 /* 16.dat in Resources */,
@@ -801,11 +800,11 @@
 				DEEBF12E18AA4D8B008422F4 /* talaarawan.png in Resources */,
 				DE0BDCC618991C6D008528C0 /* 5.dat in Resources */,
 				DEEBF12318AA4D8B008422F4 /* itapon.png in Resources */,
-				DE0EFA1D18AF42DF00AC0694 /* SpriteSheets.json in Resources */,
 				DE22301E18AFB4F5006A239A /* haluin.m4a in Resources */,
 				DE22302718AFB4F5006A239A /* magbayad.m4a in Resources */,
 				DEEBF11E18AA4D8B008422F4 /* haluin.png in Resources */,
 				DE0BDCD718991C6D008528C0 /* 22.dat in Resources */,
+				DE33687F18B71DC5003E9C01 /* Contents.json in Resources */,
 				DEEBF12D18AA4D8B008422F4 /* talaan.png in Resources */,
 				DEEBF11D18AA4D8B008422F4 /* burahin.png in Resources */,
 				DE22302918AFB4F5006A239A /* maupo.m4a in Resources */,
@@ -818,6 +817,8 @@
 				DEEBF13018AA4D8B008422F4 /* tubig.png in Resources */,
 				DE0BDCCD18991C6D008528C0 /* 12.dat in Resources */,
 				DEEBF12C18AA4D8B008422F4 /* pindutin.png in Resources */,
+				DE33688018B71DC5003E9C01 /* Marker.json in Resources */,
+				DE33688118B71DC5003E9C01 /* Sprites.json in Resources */,
 				DE22302F18AFB4F5006A239A /* tamaan.m4a in Resources */,
 				1962504D1888F4D400448004 /* camera_para_ipad640x480.dat in Resources */,
 				DE0BDCC518991C6D008528C0 /* 4.dat in Resources */,
@@ -837,12 +838,11 @@
 				DE22302A18AFB4F5006A239A /* oras.m4a in Resources */,
 				DE22301F18AFB4F5006A239A /* ihain.m4a in Resources */,
 				DE0BDCDC18991C6D008528C0 /* 27.dat in Resources */,
-				DE0EFA1C18AF42DF00AC0694 /* Sprites.json in Resources */,
 				DE0BDCDA18991C6D008528C0 /* 25.dat in Resources */,
 				1962500F1888CC0E00448004 /* camera_para_ipadmini640x480.dat in Resources */,
+				DE33688218B71DC5003E9C01 /* SpriteSheets.json in Resources */,
 				DE22301518AFB4F5006A239A /* asinan.m4a in Resources */,
 				DE0BDCC318991C6D008528C0 /* 2.dat in Resources */,
-				DE0EFA1918AF42DF00AC0694 /* Animations.json in Resources */,
 				196250141888CC0E00448004 /* CubeVS.glsl in Resources */,
 				DEEBF12A18AA4D8B008422F4 /* oras.png in Resources */,
 				DE22301A18AFB4F5006A239A /* batubalani.m4a in Resources */,
@@ -877,8 +877,8 @@
 				1962502D1888CC0E00448004 /* VideoFS.glsl in Resources */,
 				DE22302318AFB4F5006A239A /* itapon.m4a in Resources */,
 				DEEBF11618AA4D8B008422F4 /* asukal.png in Resources */,
-				DE0EFA1B18AF42DF00AC0694 /* Marker.json in Resources */,
 				DEEBF12418AA4D8B008422F4 /* itulak.png in Resources */,
+				DE33687E18B71DC5003E9C01 /* Animations.json in Resources */,
 				DEEBF12018AA4D8B008422F4 /* inumin.png in Resources */,
 				DEEBF11C18AA4D8B008422F4 /* bote.png in Resources */,
 				DE22301C18AFB4F5006A239A /* bote.m4a in Resources */,

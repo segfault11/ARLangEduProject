@@ -15,7 +15,7 @@
             <BuildableReference
                BuildableIdentifier = "primary"
                BlueprintIdentifier = "1962511E1888FC6E00448004"
-               BuildableName = "MMApp.app"
+               BuildableName = "FlipPin.app"
                BlueprintName = "MMApp"
                ReferencedContainer = "container:MMApp.xcodeproj">
             </BuildableReference>
@@ -43,7 +43,7 @@
          <BuildableReference
             BuildableIdentifier = "primary"
             BlueprintIdentifier = "1962511E1888FC6E00448004"
-            BuildableName = "MMApp.app"
+            BuildableName = "FlipPin.app"
             BlueprintName = "MMApp"
             ReferencedContainer = "container:MMApp.xcodeproj">
          </BuildableReference>
@@ -62,7 +62,7 @@
          <BuildableReference
             BuildableIdentifier = "primary"
             BlueprintIdentifier = "1962511E1888FC6E00448004"
-            BuildableName = "MMApp.app"
+            BuildableName = "FlipPin.app"
             BlueprintName = "MMApp"
             ReferencedContainer = "container:MMApp.xcodeproj">
          </BuildableReference>
@@ -80,7 +80,7 @@
          <BuildableReference
             BuildableIdentifier = "primary"
             BlueprintIdentifier = "1962511E1888FC6E00448004"
-            BuildableName = "MMApp.app"
+            BuildableName = "FlipPin.app"
             BlueprintName = "MMApp"
             ReferencedContainer = "container:MMApp.xcodeproj">
          </BuildableReference>
