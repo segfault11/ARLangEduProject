@@ -13,5 +13,5 @@
 - (void)dealloc;
 - (void)logOrientationForMarker:(int)id WithYaw:(float)yaw AndWithPitch:(float)pitch AndWithRoll:(float)roll;
 - (void)logAccelerationForMarker:(int)id WithX:(float)x AndWithY:(float)y AndWithZ:(float)z;
-- (void)logButtonPressForMarker:(int)id WithLabel:(NSString*)label;
+- (void)logButtonPressForMarker:(int)id WithLabel:(NSString*)label WithWord:(NSString*)word;
 @end

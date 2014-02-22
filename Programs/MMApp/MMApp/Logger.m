@@ -91,7 +91,7 @@
     );
 }
 //------------------------------------------------------------------------------
-- (void)logButtonPressForMarker:(int)id WithLabel:(NSString*)label
+- (void)logButtonPressForMarker:(int)id WithLabel:(NSString*)label WithWord:(NSString*)word
 {
     NSDateFormatter *formatter;
     NSString        *dateString;
@@ -103,9 +103,10 @@
 
     fprintf(
         _fileBut,
-        "%s;%d;%s\n",
+        "%s;%d;%s;%s\n",
         [dateString UTF8String],
         id,
+        [word UTF8String],
         [label UTF8String]
     );
     

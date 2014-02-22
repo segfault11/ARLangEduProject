@@ -82,7 +82,9 @@
     UIButton* b = sender;
     [self.logger
         logButtonPressForMarker:_currentContentIdx
-        WithLabel:b.titleLabel.text];
+        WithLabel:b.titleLabel.text
+        WithWord:self.word.text
+     ];
         
     Content* c = [[ContentManager instance] getContentAtIndex:_currentContentIdx];
     c.activeSentence = (c.activeSentence + 1) % c.sentences.count;
@@ -94,7 +96,9 @@
     UIButton* b = sender;
     [self.logger
         logButtonPressForMarker:_currentContentIdx
-        WithLabel:b.titleLabel.text];
+        WithLabel:b.titleLabel.text
+        WithWord:self.word.text
+     ];
     
     Content* c = [[ContentManager instance] getContentAtIndex:_currentContentIdx];
     NSString* filename = [[[[NSBundle mainBundle] resourcePath] stringByAppendingString:@"/"] stringByAppendingString:c.sound];
@@ -113,7 +117,9 @@
     UIButton* b = sender;
     [self.logger
         logButtonPressForMarker:_currentContentIdx
-        WithLabel:b.titleLabel.text];
+        WithLabel:b.titleLabel.text
+        WithWord:self.word.text
+     ];
     
     _shallDisplayTranslation = !_shallDisplayTranslation;
     [self displayCurrentContent];    
@@ -124,7 +130,9 @@
     UIButton* b = sender;
     [self.logger
         logButtonPressForMarker:_currentContentIdx
-        WithLabel:b.titleLabel.text];
+        WithLabel:b.titleLabel.text
+        WithWord:self.word.text
+     ];
     
     int numContents = [[ContentManager instance] getNumContents];
     _currentContentIdx = (_currentContentIdx + 1) % numContents;
@@ -137,7 +145,9 @@
     UIButton* b = sender;
     [self.logger
         logButtonPressForMarker:_currentContentIdx
-        WithLabel:b.titleLabel.text];
+        WithLabel:b.titleLabel.text
+        WithWord:self.word.text
+     ];
     
     int numContents = [[ContentManager instance] getNumContents];
     _currentContentIdx = (_currentContentIdx - 1 + numContents) % numContents;
