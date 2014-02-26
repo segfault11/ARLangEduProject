@@ -448,7 +448,7 @@
 				GCC_PREFIX_HEADER = "RecogGame/RecogGame-Prefix.pch";
 				INFOPLIST_FILE = "RecogGame/RecogGame-Info.plist";
 				PRODUCT_NAME = Recognize;
-				PROVISIONING_PROFILE = "";
+				PROVISIONING_PROFILE = "93621830-C206-4F26-95E8-B1460C5962F1";
 				WRAPPER_EXTENSION = app;
 			};
 			name = Debug;
@@ -464,7 +464,7 @@
 				GCC_PREFIX_HEADER = "RecogGame/RecogGame-Prefix.pch";
 				INFOPLIST_FILE = "RecogGame/RecogGame-Info.plist";
 				PRODUCT_NAME = Recognize;
-				PROVISIONING_PROFILE = "";
+				PROVISIONING_PROFILE = "93621830-C206-4F26-95E8-B1460C5962F1";
 				WRAPPER_EXTENSION = app;
 			};
 			name = Release;

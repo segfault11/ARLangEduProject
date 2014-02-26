@@ -518,6 +518,9 @@
 				LastUpgradeCheck = 0500;
 				ORGANIZATIONNAME = "Arno in Wolde Lübke";
 				TargetAttributes = {
+					1962511E1888FC6E00448004 = {
+						DevelopmentTeam = 7CSLH8V4LU;
+					};
 					196251421888FC6E00448004 = {
 						TestTargetID = 1962511E1888FC6E00448004;
 					};
@@ -709,8 +712,8 @@
 				CLANG_WARN_INT_CONVERSION = YES;
 				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
 				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
-				CODE_SIGN_IDENTITY = "iPhone Developer";
-				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				CODE_SIGN_IDENTITY = "iPhone Developer: Marc Ericson Santos (ZSFX46N425)";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer: Marc Ericson Santos (ZSFX46N425)";
 				COPY_PHASE_STRIP = NO;
 				GCC_C_LANGUAGE_STANDARD = gnu99;
 				GCC_DYNAMIC_NO_PIC = NO;
@@ -749,8 +752,8 @@
 				CLANG_WARN_INT_CONVERSION = YES;
 				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
 				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
-				CODE_SIGN_IDENTITY = "iPhone Developer";
-				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				CODE_SIGN_IDENTITY = "iPhone Developer: Marc Ericson Santos (ZSFX46N425)";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer: Marc Ericson Santos (ZSFX46N425)";
 				COPY_PHASE_STRIP = YES;
 				ENABLE_NS_ASSERTIONS = NO;
 				GCC_C_LANGUAGE_STANDARD = gnu99;
@@ -772,10 +775,13 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
+				CODE_SIGN_IDENTITY = "iPhone Developer: Marc Ericson Santos (ZSFX46N425)";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer: Marc Ericson Santos (ZSFX46N425)";
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "MMApp/MMApp-Prefix.pch";
 				INFOPLIST_FILE = "MMApp/MMApp-Info.plist";
 				PRODUCT_NAME = FlipPin;
+				PROVISIONING_PROFILE = "93621830-C206-4F26-95E8-B1460C5962F1";
 				WRAPPER_EXTENSION = app;
 			};
 			name = Debug;
@@ -785,10 +791,13 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
+				CODE_SIGN_IDENTITY = "iPhone Developer: Marc Ericson Santos (ZSFX46N425)";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer: Marc Ericson Santos (ZSFX46N425)";
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "MMApp/MMApp-Prefix.pch";
 				INFOPLIST_FILE = "MMApp/MMApp-Info.plist";
 				PRODUCT_NAME = FlipPin;
+				PROVISIONING_PROFILE = "93621830-C206-4F26-95E8-B1460C5962F1";
 				WRAPPER_EXTENSION = app;
 			};
 			name = Release;
