@@ -5,7 +5,9 @@
 int main(int argc, const char *argv[])
 {
 //Calculate response time and note answer if YES or NO
-	FILE* f = fopen("zhang.dat", "r");
+	
+    FILE* log = fopen("flipdata/Yusuke_ShimizuAccData.dat", "r");
+    FILE* f = fopen("recogdata/Yusuke_ShimizuRecogGameButData.dat", "r");
 	
     char line[500];
     int lineData[1000][6];
@@ -64,7 +66,7 @@ int main(int argc, const char *argv[])
 //Get the list of words and put in an array
     char dictionary[500][60];
     int ind2 = 1;
-    FILE* g = fopen("wordList.dat", "r");
+    FILE* g = fopen("recogdata/wordList.dat", "r");
     while(readLine(g, line, 128))
 	{
 		sscanf(line,"%s", dictionary[ind2]);
@@ -104,7 +106,7 @@ int main(int argc, const char *argv[])
 
     for (int c=1; c<51; c++)
     {
-        printf("%s %f %f %f %d %d %d\n",
+        printf("%s,%f,%f,%f,%d,%d,%d\n",
                dictionary[c],
                time[c][0],
                time[c][1],
@@ -115,15 +117,18 @@ int main(int argc, const char *argv[])
                );
     }
 
-//Get the array of markers viewed per day
-    FILE* log = fopen("AccData.dat", "r");
+//Get the array of markers viewed per day, and how long it was viewed
     
     int accData[6];
     double acceleration[3];
     double secAccData;
     int seen[30][10];
+    int seenDur[30][10];
+    int seenNot[10];
     int currentDay = 0;
     int currentColumn = 0;
+    int lineCount[10];
+    
     while(readLine(log, line, 128))
 	{
 		sscanf
@@ -146,23 +151,52 @@ int main(int argc, const char *argv[])
             currentDay = accData[0];
             currentColumn++;
         }
+        
+        lineCount[currentColumn]++;
+        
         if (accData[5]!=-1) {
             seen[accData[5]][currentColumn]=1;
+            seenDur[accData[5]][currentColumn]++;
+        }else{
+            seenNot[currentColumn]++;
         }
+        
     }
 //-------------------------------------------------------------------//
     
     for (int c=0; c<30; c++)
     {
-        printf("%d: %d %d %d %d %d\n",
+        printf("%d:,%d,%d,%d,%d,%d,count:,%d,%d,%d,%d,%d\n",
                c,
                seen[c][1],
                seen[c][2],
                seen[c][3],
                seen[c][4],
-               seen[c][5]
+               seen[c][5],
+               seenDur[c][1],
+               seenDur[c][2],
+               seenDur[c][3],
+               seenDur[c][4],
+               seenDur[c][5]
                );
      }
     
+    printf("-1 count:,%d,%d,%d,%d,%d\n",
+           seenNot[1],
+           seenNot[2],
+           seenNot[3],
+           seenNot[4],
+           seenNot[5]
+           );
+    
+    printf("Total count:,%d,%d,%d,%d,%d\n",
+           lineCount[1],
+           lineCount[2],
+           lineCount[3],
+           lineCount[4],
+           lineCount[5]
+           );
+    
     return 0;
+
 }
