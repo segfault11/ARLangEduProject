@@ -72,7 +72,7 @@ NSMutableArray* testItems;
     _currentScore = 0;
     self.userNameTextfield.text = _userName;
     
-    NSData* data = [[NSData alloc] initWithContentsOfFile:[[[NSBundle mainBundle] resourcePath] stringByAppendingString:@"/test.json"]];
+    NSData* data = [[NSData alloc] initWithContentsOfFile:[[[NSBundle mainBundle] resourcePath] stringByAppendingString:@"/testMar.json"]];
     
     if (!data)
     {

@@ -109,7 +109,7 @@
 /* Begin PBXFileReference section */
 		194869901890D72A0048AE2E /* Logger.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Logger.h; sourceTree = "<group>"; };
 		194869911890D72A0048AE2E /* Logger.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Logger.m; sourceTree = "<group>"; };
-		1962511F1888FC6E00448004 /* FlipPin.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = FlipPin.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		1962511F1888FC6E00448004 /* Control.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Control.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		196251221888FC6E00448004 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
 		196251241888FC6E00448004 /* CoreGraphics.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreGraphics.framework; path = System/Library/Frameworks/CoreGraphics.framework; sourceTree = SDKROOT; };
 		196251261888FC6E00448004 /* UIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UIKit.framework; path = System/Library/Frameworks/UIKit.framework; sourceTree = SDKROOT; };
@@ -257,7 +257,7 @@
 		196251201888FC6E00448004 /* Products */ = {
 			isa = PBXGroup;
 			children = (
-				1962511F1888FC6E00448004 /* FlipPin.app */,
+				1962511F1888FC6E00448004 /* Control.app */,
 				196251431888FC6E00448004 /* MMAppTests.xctest */,
 			);
 			name = Products;
@@ -488,7 +488,7 @@
 			);
 			name = MMApp;
 			productName = MMApp;
-			productReference = 1962511F1888FC6E00448004 /* FlipPin.app */;
+			productReference = 1962511F1888FC6E00448004 /* Control.app */;
 			productType = "com.apple.product-type.application";
 		};
 		196251421888FC6E00448004 /* MMAppTests */ = {
@@ -780,7 +780,7 @@
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "MMApp/MMApp-Prefix.pch";
 				INFOPLIST_FILE = "MMApp/MMApp-Info.plist";
-				PRODUCT_NAME = FlipPin;
+				PRODUCT_NAME = Control;
 				PROVISIONING_PROFILE = "93621830-C206-4F26-95E8-B1460C5962F1";
 				WRAPPER_EXTENSION = app;
 			};
@@ -796,7 +796,7 @@
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "MMApp/MMApp-Prefix.pch";
 				INFOPLIST_FILE = "MMApp/MMApp-Info.plist";
-				PRODUCT_NAME = FlipPin;
+				PRODUCT_NAME = Control;
 				PROVISIONING_PROFILE = "93621830-C206-4F26-95E8-B1460C5962F1";
 				WRAPPER_EXTENSION = app;
 			};

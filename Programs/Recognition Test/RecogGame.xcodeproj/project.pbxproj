@@ -10,8 +10,8 @@
 		DE33476218A50BE200CCE224 /* RecogGameViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = DE33476118A50BE200CCE224 /* RecogGameViewController.m */; };
 		DE33476518A62F4E00CCE224 /* Logger.m in Sources */ = {isa = PBXBuildFile; fileRef = DE33476418A62F4E00CCE224 /* Logger.m */; };
 		DE33476818A62FE100CCE224 /* JSONKit.m in Sources */ = {isa = PBXBuildFile; fileRef = DE33476718A62FE100CCE224 /* JSONKit.m */; settings = {COMPILER_FLAGS = "-fno-objc-arc"; }; };
-		DE33687518B45E8A003E9C01 /* test.json in Resources */ = {isa = PBXBuildFile; fileRef = DE33687418B45E8A003E9C01 /* test.json */; };
 		DE33687718B46609003E9C01 /* textlogo.png in Resources */ = {isa = PBXBuildFile; fileRef = DE33687618B46609003E9C01 /* textlogo.png */; };
+		DE4F02BD18CDAE8F007B4DB2 /* testMar.json in Resources */ = {isa = PBXBuildFile; fileRef = DE4F02BC18CDAE8F007B4DB2 /* testMar.json */; };
 		DEA93CCF18A4C9E90046FF83 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = DEA93CCE18A4C9E90046FF83 /* Foundation.framework */; };
 		DEA93CD118A4C9E90046FF83 /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = DEA93CD018A4C9E90046FF83 /* CoreGraphics.framework */; };
 		DEA93CD318A4C9E90046FF83 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = DEA93CD218A4C9E90046FF83 /* UIKit.framework */; };
@@ -49,8 +49,8 @@
 		DE33476418A62F4E00CCE224 /* Logger.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Logger.m; sourceTree = "<group>"; };
 		DE33476618A62FE100CCE224 /* JSONKit.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = JSONKit.h; sourceTree = "<group>"; };
 		DE33476718A62FE100CCE224 /* JSONKit.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = JSONKit.m; sourceTree = "<group>"; };
-		DE33687418B45E8A003E9C01 /* test.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = test.json; sourceTree = "<group>"; };
 		DE33687618B46609003E9C01 /* textlogo.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = textlogo.png; sourceTree = "<group>"; };
+		DE4F02BC18CDAE8F007B4DB2 /* testMar.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = testMar.json; sourceTree = "<group>"; };
 		DEA93CCB18A4C9E90046FF83 /* Recognize.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Recognize.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		DEA93CCE18A4C9E90046FF83 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
 		DEA93CD018A4C9E90046FF83 /* CoreGraphics.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreGraphics.framework; path = System/Library/Frameworks/CoreGraphics.framework; sourceTree = SDKROOT; };
@@ -107,8 +107,8 @@
 		DE33687818B46612003E9C01 /* files */ = {
 			isa = PBXGroup;
 			children = (
+				DE4F02BC18CDAE8F007B4DB2 /* testMar.json */,
 				DE33687618B46609003E9C01 /* textlogo.png */,
-				DE33687418B45E8A003E9C01 /* test.json */,
 			);
 			name = files;
 			sourceTree = "<group>";
@@ -282,8 +282,8 @@
 			buildActionMask = 2147483647;
 			files = (
 				DEA93CE718A4C9E90046FF83 /* Images.xcassets in Resources */,
-				DE33687518B45E8A003E9C01 /* test.json in Resources */,
 				DEA93CD918A4C9E90046FF83 /* InfoPlist.strings in Resources */,
+				DE4F02BD18CDAE8F007B4DB2 /* testMar.json in Resources */,
 				DEA93CE218A4C9E90046FF83 /* Main.storyboard in Resources */,
 				DE33687718B46609003E9C01 /* textlogo.png in Resources */,
 			);

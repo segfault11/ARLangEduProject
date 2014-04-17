@@ -7,10 +7,11 @@ int main(int argc, const char *argv[])
 //Calculate response time and note answer if YES or NO
 	
     FILE* log = fopen("flipdata/Yusuke_ShimizuAccData.dat", "r");
-    FILE* f = fopen("recogdata/Yusuke_ShimizuRecogGameButData.dat", "r");
-	
+    FILE* f = fopen("recogdata/Atsushi_KeyakiRecogGameButData.dat", "r");
+	FILE* but = fopen("flipdata/Yusuke_ShimizuButData.dat", "r");
+    
     char line[500];
-    int lineData[1000][6];
+    int lineData[5000][6];
     double secData[1000];
     char response[1000][60];
     int ind1 = 1;
@@ -64,7 +65,7 @@ int main(int argc, const char *argv[])
 //-------------------------------------------------------------------//
     
 //Get the list of words and put in an array
-    char dictionary[500][60];
+    char dictionary[100][60];
     int ind2 = 1;
     FILE* g = fopen("recogdata/wordList.dat", "r");
     while(readLine(g, line, 128))
@@ -93,6 +94,10 @@ int main(int argc, const char *argv[])
                 {
                     answer[b][timeColumn] = 1;
                 }
+                if (strcmp("NO",s[a].response)==0)
+                {
+                    answer[b][timeColumn] = 2;
+                }
                 //printf("%d\n", b);
             }
         }
@@ -104,7 +109,7 @@ int main(int argc, const char *argv[])
     }
 //-------------------------------------------------------------------//
 
-    for (int c=1; c<51; c++)
+    for (int c=1; c<91; c++)
     {
         printf("%s,%f,%f,%f,%d,%d,%d\n",
                dictionary[c],
@@ -149,6 +154,13 @@ int main(int argc, const char *argv[])
         
         if (currentDay!=accData[0]) {
             currentDay = accData[0];
+            /*printf( "%d-%d-%d %d:%d\n",
+                   accData[0],
+                   accData[1],
+                   accData[2],
+                   accData[3],
+                   accData[4]
+                   );*/
             currentColumn++;
         }
         
@@ -163,7 +175,7 @@ int main(int argc, const char *argv[])
         
     }
 //-------------------------------------------------------------------//
-    
+    /*
     for (int c=0; c<30; c++)
     {
         printf("%d:,%d,%d,%d,%d,%d,count:,%d,%d,%d,%d,%d\n",
@@ -196,6 +208,62 @@ int main(int argc, const char *argv[])
            lineCount[4],
            lineCount[5]
            );
+    */
+    
+    fclose(log);
+
+//Buttons tapped per day
+    currentDay = 0;
+    currentColumn = 0;
+    ind1 = 0;
+    int tapped[4][10];
+    
+    while(readLine(but, line, 128))
+	{
+        
+		sscanf
+        (
+         line,
+         "%d-%d-%d %d:%d:%lf;%d;%s",
+         &lineData[ind1][0],
+         &lineData[ind1][1],
+         &lineData[ind1][2],
+         &lineData[ind1][3],
+         &lineData[ind1][4],
+         &secData[ind1],
+         &lineData[ind1][5],
+         response[ind1]
+         );
+        
+        if (currentDay!=lineData[ind1][0])
+        {
+            currentDay = lineData[ind1][0];
+            currentColumn++;
+        }
+        
+        if (strcmp("LISTEN",response[ind1])==0)
+        {
+            tapped[0][currentColumn]++;
+        }
+        else if (strcmp("TRANSLATE",response[ind1])==0)
+        {
+            tapped[1][currentColumn]++;
+        }
+        else if (strcmp("DESCRIBE",response[ind1])==0)
+        {
+            tapped[2][currentColumn]++;
+        }
+        //printf("%d %lf\n",ind1,secData[ind1]);
+        ind1++;
+	
+    
+    }
+    //printf("LISTEN,%d,%d,%d,%d,%d\n",tapped[0][1],tapped[0][2],tapped[0][3],tapped[0][4],tapped[0][5]);
+    //printf("TRANSLATE,%d,%d,%d,%d,%d\n",tapped[1][1],tapped[1][2],tapped[1][3],tapped[1][4],tapped[1][5]);
+    //printf("DESCRIBE,%d,%d,%d,%d,%d\n",tapped[2][1],tapped[2][2],tapped[2][3],tapped[2][4],tapped[2][5]);
+    
+    fclose(but);
+//-------------------------------------------------------------------//
     
     return 0;
 
